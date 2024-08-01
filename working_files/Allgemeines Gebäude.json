@@ -1,0 +1,717 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "Allgemeines Gebäude",
+    "handle": "INF.1",
+    "text": "Ein Gebäude umschließt alle stationären Arbeitsplätze, die verarbeiteten Informationen sowie die aufgestellte Informationstechnik. Es gewährleistet somit einen Schutz vor äußeren Einflüssen. Daher ist nicht nur das Bauwerk an sich zu betrachten, also Wände, Decken, Böden, Dach, Fenster sowie Türen, sondern auch alle gebäudeweiten Infrastruktur- und Versorgungseinrichtungen wie Strom, Wasser, Gas, Heizung und Kühlung. Betrachtet wird ein Gebäude, das von einer oder mehreren Organisationseinheiten einer Institution genutzt wird. Diese können unterschiedliche Sicherheitsansprüche haben. Zudem muss in alle Überlegungen einfließen, dass ein Gebäude fast immer auch von institutionsfremden Personen, wie Besuch, Kundschaft oder Liefernden, betreten wird. Wenn ein Gebäude von verschiedenen Parteien genutzt wird, dann müssen Gestaltung und Ausstattung des Gebäudes und das Nutzungskonzept für das Gebäude zueinander passen. Es soll eine optimale Umgebung für die dort tätigen Menschen sichergestellt werden. Unberechtigte sollen dort keinen Zutritt erhalten, wo sie die Sicherheit beeinträchtigen könnten. Die im Gebäude installierte Technik soll zudem sicher und effizient betrieben werden können.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Feuer",
+            "handle": "2.1",
+            "text": "Gebäude und Einrichtung können durch ein Feuer schwer beschädigt, Menschen schwer verletzt oder getötet werden. Neben den direkt durch das Feuer verursachten Schäden müssen auch die Folgeschäden betrachtet werden. So dauert die Wiederinbetriebnahme durch Brand beschädigter Bereiche in der Regel Wochen oder gar Monate. Eine sehr große Gefahr bei einem Feuer ist der giftige Brandrauch. Die meisten Personenschäden entstehen daher durch Rauchvergiftungen. Aber auch an Einrichtungen und IT-Systemen kann Brandrauch schwere Schäden anrichten.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Brand durch technische Defekte",
+                    "type": "Threat",
+                    "text": "Ein Brand kann durch technische Defekte an elektrischen Geräten oder an der Heizungsanlage entstehen.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Brand durch Brandstiftung",
+                    "type": "Threat",
+                    "text": "Ein Brand kann durch Brandstiftung gelegt werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Blitz",
+            "handle": "2.2",
+            "text": "Während eines Gewitters sind Blitzeinschläge die größte Gefahr für Gebäude und Informationstechnik. Blitze erreichen bei Spannungen von mehreren 100.000 Volt Ströme bis zu 200.000 Ampere. Diese enorme elektrische Energie wird innerhalb von 50 bis 100 Mikrosekunden freigesetzt und abgebaut. Ein Blitz mit diesen Werten, der in einem Abstand von etwa zwei Kilometern einschlägt, verursacht auf elektrischen Leitungen im Gebäude immer noch Spannungsspitzen, die zur Zerstörung empfindlicher elektronischer Geräte führen können. Diese indirekten Schäden nehmen zu, je näher am Gebäude der Blitz einschlägt. Schlägt der Blitz direkt in ein Gebäude ein, können durch die dynamische Energie des Blitzes große Schäden verursacht werden. Dies können zum Beispiel Beschädigungen an Dach und Fassade sowie Schäden durch auftretende Brände oder Überspannungsschäden an elektrischen Geräten sein.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Blitzschlag in das Gebäude",
+                    "type": "Threat",
+                    "text": "Ein Blitz kann direkt in das Gebäude einschlagen und Schäden an der Gebäudehülle, der elektrischen Installation oder an elektronischen Geräten verursachen.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Indirekter Blitzschlag",
+                    "type": "Threat",
+                    "text": "Ein Blitzschlag in der Nähe des Gebäudes kann zu Spannungsspitzen in der elektrischen Installation führen und Schäden an elektronischen Geräten verursachen.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Wasser",
+            "handle": "2.3",
+            "text": "Wasser kann von außen, beispielsweise durch Regen, Hochwasser oder Überschwemmungen, oder von innen, etwa durch defekte wasserführende Leitungen, Schäden an einem Gebäude und seinen Einrichtungen verursachen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Hochwasser",
+                    "type": "Threat",
+                    "text": "Hochwasser kann das Gebäude überfluten und Schäden an der Gebäudehülle, der elektrischen Installation oder an elektronischen Geräten verursachen.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Lecks in Wasserleitungen",
+                    "type": "Threat",
+                    "text": "Lecks in Wasserleitungen können zu Wasserschäden im Gebäude führen und Schäden an der Gebäudehülle, der elektrischen Installation oder an elektronischen Geräten verursachen.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Elementarschäden und Naturkatastrophen",
+            "handle": "2.4",
+            "text": "Je nach Standort ist ein Gebäude den Risiken durch Elementarschäden und Naturkatastrophen unterschiedlich stark ausgesetzt. Ursachen für Naturkatastrophen können seismische, klimatische oder vulkanische Phänomene sein, wie beispielsweise Erdbeben, Hochwasser, Erdrutsche, Tsunamis, Lawinen oder Vulkanausbrüche. Beispiele für extreme meteorologische Phänomene sind Unwetter, Orkane oder Starkregen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Erdbeben",
+                    "type": "Threat",
+                    "text": "Ein Erdbeben kann das Gebäude beschädigen oder zerstören.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Hochwasser",
+                    "type": "Threat",
+                    "text": "Hochwasser kann das Gebäude überfluten und Schäden an der Gebäudehülle, der elektrischen Installation oder an elektronischen Geräten verursachen.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Umfeld-Gefährdungen",
+            "handle": "2.5",
+            "text": "Gebäude können auch durch Ereignisse in der unmittelbaren Umgebung beschädigt werden, beispielsweise wenn giftige Substanzen austreten. Durch Rettungsarbeiten, Straßensperrungen oder Evakuierungen kann es auch möglich sein, dass das Gebäude nur noch eingeschränkt oder nicht mehr genutzt werden kann.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Austritt giftiger Substanzen",
+                    "type": "Threat",
+                    "text": "Der Austritt giftiger Substanzen aus einem nahegelegenen Betrieb kann das Gebäude kontaminieren und es für die Nutzung unbrauchbar machen.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unbefugter Zutritt",
+            "handle": "2.6",
+            "text": "Wenn Unbefugte in ein Gebäude oder einzelne Räume gelangen, kann dies verschiedene andere Gefährdungen nach sich ziehen. Unbefugte Personen können einerseits durch vorsätzliche Handlungen wie Diebstahl oder Manipulation von Informationen, IT-Systemen oder IT-Komponenten, andererseits aber auch durch unbeabsichtigtes Fehlverhalten, z. B. aufgrund mangelnder Fachkenntnisse, Schäden verursachen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Diebstahl von IT-Equipment",
+                    "type": "Threat",
+                    "text": "Unbefugte Personen können IT-Equipment aus dem Gebäude stehlen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Manipulation von IT-Systemen",
+                    "type": "Threat",
+                    "text": "Unbefugte Personen können IT-Systeme manipulieren und Daten löschen oder verändern.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verstoß gegen Gesetze oder Regelungen",
+            "handle": "2.7",
+            "text": "Wird ein Gebäude errichtet, sind viele Gesetze und Vorgaben zu beachten, die beispielsweise den Brandschutz oder andere Aspekte der baulichen Sicherheit betreffen. Wenn gegen diese Gesetze verstoßen wird, fällt dies unter Umständen lange nicht auf, kann aber katastrophale Folgen nach sich ziehen, etwa wenn Brandschotten nicht bestimmungsgemäß eingebaut wurden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Nicht ausreichender Brandschutz",
+                    "type": "Threat",
+                    "text": "Wenn Brandschotten nicht bestimmungsgemäß eingebaut wurden, kann sich ein Brand schnell im gesamten Gebäude ausbreiten.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Brandschottungen",
+            "handle": "2.8",
+            "text": "Jedes Gebäude, in dem IT betrieben wird, ist von einer Vielzahl von Kabeln und Leitungen durchzogen, wie beispielsweise Frisch- und Abwasserleitungen, Heizungsrohre oder Leitungen zur Energieversorgung oder Datenübertragung. Es ist dabei unvermeidlich, dass solche Rohr- und Kabeltrassen Brandschutzwände und Geschossdecken queren müssen. Wenn an solchen Stellen keine geeigneten Brandschotten eingebaut sind, können sich darüber unter Umständen Brände und Rauch unkontrolliert ausbreiten.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Brandausbreitung durch nicht ausreichende Brandschottungen",
+                    "type": "Threat",
+                    "text": "Ein Brand kann sich durch nicht ausreichende Brandschottungen schnell im gesamten Gebäude ausbreiten.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ausfall der Stromversorgung",
+            "handle": "2.9",
+            "text": "Bei einem Stromausfall können ganze Gebäude oder Teile davon unbenutzbar werden. Von der Stromversorgung sind nicht nur die offensichtlichen, direkten Stromverbraucher wie IT oder Beleuchtung abhängig. Auch alle Infrastruktureinrichtungen sind heute direkt oder indirekt vom Strom abhängig, z. B. Aufzüge, Klimatechnik, Gefahrenmeldeanlagen, Sicherheitsschleusen, automatische Türschließanlagen, Sprinkler- oder Telefonnebenstellenanlagen. Selbst die Wasserversorgung ist in Hoch- oder Tiefgeschossen aufgrund der erforderlichen Pumpen auf Strom angewiesen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Stromausfall durch technischen Defekt",
+                    "type": "Threat",
+                    "text": "Ein technischer Defekt an der Stromversorgung kann zu einem Stromausfall führen.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Stromausfall durch Sabotage",
+                    "type": "Threat",
+                    "text": "Eine Person kann die Stromversorgung sabotieren und einen Stromausfall verursachen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Planung der Gebäudeabsicherung",
+            "handle": "INF.1.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Je nach der (geplanten) Nutzung eines Gebäudes und dem Schutzbedarf der dort betriebenen Geschäftsprozesse MUSS festgelegt werden, wie das Gebäude abzusichern ist. Bei einem Gebäude MÜSSEN insbesondere Sicherheitsaspekte zum Schutz von Personen im Gebäude, dem Schutz der Wirtschaftsgüter und der IT beachtet werden, von Brandschutz über Elektrik bis hin zur Zutrittskontrolle. Die Sicherheitsanforderungen aus den verschiedenen Bereichen MÜSSEN aufeinander abgestimmt werden.",
+            "isresponsible": "Planende",
+            "mitigates": [
+                "G 0.1",
+                "G 0.18",
+                "G 0.44"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Angepasste Aufteilung der Stromkreise",
+            "handle": "INF.1.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Es MUSS regelmäßig überprüft werden, ob die Absicherung und Auslegung der Stromkreise noch den tatsächlichen Bedürfnissen genügen.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.8"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einhaltung von Brandschutzvorschriften",
+            "handle": "INF.1.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Die bestehenden Brandschutzvorschriften sowie die Auflagen der Bauaufsicht MÜSSEN eingehalten werden. Die Fluchtwege MÜSSEN vorschriftsmäßig ausgeschildert und freigehalten werden. Es MUSS regelmäßig kontrolliert werden, dass die Fluchtwege benutzbar und frei von Hindernissen sind, damit das Gebäude in einer Gefahrensituation schnell geräumt werden kann. Bei der Brandschutzplanung SOLLTE die örtliche Feuerwehr hinzugezogen werden. Unnötige Brandlasten MÜSSEN vermieden werden. Es MUSS eine Brandschutzbeauftragte oder einen Brandschutzbeauftragten oder eine mit dem Aufgabengebiet betraute Person geben. Diese Person MUSS geeignet geschult sein.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.1",
+                "G 0.18",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Branderkennung in Gebäuden",
+            "handle": "INF.1.A4",
+            "level": "Low",
+            "affects": [],
+            "text": "Gebäude MÜSSEN entsprechend der Auflagen in der Baugenehmigung und dem Brandschutzkonzept folgend mit einer ausreichenden Anzahl von Rauchmeldern ausgestattet sein. Ist eine lokale Alarmierung am Ort des Melders nicht ausreichend, MÜSSEN alle Melder auf eine Brandmeldezentrale (BMZ) aufgeschaltet werden. Bei Rauchdetektion MUSS eine Alarmierung im Gebäude ausgelöst werden. Es MUSS sichergestellt sein, dass alle im Gebäude anwesenden Personen diese wahrnehmen können. Die Funktionsfähigkeit aller Rauchmelder sowie aller sonstigen Komponenten einer Brandmeldeanlage (BMA) MUSS regelmäßig überprüft werden.",
+            "isresponsible": "Planende",
+            "mitigates": [
+                "G 0.1",
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Handfeuerlöscher",
+            "handle": "INF.1.A5",
+            "level": "Low",
+            "affects": [],
+            "text": "Zur Sofortbekämpfung von Bränden MÜSSEN Handfeuerlöscher in der jeweils geeigneten Brandklasse (DIN EN 3 Tragbare Feuerlöscher) in ausreichender Zahl und Größe im Gebäude zur Verfügung stehen. Die Handfeuerlöscher MÜSSEN regelmäßig geprüft und gewartet werden. Die Mitarbeitenden SOLLTEN in die Benutzung der Handfeuerlöscher eingewiesen werden. Die Einweisungen SOLLTEN in zweckmäßigen Zeitabständen wiederholt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.1",
+                "G 0.18",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Geschlossene Fenster und Türen",
+            "handle": "INF.1.A6",
+            "level": "Low",
+            "affects": [],
+            "text": "Fenster und von außen zugängliche Türen, etwa von Balkonen oder Terrassen, MÜSSEN zu Zeiten, in denen ein Raum nicht besetzt ist, geschlossen werden. Räume MÜSSEN verschlossen werden, falls dort vertrauliche Informationen zurückgelassen werden. Dafür MUSS es eine entsprechende Anweisung geben. Alle Mitarbeitenden SOLLTEN dazu verpflichtet werden, der Anweisung nachzukommen. Es MUSS regelmäßig überprüft werden, ob die Fenster und Innen- sowie Außentüren nach Verlassen des Gebäudes verschlossen sind. Brand- und Rauchschutztüren DÜRFEN NUR dann dauerhaft offen gehalten werden, wenn dies durch zugelassene Feststellanlagen erfolgt.",
+            "isresponsible": "Mitarbeitende",
+            "mitigates": [
+                "G 0.18",
+                "G 0.29",
+                "G 0.44"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Zutrittsregelung und -kontrolle",
+            "handle": "INF.1.A7",
+            "level": "Low",
+            "affects": [],
+            "text": "Der Zutritt zu schutzbedürftigen Gebäudeteilen und Räumen MUSS geregelt und kontrolliert werden. Es SOLLTE ein Konzept für die Zutrittskontrolle existieren. Die Zahl der zutrittsberechtigten Personen SOLLTE für jeden Bereich auf ein Mindestmaß reduziert werden. Weitere Personen DÜRFEN erst Zutritt erhalten, nachdem geprüft wurde, ob dies notwendig ist. Alle erteilten Zutrittsberechtigungen SOLLTEN dokumentiert werden. Die Zutrittskontrollmaßnahmen MÜSSEN regelmäßig auf ihre Wirksamkeit überprüft werden. Zutrittskontrollen SOLLTEN auch während Umzügen soweit wie möglich vorhanden sein.",
+            "isresponsible": "Zentrale Verwaltung",
+            "mitigates": [
+                "G 0.44"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Rauchverbot",
+            "handle": "INF.1.A8",
+            "level": "Low",
+            "affects": [],
+            "text": "Für Räume mit IT oder Datenträgern, in denen Brände oder Verschmutzungen zu hohen Schäden führen können, wie Serverräume, Datenträger- oder Belegarchive, MUSS ein Rauchverbot erlassen werden. Es MUSS regelmäßig kontrolliert werden, dass bei der Einrichtung oder Duldung von Raucherzonen der Zutrittsschutz nicht umgangen wird.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.1",
+                "G 0.4",
+                "G 0.18",
+                "G 0.44"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einhaltung einschlägiger Normen und Vorschriften",
+            "handle": "INF.1.A10",
+            "level": "Low",
+            "affects": [],
+            "text": "Bei der Planung, der Errichtung und dem Umbau von Gebäuden sowie beim Einbau von technischen Einrichtungen MÜSSEN alle relevanten Normen und Vorschriften berücksichtigt werden.",
+            "isresponsible": "Errichterfirma, Bauleitung",
+            "mitigates": [
+                "G 0.18",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sicherheitskonzept für die Gebäudenutzung",
+            "handle": "INF.1.A9",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTE ein Sicherheitskonzept für die Gebäudenutzung geben. Das Sicherheitskonzept für das Gebäude SOLLTE mit dem Gesamtsicherheitskonzept der Institution abgestimmt sein. Es SOLLTE dokumentiert und regelmäßig aktualisiert werden. Schützenswerte Räume oder Gebäudeteile SOLLTEN nicht in exponierten oder besonders gefährdeten Bereichen untergebracht sein. Es MUSS ein IT-bezogenes Brandschutzkonzept erstellt und umgesetzt werden.",
+            "isresponsible": "Planende",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Schlüsselverwaltung",
+            "handle": "INF.1.A12",
+            "level": "Medium",
+            "affects": [],
+            "text": "Für alle Schlüssel des Gebäudes SOLLTE ein Schließplan vorliegen. Die Herstellung, Aufbewahrung, Verwaltung und Ausgabe von Schlüsseln SOLLTE zentral geregelt sein. Reserveschlüssel SOLLTEN vorgehalten und gesichert, aber für Notfälle griffbereit aufbewahrt werden. Nicht ausgegebene Schlüssel SOLLTEN sicher aufbewahrt werden. Jede Schlüsselausgabe SOLLTE dokumentiert werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.16",
+                "G 0.18",
+                "G 0.44"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Regelungen für Zutritt zu Verteilern",
+            "handle": "INF.1.A13",
+            "level": "Medium",
+            "affects": [],
+            "text": "Der Zutritt zu den Verteilern aller Versorgungseinrichtungen in einem Gebäude SOLLTE im Bedarfsfall schnell möglich sein. Der Zutritt zu Verteilern SOLLTE auf einen engen Kreis von Berechtigten beschränkt sein",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.27",
+                "G 0.44"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Blitzschutzeinrichtungen",
+            "handle": "INF.1.A14",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTE eine Blitzschutzanlage nach geltender Norm installiert sein. Es SOLLTE ein umfassendes Blitz- und Überspannungsschutzkonzept vorhanden sein. Die Fangeinrichtungen bei Gebäuden mit umfangreicher IT-Ausstattung SOLLTEN mindestens der Schutzklasse II gemäß DIN EN 62305 Blitzschutz entsprechen. Die Blitzschutzanlage SOLLTE regelmäßig geprüft und gewartet werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Lagepläne der Versorgungsleitungen",
+            "handle": "INF.1.A15",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTEN aktuelle Lagepläne aller Versorgungsleitungen existieren. Es SOLLTE geregelt sein, wer die Lagepläne aller Versorgungsleitungen führt und aktualisiert. Die Pläne SOLLTEN so aufbewahrt werden, dass ausschließlich berechtigte Personen darauf zugreifen können, sie aber im Bedarfsfall schnell verfügbar sind.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.14",
+                "G 0.18",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Vermeidung von Lagehinweisen auf schützenswerte Gebäudeteile",
+            "handle": "INF.1.A16",
+            "level": "Medium",
+            "affects": [],
+            "text": "Lagehinweise auf schutzwürdige Bereiche SOLLTEN vermieden werden. Schutzwürdige Gebäudebereiche SOLLTEN von außen nicht leicht einsehbar sein.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.19",
+                "G 0.34"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Baulicher Rauchschutz",
+            "handle": "INF.1.A17",
+            "level": "Medium",
+            "affects": [],
+            "text": "Der bauliche Rauchschutz SOLLTE nach Installations- und Umbauarbeiten überprüft werden. Es SOLLTE regelmäßig überprüft werden, ob die Rauchschutz-Komponenten noch funktionieren.",
+            "isresponsible": "Planende",
+            "mitigates": [
+                "G 0.1",
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Brandschutzbegehungen",
+            "handle": "INF.1.A18",
+            "level": "Medium",
+            "affects": [],
+            "text": "Brandschutzbegehungen SOLLTEN regelmäßig, d. h. mindestens ein- bis zweimal im Jahr, stattfinden. Bei Brandschutzbegehungen festgestellte Mängel SOLLTEN unverzüglich behoben werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.1",
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Information des oder der Brandschutzbeauftragten",
+            "handle": "INF.1.A19",
+            "level": "Medium",
+            "affects": [],
+            "text": "Der oder die Brandschutzbeauftragte SOLLTE über Arbeiten an Leitungstrassen, Fluren, Flucht- und Rettungswegen informiert werden. Diese Person SOLLTE die ordnungsgemäße Ausführung von Brandschutzmaßnahmen kontrollieren.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.1",
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Alarmierungsplan und Brandschutzübungen",
+            "handle": "INF.1.A20",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTE ein Alarmierungsplan für die im Brandfall zu ergreifenden Maßnahmen erstellt werden. Der Alarmierungsplan SOLLTE in regelmäßigen Abständen überprüft und aktualisiert werden. Brandschutzübungen SOLLTEN regelmäßig durchgeführt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.1",
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einbruchschutz",
+            "handle": "INF.1.A27",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTEN ausreichende und den örtlichen Gegebenheiten angepasste Maßnahmen zum Einbruchschutz umgesetzt werden. Bei der Planung, der Umsetzung und im Betrieb SOLLTE beim Einbruchschutz darauf geachtet werden, dass er gleichwertig und durchgängig ist. Er SOLLTE regelmäßig durch eine fachkundige Person begutachtet werden. Die Regelungen zum Einbruchschutz SOLLTEN den Mitarbeitenden bekannt sein.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.44"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Regelmäßige Aktualisierungen der Dokumentation",
+            "handle": "INF.1.A36",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Dokumentation eines Gebäudes, z. B. Baupläne, Trassenpläne, Strangschemata, Fluchtwegpläne und Feuerwehrlaufkarten, SOLLTE immer auf dem aktuellen Stand gehalten werden. Es SOLLTE mindestens einmal innerhalb von drei Jahren überprüft werden, ob alle relevanten Pläne noch aktuell und korrekt sind. Über Änderungen SOLLTEN die Mitarbeitenden informiert werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.1",
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Türen und Fenster",
+            "handle": "INF.1.A22",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Türen und Fenster SOLLTEN anhand der Schutzziele des zu sichernden Bereichs und des Schutzbedarfs der Institution in der passenden Klassifizierung nach den einschlägigen Normen ausgewählt werden. Alle raumumschließenden Sicherungsmaßnahmen durch Fenster, Türen und Wände SOLLTEN in Bezug auf Einbruch, Brand und Rauch gleichwertig und angemessen sein. Es SOLLTE regelmäßig überprüft werden, dass die Sicherheitstüren und -fenster funktionstüchtig sind.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.1",
+                "G 0.18",
+                "G 0.34",
+                "G 0.44"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Bildung von Sicherheitszonen",
+            "handle": "INF.1.A23",
+            "level": "High",
+            "affects": [
+                "C"
+            ],
+            "text": "Räume ähnlichen Schutzbedarfs SOLLTEN in Zonen zusammengefasst werden, um vergleichbare Risiken einheitlich behandeln und Kosten für erforderliche Sicherheitsmaßnahmen reduzieren zu können.",
+            "isresponsible": "Planende",
+            "mitigates": [
+                "G 0.18",
+                "G 0.34",
+                "G 0.44"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Selbsttätige Entwässerung",
+            "handle": "INF.1.A24",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Alle von Wasser gefährdeten Bereiche SOLLTEN mit einer selbsttätigen Entwässerung ausgestattet sein. Es SOLLTE regelmäßig geprüft werden, ob die aktiven und passiven Entwässerungseinrichtungen noch funktionieren.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.3",
+                "G 0.5",
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Geeignete Standortauswahl",
+            "handle": "INF.1.A25",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Bei Planung und Auswahl des Gebäudestandortes SOLLTE geprüft werden, welche Umfeldbedingungen Einfluss auf die Informationssicherheit haben könnten. Es SOLLTE eine Übersicht über standortbedingte Gefährdungen geben. Diesen Gefährdungen SOLLTE mit zusätzlichen kompensierenden Maßnahmen entgegengewirkt werden.",
+            "isresponsible": "Institutionsleitung",
+            "mitigates": [
+                "G 0.5",
+                "G 0.6",
+                "G 0.7",
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Pforten- oder Sicherheitsdienst",
+            "handle": "INF.1.A26",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Die Aufgaben des Pforten- oder Sicherheitsdienstes SOLLTEN klar dokumentiert sein. Der Pfortendienst SOLLTE alle Personenbewegungen an der Pforte und an allen anderen Eingängen beobachten und, je nach Sicherheitskonzept, kontrollieren. Alle Mitarbeitenden und Besuchenden SOLLTEN sich bei dem Pfortendienst ausweisen können. Besuchende SOLLTEN zu den Besuchten begleitet oder an der Pforte abgeholt werden. Der Pfortendienst SOLLTE rechtzeitig darüber informiert werden, wenn sich Zutrittsberechtigungen ändern.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.16",
+                "G 0.18",
+                "G 0.34",
+                "G 0.44"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Auswahl eines geeigneten Gebäudes",
+            "handle": "INF.1.A30",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Bei der Auswahl eines geeigneten Gebäudes SOLLTE geprüft werden, ob alle für die spätere Nutzung relevanten Sicherheitsanforderungen umgesetzt werden können. Für jedes Gebäude SOLLTEN im Vorfeld die vorhandenen Gefährdungen und die erforderlichen Schäden vorbeugenden oder reduzierenden Maßnahmen dokumentiert werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Auszug aus Gebäuden",
+            "handle": "INF.1.A31",
+            "level": "High",
+            "affects": [
+                "C"
+            ],
+            "text": "Im Vorfeld des Auszugs SOLLTE ein Bestandsverzeichnis aller für die Informationssicherheit für den Umzug relevanten Objekte wie Hardware, Software, Datenträger, Ordner oder Schriftstücke erstellt werden. Nach dem Auszug SOLLTEN alle Räume nach zurückgelassenen Dingen durchsucht werden.",
+            "isresponsible": "Zentrale Verwaltung",
+            "mitigates": [
+                "G 0.16",
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Brandschott-Kataster",
+            "handle": "INF.1.A32",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Es SOLLTE ein Brandschott-Kataster geführt werden. In diesem SOLLTEN alle Arten von Schotten individuell aufgenommen werden. Nach Arbeiten an Brandschotten SOLLTEN die Änderungen im Kataster spätestens nach vier Wochen eingetragen werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Gefahrenmeldeanlage",
+            "handle": "INF.1.A34",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Es SOLLTE eine den Räumlichkeiten und den Risiken angemessene Gefahrenmeldeanlage geben. Die Gefahrenmeldeanlage SOLLTE regelmäßig geprüft und gewartet werden. Es MUSS sichergestellt werden, dass diejenigen, die Gefahrenmeldungen empfangen in der Lage sind, technisch und personell angemessen auf den Alarm zu reagieren.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.1",
+                "G 0.3",
+                "G 0.18",
+                "G 0.44"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Perimeterschutz",
+            "handle": "INF.1.A35",
+            "level": "High",
+            "affects": [
+                "CA"
+            ],
+            "text": "Abhängig vom Schutzbedarf des Gebäudes und abhängig vom Gelände SOLLTE dieses über einen Perimeterschutz verfügen. Hierbei SOLLTEN mindestens folgende Komponenten auf ihren Nutzen und ihre Umsetzbarkeit hin betrachtet werden: äußere Umschließung oder Umfriedung, Sicherungsmaßnahmen gegen unbeabsichtigtes Überschreiten einer Grundstücksgrenze, Sicherungsmaßnahmen gegen beabsichtigtes gewaltloses Überwinden der Grundstücksgrenze, Maßnahmen zur Erschwerung des beabsichtigten gewaltsamen Überwindens der Grundstücksgrenze, Freigelände-Sicherungsmaßnahmen, Personen- und Fahrzeugdetektion, Maßnahmen zur Beweissicherung (beispielsweise Videoaufzeichnung) sowie automatische Alarmierung.",
+            "isresponsible": "Planende, Haustechnik",
+            "mitigates": [
+                "G 0.7",
+                "G 0.34",
+                "G 0.44"
+            ]
+        }
+    ]
+}

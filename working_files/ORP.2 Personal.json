@@ -1,0 +1,174 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "ORP.2 Personal",
+    "handle": "ORP.2",
+    "text": "This chapter focuses on the role of personnel in information security. It emphasizes that even the most robust technical safeguards can be rendered ineffective if employees do not adhere to security practices. The goal is to outline the responsibilities of human resources and supervisors in ensuring that employees understand and comply with information security policies.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Personalausfall",
+            "handle": "2.1",
+            "text": "The absence of personnel can lead to delays or the inability to complete tasks.",
+            "exploitedBy_examples": [],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Kenntnis über Regelungen",
+            "handle": "2.2",
+            "text": "Employees may not be aware of or understand security policies, leading to unintentional breaches.",
+            "exploitedBy_examples": [],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sorglosigkeit im Umgang mit Informationen",
+            "handle": "2.3",
+            "text": "Employees may engage in careless practices that compromise security, such as writing passwords on sticky notes.",
+            "exploitedBy_examples": [],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Qualifikationen der Mitarbeitenden",
+            "handle": "2.4",
+            "text": "Employees may lack the necessary skills or knowledge to effectively identify and respond to security threats.",
+            "exploitedBy_examples": [],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Geregelte Einarbeitung neuer Mitarbeitender",
+            "handle": "ORP.2.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Personalabteilung sowie die Vorgesetzten MÜSSEN dafür sorgen, dass Mitarbeitende zu Beginn ihrer Beschäftigung in ihre neuen Aufgaben eingearbeitet werden. Die Mitarbeitenden MÜSSEN über bestehende Regelungen, Handlungsanweisungen und Verfahrensweisen informiert werden. Eine Checkliste und ein direkter Ansprechpartner oder Ansprechpartnerin (\"Pate oder Patin\") kann hierbei hilfreich sein und SOLLTE etabliert werden.",
+            "isresponsible": "Vorgesetzte",
+            "mitigates": [
+                "G 0.29",
+                "G 0.31",
+                "G 0.38"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Geregelte Verfahrensweise beim Weggang von Mitarbeitenden",
+            "handle": "ORP.2.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Verlassen Mitarbeitende die Institution, MUSS der oder die Nachfolgende rechtzeitig eingewiesen werden. Dies SOLLTE idealerweise durch den oder die ausscheidenden Mitarbeitenden erfolgen. Ist eine direkte Übergabe nicht möglich, MUSS von den ausscheidenden Mitarbeitenden eine ausführliche Dokumentation angefertigt werden.\n\nAußerdem MÜSSEN von ausscheidenden Mitarbeitenden alle im Rahmen ihrer Tätigkeit erhaltenen Unterlagen, Schlüssel und Geräte sowie Ausweise und Zutrittsberechtigungen eingezogen werden. Vor der Verabschiedung MUSS noch einmal auf Verschwiegenheitsverpflichtungen hingewiesen werden. Es SOLLTE besonders darauf geachtet werden, dass keine Interessenkonflikte auftreten. Um nach einem Stellenwechsel Interessenkonflikte zu vermeiden, SOLLTEN Konkurrenzverbote und Karenzzeiten vereinbart werden.\n\nWeiterhin MÜSSEN Notfall- und andere Ablaufpläne aktualisiert werden. Alle betroffenen Stellen innerhalb der Institution, wie z. B. das Sicherheitspersonal oder die IT-Abteilung, MÜSSEN über das Ausscheiden des oder der Mitarbeitenden informiert werden. Damit alle verbundenen Aufgaben, die beim Ausscheiden des oder der Mitarbeitenden anfallen, erledigt werden, SOLLTE hier ebenfalls eine Checkliste angelegt werden. Zudem SOLLTE es einen festen Ansprechpartner oder Ansprechpartnerin der Personalabteilung geben, der den Weggang von Mitarbeitenden begleitet.",
+            "isresponsible": "Vorgesetzte, IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.19",
+                "G 0.29",
+                "G 0.30",
+                "G 0.33"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Festlegung von Vertretungsregelungen",
+            "handle": "ORP.2.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Vorgesetzten MÜSSEN dafür sorgen, dass im laufenden Betrieb Vertretungsregelungen umgesetzt werden. Dafür MUSS sichergestellt werden, dass es für alle wesentlichen Geschäftsprozesse und Aufgaben praktikable Vertretungsregelungen gibt. Bei diesen Regelungen MUSS der Aufgabenumfang der Vertretung im Vorfeld klar definiert werden. Es MUSS sichergestellt werden, dass die Vertretung über das dafür nötige Wissen verfügt. Ist dies nicht der Fall, MUSS überprüft werden, wie der Vertretenden zu schulen ist oder ob es ausreicht, den aktuellen Verfahrens- oder Projektstand ausreichend zu dokumentieren. Ist es im Ausnahmefall nicht möglich, für einzelne Mitarbeitende einen kompetenten Vertretenden zu benennen oder zu schulen, MUSS frühzeitig entschieden werden, ob externes Personal dafür hinzugezogen werden kann.",
+            "isresponsible": "Vorgesetzte",
+            "mitigates": [
+                "G 0.31",
+                "G 0.33"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Festlegung von Regelungen für den Einsatz von Fremdpersonal",
+            "handle": "ORP.2.A4",
+            "level": "Low",
+            "affects": [],
+            "text": "Wird externes Personal beschäftigt, MUSS dieses wie alle eigenen Mitarbeitenden dazu verpflichtet werden, geltende Gesetze, Vorschriften und interne Regelungen einzuhalten. Fremdpersonal, das kurzfristig oder einmalig eingesetzt wird, MUSS in sicherheitsrelevanten Bereichen beaufsichtigt werden. Bei längerfristig beschäftigtem Fremdpersonal MUSS dieses wie die eigenen Mitarbeitenden in seine Aufgaben eingewiesen werden. Auch für diese Mitarbeitende MUSS eine Vertretungsregelung eingeführt werden. Verlässt das Fremdpersonal die Institution, MÜSSEN Arbeitsergebnisse wie bei eigenem Personal geregelt übergeben und eventuell ausgehändigte Zugangsberechtigungen zurückgegeben werden.",
+            "isresponsible": "Vorgesetzte",
+            "mitigates": [
+                "G 0.17",
+                "G 0.29",
+                "G 0.30",
+                "G 0.44",
+                "G 0.45",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Vertraulichkeitsvereinbarungen für den Einsatz von Fremdpersonal",
+            "handle": "ORP.2.A5",
+            "level": "Low",
+            "affects": [],
+            "text": "Bevor externe Personen Zugang und Zugriff zu vertraulichen Informationen erhalten, MÜSSEN mit ihnen Vertraulichkeitsvereinbarungen in schriftlicher Form geschlossen werden. In diesen Vertraulichkeitsvereinbarungen MÜSSEN alle wichtigen Aspekte zum Schutz von institutionsinternen Informationen berücksichtigt werden.",
+            "isresponsible": "Vorgesetzte",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.22",
+                "G 0.29",
+                "G 0.32",
+                "G 0.37",
+                "G 0.45",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Aufgaben und Zuständigkeiten von Mitarbeitenden",
+            "handle": "ORP.2.A14",
+            "level": "Low",
+            "affects": [],
+            "text": "Alle Mitarbeitenden MÜSSEN dazu verpflichtet werden, geltende Gesetze, Vorschriften und interne Regelungen einzuhalten. Den Mitarbeitenden MUSS der rechtliche Rahmen ihre Tätigkeit bekannt sein. Die Aufgaben und Zuständigkeiten von Mitarbeitenden MÜSSEN in geeigneter Weise dokumentiert sein. Außerdem MÜSSEN alle Mitarbeitenden darauf hingewiesen werden, dass alle während der Arbeit erhaltenen Informationen ausschließlich zum internen Gebrauch bestimmt sind. Den Mitarbeitenden MUSS bewusst gemacht werden, die Informationssicherheit der Institution auch außerhalb der Arbeitszeit und außerhalb des Betriebsgeländes zu schützen.",
+            "isresponsible": "Vorgesetzte",
+            "mitigates": [
+                "G 0.18",
+                "G 0.19",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Qualifikation des Personals",
+            "handle": "ORP.2.A15",
+            "level": "Low",
+            "affects": [],
+            "text": "Mitarbeitende MÜSSEN regelmäßig geschult bzw. weitergebildet werden. In allen Bereichen MUSS sichergestellt werden, dass kein Mitarbeitende mit veralteten Wissensstand arbeitet. Weiterhin SOLLTE den Mitarbeitenden während ihrer Beschäftigung die Möglichkeit gegeben werden, sich im Rahmen ihres Tätigkeitsfeldes weiterzubilden.\n\nWerden Stellen besetzt, MÜSSEN die erforderlichen Qualifikationen und Fähigkeiten genau formuliert sein. Anschließend SOLLTE geprüft werden, ob diese bei den Bewerbenden für die Stelle tatsächlich vorhanden sind. Es MUSS sichergestellt sein, dass Stellen nur von Mitarbeitenden besetzt werden, für die sie qualifiziert sind.",
+            "isresponsible": "Vorgesetzte",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.29",
+                "G 0.32",
+                "G 0.38",
+                "G 0.42",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sicherheitsüberprüfung",
+            "handle": "ORP.2.A13",
+            "level": "High",
+            "affects": [
+                "C"
+            ],
+            "text": "Im Hochsicherheitsbereich SOLLTE eine zusätzliche Sicherheitsüberprüfung zusätzlich zur grundlegenden Überprüfung der Vertrauenswürdigkeit von Mitarbeitenden durchgeführt werden. Arbeiten Mitarbeitende mit nach dem Geheimschutz klassifizierten Verschlusssachen, SOLLTEN sich die entsprechenden Mitarbeitenden einer Sicherheitsüberprüfung nach dem Sicherheitsüberprüfungsgesetz (SÜG) unterziehen. Diesbezüglich SOLLTE der oder die Informationssicherheitsbeauftragte den Geheimschutzbeauftragten oder die Geheimschutzbeauftragte bzw. Sicherheitsbevollmächtigten oder Sicherheitsbevollmächtigte der Institution einbeziehen.",
+            "isresponsible": "",
+            "mitigates": [
+                "G 0.14",
+                "G 0.29",
+                "G 0.36",
+                "G 0.38"
+            ]
+        }
+    ]
+}

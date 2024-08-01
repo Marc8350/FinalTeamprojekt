@@ -1,0 +1,402 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "Eingebettete Systeme",
+    "handle": "SYS.4.3",
+    "text": "Eingebettete Systeme sind informationsverarbeitende Systeme, die in ein größeres System oder Produkt integriert sind. Sie übernehmen Steuerungs-, Regelungs- und Datenverarbeitungsaufgaben und werden dabei oft nicht direkt von den Benutzenden wahrgenommen. Eingebettete Systeme finden sich sowohl im Bereich der Hochtechnologie wie z. B. der Luft- und Raumfahrt, der Medizintechnik, der Telekommunikation und der Automobiltechnik als auch im Consumer- und Haushaltsgerätebereich.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Sicherheitsanforderungen bei der Entwicklung von eingebetteten Systemen",
+            "handle": "2.1",
+            "text": "Aus Kostengründen spielt die Informationssicherheit bei der Entwicklung von eingebetteten Systemen häufig eine weniger wichtige Rolle als z. B. die Performance oder Zuverlässigkeit. Werden jedoch Sicherheitsanforderungen in einer oder mehreren Entwicklungsphasen nicht ausreichend berücksichtigt, können die eingebetteten Systeme schwerwiegende Schwachstellen aufweisen.",
+            "exploitedBy_examples": [],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ungesicherte Ein- und Ausgabe-Schnittstellen bei eingebetteten Systemen",
+            "handle": "2.2",
+            "text": "Die Schnittstellen eingebetteter Systeme sind potenzielle Angriffspunkte. Das betrifft Schnittstellen auf allen Ebenen des OSI-Schichtenmodells und alle eingesetzten Übertragungsmedien. Wird der Zugang über die Schnittstellen nicht kontrolliert oder sind die Kontrollmechanismen zu schwach, könnte bei einem Angriff in das System eingedrungen werden, unbefugt Daten gelesen und manipuliert sowie Folgeangriffe eingeleitet werden. So könnten unbemerkt Spionage- oder Sabotagegeräte angeschlossen werden, z. B. miniaturisierte Steuerungen oder Datenlogger.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Angriff über I/O-Ports",
+                    "type": "Threat",
+                    "text": "Auf Mikrocontroller-Ebene könnten bei Anschluss der Systeme an die I/O-Ports über die I/O-Leitungen Signale in die I/O-Register eingespielt werden oder es könnten Ausgangssignale aufgezeichnet werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Angriff über Reset-Eingang",
+                    "type": "Threat",
+                    "text": "Ist ein Reset-Eingang vorhanden, könnten Angreifende diesen ansteuern und temporär das System außer Betrieb setzen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende physische Absicherung bei eingebetteten Systemen",
+            "handle": "2.3",
+            "text": "Sind eingebettete Systeme physisch leicht zugänglich, könnten Angreifende die Systeme zerstören oder beschädigen, z. B. durch mechanische Gewalt, Kurzschlüsse oder Überspannungen. Auch könnten sie auf die elektronischen Komponenten zugreifen, z. B. IC-Pins oder Kontaktierungen, und so die elektrischen Signale mit entsprechenden Mess- und Analysewerkzeugen unbemerkt aufzeichnen sowie selbst Signale einspeisen. Gelangen sie in den Besitz eines eingebetteten Systems, können sie mittels physischer Verfahren Daten lesen und manipulieren oder auf nicht sicher gelöschte Daten zugreifen. Das kann dann dazu führen, dass die Vertraulichkeit, Integrität und Verfügbarkeit der auf dem eingebetteten System gespeicherten Informationen verletzt werden.",
+            "exploitedBy_examples": [],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Hardwareausfall und Hardwarefehler bei eingebetteten Systemen",
+            "handle": "2.4",
+            "text": "Umgebungseinflüsse wie elektromagnetische Interferenz, Temperaturschwankungen, eine instabile Spannungsversorgung, herstellungsbedingte Materialfehler und Fertigungsstreuung können dazu führen, dass eingebettete Systeme ausfallen. Auch ein normaler oder vorzeitiger Verschleiß, der z. B. durch raue Umgebungseinflüsse wie Staub, Sand oder Verschmutzungen entstehen kann, kann einen Ausfall der Systeme zur Folge haben. Auch könnten hierdurch die umgebenden Systeme stark beeinträchtigen werden.",
+            "exploitedBy_examples": [],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einspielen (Flashen) von manipulierten Software-Updates bei eingebetteten Systemen",
+            "handle": "2.5",
+            "text": "Viele eingebettete Systeme speichern ihre Software auf Flash-Speichern und EEPROMs und bieten die Möglichkeit, ihre Firmware mit einem Programmiergerät zu aktualisieren, das über eine Datenschnittstelle oder über eine Netzverbindung angeschlossen wird. Darüber können allerdings auch Angreifende manipulierte Software-Updates einspielen und so die Funktion des Systems modifizieren. In der Folge können die ursprünglichen Aufgaben des Systems unterbrochen oder manipuliert werden.",
+            "exploitedBy_examples": [],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Seitenkanalangriffe auf eingebettete Kryptosysteme",
+            "handle": "2.6",
+            "text": "Angreifende könnten mittels eines Seitenkanalangriffs Verschlüsselungen oder Signaturen brechen, indem sie dazu beobachtbare Eigenschaften der physischen Implementierung eines Kryptosystems ausnutzen. So könnten sie beispielsweise aus dem Energieverbrauch eines Mikroprozessors während kryptographischer Berechnungen Rückschlüsse auf ausgeführte Operationen und auf Schlüssel ziehen. Auch könnten sie Rechenzeitangriffe, mikroarchitekturelle Angriffe oder (semi-) invasive Angriffe durchführen. So konnten Forschende in der Vergangenheit den geheimen Schlüssel eines TLS/SSL-Servers ermitteln, der den Digital Signature Algorithm (DSA) mit Elliptischer Kurven-Kryptografie verwendet. Der Angriff beruhte auf der Tatsache, dass die benötigte Zeit für eine Multiplikation Rückschlüsse auf deren Operanden zulässt.",
+            "exploitedBy_examples": [],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Eindringen und Manipulation über die Kommunikationsschnittstelle von eingebetteten Systemen",
+            "handle": "2.7",
+            "text": "Eingebettete Systeme sind oft hinsichtlich Codegröße, Zeitverhalten, Energieverbrauch, Kosten sowie Größe und Gewicht eingeschränkt. Sie sind daher häufig nicht mit ausreichenden Sicherheitsfunktionen, wie z. B. starker Kryptografie, ausgestattet. Moderne eingebettete Systeme sind zunehmend durch weitverbreitete Techniken und Protokolle vernetzt und somit potenziell angreifbar.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Angriff über Kommunikationsschnittstellen",
+                    "type": "Threat",
+                    "text": "Bei einem Angriff könnte versucht werden, Daten oder Software auf einem eingebetteten System zu manipulieren, indem versucht wird, die standardmäßig vorgesehenen Kommunikationsschnittstellen und -protokolle für eigene Zwecke zu missbrauchen. Sind z. B. die IP-Kommunikation oder Ethernet-, WLAN-, Bluetooth- und Mobil- oder Digitalfunk-Schnittstellen nicht ausreichend gesichert, können Angreifende Verbindungen übernehmen, Nachrichten fälschen oder in ein System eindringen und Folgeangriffe durchführen. Weiterhin kann ebenso versucht werden, mittels anderer verfügbarer Kommunikationsschnittstellen, z. B. USB-Ports, in das System einzudringen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz gefälschter Komponenten",
+            "handle": "2.8",
+            "text": "Im Produktionsprozess oder wenn im Servicefall Komponenten ausgetauscht werden, kann es passieren, dass gefälschte Komponenten in eingebettete Systeme eingebaut werden. Da für viele Bauteile Fälschungen im Umlauf sind, kann dies auch unabsichtlich geschehen. Gefälschte Bauteile arbeiten oft unzuverlässiger als die originalen Bauteile. Hierdurch könnten Funktionen ausfallen oder nur fehlerhaft arbeiten. Angreifende können auch gezielt ein Gerät oder Bauteil entwickeln, das genauso aussieht wie das Original, aber dessen Funktion manipuliert ist. Durch eine derartige Komponente könnten beispielsweise Hintertüren eingebaut, einzelne Funktionen manipuliert oder die Verfügbarkeit eingeschränkt werden.",
+            "exploitedBy_examples": [],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Regelungen zum Umgang mit eingebetteten Systemen",
+            "handle": "SYS.4.3.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Alle Benutzenden und Administrierende MÜSSEN über Verhaltensregeln und Meldewege bei Ausfällen, Fehlfunktionen oder bei Verdacht auf einen Sicherheitsvorfall informiert sein. Alle eingebetteten Systeme inklusive Schnittstellen MÜSSEN erfasst werden. Die eingebetteten Systeme MÜSSEN sicher vorkonfiguriert werden. Die vorgenommene Konfiguration SOLLTE dokumentiert sein. Weiterhin SOLLTEN Regelungen festgelegt werden, um die Integrität und Funktionsfähigkeit der eingebetteten Systeme zu testen.",
+            "isresponsible": "B",
+            "mitigates": [
+                "G 0.18",
+                "G 0.29",
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Deaktivieren nicht benutzter Schnittstellen und Dienste bei eingebetteten Systemen",
+            "handle": "SYS.4.3.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Es MUSS sichergestellt werden, dass nur auf benötigte Schnittstellen zugegriffen werden kann. Alle anderen Schnittstellen MÜSSEN deaktiviert werden. Zudem DÜRFEN NUR benötigte Dienste aktiviert sein. Der Zugang zu Anwendungsschnittstellen MUSS durch sichere Authentisierung geschützt sein.",
+            "isresponsible": "B",
+            "mitigates": [
+                "G 0.23",
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Protokollierung sicherheitsrelevanter Ereignisse bei eingebetteten Systemen",
+            "handle": "SYS.4.3.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Sicherheitsverstöße MÜSSEN protokolliert werden (siehe OPS.1.1.5 Protokollierung). Ist eine elektronische Protokollierung nicht oder nur sehr begrenzt realisierbar, SOLLTEN alternative, organisatorische Regelungen geschaffen und umgesetzt werden.",
+            "isresponsible": "B",
+            "mitigates": [
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.25",
+                "G 0.26",
+                "G 0.30",
+                "G 0.37"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erstellung von Beschaffungskriterien für eingebettete Systeme",
+            "handle": "SYS.4.3.A4",
+            "level": "Medium",
+            "affects": [],
+            "text": "Bevor eingebettete Systeme beschafft werden, SOLLTE eine Anforderungsliste erstellt werden, anhand derer die infrage kommenden Systeme oder Komponenten bewertet werden. Die Anforderungsliste SOLLTE mindestens folgende sicherheitsrelevante Aspekte umfassen: Aspekt der materiellen Sicherheit, Anforderungen an die Sicherheitseigenschaften der Hardware, Anforderungen an die Sicherheitseigenschaften der Software, Unterstützung eines Trusted Platform Module (TPM) durch das Betriebssystem, Sicherheitsaspekte der Entwicklungsumgebung sowie organisatorische Sicherheitsaspekte.",
+            "isresponsible": "S",
+            "mitigates": [
+                "G 0.18",
+                "G 0.20"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Schutz vor schädigenden Umwelteinflüssen bei eingebetteten Systemen",
+            "handle": "SYS.4.3.A5",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTE sichergestellt werden, dass eingebettete Systeme entsprechend ihrer vorgesehenen Einsatzart und des vorgesehenen Einsatzorts angemessen vor schädigenden Umwelteinflüssen geschützt sind. Die Anforderungen hierfür SOLLTEN bereits bei der Planung analysiert werden. Zudem SOLLTE sichergestellt werden, dass die Vorkehrungen, um einzelne Komponenten vor Staub, Hitze, Nässe und Verschmutzung zu schützen, keine Probleme mit den Anforderungen des übergeordneten Systems verursachen.",
+            "isresponsible": "S",
+            "mitigates": [
+                "G 0.4",
+                "G 0.25"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verhindern von Debugging-Möglichkeiten bei eingebetteten Systemen",
+            "handle": "SYS.4.3.A6",
+            "level": "Medium",
+            "affects": [],
+            "text": "Eventuelle Debugging-Möglichkeiten SOLLTEN möglichst vollständig aus eingebetteten Systemen entfernt werden. Wird On-Chip-Debugging genutzt, MUSS sichergestellt werden, dass Debugging-Funktionen nicht unberechtigt genutzt oder aktiviert werden können. Weiterhin SOLLTE sichergestellt werden, dass keine Eingabeschnittstellen für Testsignale und Messpunkte zum Anschluss von Analysatoren aktiviert und für Unberechtigte nutzbar sind. Zudem SOLLTEN alle Hardware-Debugging-Schnittstellen deaktiviert sein.",
+            "isresponsible": "S",
+            "mitigates": [
+                "G 0.23",
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Hardware-Realisierung von Funktionen eingebetteter Systeme",
+            "handle": "SYS.4.3.A7",
+            "level": "Medium",
+            "affects": [],
+            "text": "Werden eingebettete Systeme selbst entwickelt, SOLLTEN bei der Designentscheidung zur Hardware- und Software-Realisierung Sicherheitsaspekte berücksichtigt werden. Auch bei der Entscheidung, eine bestimmte Hardware-Technik zu implementieren, SOLLTEN Sicherheitsaspekte berücksichtigt werden.",
+            "isresponsible": "S",
+            "mitigates": [
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.24"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz eines sicheren Betriebssystems für eingebettete Systeme",
+            "handle": "SYS.4.3.A8",
+            "level": "Medium",
+            "affects": [],
+            "text": "Das eingesetzte Betriebssystem und die Konfiguration des eingebetteten Systems SOLLTEN für den vorgesehenen Betrieb geeignet sein. So SOLLTE das Betriebssystem für die vorgesehene Aufgabe über ausreichende Sicherheitsmechanismen verfügen. Die benötigten Dienste und Funktionen SOLLTEN aktiviert sein. Das Betriebssystem SOLLTE es unterstützen, ein Trusted Plattform Module (TPM) zu nutzen.",
+            "isresponsible": "S",
+            "mitigates": [
+                "G 0.15",
+                "G 0.20",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.28",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz kryptografischer Prozessoren bzw. Koprozessoren bei eingebetteten Systemen",
+            "handle": "SYS.4.3.A9",
+            "level": "Medium",
+            "affects": [],
+            "text": "Wird ein zusätzlicher Mikrocontroller für die kryptografischen Berechnungen verwendet, SOLLTE dessen Kommunikation mit dem System-Mikrocontroller ausreichend abgesichert sein. Für das eingebettete System SOLLTEN die nötigen Vertrauensanker realisiert werden. Auch SOLLTE eine Vertrauenskette (Chain of Trust) implementiert sein.",
+            "isresponsible": "S",
+            "mitigates": [
+                "G 0.15",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Wiederherstellung von eingebetteten Systemen",
+            "handle": "SYS.4.3.A10",
+            "level": "Medium",
+            "affects": [],
+            "text": "Eingebettete Systeme SOLLTEN über Rollback-Fähigkeiten verfügen.",
+            "isresponsible": "S",
+            "mitigates": [
+                "G 0.25",
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Aussonderung eines eingebetteten Systems",
+            "handle": "SYS.4.3.A11",
+            "level": "Medium",
+            "affects": [],
+            "text": "Bevor eingebettete Systeme ausgesondert werden, SOLLTEN sämtliche Daten auf dem System sicher gelöscht werden. Ist dies nicht möglich, SOLLTE das System vernichtet werden. Die Löschung oder Vernichtung SOLLTE dokumentiert werden.",
+            "isresponsible": "S",
+            "mitigates": [
+                "G 0.15",
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz eines zertifizierten Betriebssystems",
+            "handle": "SYS.4.3.A13",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Das Betriebssystem SOLLTE nach einem anerkannten Standard auf einer angemessenen Stufe evaluiert sein.",
+            "isresponsible": "H",
+            "mitigates": [
+                "G 0.15",
+                "G 0.20",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.28",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Abgesicherter und authentisierter Bootprozess bei eingebetteten Systemen",
+            "handle": "SYS.4.3.A14",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Der Bootprozess eines eingebetteten Systems SOLLTE abgesichert sein, indem der Bootloader die Integrität des Betriebssystems überprüft und es nur dann lädt, wenn es als korrekt eingestuft wurde. Umgekehrt SOLLTE auch das Betriebssystem die Integrität des Bootloaders prüfen. Es SOLLTE ein mehrstufiges Boot-Konzept mit kryptografisch sicherer Überprüfung der Einzelschritte realisiert werden. Sichere Hardware-Vertrauensanker SOLLTEN verwendet werden. Bei einem ARM-basierten eingebetteten System SOLLTE ARM Secure Boot genutzt werden. Bei einem Unified Extensible Firmware Interface (UEFI) SOLLTE Secure Boot genutzt werden.",
+            "isresponsible": "H",
+            "mitigates": [
+                "G 0.21",
+                "G 0.22",
+                "G 0.30",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Speicherschutz bei eingebetteten Systemen",
+            "handle": "SYS.4.3.A15",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Bereits beim Entwurf eingebetteter Systeme SOLLTEN Speicherschutzmechanismen berücksichtigt werden. Die Art des Speicherschutzes sowie Anzahl und Größe der Schutzräume SOLLTEN für den Einsatzzweck angemessen sein.",
+            "isresponsible": "H",
+            "mitigates": [
+                "G 0.21",
+                "G 0.22",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Tamper-Schutz bei eingebetteten Systemen",
+            "handle": "SYS.4.3.A16",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Für eingebettete Systeme SOLLTE ein Tamper-Schutz-Konzept entwickelt werden. Es SOLLTEN angemessene Mechanismen etabliert werden, die Tamper-Angriffe erkennen, aufzeichnen und verhindern. Schließlich SOLLTEN angemessene Vorgaben etabliert werden, wie auf einen Tamper-Angriff zu reagieren ist.",
+            "isresponsible": "H",
+            "mitigates": [
+                "G 0.21",
+                "G 0.22",
+                "G 0.24",
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Automatische Überwachung der Baugruppenfunktion",
+            "handle": "SYS.4.3.A17",
+            "level": "High",
+            "affects": [
+                "IA"
+            ],
+            "text": "Sämtliche Baugruppen eines eingebetteten Systems mit erhöhten Anforderungen an die Verfügbarkeit und Integrität SOLLTEN integrierte Selbsttesteinrichtungen (Built-in Self-Test, BIST) besitzen. Tests SOLLTEN während des Einschaltvorgangs sowie in angemessenen zeitlichen Intervallen während des Betriebs die Integrität des Systems prüfen. Soweit möglich, SOLLTEN die Selbsttestfunktionen auch Sicherheitsfunktionen und Sicherheitseigenschaften der Baugruppe überprüfen. Regelmäßig SOLLTE die Integrität der Speicher und I/O-Komponenten im Rahmen des BIST geprüft werden. Bestehende BIST-Funktionen SOLLTEN, falls möglich, um die erforderlichen Funktionen ergänzt werden.",
+            "isresponsible": "H",
+            "mitigates": [
+                "G 0.21",
+                "G 0.22",
+                "G 0.25",
+                "G 0.26",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Widerstandsfähigkeit eingebetteter Systeme gegen Seitenkanalangriffe",
+            "handle": "SYS.4.3.A18",
+            "level": "High",
+            "affects": [
+                "C"
+            ],
+            "text": "Es SOLLTEN angemessene Vorkehrungen gegen nicht-invasive und (semi-)invasive Seitenkanalangriffe getroffen werden.",
+            "isresponsible": "H",
+            "mitigates": [
+                "G 0.15",
+                "G 0.21",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Auswahl einer vertrauenswürdigen Lieferungs- und Logistikkette sowie qualifizierte herstellende Institutionen für eingebettete Systeme",
+            "handle": "SYS.4.3.A12",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Es SOLLTEN in der Logistikkette wirksame Kontrollen durchgeführt werden, sodass sichergestellt ist, dass eingebettete Systeme keine manipulierten, gefälschten oder getauschten Komponenten enthalten, die Systeme der Spezifikation entsprechen und keine verdeckten Funktionen bei der Herstellung implementiert wurden sowie Unbefugte nicht an vertrauliche Informationen über das eingebettete System gelangen können. Die beteiligten Unternehmen SOLLTEN nachweisbar qualifiziert sein.",
+            "isresponsible": "H",
+            "mitigates": [
+                "G 0.4",
+                "G 0.18",
+                "G 0.20",
+                "G 0.21",
+                "G 0.22",
+                "G 0.30"
+            ]
+        }
+    ]
+}

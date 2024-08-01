@@ -1,0 +1,344 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "SYS.3.2.3 iOS (for Enterprise)",
+    "handle": "SYS.3.2.3",
+    "text": "This chapter describes how to securely integrate iOS devices into an organization's IT infrastructure. It focuses on the configuration of iOS devices for business use and includes requirements for security settings, data protection, and the use of cloud services. The chapter also addresses the use of Apple's MDM solution for managing iOS devices.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Risikokonzentration durch ein Konto (Apple-ID) für alle Apple-Dienste",
+            "handle": "2.1",
+            "text": "The Apple ID is a central access point for all Apple services. If unauthorized individuals gain access to an Apple ID, they can potentially use Apple services, disrupt the availability of Apple ID-based services, remotely locate or reset iOS devices, or access data stored in iCloud. Attackers can even clone data stored in iCloud backups to their own iOS devices.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unauthorized access to Apple ID",
+                    "type": "Threat",
+                    "text": "An attacker could gain access to an Apple ID through phishing, social engineering, or by exploiting vulnerabilities in Apple's systems. Once they have access, they can use the Apple ID to access sensitive information, control the user's devices, or disrupt their services.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Feste Integration von vorinstallierten Apps und deren Funktionen",
+            "handle": "2.2",
+            "text": "Pre-installed apps on iOS devices, such as Mail and Safari, have higher privileges than apps downloaded from the App Store. This increases the attack surface of iOS devices.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Exploiting vulnerabilities in pre-installed apps",
+                    "type": "Threat",
+                    "text": "Attackers could exploit vulnerabilities in pre-installed apps to gain unauthorized access to sensitive information or to take control of the device.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Missbräuchlicher Zugriff auf ausgelagerte Daten",
+            "handle": "2.3",
+            "text": "Features like iCloud Keychain, iMessage, FaceTime, Siri, Continuity, Spotlight Suggestions, and iCloud backups rely on Apple's infrastructure. This means that data is synchronized between devices and users through Apple's servers, creating a potential risk of unauthorized access to this data.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Data interception on Apple servers",
+                    "type": "Threat",
+                    "text": "Attackers could intercept data transmitted between iOS devices and Apple's servers, potentially gaining access to sensitive information.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Strategie für die iOS-Nutzung",
+            "handle": "SYS.3.2.3.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Wird ein MDM eingesetzt, so MÜSSEN die iOS-basierten Geräte über das MDM verwaltet und konfiguriert werden. Hierzu MUSS eine Strategie zur iOS-Nutzung vorliegen, in der Aspekte wie die Auswahl der Endgeräte oder Strategien für Datensicherungen festgelegt werden. Es MUSS geregelt werden, ob zusätzliche Apps von Drittanbietenden genutzt werden sollen bzw. dürfen. Außerdem MÜSSEN Jailbreaks organisatorisch untersagt und nach Möglichkeit technisch verhindert werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.14",
+                "G 0.16",
+                "G 0.19",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.25",
+                "G 0.28",
+                "G 0.29",
+                "G 0.30",
+                "G 0.32",
+                "G 0.37",
+                "G 0.38",
+                "G 0.41",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Planung des Einsatzes von Cloud-Diensten",
+            "handle": "SYS.3.2.3.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Bevor iOS-basierte Geräte verwendet werden, MUSS festgelegt werden, welche Cloud-Services in welchem Umfang genutzt werden sollen bzw. dürfen. Dabei SOLLTE berücksichtigt werden, dass iOS-basierte Geräte grundsätzlich eng mit iCloud-Diensten von Apple verzahnt sind. Außerdem SOLLTE berücksichtigt werden, dass beispielsweise bereits die Aktivierung von Einzelgeräten mit einer Apple-ID hiervon betroffen ist. Daher SOLLTE geprüft werden, ob zur Geräteregistrierung Apple Business Manager (früher Device Enrollment Program, DEP) genutzt werden kann.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.11",
+                "G 0.14",
+                "G 0.19",
+                "G 0.29",
+                "G 0.36",
+                "G 0.38",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verhinderung des unautorisierten Löschens von Konfigurationsprofilen",
+            "handle": "SYS.3.2.3.A7",
+            "level": "Low",
+            "affects": [],
+            "text": "Damit Konfigurationsprofile nicht unautorisiert gelöscht werden können, MÜSSEN geeignete technische (z. B. durch den betreuten Modus) oder organisatorische Maßnahmen getroffen und umgesetzt werden. Benutzende von mobilen Endgeräten SOLLTEN für den Sinn und Zweck der Sicherheitsmaßnahmen sensibilisiert werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.19",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.30",
+                "G 0.32",
+                "G 0.35",
+                "G 0.37",
+                "G 0.38",
+                "G 0.41",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung von Apple-IDs",
+            "handle": "SYS.3.2.3.A12",
+            "level": "Medium",
+            "affects": [],
+            "text": "Statt einer persönlichen Apple-ID der Benutzenden SOLLTE eine anonymisierte Apple-ID verwendet werden. Falls möglich, SOLLTE der Apple Business Manager für Volumenlizenzen (früher Volume Purchase Program, VPP) sowie eine zentralisierte Installation von Apps verwendet werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.14",
+                "G 0.16",
+                "G 0.19",
+                "G 0.32",
+                "G 0.35",
+                "G 0.36",
+                "G 0.37",
+                "G 0.41",
+                "G 0.42",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung der Konfigurationsoption \"Einschränkungen unter iOS\"",
+            "handle": "SYS.3.2.3.A13",
+            "level": "Medium",
+            "affects": [],
+            "text": "Alle nicht benötigten oder erlaubten Funktionen bzw. Dienste von iOS SOLLTEN deaktiviert werden. Basierend auf dem Einsatzzweck und dem zugrundeliegenden Schutzbedarf SOLLTE geprüft werden, welche der Funktionen \"Sperrbildschirm\", \"Unified Communication\", \"Siri\", \"Hintergrundbild\", \"Verbindung mit Host-Systemen\" und \"Diagnose- und Nutzungsdaten\" einzusetzen sind.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.14",
+                "G 0.16",
+                "G 0.19",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.26",
+                "G 0.28",
+                "G 0.29",
+                "G 0.30",
+                "G 0.32",
+                "G 0.36",
+                "G 0.37",
+                "G 0.38",
+                "G 0.41",
+                "G 0.42",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung der iCloud-Infrastruktur",
+            "handle": "SYS.3.2.3.A14",
+            "level": "Medium",
+            "affects": [],
+            "text": "Bevor die umfängliche oder selektive Nutzung der iCloud-Infrastruktur für eine dienstliche Nutzung freigegeben wird, SOLLTE bewertet werden, ob die allgemeinen Geschäftsbedingungen der Firma Apple mit den internen Richtlinien hinsichtlich Verfügbarkeit, Vertraulichkeit, Integrität und Datenschutz vereinbar sind. Wird die Nutzung der iCloud-Infrastruktur erlaubt, SOLLTE die Identität am iCloud-Webservice durch eine Zwei-Faktor-Authentisierung geprüft werden. Ansonsten SOLLTE die iCloud-Nutzung für einen rein dienstlichen Bedarf auf ein geringes Maß reduziert oder komplett ausgeschlossen werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.9",
+                "G 0.11",
+                "G 0.14",
+                "G 0.16",
+                "G 0.19",
+                "G 0.23",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung der Continuity-Funktionen",
+            "handle": "SYS.3.2.3.A15",
+            "level": "Medium",
+            "affects": [],
+            "text": "Wurde die Nutzung der iCloud-Infrastruktur nicht grundsätzlich durch das Sicherheitsmanagement der Institution untersagt, SOLLTE die Vereinbarkeit der Continuity-Funktionen mit den internen Richtlinien unter Berücksichtigung der Aspekte Vertraulichkeit und Integrität bewertet werden. Auf Basis der Bewertungsergebnisse SOLLTE geregelt werden, inwieweit diese Funktionen technisch bzw. organisatorisch eingeschränkt werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.11",
+                "G 0.19",
+                "G 0.29",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung der Gerätecode-Historie",
+            "handle": "SYS.3.2.3.A17",
+            "level": "Medium",
+            "affects": [],
+            "text": "Im Konfigurationsprofil SOLLTE die Anzahl der eindeutigen Codes bis zur ersten Wiederholung auf einen angemessenen Wert festgelegt sein.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.14",
+                "G 0.16",
+                "G 0.19",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.32",
+                "G 0.36",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung der Konfigurationsoption für den Browser Safari",
+            "handle": "SYS.3.2.3.A18",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die bereits in der Institution etablierten Browserrichtlinien SOLLTEN entsprechend auch für Safari durch technische und organisatorische Maßnahmen umgesetzt werden. Dabei SOLLTEN die bereits etablierten Anforderungen für Browser auf stationären und tragbaren PCs als Grundlage für die Absicherung der iOS-basierten Geräte dienen sowie die Einsatzszenarien. Das Einsatzumfeld der Geräte SOLLTE beachtet werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.26",
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Installation von Apps und Einbindung des Apple App Stores",
+            "handle": "SYS.3.2.3.A21",
+            "level": "Medium",
+            "affects": [],
+            "text": "Um sicherzustellen, dass den autorisierten Benutzenden die benötigten Apps zum notwendigen Zeitpunkt ausreichend zur Verfügung stehen, SOLLTE überlegt werden, den Apple Business Manager in die MDM-Infrastruktur zu integrieren. Zahlungen im App Store SOLLTE NICHT über biometrische Verfahren bestätigt werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.21",
+                "G 0.25",
+                "G 0.26",
+                "G 0.28",
+                "G 0.32",
+                "G 0.39",
+                "G 0.41",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung der automatischen Konfigurationsprofillöschung",
+            "handle": "SYS.3.2.3.A23",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Geräte, die über einen klar definierten Zeitraum durchgängig offline sind, SOLLTEN ihren Zugang zur internen Infrastruktur verlieren. Nach Ablauf des definierten Zeitraums oder an einem bestimmten Tag, SOLLTE das Konfigurationsprofil ohne Zutun des IT-Betriebs gelöscht werden. Falls Benutzende des Geräts vor Ablauf der Frist auf das interne Netz zugreift, SOLLTE der Zeitraum bis zur automatischen Löschung des Konfigurationsprofils erneuert werden. Falls sicherzustellen ist, ob die Benutzenden noch im Besitz ihres Gerätes sind, SOLLTEN sie aktiv zum Zugriff innerhalb einer Frist aufgefordert werden. Falls die Frist ohne Zugriff verstreicht, sollte das Konfigurationsprofil der entsprechenden Benutzenden automatisch gelöscht werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.11",
+                "G 0.16",
+                "G 0.27",
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung der Konfigurationsoption für AirPrint",
+            "handle": "SYS.3.2.3.A25",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Freigegebene AirPrint-Drucker SOLLTEN den Benutzenden durch ein Konfigurationsprofil bereitgestellt werden. Um zu vermeiden, dass Informationen auf nicht vertrauenswürdigen Druckern von Benutzenden ausgedruckt werden können, SOLLTEN stets alle Kommunikationsverbindungen über die Infrastruktursysteme der Institution geführt werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.16",
+                "G 0.19",
+                "G 0.29",
+                "G 0.35",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Keine Verbindung mit Host-Systemen",
+            "handle": "SYS.3.2.3.A26",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Um zu vermeiden, dass iOS-basierte Geräte unautorisiert mit anderen IT-Systemen verbunden werden, SOLLTEN die Benutzenden iOS-basierte Geräte ausschließlich mit dem MDM verbinden können.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.11",
+                "G 0.14",
+                "G 0.16",
+                "G 0.19",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.28",
+                "G 0.29",
+                "G 0.30",
+                "G 0.32",
+                "G 0.35",
+                "G 0.36",
+                "G 0.38",
+                "G 0.39",
+                "G 0.41",
+                "G 0.42",
+                "G 0.46"
+            ]
+        }
+    ]
+}

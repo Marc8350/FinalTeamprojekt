@@ -1,0 +1,84 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "Maschine",
+    "handle": "IND.2.4",
+    "text": "Eine Maschine ist eine technische Vorrichtung, die automatisierte Aufgaben durchführt. Ein typisches Beispiel dafür ist eine Werkzeugmaschine, die Werkstücke auf eine vorgegebene Art bearbeitet. Dabei wird sie von einem IT-System gesteuert, das die entsprechenden Arbeitsanweisungen und -schritte vorgibt. Solche Maschinen werden auch als Automaten bezeichnet. Meistens werden Maschinen von Maschinenbauenden konstruiert und mit bestimmten vordefinierten Funktionen ausgestattet. Der oder die Betreibende der Maschine kann allerdings auch die Parameter bestimmen, nach denen sie arbeiten soll. So lassen sich beispielsweise Formen, die gefräst werden sollen, oder Kalibrierungen für bestimmte Materialien einstellen. Damit die Betreibenden die Parameter verändern können, verfügen Maschinen über verschiedene Schnittstellen, z. B. für Wechseldatenträger, spezialisierte Programmiergeräte oder Netzzugriffe. Häufig werden von Maschinenbauenden auch Fernwartungsdienstleistungen angeboten, um frühzeitigen Verschleiß zu erkennen oder in Problemsituationen schnell reagieren zu können.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ausfall oder Störung durch ungenügende Wartung",
+            "handle": "2.1",
+            "text": "Werden Maschinen nicht regelmäßig gewartet, können sie frühzeitig nicht mehr korrekt funktionieren oder ganz ausfallen. Durch Fehlfunktionen können z. B. Mitarbeitende gefährdet werden oder die Produktion könnte erheblich beeinträchtigt werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Maschinen-Ausfall durch fehlende Wartung",
+                    "type": "Threat",
+                    "text": "Durch fehlende Wartung kann es zu einem Ausfall der Maschine kommen, der zu Produktionsausfällen und/oder Gefährdung von Personen führt.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Gezielte Manipulationen",
+            "handle": "2.2",
+            "text": "Sind die Schnittstellen einer Maschine ungenügend geschützt, kann die Maschine manipuliert werden, z. B. über lokale Programmiergeräte oder Netzdienste. Dadurch können Werkstücke beschädigt werden oder ganze Produktreihen fehlerhaft sein. Bei einem Angriff könnte aber auch die Maschine selbst beschädigt werden, sodass auch dadurch ein wirtschaftlicher Verlust entsteht.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Manipulation der Maschine durch unbefugten Zugriff",
+                    "type": "Threat",
+                    "text": "Ein Angreifer kann über eine ungeschützte Schnittstelle die Maschine manipulieren und so z. B. die Produktion sabotieren oder sensible Daten stehlen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fernwartung durch Maschinen- und Anlagenbauende",
+            "handle": "IND.2.4.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Für die Fernwartung einer Maschine MUSS es eine zentrale Richtlinie geben. Darin MUSS geregelt werden, wie die jeweiligen Fernwartungslösungen einzusetzen sind. Die Richtlinie MUSS auch festlegen, wie Kommunikationsverbindungen geschützt werden sollen. Hierüber hinaus MUSS sie auch beschreiben, welche Aktivitäten während der Fernwartung überwacht werden sollen. Außerdem SOLLTE NICHT möglich sein, dass über die Fernwartung einer Maschine auf andere IT-Systeme oder Maschinen der Institution zugegriffen werden kann. Mit Dienstleistenden MUSS vereinbart werden, wie sie die in der Maschine gespeicherten Informationen verwerten dürfen.",
+            "isresponsible": "OT-Betrieb (Operational Technology, OT)",
+            "mitigates": [
+                "G 0.11",
+                "G 0.14",
+                "G 0.18",
+                "G 0.21",
+                "G 0.22",
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Betrieb nach Ende der Gewährleistung",
+            "handle": "IND.2.4.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Es MUSS ein Prozess etabliert werden, der gewährleistet, dass die Maschine auch über den Gewährleistungszeitraum hinaus sicher weiterbetrieben werden kann. Hierzu MÜSSEN mit den Liefernden weitere Unterstützungsleistungen vertraglich vereinbart werden.",
+            "isresponsible": "OT-Betrieb (Operational Technology, OT)",
+            "mitigates": [
+                "G 0.21",
+                "G 0.39"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,537 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "Microsoft Exchange und Outlook",
+    "handle": "APP.5.2",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlende oder unzureichende Regelungen für Exchange und Outlook",
+            "handle": "2.1",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Datenverlust durch fehlerhafte Einbindung von Exchange in das Active Directory",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Datenverlust durch ungeregelte Depublikation von Postfachdatenbanken",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Datenverlust durch ungeregelten Zugriff von Outlook-Clients auf Exchange-Server",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "APP.5.2.A3",
+                "APP.5.2.A7"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlerhafte Migration von Exchange",
+            "handle": "2.2",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Störung der internen Kommunikation über Exchange durch fehlerhafte Migration",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Probleme bei der Konfiguration von Exchange durch fehlerhafte Migration",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Fehlerhafte Protokolleinstellungen durch fehlerhafte Migration",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "APP.5.2.A7"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzulässiger Browserzugriff auf Exchange",
+            "handle": "2.3",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unkontrollierter Zugriff von außen auf das interne Netz durch fehlerhafte Konfiguration von IIS",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Ausspähen von E-Mail-Adressen und -Inhalten durch Angreifer",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Missbrauch von E-Mail-Funktionen durch Angreifer",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Versenden von Spam-Mails durch Angreifer",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Zugriff auf institutionsinterne Informationen durch Angreifer",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "APP.5.2.A11",
+                "APP.5.2.A12"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unerlaubte Anbindung anderer Systeme an Exchange",
+            "handle": "2.4",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Verlust von E-Mails durch inkompatible Konnektoren bei Migration",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Veränderung von E-Mails durch inkompatible Konnektoren bei Migration",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Datenverlust durch unsachgemäße Anbindung von Fremdsystemen",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Blockierung des Exchange-Systems durch unsachgemäße Anbindung von Fremdsystemen",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "APP.5.2.A9"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlerhafte Administration von Zugangs- und Zugriffsrechten unter Exchange und Outlook",
+            "handle": "2.5",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Zugriff auf vertrauliche Informationen durch unberechtigte Personen",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "APP.5.2.A3"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlerhafte Konfiguration von Exchange",
+            "handle": "2.6",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Sicherheitslücken durch fehlerhafte Konfiguration von Exchange",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "APP.5.2.A9"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlerhafte Konfiguration von Outlook",
+            "handle": "2.7",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Kompromittierung von privaten Schlüsseln durch fehlerhafte Konfiguration von Outlook",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unwirksamer Verschlüsselungsmechanismus durch fehlerhafte Konfiguration von Outlook",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unbefugter Zugriff auf E-Mails durch fehlerhafte Konfiguration von Outlook",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "APP.5.2.A10"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlfunktionen und Missbrauch selbst entwickelter Makros sowie Programmierschnittstellen unter Outlook",
+            "handle": "2.8",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Verbreitung von Schadsoftware durch bösartige Tools und Makros",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Abgreifen von Informationen durch bösartige Tools und Makros",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Veränderung von Informationen durch bösartige Tools und Makros",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Löschen von Informationen durch bösartige Tools und Makros",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Weiterleitung von Nachrichten durch bösartige Makros",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Verschieben von Terminen durch bösartige Makros",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Verschieben von Aufgaben durch bösartige Makros",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Falsche Ergebnisse durch Fehler in Makros",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unwirtschaftliche Entscheidungen durch Fehler in Makros",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Automatischer Datenabfluss durch Fehler in Makros",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "APP.5.2.A10"
+            ]
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Planung des Einsatzes von Exchange und Outlook",
+            "handle": "APP.5.2.A1",
+            "level": "Low",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "IT-Betrieb"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Auswahl einer geeigneten Exchange-Infrastruktur",
+            "handle": "APP.5.2.A2",
+            "level": "Low",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "IT-Betrieb"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Berechtigungsmanagement und Zugriffsrechte",
+            "handle": "APP.5.2.A3",
+            "level": "Low",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "IT-Betrieb"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Datensicherung von Exchange",
+            "handle": "APP.5.2.A5",
+            "level": "Low",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "IT-Betrieb"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Konfiguration von Exchange-Servern",
+            "handle": "APP.5.2.A9",
+            "level": "Medium",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "IT-Betrieb"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Konfiguration von Outlook",
+            "handle": "APP.5.2.A10",
+            "level": "Medium",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "IT-Betrieb"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Absicherung der Kommunikation zwischen Exchange-Systemen",
+            "handle": "APP.5.2.A11",
+            "level": "Medium",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "IT-Betrieb"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz von Outlook Anywhere, MAPI over HTTP und Outlook im Web",
+            "handle": "APP.5.2.A12",
+            "level": "Medium",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "IT-Betrieb"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verschlüsselung von Exchange-Datenbankdateien",
+            "handle": "APP.5.2.A17",
+            "level": "High",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "IT-Betrieb"
+        }
+    ]
+}

@@ -1,0 +1,358 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "APP.7 Entwicklung von Individualsoftware",
+    "handle": "APP.7",
+    "text": "Viele Institutionen stehen vor Herausforderungen, die sie nicht mehr hinreichend mit unangepasster Software lösen können. Die mit diesen Herausforderungen verbundenen Aufgabenstellungen bedürfen häufig Softwarelösungen, die auf die individuellen Bedürfnisse der Institutionen zugeschnitten sind. Im Folgenden werden diese Softwarelösungen als Individualsoftware bezeichnet. Hierzu können einerseits Basislösungen, die aus einer Grundmenge an typischen Funktionen bestehen, eingesetzt und individualisiert werden. Die Grundfunktionen werden hierbei für den individuellen Einsatzzweck der Institution angepasst und um individuell benötigte Funktionen erweitert. Gängige Beispiele hierfür sind IT-Anwendungen wie ERP- (Enterprise Resource Planning), CMS- (Content Management Systeme) oder IDM-Systeme (Identity Management). Individualsoftware kann auch vollständig neu von der Institution selbst oder von Dritten entwickelt werden. Hierzu gehören Anwendungen zur Geschäftsprozesssteuerung oder individuell angepasste Fachanwendungen, wie Personalverwaltungssoftware, Verfahren zur Verwaltung von Sozialdaten oder Meldedaten. Von essentieller Bedeutung ist es hierbei, dass bereits bei der Planung und Konzeptionierung der Individualsoftware auch die benötigten Sicherheitsfunktionen bedacht werden und die Informationssicherheit in dem gesamten Lebenszyklus der Individualsoftware berücksichtigt wird. Fehler in der Planung oder fehlende Sicherheitsfunktionen können im laufenden Betrieb nicht oder nur mit hohem zusätzlichem Aufwand ausgeglichen werden.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzulängliche vertragliche Regelungen mit externen Dienstleistenden",
+            "handle": "2.1",
+            "text": "Aufgrund von unzulänglichen vertraglichen Regelungen mit externen Dienstleistenden können vielfältige und schwerwiegende Sicherheitsprobleme auftreten. Dies gilt insbesondere, wenn Anwendungen erstellt, eingeführt oder gewartet werden. Sind Aufgaben, Leistungsparameter oder der Aufwand ungenügend oder missverständlich beschrieben, können Sicherheitsmaßnahmen möglicherweise aus Unkenntnis oder aufgrund mangelnder Qualifizierung oder fehlender Ressourcen nicht umgesetzt werden. Dies kann viele negative Auswirkungen nach sich ziehen, etwa wenn regulatorische Anforderungen und Pflichten nicht erfüllt werden, Auskunftspflichten und Gesetze nicht eingehalten werden oder keine Verantwortung übernommen wird, weil Kontroll- und Steuerungsmöglichkeiten fehlen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unzureichende Beschreibung von Aufgaben und Leistungsparametern",
+                    "type": "Threat",
+                    "text": "Die Aufgaben und Leistungsparameter der externen Dienstleistenden sind nicht ausreichend klar definiert. Dies führt dazu, dass die Sicherheitsanforderungen nicht vollständig erfüllt werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Mangelnde Qualifikation der externen Dienstleistenden",
+                    "type": "Threat",
+                    "text": "Die externen Dienstleistenden verfügen nicht über die notwendige Qualifikation, um die Sicherheitsanforderungen zu erfüllen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Fehlende Ressourcen der externen Dienstleistenden",
+                    "type": "Threat",
+                    "text": "Die externen Dienstleistenden verfügen nicht über die notwendigen Ressourcen, um die Sicherheitsanforderungen zu erfüllen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Software-Konzeptionsfehler",
+            "handle": "2.2",
+            "text": "Werden Anwendungen, Programme und Protokolle konzeptioniert, können sicherheitsrelevante Konzeptionsfehler entstehen. Diese ergeben sich häufig daraus, dass Anwendungsmodule und Protokolle, die für einen bestimmten Zweck vorgesehen sind, in anderen Einsatzszenarien wiederverwendet werden. Sind dann andere Sicherheitsvorgaben relevant, kann dies zu massiven Sicherheitsproblemen führen, zum Beispiel wenn Anwendungsmodule und Protokolle, die eigentlich für abgeschottete betriebliche Umgebungen vorgesehen sind, an das Internet angebunden werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Wiederverwendung von Software-Komponenten",
+                    "type": "Threat",
+                    "text": "Software-Komponenten, die für eine bestimmte Umgebung entwickelt wurden, werden in einer anderen Umgebung eingesetzt, ohne dass die Sicherheitsanforderungen angepasst werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Undokumentierte Funktionen",
+            "handle": "2.3",
+            "text": "Viele Anwendungen enthalten vom herstellenden Unternehmen eingebaute, undokumentierte Funktionen, häufig für die Entwicklung oder zum Support der Anwendung. Diese sind den Benutzenden meistens nicht bekannt. Undokumentierte Funktionen sind dann problematisch, wenn sie es erlauben, dass wesentliche Sicherheitsmechanismen umgangen werden, z. B. zum Zugriffsschutz. Dies kann die Vertraulichkeit, Integrität und Verfügbarkeit der verarbeiteten Daten erheblich beeinträchtigen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Umgehung von Sicherheitsmechanismen",
+                    "type": "Threat",
+                    "text": "Angreifer nutzen undokumentierte Funktionen, um Sicherheitsmechanismen zu umgehen und auf sensible Daten zuzugreifen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlende oder unzureichende Sicherheitsmaßnahmen in Anwendungen",
+            "handle": "2.4",
+            "text": "Sicherheitsmechanismen oder Sicherheitsfunktionen sollen in der Anwendung sicherstellen, dass bei der Verarbeitung von Informationen die Vertraulichkeit, Integrität und Verfügbarkeit im benötigten Maße gewährleistet werden können. Häufig steht bei der Entwicklung einer Anwendung aber die fachliche Funktionalität oder der Zeit- und Kostenrahmen im Vordergrund. So können wichtige Sicherheitsmechanismen zu schwach ausgeprägt sein, sodass sie einfach umgangen werden können oder sogar ganz fehlen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Schwache Sicherheitsmechanismen",
+                    "type": "Threat",
+                    "text": "Die Sicherheitsmechanismen der Anwendung sind zu schwach ausgeprägt, sodass Angreifer diese leicht umgehen können.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Fehlende Sicherheitsmechanismen",
+                    "type": "Threat",
+                    "text": "Die Anwendung verfügt über keine oder unzureichende Sicherheitsmechanismen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Mangelhafte Steuerung der Software-Entwicklung",
+            "handle": "2.5",
+            "text": "Wird die Software-Entwicklung vom Auftraggebenden nicht hinreichend gesteuert, bestehen eine Reihe von Gefahren, wie z. B.: Es können geforderte Sicherheitsfunktionen fehlen oder nur unzureichend implementiert werden. Hieraus können sich vielfältige Risiken ergeben, die die Verfügbarkeit, Vertraulichkeit und Integrität der mit der Individualsoftware verarbeiteten Daten gefährden. Das Entwicklungsprojekt kann sich zeitlich verzögern, sodass die Individualsoftware nicht rechtzeitig verfügbar ist. Prioritäten können falsch gesetzt werden, indem z. B. nachrangig benötigte Funktionen umfangreich entwickelt werden und dringend benötigte Sicherheitsfunktionen nur rudimentär implementiert werden. Auch hieraus können Projektverzögerungen und vielseitige Sicherheitsrisiken entstehen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Fehlende Sicherheitsfunktionen",
+                    "type": "Threat",
+                    "text": "Die Individualsoftware verfügt über keine oder unzureichende Sicherheitsfunktionen, da die Entwicklung nicht ausreichend gesteuert wurde.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Projektverzögerung",
+                    "type": "Threat",
+                    "text": "Die Entwicklung der Individualsoftware verzögert sich, da die Steuerung der Entwicklung nicht ausreichend ist.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Falsche Priorisierung",
+                    "type": "Threat",
+                    "text": "Die Entwicklung der Individualsoftware wird nicht ausreichend gesteuert, sodass wichtige Sicherheitsfunktionen nicht priorisiert werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Beauftragung ungeeigneter Software-Entwickelnder",
+            "handle": "2.6",
+            "text": "Werden ungeeignete Software-Entwickelnde beauftragt, können daraus unterschiedliche Gefährdungen entstehen: Aufgrund fehlender fachlicher Expertise, z. B. in der verwendeten Programmiersprache, in den eingesetzten Frameworks oder der geplanten technischen Einsatzumgebung, kann die Software viele vermeidbare Sicherheitslücken umfassen. Fehlende Kenntnisse im Bereich des Projektmanagements und Requirements Engineering können zu Reibungsverlusten in Abstimmungsprozessen und somit zu erheblichen Verzögerungen führen. Auch können deswegen Schwerpunkte falsch gesetzt werden und so wesentliche Sicherheitsfunktionen nicht mit der erforderlichen Priorität implementiert werden. Ungeeignete Software-Entwickelnde können beispielsweise aufgrund zu knapper, unrealistischer Kostenkalkulationen beauftragt werden. Auch Fehler, missverständliche Anforderungen und falsche Zielvorstellungen in Ausschreibungen können dazu führen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Fehlende fachliche Expertise",
+                    "type": "Threat",
+                    "text": "Die beauftragten Software-Entwickelnden verfügen nicht über die notwendige fachliche Expertise, um die Sicherheitsanforderungen zu erfüllen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Fehlendes Projektmanagement",
+                    "type": "Threat",
+                    "text": "Die beauftragten Software-Entwickelnden verfügen nicht über die notwendigen Projektmanagementkenntnisse, um die Entwicklung der Individualsoftware zu steuern.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Falsche Kostenkalkulation",
+                    "type": "Threat",
+                    "text": "Die beauftragten Software-Entwickelnden kalkulieren die Kosten für die Entwicklung der Individualsoftware falsch, sodass wichtige Sicherheitsfunktionen nicht implementiert werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erweiterung der Planung des Software-Einsatzes um Aspekte von Individualsoftware",
+            "handle": "APP.7.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Planung des Software-Einsatzes MUSS um Aspekte von Individualsoftware ergänzt werden, indem definiert wird, wer dafür zuständig ist, die Software-Entwicklung bzw. den Auftragnehmenden zu steuern und zu koordinieren, sowie in was für einen organisatorischen Rahmen die Software zu entwickeln ist (Projektmanagementmodell).",
+            "isresponsible": "Beschaffungsstelle",
+            "mitigates": [
+                "G 0.18",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Festlegung von Sicherheitsanforderungen an den Prozess der Software-Entwicklung",
+            "handle": "APP.7.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Institution MUSS klare Anforderungen an den Prozess der Software-Entwicklung definieren. Aus den Anforderungen MUSS hervorgehen, in was für einer Umgebung die Software entwickelt werden darf und welche technischen und organisatorischen Maßnahmen von Seiten der beauftragten Software-Entwickelnden umzusetzen sind.",
+            "isresponsible": "Beschaffungsstelle",
+            "mitigates": [
+                "G 0.18",
+                "G 0.22",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Festlegung der Sicherheitsfunktionen zur Systemintegration",
+            "handle": "APP.7.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Der IT-Betrieb und die zuständigen Fachverantwortlichen MÜSSEN Anforderungen an die technische Einsatzumgebung der geplanten Individualsoftware erstellen und mit der Software-Entwicklung abstimmen. Aus den Anforderungen MUSS klar hervorgehen: auf was für einer Hardware-Plattform, auf was für einer Software-Plattform (inklusive gesamten Software-Stack), mit welchen zur Verfügung stehenden Ressourcen (z. B. CPU-Cluster oder Arbeitsspeicher), mit welchen Schnittstellen mit anderen IT-Systemen oder Anwendungen sowie mit welchen sich hieraus ergebenen Sicherheitsfunktionen die Anwendung eingesetzt werden soll. Schnittstellen mit anderen IT-Systemen SOLLTEN in standardisierten technischen Formaten modelliert und definiert werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Anforderungsgerechte Beauftragung",
+            "handle": "APP.7.A4",
+            "level": "Low",
+            "affects": [],
+            "text": "Wird Individualsoftware durch die eigene Institution entwickelt oder extern beauftragt, dann MÜSSEN neben den bestehenden rechtlichen und organisatorischen Vorgaben insbesondere der Anforderungskatalog (siehe hierzu APP.6 Allgemeine Software), die Sicherheitsanforderungen an den Prozess der Software-Entwicklung, sowie die Sicherheitsfunktionen zur Systemintegration als Grundlage zur Software-Entwicklung verwendet werden.",
+            "isresponsible": "Beschaffungsstelle",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Geeignete Steuerung der Anwendungsentwicklung",
+            "handle": "APP.7.A5",
+            "level": "Medium",
+            "affects": [],
+            "text": "Bei der Entwicklung von Individualsoftware SOLLTE ein geeignetes Steuerungs- und Projektmanagementmodell verwendet werden. Hierbei SOLLTE das ausgewählte Modell mit dem Auftragnehmenden abgestimmt werden. Bei der Steuerung SOLLTE es berücksichtigt werden. Es SOLLTE insbesondere berücksichtigt werden, dass das benötigte Personal ausreichend qualifiziert ist. Alle relevanten Phasen SOLLTEN während des Lebenszyklus der Software abgedeckt werden. Außerdem SOLLTE es ein geeignetes Entwicklungsmodell, ein Risikomanagement sowie Qualitätsziele enthalten.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Dokumentation der Anforderungen an die Individualsoftware",
+            "handle": "APP.7.A6",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Anforderungen aus den Anforderungskatalog, die Sicherheitsanforderungen an den Prozess der Software-Entwicklung, sowie die Sicherheitsfunktionen zur Systemintegration SOLLTEN umfassend dokumentiert werden. Insbesondere SOLLTE ein Sicherheitsprofil für die Anwendung erstellt werden. Dieses SOLLTE den Schutzbedarf der zu verarbeitenden Daten und Funktionen dokumentieren. Die Dokumentation mitsamt Sicherheitsprofil SOLLTE den Entwickelnden zur Software-Entwicklung zur Verfügung gestellt werden. Die Dokumentation SOLLTE bei Änderungen an der Individualsoftware sowie bei funktionalen Updates aktualisiert werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Beschaffung von Individualsoftware",
+            "handle": "APP.7.A7",
+            "level": "Medium",
+            "affects": [],
+            "text": "Das Entwicklungsprojekt SOLLTE im Rahmen des hierfür bestens geeigneten Projektmanagementmodells beauftragt werden. Sicherheitsaspekte SOLLTEN dabei bereits bei der Ausschreibung und Vergabe berücksichtigt werden, sodass einerseits nur geeignete Auftragnehmende beauftragt werden, andererseits aber keine weitreichenden Rückschlüsse auf die Sicherheitsarchitektur durch die öffentlich verfügbaren Informationen möglich sind. In der Institution SOLLTEN definierte Prozesse und festgelegte Kontaktpersonen existieren, die sicherstellen, dass die jeweiligen Rahmenbedingungen berücksichtigt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.19",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Frühzeitige Beteiligung der Fachverantwortlichen bei entwicklungsbegleitenden Software-Tests",
+            "handle": "APP.7.A8",
+            "level": "Medium",
+            "affects": [],
+            "text": "Fachverantwortliche SOLLTEN schon vor der endgültigen Abnahme frühzeitig an entwicklungsbegleitenden Tests der Software-Entwickelnden beteiligt werden. Dies SOLLTE in Abstimmung mit dem Auftragnehmenden bereits initial im Projektablaufplan berücksichtigt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Treuhänderische Hinterlegung",
+            "handle": "APP.7.A9",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Für institutionskritische Anwendungen SOLLTE geprüft werden, ob diese gegen Ausfall des herstellenden Unternehmens abgesichert werden. Dafür SOLLTEN nicht zum Lieferumfang der Anwendung gehörende Materialien und Informationen treuhänderisch hinterlegt werden, etwa bei einer Escrow-Agentur. Dokumentierter Code, Konstruktionspläne, Schlüssel oder Passwörter SOLLTEN dazu gehören. Die Pflichten der Escrow-Agentur zur Hinterlegung und Herausgabe SOLLTEN vertraglich geregelt werden. Es SOLLTE geklärt werden, wann das Hinterlegte an wen herausgegeben werden darf.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.45"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Beauftragung zertifizierter Software-Entwicklungsunternehmen",
+            "handle": "APP.7.A10",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Werden besonders sicherheitskritische Anwendungen entwickelt, SOLLTEN hierzu zertifizierte Software-Entwicklungsunternehmen beauftragt werden. Die Zertifizierung SOLLTE Sicherheitsaspekte für relevante Aspekte der Software-Entwicklung umfassen.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18"
+            ]
+        }
+    ]
+}

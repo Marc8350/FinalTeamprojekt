@@ -1,0 +1,642 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "Unified Communications und Collaboration (UCC)",
+    "handle": "APP.5.4",
+    "text": "Unified Communications (UCC) bezeichnet einen Dienst, der verschiedene Kommunikationsdienste in einer Anwendung und in der Regel auch einem Softclient vereint. Damit wird der Anteil der traditionellen Telefonie in der persönlichen digitalen Kommunikation reduziert. Die möglichen Kommunikationswege werden um zusätzliche Dienste wie Video, diverse Formen von Chats und Erreichbarkeitsanzeigen erweitert. Eine Kommunikationsbeziehung zwischen zwei oder mehr Teilnehmenden wird unabhängig vom benutzten Dienst als Konversation bezeichnet. Die häufig bei Unified Communications und Collaboration (UCC) genannte Zusammenarbeit (Collaboration) geht noch einen Schritt weiter. Während damit in der Vergangenheit häufig nur Dienste wie Screen Sharing und (digitales) Whiteboarding bezeichnet wurden, stellen UCC-Dienste viele weitere Funktionen zur Verfügung. Insbesondere beim Zusammenarbeiten von Teams hat sich eine Anzahl von Anwendungen etabliert, die häufig als Cloud-Dienst benutzt werden und neben Telefonie, Erreichbarkeitsanzeige, klassischen Chats, Video-Anrufen und Konferenzen auch Team-Chatbereiche sowie gemeinsame Dateiablagen beinhalten. Hinzukommen (offene) Schnittstellen, wodurch zusätzliche Anwendungen integriert werden können, so dass der Gesamtdienst funktional gegebenenfalls sehr umfangreich wird.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Eingeschränkte Verfügbarkeit von UCC-Diensten",
+            "handle": "2.1",
+            "text": "UCC-Dienste unterliegen häufig erhöhten Anforderungen an die Verfügbarkeit und gleichzeitig hängt die Funktionstüchtigkeit von UCC-Diensten von weiteren IT-Systemen und Anwendungen ab. Falls die Datennetze, die von UCC-Diensten verwendet werden, nicht voll funktionsfähig sind, kann das die Verfügbarkeit der UCC-Dienste beeinträchtigen. So können beispielsweise Störungen im Datennetz oder bei der Internetverbindung die Qualität der Kommunikation einschränken, was eine verzögerte Sprachverständigung, Artefakte im Videobild oder den Abbruch der Verbindung verursachen kann. Abhängigkeiten zwischen kritischen IT-Systemen können auch die Funktionsfähigkeit von weiteren Diensten oder Organisationseinheiten behindern. Wenn beispielsweise UCC als Kommunikationsplattform zwingend erforderlich ist, um das Netz wiederaufzubauen, das Netz aber benötigt wird, damit die UCC-Dienste funktionieren, dann blockieren sich beide und können nicht wiederhergestellt werden. Häufig werden UCC-Dienste als Cloud-Dienst benutzt oder bei einem Dienstleistungsunternehmen betrieben, wodurch Störungen bei externen Netzen oder beim Dienstleistungsunternehmen zu eingeschränkter Verfügbarkeit der UCC-Dienste führen können. Gleiches gilt für den Authentisierungsdienst, über den sich die Benutzenden an den UCC-Diensten anmelden. Fällt der Authentisierungsdienst aus, können die UCC-Dienste oft nicht mehr verwendet werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Störung des Datennetzes",
+                    "type": "Threat",
+                    "text": "Störungen im Datennetz können die Verfügbarkeit der UCC-Dienste beeinträchtigen.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Störung der Internetverbindung",
+                    "type": "Threat",
+                    "text": "Störungen der Internetverbindung können die Qualität der Kommunikation einschränken.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Störung des externen Netzes",
+                    "type": "Threat",
+                    "text": "Störungen bei externen Netzen können zu eingeschränkter Verfügbarkeit der UCC-Dienste führen.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Störung des Dienstleistungsunternehmens",
+                    "type": "Threat",
+                    "text": "Störungen beim Dienstleistungsunternehmen können zu eingeschränkter Verfügbarkeit der UCC-Dienste führen.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Ausfall des Authentisierungsdienstes",
+                    "type": "Threat",
+                    "text": "Fällt der Authentisierungsdienst aus, können die UCC-Dienste oft nicht mehr verwendet werden.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Planung von UCC",
+            "handle": "2.2",
+            "text": "Wenn UCC nicht so geplant wird, wie es auch tatsächlich benutzt werden soll, kann dies Auswirkungen auf die Funktionalität aller UCC-Dienste haben. Werden UCC-Komponenten verändert oder vermehrt benutzt, z. B. durch eine erhöhte Anzahl von Benutzenden, kann eine ursprünglich geeignete Planung unzureichend werden. Je nach Bereitstellungsart und benutzten Diensten können sich die Anforderungen der UCC-Komponenten an die Netze stark unterscheiden. Eine auf Sprachkommunikation fokussierte UCC-Komponente im eigenen Netz kann beispielsweise andere Anforderungen an Internet- und WAN-Verbindungen stellen als ein Cloud-Dienst, der auch mobil benutzt werden soll. Werden die Netze nicht so geplant, dass sie UCC-Dienste berücksichtigen, sind die UCC-Dienste nicht ausreichend nutzbar. Entsprechende Gefährdungen gibt es auch für die zu berücksichtigenden Endgeräte. Besonders die Videokommunikation und die zugehörigen Funktionen stellen zum Teil sehr hohe Anforderungen an die Clients. Insbesondere bei Thin Clients kann dies zu Problemen führen, da UCC-Dienste häufig ganz oder teilweise auf dem Endgerät ausgeführt werden, um Kommunikationsdatenströme zu optimieren. Clients mit unzureichender Rechenleistung können beispielsweise Aussetzer oder Artefakte bei der Videokommunikation bedingen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Ungenügende Bandbreite",
+                    "type": "Threat",
+                    "text": "Wenn die Netze nicht so geplant sind, dass sie UCC-Dienste berücksichtigen, sind die UCC-Dienste nicht ausreichend nutzbar.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Ungenügende Rechenleistung",
+                    "type": "Threat",
+                    "text": "Clients mit unzureichender Rechenleistung können beispielsweise Aussetzer oder Artefakte bei der Videokommunikation bedingen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlerhafte Konfiguration von UCC",
+            "handle": "2.3",
+            "text": "Eine große Zahl von Funktionen und Diensten bedeutet oft auch eine Vielzahl von Konfigurationsmöglichkeiten. Dabei können Fehlkonfigurationen auftreten. Benutzende können oder müssen ihre UCC-Clients teilweise selbst konfigurieren. Dies kann Benutzende aufgrund der Vielzahl von Konfigurationsmöglichkeiten überfordern und fehlerhafte Konfigurationen verursachen. Wenn beispielsweise im Büro und im Homeoffice verschiedene Headsets verwendet werden, muss die Konfiguration gegebenenfalls angepasst werden. Fehlkonfigurationen können dazu führen, dass Benutzende in Besprechungen nicht hör- oder sichtbar sind oder selbst keinen Ton hören. Darüber hinaus können ungewollt Informationen preisgegeben werden, wenn Raumsysteme so konfiguriert sind, dass eingehende Kommunikationsanfragen automatisch angenommen werden. Ebenso können durch ein unzureichendes Identitäts- und Berechtigungskonzept Fehler auftreten, wenn UCC-Dienste konfiguriert werden. Administrierende, die im Rahmen der Einrichtung von neuen Konten ebenfalls zentrale Routing-Einstellungen ändern, können hierdurch eine gravierende Fehlkonfiguration verursachen. Diese kann dazu führen, dass Daten verloren gehen, oder der UCC-Dienst ausfällt. Zu den Fehlkonfigurationen durch ein unzureichendes Identitäts- und Berechtigungskonzept gehören auch unzureichend eingeschränkte Berechtigungen von externen Teilnehmenden. Können diese beispielsweise unberechtigt auf Inhalte von Konversationen zugreifen, so können Informationen abfließen oder manipuliert werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Fehlkonfiguration durch Benutzende",
+                    "type": "Threat",
+                    "text": "Benutzende können aufgrund der Vielzahl von Konfigurationsmöglichkeiten überfordert und fehlerhafte Konfigurationen verursachen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Fehlkonfiguration durch Administrierende",
+                    "type": "Threat",
+                    "text": "Administrierende, die im Rahmen der Einrichtung von neuen Konten ebenfalls zentrale Routing-Einstellungen ändern, können hierdurch eine gravierende Fehlkonfiguration verursachen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unzureichende Berechtigungen für externe Teilnehmende",
+                    "type": "Threat",
+                    "text": "Können externe Teilnehmende beispielsweise unberechtigt auf Inhalte von Konversationen zugreifen, so können Informationen abfließen oder manipuliert werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unbefugte oder missbräuchliche Benutzung der Administrationsrechte eines UCC-Dienstes",
+            "handle": "2.4",
+            "text": "Durch die zugewiesenen Administrationsrechte können Administrierende die UCC-Dienste gegebenenfalls tiefgreifend ändern. Werden Administrationsrechte unbefugt oder missbräuchlich benutzt, kann dies weitreichende Folgen haben. Beispielsweise können Administrationsrechte dazu benutzt werden, um einen privaten Bereich, wie einen Chat oder eine Dateiablage, der ursprünglich nur für einen begrenzten Personenkreis zugänglich war, für alle Benutzenden des UCC-Dienstes freizugeben. Hierdurch können schützenswerte Informationen durch unbefugte Personen eingesehen und gegebenenfalls verändert werden. Weiterhin können durch vorsätzlich veränderte Routing-Konfigurationen die UCC-Dienste nicht oder nur eingeschränkt zur Verfügung stehen. Falls beispielsweise sämtliche ausgehende Anrufe durch zentrale IT-Systeme blockiert werden, kann der Dienst Telefonie nicht mehr benutzt werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Missbrauch von Administrationsrechten",
+                    "type": "Threat",
+                    "text": "Werden Administrationsrechte unbefugt oder missbräuchlich benutzt, kann dies weitreichende Folgen haben.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Preisgabe von schützenswerten Informationen",
+            "handle": "2.5",
+            "text": "Moderne UCC-Clients verfügen über eine Vielfalt an Funktionen und sind daher für viele Benutzende unübersichtlich. Dies begünstigt Fehlbedienungen, die dazu führen können, dass Informationen nicht regelkonform weitergegeben werden. Wird versehentlich ein falscher Kontakt ausgewählt, erhält dieser gegebenenfalls per Chat ungewollt schützenswerte Informationen. Ein weiteres Szenario ist, ungewollt Informationen bei einer Bildschirmfreigabe preiszugeben, wenn beispielsweise versehentlich der E-Mail-Client statt der vorgesehenen Präsentation freigegeben wird. Vielen Benutzenden ist nicht bewusst, dass die UCC-Dienste Daten, die beispielsweise innerhalb von privaten Chats gesendet werden, in einer Cloud abspeichern. So können unbewusst Ablagerichtlinien der Institution verletzt werden. Gleiches gilt für Dateien, in denen Konversationen aufgezeichnet wurden. Teambereiche verfügen zwar in der Regel über einen definierten Kreis von Benutzenden und entsprechende Zugriffsbeschränkungen, jedoch ist vielen Benutzenden nicht bewusst, dass die Zugriffsrechte und Mitgliedschaften nachträglich modifiziert werden können. Dadurch können weitere Personen auf alle zuvor dort abgelegten Dateien zugreifen. Darüber hinaus werden häufig öffentliche Teambereiche erstellt, denen weitere Personen ohne explizite Erlaubnis beitreten können. Dadurch können gegebenenfalls Daten von unberechtigten Personen eingesehen werden. Beispielsweise kann ein Teambereich eines Projekts ausschließlich aus internen Benutzenden bestehen. Teilnehmende laden nun interne Dokumente hoch, da alle Teammitglieder intern sind. Wenn im weiteren Projektverlauf externe Personen in den Bereich eingeladen werden, können sie auf alle bisherigen Dokumente zugreifen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Fehlbedienung durch Benutzende",
+                    "type": "Threat",
+                    "text": "Moderne UCC-Clients verfügen über eine Vielfalt an Funktionen und sind daher für viele Benutzende unübersichtlich. Dies begünstigt Fehlbedienungen, die dazu führen können, dass Informationen nicht regelkonform weitergegeben werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unbewußte Preisgabe von Daten in der Cloud",
+                    "type": "Threat",
+                    "text": "Vielen Benutzenden ist nicht bewusst, dass die UCC-Dienste Daten, die beispielsweise innerhalb von privaten Chats gesendet werden, in einer Cloud abspeichern.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unbewußte Preisgabe von Daten in Teambereichen",
+                    "type": "Threat",
+                    "text": "Teambereiche verfügen zwar in der Regel über einen definierten Kreis von Benutzenden und entsprechende Zugriffsbeschränkungen, jedoch ist vielen Benutzenden nicht bewusst, dass die Zugriffsrechte und Mitgliedschaften nachträglich modifiziert werden können.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Preisgabe von personenbezogenen Informationen",
+            "handle": "2.6",
+            "text": "UCC-Dienste erheben an vielen Stellen Daten, die auch anderen Benutzenden angezeigt werden. Dies kann dazu führen, dass personenbezogene Informationen ungewollt preisgegeben werden. Unter anderem kann die Verfügbarkeit von Benutzenden sichtbar sein. Auch Zeitstempel an Beiträgen in Chats bis hin zu umfangreichen Auswertungen über Gespräche, Aktivitäten oder Inhalte für einzelne Benutzende können Teil einer UCC-Komponente sein. Dabei können sogar Personenprofile durch die UCC-Dienste gebildet werden. Auch Personen ohne erweiterte Berechtigungen erhalten häufig Zugriff auf diese Auswertungen. Dadurch können sie Rückschlüsse auf Arbeitszeiten und -inhalte sowie persönliche Beziehungen anderer Personen ziehen und diese beispielsweise zur Leistungsüberwachung verwenden. Werden bei mobilem Arbeiten virtuelle Konferenzen benutzt, können ungewollt private Informationen an die Teilnehmenden der Konferenz übermittelt werden. Dazu zählen beispielsweise Personen, die durch das Videobild laufen, persönliche Gegenstände im Hintergrund einer Videoübertragung oder Geräusche und Stimmen aus dem privaten Umfeld.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Preisgabe von Verfügbarkeitsdaten",
+                    "type": "Threat",
+                    "text": "Unter anderem kann die Verfügbarkeit von Benutzenden sichtbar sein.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Preisgabe von Zeitstempeln",
+                    "type": "Threat",
+                    "text": "Auch Zeitstempel an Beiträgen in Chats bis hin zu umfangreichen Auswertungen über Gespräche, Aktivitäten oder Inhalte für einzelne Benutzende können Teil einer UCC-Komponente sein.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Preisgabe von Personenprofilen",
+                    "type": "Threat",
+                    "text": "Dabei können sogar Personenprofile durch die UCC-Dienste gebildet werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Preisgabe von privaten Informationen bei Videokonferenzen",
+                    "type": "Threat",
+                    "text": "Werden bei mobilem Arbeiten virtuelle Konferenzen benutzt, können ungewollt private Informationen an die Teilnehmenden der Konferenz übermittelt werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Wechselwirkungen bei UCC-Diensten",
+            "handle": "2.7",
+            "text": "UCC-Dienste können untereinander Wechselwirkungen verursachen, welche die Funktionalität einschränken. Um das Benutzungserlebnis zu verbessern, werden verschiedene Dienste häufig in einer Benutzungsoberfläche verknüpft. Dies kann jedoch zu Abhängigkeiten zwischen den Diensten führen. Wird beispielsweise der Videokonferenzdienst in eine Oberfläche zur Teamkollaboration integriert, kann der Videodienstes nicht mehr verwendet werden, falls die Oberfläche ausfällt. UCC-Dienste benutzen häufig gemeinsame Ressourcen. Dies kann zu Konflikten führen, welche die Funktionalität beeinträchtigen. Werden Headsets beispielsweise von einer Telefonie- und einer Videokonferenzanwendung gleichzeitig verwendet, können die Headsets durch eine Anwendung blockiert werden und dann nicht mehr für die andere Anwendung zur Verfügung stehen. Manche Anwendungen haben sehr hohe Ressourcenanforderungen. Wenn mehrere UCC-Dienste gleichzeitig auf einem IT-System ausgeführt werden, kann dies dazu führen, dass der Client überfordert ist und das IT-System ausfällt oder abstürzt. Wenn beispielsweise mehrere Videokonferenzanwendungen parallel im Hintergrund ausgeführt werden, kann die resultierende Auslastung des Arbeitsspeichers den Client stark beeinträchtigen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Abhängigkeit von Diensten",
+                    "type": "Threat",
+                    "text": "Wird beispielsweise der Videokonferenzdienst in eine Oberfläche zur Teamkollaboration integriert, kann der Videodienstes nicht mehr verwendet werden, falls die Oberfläche ausfällt.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Konflikte bei Ressourcen",
+                    "type": "Threat",
+                    "text": "Werden Headsets beispielsweise von einer Telefonie- und einer Videokonferenzanwendung gleichzeitig verwendet, können die Headsets durch eine Anwendung blockiert werden und dann nicht mehr für die andere Anwendung zur Verfügung stehen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Überlastung des IT-Systems",
+                    "type": "Threat",
+                    "text": "Wenn mehrere UCC-Dienste gleichzeitig auf einem IT-System ausgeführt werden, kann dies dazu führen, dass der Client überfordert ist und das IT-System ausfällt oder abstürzt.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Zugriff auf Applikationen oder Ressourcen durch Freigabe der Steuerung",
+            "handle": "2.8",
+            "text": "Werden den Teilnehmenden innerhalb einer Konversation Desktop- oder Bildschirminhalte angezeigt, kann die Steuerung durch den Freigebenden an andere Benutzende übertragen werden. Dies kann jedoch dazu führen, dass der Freigebende die Kontrolle über weitere Handlungen verliert. Da die Funktion zwar häufig vorhanden ist, in der Regel aber nur selten benutzt wird, sind viele Benutzende mit der Bedienung nicht vertraut, akzeptieren die Freigabe und verlieren dann die Kontrolle über ihren Client. Beispielsweise können Benutzende die Steuerung ihrer Maus freigeben, ohne zu wissen, wie die Freigabe beendet werden kann. Dadurch können Teilnehmende der Konversation möglicherweise auf weitere Anwendungen des Clients zugreifen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Verlust der Kontrolle durch den Freigebenden",
+                    "type": "Threat",
+                    "text": "Da die Funktion zwar häufig vorhanden ist, in der Regel aber nur selten benutzt wird, sind viele Benutzende mit der Bedienung nicht vertraut, akzeptieren die Freigabe und verlieren dann die Kontrolle über ihren Client.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Vorspiegelung falscher Identitäten",
+            "handle": "2.9",
+            "text": "Dadurch, dass neue UCC-Dienste eingeführt werden und Externe neue Möglichkeiten erhalten, Kontakt aufzunehmen, ergeben sich neue Wege für Angreifende, die sich als vertrauenswürdige Kommunikationspartner und -partnerin ausgeben wollen, um so an vertrauliche Informationen zu gelangen. Die Komplexität von UCC-Diensten erhöht die Wahrscheinlichkeit für Fehlbedienungen oder unbewusste Verletzungen von Sicherheitsrichtlinien durch die Benutzenden. Hyperlinks zu schädlichen Inhalten können beispielsweise geöffnet werden, weil die UCC-Dienste als interne Plattform mit erhöhter Vertrauenswürdigkeit wahrgenommen werden. Häufig sind sich die Benutzenden nicht darüber bewusst, dass sie auch von unbekannten Externen kontaktiert werden können. Dadurch sind sie anfälliger für Social Engineering, beispielsweise über einen Chat oder eine Einladung zu einer Konversation. Weiterhin können Angreifende ihre angezeigten Namen, ihre Stimme oder ihr Aussehen manipulieren. Dadurch kann sich zum Beispiel eine externe Person über die vermeintlich interne Kommunikationsplattform als vorgesetzte Person ausgeben, um so vertrauliche Informationen oder Dokumente direkt über den Chat zu erhalten.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Social Engineering",
+                    "type": "Threat",
+                    "text": "Häufig sind sich die Benutzenden nicht darüber bewusst, dass sie auch von unbekannten Externen kontaktiert werden können. Dadurch sind sie anfälliger für Social Engineering, beispielsweise über einen Chat oder eine Einladung zu einer Konversation.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Vorspiegelung einer falschen Identität",
+                    "type": "Threat",
+                    "text": "Weiterhin können Angreifende ihre angezeigten Namen, ihre Stimme oder ihr Aussehen manipulieren. Dadurch kann sich zum Beispiel eine externe Person über die vermeintlich interne Kommunikationsplattform als vorgesetzte Person ausgeben, um so vertrauliche Informationen oder Dokumente direkt über den Chat zu erhalten.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Planung von UCC",
+            "handle": "APP.5.4.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Es MUSS umfassend und detailliert geplant werden, wie und für welchen Zweck UCC eingesetzt werden soll. Die Planung MUSS insbesondere die Wechselwirkungen der UCC-Dienste berücksichtigen und mindestens folgende Aspekte beinhalten: Einsatzzwecke der vorgesehenen UCC-Dienste, Funktionale Anforderungen an UCC als Gesamtheit und an die einzelnen UCC-Dienste, Anforderungen zur Absicherung von UCC, Festlegung zu Informationen und Daten, die über UCC übertragen werden dürfen, Analyse der Kommunikation und der Abhängigkeiten von UCC-Diensten untereinander, Produkt- und Dienstauswahl ausgehend von den definierten Anforderungen, Aufstellen von organisatorischen Regelungen, um die UCC-Dienste zu benutzen. Bei der Planung MUSS berücksichtigt werden, wie UCC in die IT-Infrastruktur der Institution integriert wird. Hierbei MUSS insbesondere betrachtet werden, ob und wie die Systeme der UCC-Dienste innerhalb des Netzes separiert werden sollen und welche Schnittstellen zu weiteren benutzten Anwendungen notwendig sind.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Berücksichtigung von UCC in der Netzplanung",
+            "handle": "APP.5.4.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Bevor UCC-Dienste eingeführt werden, MUSS geprüft werden, ob das Netz die UCC-spezifischen Leistungsparameter erfüllt. Falls die Leistungsparameter nicht erfüllt werden, MUSS festgelegt werden, wie hiermit umgegangen wird. Sollen UCC-Dienste benutzt werden, SOLLTEN im Rahmen der allgemeinen Netzplanung insbesondere folgende Aspekte berücksichtigt werden: Erfüllung der UCC-spezifischen Leistungsparameter wie Paketverlust, Jitter und Latenz, Netzkapazitäten (Bandbreite) für die festgelegte Benutzung der UCC-Dienste wie Videokonferenzen, Berücksichtigung von Power over Ethernet (PoE) für stationäre Endgeräte, Verfügbarkeit von WLAN für mobile Endgeräte. Falls die UCC-Dienste erweitert werden, SOLLTEN diese Aspekte erneut geprüft werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Initiales und regelmäßiges Testen der UCC-Dienste",
+            "handle": "APP.5.4.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Für die UCC-Dienste MÜSSEN initial Tests durchgeführt werden, die verifizieren, dass die UCC-Komponenten untereinander und mit anderen UCC-Diensten interferenzfrei funktionieren. Ebenfalls MÜSSEN Tests mit ausgewählten Benutzenden durchgeführt werden, um insbesondere Wechselwirkungen mit anderen Anwendungen zu überprüfen. Diese Tests SOLLTEN wiederholt werden, wenn die UCC-Dienste erweitert oder verändert werden. Zusätzlich SOLLTE die Konfiguration der UCC-Dienste in regelmäßigen Abständen auf Plausibilität und Konformität für die festgelegten Einsatzzwecke überprüft werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.25",
+                "G 0.26"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Deaktivierung nicht benötigter Funktionen und Dienste",
+            "handle": "APP.5.4.A4",
+            "level": "Low",
+            "affects": [],
+            "text": "UCC-Dienste DÜRFEN NUR mit dem geringsten notwendigen Funktionsumfang betrieben werden. Die verfügbaren Funktionen und Dienste MÜSSEN entsprechend der definierten Einsatzzwecke ausgewählt werden. Dabei MÜSSEN gegebenenfalls auftretende Wechselwirkungen zwischen den verschiedenen Komponenten eines UCC-Dienstes berücksichtigt werden. Außerdem MÜSSEN insbesondere die folgenden Dienste und Funktionen auf Notwendigkeit geprüft und gegebenenfalls deaktiviert oder eingeschränkt werden: Speicherung von personenbezogenen Daten durch die UCC-Komponenten, Zugriff und Verarbeitung von personenbezogenen Daten durch Benutzende und den UCC-Dienst, Benutzbarkeit von Funktionen wie Chat, Erreichbarkeitsstatus, Dateiablagen oder Team-Bereiche durch externe Teilnehmende, Senden von Daten und Dateien an externe UCC-Dienste. Konversationsbezogene Log-Daten DÜRFEN NUR in minimal notwendigem Umfang gespeichert werden. Funktionen und Dienste, die auf (dauerhaft) gespeicherte Log-Daten zugreifen, MÜSSEN auf ihre Notwendigkeit geprüft und gegebenenfalls deaktiviert werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.14",
+                "G 0.23"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Rollen- und Berechtigungskonzept für UCC",
+            "handle": "APP.5.4.A5",
+            "level": "Low",
+            "affects": [],
+            "text": "Das Rollen- und Berechtigungskonzept MUSS um UCC-spezifische Definitionen von Rollen und Berechtigungen ergänzt werden. Solche Definitionen MÜSSEN sowohl für alle internen Benutzenden als auch für die externen Benutzenden getroffen werden. Es MÜSSEN folgende Aspekte berücksichtigt werden: Berechtigungen zur zielgerichteten Benutzung von UCC-Diensten gemäß festgelegter Einsatzzwecke, Berechtigungen zur Anpassung der Konfiguration von Konversationen, Berechtigungen für spezielle Funktionen von UCC-Diensten wie Aufzeichnung von Konversationen und Zugriff auf Dateiablagen eines UCC-Dienstes. Darüber hinaus MÜSSEN die Berechtigungen der Konten ebenfalls auf das notwendige Minimum reduziert werden. Dienste, die nur für einen Teil der Benutzenden zur Verfügung stehen, DÜRFEN NICHT für die restlichen Benutzenden zugänglich sein. Zudem SOLLTEN nur Benutzende mit einer entsprechenden Berechtigung auf Daten wie Aufzeichnungen oder Dateiablagen zugreifen können. Die Festlegungen MÜSSEN festgehalten, regelmäßig und anlassbezogen geprüft und aktualisiert werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.30",
+                "G 0.32"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verschlüsselung von UCC-Daten",
+            "handle": "APP.5.4.A6",
+            "level": "Low",
+            "affects": [],
+            "text": "Sämtliche Kommunikation über unzureichend vertrauenswürdige Netze MUSS mit sicheren Verfahren verschlüsselt werden, sofern dies durch die jeweilige UCC-Komponente unterstützt wird. Falls eine Verschlüsselung für einzelne UCC-Komponenten oder einzelne Konversationen nicht möglich ist, MUSS die Festlegung, welche Informationen über diese UCC-Komponenten übertragen werden dürfen, geprüft und gegebenenfalls angepasst werden. Insbesondere MUSS bei anwendungsübergreifender Kommunikation festgelegt werden, für welche Konversationen die Medienströme und die Signalisierung und welche weiteren Daten wie Chat oder Dateitransfer verschlüsselt übertragen werden müssen. Dateiablagen, die persistente personenbezogene oder vertrauliche Daten enthalten, MÜSSEN mit Hilfe von sicheren Verschlüsselungsmechanismen abgesichert werden. Hierbei MÜSSEN sowohl interne Dateiablagen der UCC-Dienste als auch über Schnittstellen angebundene externe Dateiablagen berücksichtigt werden. Die Benutzenden MÜSSEN zudem über den Status der Verschlüsselung innerhalb von Konversationen informiert werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.14",
+                "G 0.15",
+                "G 0.19",
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Regelungen für eine sichere Benutzung der UCC-Dienste",
+            "handle": "APP.5.4.A7",
+            "level": "Low",
+            "affects": [],
+            "text": "Konversationen, die mit Hilfe von UCC durchgeführt werden, MÜSSEN abgesichert werden. Hierbei MÜSSEN folgende Aspekte berücksichtigt werden: Auswahl der Teilnehmenden entsprechend dem Inhalt der Konversation, zusätzliche Absicherung von geplanten Konversationen über Mechanismen wie PIN oder ein Passwort, Zuweisung von Moderationsrechten an ausgewählte Benutzende der einladenden Institution, Regelungen zum Umgang mit Aufzeichnungen von Konversationen, Regelungen für Endgeräte, die von mehreren Benutzenden verwendet werden. Die Benutzenden MÜSSEN über Funktionen informiert werden, über die Konversationen abgesichert werden können. Ebenso MÜSSEN die Benutzenden dafür sensibilisiert werden, wie die UCC-Dienste sicher benutzt werden, insbesondere für externe Chats oder Videokonferenzen.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.30",
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz eines Session Border Controller am Provider-Übergang",
+            "handle": "APP.5.4.A8",
+            "level": "Medium",
+            "affects": [],
+            "text": "Für die UCC-Kommunikation über eingeschränkt vertrauenswürdige Netze SOLLTE mindestens für Sprachdienste ein Session Border Controller (SBC) am Netzübergang bzw. beim Übergang zum SIP Provider eingesetzt werden. Der SBC SOLLTE als Verschlüsselungsendpunkt die Signalisierung und die Medienströme terminieren. Der SBC SOLLTE für die Signalisierung und die Medienströme Filterfunktionen unterstützen, die die jeweiligen Konversationen zusätzlich absichern.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.23"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Konfiguration von UCC",
+            "handle": "APP.5.4.A9",
+            "level": "Medium",
+            "affects": [],
+            "text": "Um UCC sicher zu konfigurieren, SOLLTEN mindestens die folgenden Aspekte berücksichtigt werden: Verschlüsselung von Signalisierungs- und Mediendaten auch auf vertrauenswürdigen Übertragungsstrecken, Absicherung von gespeicherten Daten, insbesondere Festlegung für Zugriffsberechtigung auf Aufzeichnungen von Konversationen, Einschränkung der zur Verfügung stehenden Dienste auf ausschließlich interne Benutzende, Einschränkung der Übertragung von Erreichbarkeitsinformationen. Gespeicherte Daten SOLLTEN verschlüsselt werden. Auf gespeicherte Daten SOLLTEN Benutzende nur nach vorheriger Authentisierung zugreifen können. Der IT-Betrieb SOLLTE sichere Einstellungen vorgeben, die verwendet werden, wenn Konversationen erstellt werden. Für textbasierte Konversationen SOLLTE ein Malware-Schutz aktiviert werden. Die Umsetzung SOLLTE festgehalten, regelmäßig und anlassbezogen auf Einhaltung der Vorgaben geprüft und angepasst werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.14",
+                "G 0.15",
+                "G 0.18",
+                "G 0.19",
+                "G 0.30",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Absicherung und Einschränkung von Auswertungen von Inhalten",
+            "handle": "APP.5.4.A10",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Art einer (automatischen) Auswertung von Konversationsinhalten SOLLTE schon im Vorfeld sorgfältig geprüft werden und ihr Nutzen gegen den Schutzbedarf abgewogen werden. Es SOLLTE die Möglichkeit bestehen, entsprechende Funktionen entweder vollständig oder pro Konversation zu deaktivieren und eine inhaltliche Auswertung der Kommunikation zu verhindern. Besondere Beachtung SOLLTEN KI-Funktionen und die Übertragung von Daten an Onlinedienste erhalten. Werden Inhalte über den Zweck der Konversation hinausgehend ausgewertet, MUSS dazu auch eine Zustimmung der an der Konversation teilnehmenden Personen eingeholt werden. Werden während der Auswertung von Konversationen persistente Daten erzeugt, SOLLTEN für diese geeignete Schutzmaßnahmen umgesetzt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sicherstellung der Verfügbarkeit von Kommunikationsdiensten",
+            "handle": "APP.5.4.A11",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Die Verfügbarkeit von UCC-Diensten SOLLTE insbesondere durch folgende technische Maßnahmen sichergestellt werden: redundante Auslegung zentraler Server und Dienste, Benutzung von Call Admission Control (CAC) zur Qualitätssicherung von Telefonie und Video-Diensten, möglichst autark funktionierende UCC-Dienste. Darüber hinaus SOLLTE bei Cloud-basierten UCC-Diensten der Cloud-Provider sowie der Internet-Provider ausfallsicher an das eigene Netz angebunden werden. Zudem SOLLTE ein SIP-Provider, der Rufnummern bereitstellt und den Übergang ins öffentliche Telefonnetz bildet, hochverfügbar an das eigene Netz angebunden werden. Die Verfügbarkeit SOLLTE durch ein Monitoring der UCC-Dienste überwacht werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.9",
+                "G 0.25",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einbindung von UCC in die Notfallplanung",
+            "handle": "APP.5.4.A12",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Ausgehend von einer Business Impact Analyse SOLLTE geprüft werden, welche UCC-Dienste in der Notfallplanung berücksichtigt werden sollen. Hierbei SOLLTEN in Notfallsituationen für einzelne UCC-Dienste alternative Anwendungen bereitgestellt werden. Insbesondere SOLLTE für die Benutzenden die Erreichbarkeit von wichtigen Diensten wie der Notruf gewährleistet werden. Zudem SOLLTE ein Notfallplan für die UCC-Dienste erstellt werden, in dem notwendige Konfigurationen sowie Routing-Anpassungen, die über den Telefonie-Provider realisiert werden, behandelt werden. Ebenso SOLLTE der Wiederanlauf der UCC-Komponenten und -Dienste unter Berücksichtigung der Wechselwirkungen innerhalb der UCC-Dienste festgelegt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.25"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Administration von SIP-Trunks",
+            "handle": "APP.5.4.A13",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Wenn SIP-Trunks administriert werden, SOLLTE für folgende Tätigkeiten ein 4-Augen-Prinzip angewendet werden: Änderungen an Routing-Konfigurationen, Änderungen an Parametern, die im Rahmen von Call Admission Control benutzt werden, Änderungen hinsichtlich der Verschlüsselung sowohl in Richtung des eigenen Netzes als auch in Richtung des Provider-Netzes, Änderungen an weiteren sicherheitsrelevanten Konfigurationen wie der lokalen Speicherung von Verbindungsdaten.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.31",
+                "G 0.32"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ende-zu-Ende-Verschlüsselung",
+            "handle": "APP.5.4.A14",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Für UCC-Kommunikation SOLLTE eine sichere Ende-zu-Ende-Verschlüsselung benutzt werden. Die Ende-zu-Ende-Verschlüsselung SOLLTE sich sowohl auf die Signalisierung als auch auf die Mediendaten von Audio- und Videokommunikation mit zwei oder mehr Teilnehmenden erstrecken. Bei Konversationen zwischen UCC-Diensten von verschiedenen Herstellenden SOLLTEN die übertragenen Informationen eingeschränkt werden, sofern eine Ende-zu-Ende-Verschlüsselung nach Stand der Technik nicht möglich ist.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.15"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einschränkung von KI-Funktionen",
+            "handle": "APP.5.4.A15",
+            "level": "High",
+            "affects": [
+                "C"
+            ],
+            "text": "Die Benutzung von KI-Funktionen SOLLTE deaktiviert oder auf ein Minimum reduziert werden. Ist eine permanente Deaktivierung nicht möglich oder erwünscht, SOLLTE festgelegt werden, dass Benutzende der UCC-Dienste zu Beginn einer Konversation zielgerichtet KI-Funktionen deaktivieren, falls dies möglich ist.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz eines SBC an weiteren Netzübergängen",
+            "handle": "APP.5.4.A16",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Ergänzend zu einem SBC am Netzübergang zum Provider, SOLLTEN weitere SBC an internen Netzübergängen eingesetzt werden. Hierbei SOLLTEN insbesondere Netzübergänge zwischen Netzsegmenten mit unterschiedlichem Schutzbedarf berücksichtigt werden. Der SBC SOLLTE sicherstellen, dass die Verschlüsselungsmechanismen an den SBC-gesicherten Netzsegmentübergängen anforderungskonform realisiert werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.23"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einschränkung der Benutzung von UCC-Diensten",
+            "handle": "APP.5.4.A17",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Folgende Aspekte SOLLTEN mindestens berücksichtigt werden, um die UCC-Dienste sowie die übertragenen Daten zusätzlich abzusichern: Einschränkung der Dienste entsprechend des Schutzbedarfs der übertragenen Informationen, Benutzung einer Multi-Faktor-Authentisierung für Benutzende, Deaktivierung von Funktionen für externe Benutzende, Deaktivierung der Speicherung von Metadaten, Einschränkung der Sichtbarkeit von kommunikationsbezogenen Daten für Administrierende. Darüber hinaus SOLLTEN zusätzliche technische und organisatorische Vorkehrungen getroffen werden, um Konversationen über die Vergabe von PINs bzw. Passwörtern hinaus abzusichern.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.19",
+                "G 0.30",
+                "G 0.32"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einbindung von UCC in ein Sicherheitsmonitoring",
+            "handle": "APP.5.4.A18",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Die zentralen UCC-Komponenten SOLLTEN durch ein Sicherheitsmonitoring überwacht werden. Dies SOLLTE mindestens für Komponenten umgesetzt werden, die wie Multipoint Control Units Verschlüsselungsendpunkte realisieren oder die wie SBCs an Vertrauensgrenzen positioniert sind. Wird für die IT der Institution ein System zur zentralen Detektion und automatisierten Echtzeitüberprüfung von Ereignismeldungen eingesetzt, SOLLTEN die zentralen UCC-Komponenten hierin eingebunden werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.25"
+            ]
+        }
+    ]
+}

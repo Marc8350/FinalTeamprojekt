@@ -1,0 +1,285 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "Schutz vor Schadprogrammen",
+    "handle": "OPS.1.1.4",
+    "text": "Schadprogramme sind Programme, die in der Regel ohne Wissen und Einwilligung der Benutzenden schädliche Funktionen auf einem IT-System ausführen. Diese Schadfunktionen können ein breites Feld abdecken, das von Spionage über Erpressung (sogenannte Ransomware) bis hin zur Sabotage und Zerstörung von Informationen oder gar Geräten reicht.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Softwareschwachstellen und Drive-by-Downloads",
+            "handle": "2.1",
+            "text": "Sind IT-Systeme nicht ausreichend vor Schadprogrammen geschützt, können Softwareschwachstellen bei Angriffen ausgenutzt werden, um Schadcode auszuführen. Dies kann unter anderem passieren, wenn Patches nicht zeitnah eingespielt und Schutzmechanismen von Anwendungsprogrammen, wie Browsern, nicht richtig konfiguriert sind. Bei den sogenannten Drive-by-Downloads reicht es beispielsweise aus, eine mit Schadcode behaftete Website zu besuchen. Eine Schwachstelle im Browser oder in einem installierten Plug-in, wie Java oder Adobe Flash, kann dann ausgenutzt werden, um das IT-System zu infizieren und Angreifenden umfangreiche Kontrolle sowie einen Zugang zum Netz einer Institution zu verschaffen. Besonders gefährdet sind hier IT-Systeme, die nicht regelmäßig aktualisiert werden, z. B. viele Smartphones.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Drive-by-Download",
+                    "type": "Threat",
+                    "text": "Ein Angreifer kann eine Website mit Schadcode erstellen, die ein IT-System infiziert, wenn ein Benutzer diese Website besucht. Der Schadcode kann dann auf dem IT-System ausgeführt werden, ohne dass der Benutzer dies bemerkt.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erpressung durch Ransomware",
+            "handle": "2.2",
+            "text": "Eine weitverbreitete Art von Schadprogrammen ist die sogenannte Ransomware. Diese verschlüsselt die Daten des infizierten IT-Systems sowie häufig auch weitere Daten, die etwa über Netzfreigaben erreichbar sind. In der Regel verwenden die Angreifenden dabei Verschlüsselungsmethoden, die ohne Kenntnis des Schlüssels nicht umkehrbar sind, und erpressen damit ihre Opfer um hohe Geldsummen. Besteht kein wirksamer Schutz gegen Schadprogramme und sind keine ergänzenden Vorkehrungen, wie Datensicherungen, getroffen, kann die Verfügbarkeit von Informationen erheblich eingeschränkt werden, Daten können verloren gehen, sowie massive finanzielle und Image-Schäden können eintreten.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Ransomware-Angriff",
+                    "type": "Threat",
+                    "text": "Ein Angreifer kann Ransomware auf einem IT-System installieren, um die Daten des Systems zu verschlüsseln und dann ein Lösegeld für die Entschlüsselung der Daten zu fordern.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Gezielte Angriffe und Social Engineering",
+            "handle": "2.3",
+            "text": "Institutionen werden häufig mit maßgeschneiderten Schadprogrammen angegriffen. Dabei werden z. B. Führungskräfte über Methoden des Social Engineerings dazu verleitet, schädliche E-Mail-Anhänge zu öffnen. Maßgeschneiderte Schadprogramme können zudem häufig nicht unmittelbar von Virenschutzprogrammen erkannt werden. Auch die Personalabteilung einer Institution kann beispielsweise ein Angriffsziel sein, indem etwa mit Schadsoftware infizierte Bewerbungsunterlagen auf elektronischem Wege zugesendet werden. Konnten die Angreifenden auf diese Weise ein IT-System infizieren, so können sie sich innerhalb der Institution ausbreiten und beispielsweise Informationen einsehen, manipulieren oder zerstören.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Spear-Phishing-Angriff",
+                    "type": "Threat",
+                    "text": "Ein Angreifer kann eine E-Mail mit einem Schadprogramm an eine Person senden, die sich für ein bestimmtes Unternehmen oder eine bestimmte Organisation interessiert. Die E-Mail kann so aussehen, als ob sie von einem legitimen Unternehmen oder einer Organisation stammt. Wenn die Person auf den Link in der E-Mail klickt oder die angehängte Datei öffnet, kann das Schadprogramm auf ihrem Computer installiert werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Botnetze",
+            "handle": "2.4",
+            "text": "Über Schadprogramme können IT-Systeme einer Institution Teil von sogenannten Botnetzen werden. Angreifende, die in einem solchen Botnetz häufig tausende von Systemen kontrollieren, können diese beispielsweise einsetzen, um Spam zu versenden oder verteilte Denial-of-Service (DDoS)-Angriffe auf Dritte zu starten. Auch wenn die eigene Institution möglicherweise nicht unmittelbar geschädigt wird, kann sich dies trotzdem negativ bezüglich der Verfügbarkeit und Integrität der eigenen Dienste und IT-Systeme auswirken und sogar rechtliche Probleme nach sich ziehen. Wenn z. B. der E-Mail-Server einer Institution auf eine Blockliste gelangt, ist möglicherweise kein Versand und Empfang von E-Mails mehr möglich.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "DDoS-Angriff",
+                    "type": "Threat",
+                    "text": "Ein Angreifer kann ein Botnetz verwenden, um einen DDoS-Angriff auf ein IT-System durchzuführen. Bei einem DDoS-Angriff werden viele Computer verwendet, um ein IT-System mit so vielen Anfragen zu überlasten, dass es nicht mehr richtig funktioniert.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Infektion von Produktionssystemen und IoT-Geräten",
+            "handle": "2.5",
+            "text": "Neben klassischen IT-Systemen werden vermehrt auch Geräte durch Schadprogramme angegriffen, die auf den ersten Blick nicht wie offensichtliche Ziele aussehen. Bei einem Angriff könnte beispielsweise eine über das Internet erreichbare Überwachungskamera infiziert werden, um in der Institution zu spionieren. Aber auch eine vernetzte Glühbirne oder eine Kaffeemaschine mit App-Steuerung kann als Eintrittspunkt in das Netz der Institution oder als Teil eines Botnetzes dienen, wenn diese Geräte nicht ausreichend vor Schadprogrammen geschützt werden. Vernetzte Produktionssysteme oder Industriesteuerungen können ebenfalls durch Schadprogramme manipuliert oder sogar zerstört werden, was Ausfälle und viele weitere Gefährdungen für die Institution und ihre Mitarbeitenden, z. B. durch Brände, nach sich ziehen kann.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "IoT-Geräte-Infektion",
+                    "type": "Threat",
+                    "text": "Ein Angreifer kann ein IoT-Gerät, wie z. B. eine Smart-Kamera, infizieren, um auf das Netzwerk der Institution zuzugreifen oder um Daten zu stehlen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erstellung eines Konzepts für den Schutz vor Schadprogrammen",
+            "handle": "OPS.1.1.4.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Es MUSS ein Konzept erstellt werden, das beschreibt, welche IT-Systeme vor Schadprogrammen geschützt werden müssen. Hierbei MÜSSEN auch IoT-Geräte und Produktionssysteme berücksichtigt werden. Außerdem MUSS festgehalten werden, wie der Schutz zu erfolgen hat. Ist kein verlässlicher Schutz möglich, so SOLLTEN die identifizierten IT-Systeme NICHT betrieben werden. Das Konzept SOLLTE nachvollziehbar dokumentiert und aktuell gehalten werden.",
+            "isresponsible": "[B]",
+            "mitigates": [
+                "G 0.18",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Nutzung systemspezifischer Schutzmechanismen",
+            "handle": "OPS.1.1.4.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Es MUSS geprüft werden, welche Schutzmechanismen die verwendeten IT-Systeme sowie die darauf genutzten Betriebssysteme und Anwendungen bieten. Diese Mechanismen MÜSSEN genutzt werden, sofern es keinen mindestens gleichwertigen Ersatz gibt oder gute Gründe dagegen sprechen. Werden sie nicht genutzt, MUSS dies begründet und dokumentiert werden.",
+            "isresponsible": "[B]",
+            "mitigates": [
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Auswahl eines Virenschutzprogrammes",
+            "handle": "OPS.1.1.4.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Abhängig vom verwendeten Betriebssystem, anderen vorhandenen Schutzmechanismen sowie der Verfügbarkeit geeigneter Virenschutzprogramme MUSS für den konkreten Einsatzzweck ein entsprechendes Schutzprogramm ausgewählt und installiert werden. Für Gateways und IT-Systeme, die dem Datenaustausch dienen, MUSS ein geeignetes Virenschutzprogramm ausgewählt und installiert werden.\n\nEs DÜRFEN NUR Produkte für den Enterprise-Bereich mit auf die Institution zugeschnittenen Service- und Supportleistungen eingesetzt werden. Produkte für die reine Heimanwendung oder Produkte ohne Support DÜRFEN NICHT im professionellen Wirkbetrieb eingesetzt werden.\n\nCloud-Dienste zur Verbesserung der Detektionsleistung der Virenschutzprogramme SOLLTEN genutzt werden. Falls Cloud-Funktionen solcher Produkte verwendet werden, MUSS sichergestellt werden, dass dies nicht im Widerspruch zum Daten- oder Geheimschutz steht. Neben Echtzeit- und On-Demand-Scans MUSS eine eingesetzte Lösung die Möglichkeit bieten, auch komprimierte Daten nach Schadprogrammen zu durchsuchen.",
+            "isresponsible": "[B]",
+            "mitigates": [
+                "G 0.19",
+                "G 0.20",
+                "G 0.29",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Betrieb und Konfiguration von Virenschutzprogrammen",
+            "handle": "OPS.1.1.4.A5",
+            "level": "Low",
+            "affects": [],
+            "text": "Das Virenschutzprogramm MUSS für seine Einsatzumgebung geeignet konfiguriert werden. Die Erkennungsleistung SOLLTE dabei im Vordergrund stehen, sofern nicht Datenschutz- oder Leistungsgründe im jeweiligen Einzelfall dagegen sprechen. Wenn sicherheitsrelevante Funktionen des Virenschutzprogramms nicht genutzt werden, SOLLTE dies begründet und dokumentiert werden. Bei Schutzprogrammen, die speziell für die Desktop-Virtualisierung optimiert sind, SOLLTE nachvollziehbar dokumentiert sein, ob auf bestimmte Detektionsverfahren zugunsten der Leistung verzichtet wird. Es MUSS sichergestellt werden, dass die Benutzenden keine sicherheitsrelevanten Änderungen an den Einstellungen der Antivirenprogramme vornehmen können.",
+            "isresponsible": "[B]",
+            "mitigates": [
+                "G 0.27",
+                "G 0.29",
+                "G 0.30",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Regelmäßige Aktualisierung der eingesetzten Virenschutzprogramme",
+            "handle": "OPS.1.1.4.A6",
+            "level": "Low",
+            "affects": [],
+            "text": "Auf den damit ausgestatteten IT-Systemen MÜSSEN die Virenschutzprogramme nach Empfehlung der herstellenden Institution regelmäßig und zeitnah aktualisiert werden.",
+            "isresponsible": "[B]",
+            "mitigates": [
+                "G 0.18",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sensibilisierung und Verpflichtung der Benutzenden",
+            "handle": "OPS.1.1.4.A7",
+            "level": "Low",
+            "affects": [],
+            "text": "Benutzende MÜSSEN regelmäßig über die Bedrohung durch Schadprogramme aufgeklärt werden. Sie MÜSSEN die grundlegenden Verhaltensregeln einhalten, um die Gefahr eines Befalls durch Schadprogramme zu reduzieren. Dateien, E-Mails, Webseiten usw. aus nicht vertrauenswürdigen Quellen SOLLTEN NICHT geöffnet werden. Sie MÜSSEN entsprechenden Kontaktpersonen für den Fall eines Verdacht auf eine Infektion mit einem Schadprogramm bekannt sein. Sie MÜSSEN sich an die ihnen benannten Kontaktpersonen wenden, wenn der Verdacht auf eine Infektion mit einem Schadprogramm besteht.",
+            "isresponsible": "[Benutzende]",
+            "mitigates": [
+                "G 0.31",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Meldung von Infektionen mit Schadprogrammen",
+            "handle": "OPS.1.1.4.A9",
+            "level": "Medium",
+            "affects": [],
+            "text": "Das eingesetzte Virenschutzprogramm SOLLTE eine Infektion mit einem Schadprogramm automatisch blockieren und melden. Die automatische Meldung SOLLTE an einer zentralen Stelle angenommen werden. Dabei SOLLTEN die zuständigen Mitarbeitenden je nach Sachlage über das weitere Vorgehen entscheiden. Das Vorgehen bei Meldungen und Alarmen der Virenschutzprogramme SOLLTE geplant, dokumentiert und getestet werden. Es SOLLTE insbesondere geregelt sein, was im Falle einer bestätigten Infektion geschehen soll.",
+            "isresponsible": "[Benutzende]",
+            "mitigates": [
+                "G 0.18",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Nutzung spezieller Analyseumgebungen",
+            "handle": "OPS.1.1.4.A10",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Automatisierte Analysen in einer speziellen Testumgebung (basierend auf Sandboxen bzw. separaten virtuellen oder physischen Systemen) SOLLTEN für eine Bewertung von verdächtigen Dateien ergänzend herangezogen werden.",
+            "isresponsible": "[H]",
+            "mitigates": [
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz mehrerer Scan-Engines",
+            "handle": "OPS.1.1.4.A11",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Zur Verbesserung der Erkennungsleistung SOLLTEN für besonders schutzwürdige IT-Systeme, wie Gateways und IT-Systeme zum Datenaustausch, Virenschutzprogramme mit mehreren alternativen Scan-Engines eingesetzt werden.",
+            "isresponsible": "[H]",
+            "mitigates": [
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz von Datenträgerschleusen",
+            "handle": "OPS.1.1.4.A12",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Bevor insbesondere Datenträger von Dritten mit den IT-Systemen der Institution verbunden werden, SOLLTEN diese durch eine Datenträgerschleuse geprüft werden.",
+            "isresponsible": "[H]",
+            "mitigates": [
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Umgang mit nicht vertrauenswürdigen Dateien",
+            "handle": "OPS.1.1.4.A13",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Ist es notwendig, nicht vertrauenswürdige Dateien zu öffnen, SOLLTE dies nur auf einem isolierten IT-System geschehen. Die betroffenen Dateien SOLLTEN dort z. B. in ein ungefährliches Format umgewandelt oder ausgedruckt werden, wenn sich hierdurch das Risiko einer Infektion durch Schadsoftware verringert.",
+            "isresponsible": "[H]",
+            "mitigates": [
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Auswahl und Einsatz von Cyber-Sicherheitsprodukten gegen gezielte Angriffe",
+            "handle": "OPS.1.1.4.A14",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Der Einsatz sowie der Mehrwert von Produkten und Services, die im Vergleich zu herkömmlichen Virenschutzprogrammen einen erweiterten Schutzumfang bieten, SOLLTE geprüft werden. Solche Sicherheitsprodukte gegen gezielte Angriffe SOLLTEN z. B. bei der Ausführung von Dateien in speziellen Analyseumgebungen, bei der Härtung von Clients oder bei der Kapselung von Prozessen eingesetzt werden. Vor einer Kaufentscheidung für ein Sicherheitsprodukt SOLLTEN Schutzwirkung und Kompatibilität zur eigenen IT-Umgebung getestet werden.",
+            "isresponsible": "[H]",
+            "mitigates": [
+                "G 0.18",
+                "G 0.39"
+            ]
+        }
+    ]
+}

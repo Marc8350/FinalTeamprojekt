@@ -1,0 +1,475 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "Mobile Anwendungen (Apps)",
+    "handle": "APP.1.4",
+    "text": "Smartphones, Tablets und ähnliche mobile Geräte sind heute auch in Behörden und Unternehmen weit verbreitet. Mitarbeitende können so unabhängig von Ort und Zeit auf Daten der Institution, auf Informationen und Anwendungen zugreifen. Mobile Anwendungen (Applikationen, kurz Apps) sind Anwendungen, die auf mobil genutzten Betriebssystemen wie iOS oder Android auf entsprechenden Endgeräten installiert und ausgeführt werden. Apps werden üblicherweise aus sogenannten App Stores bezogen. Diese werden oft von den herstellenden Institutionen der mobil genutzten Betriebssysteme und Endgeräte betrieben und gepflegt. Im professionellen Umfeld ist es aber auch üblich, Apps selbst zu entwickeln und z. B. über Mobile-Device-Management-Lösungen (MDM) auf den Endgeräten zu installieren und zu verwalten. Im Vergleich zu Anwendungen auf Desktop-Betriebssystemen unterliegen Apps unter iOS oder Android besonderen Rahmenbedingungen, wie etwa einem durch das Betriebssystem sichergestellten Berechtigungsmanagement. Für die unterschiedlichen mobilen Betriebssysteme gibt es mittlerweile eine große Auswahl an verfügbaren Apps. Auch gibt es standardisierte Bibliotheken und Entwicklungsumgebungen, mit deren Hilfe sich Apps im Vergleich zu klassischen Anwendungen schnell selbst entwickeln lassen.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ungeeignete Auswahl von Apps",
+            "handle": "APP.1.4.A1",
+            "text": "Die ausgewählten Apps wirken sich stark auf die damit verarbeiteten Informationen, auf das mobile Endgerät sowie häufig auf die IT-Infrastruktur der Institution aus. Wird dies bei der Auswahl der Apps nicht berücksichtigt, können weitreichende Probleme entstehen. Besonders hoch ist die Gefahr, wenn es sich dabei um Apps handelt, die nicht eigens für die abzubildenden Geschäftsprozesse entwickelt wurden. So könnten beispielsweise die für den Betrieb einer App erforderlichen Voraussetzungen nicht ausreichend betrachtet werden. Möglicherweise ist dann z. B. die mobile Netzanbindung nicht leistungsfähig genug oder die Hardware nicht kompatibel. Apps können auch dann ungeeignet sein, wenn sie keine ausreichende langfristige Einsatzstabilität und -planung bieten oder von den herstellenden Institutionen nicht ausreichend gepflegt werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "App erfüllt nicht die Anforderungen der Institution",
+                    "type": "Threat",
+                    "text": "Die App wurde nicht für die spezifischen Anforderungen der Institution entwickelt und kann daher nicht die benötigten Funktionen erfüllen oder die Daten nicht ausreichend schützen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "App ist nicht kompatibel mit der Infrastruktur",
+                    "type": "Threat",
+                    "text": "Die App ist nicht mit der IT-Infrastruktur der Institution kompatibel, z. B. weil sie eine bestimmte Version eines Betriebssystems oder eine bestimmte Hardware benötigt, die nicht vorhanden ist.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "App ist nicht ausreichend gepflegt",
+                    "type": "Threat",
+                    "text": "Die App wird nicht mehr von den Entwicklern gepflegt und erhält daher keine Sicherheitsupdates mehr. Dadurch können Sicherheitslücken ausgenutzt werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Zu weitreichende Berechtigungen",
+            "handle": "APP.1.4.A2",
+            "text": "Apps benötigen gewisse Berechtigungen, um auf bestimmte Funktionen und Dienste zugreifen zu können. So kann eine App in der Regel immer auf die Internetverbindung des mobilen Endgeräts zugreifen. Der Standort oder das Adressbuch müssen hingegen meist gesondert freigegeben werden. Werden Apps eingesetzt, die zu weitgehende Berechtigungen erfordern, oder werden die Berechtigungen nicht ausreichend eingeschränkt, so kann sich das insbesondere auf die Vertraulichkeit und Integrität der Informationen auf dem Endgerät auswirken. Apps können zudem Informationen an unberechtigte Dritte weitergeben, wie z. B. den Standort, Fotos oder Kontakt- und Kalenderdaten. Außerdem sind Apps in der Lage, lokal abgespeicherte Daten zu verändern oder zu löschen. Schließlich können Apps auch Kosten verursachen, etwa durch Telefonanrufe, versendete SMS oder In-App-Käufe.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "App greift auf sensible Daten zu",
+                    "type": "Threat",
+                    "text": "Die App greift auf sensible Daten zu, z. B. auf den Standort, das Adressbuch oder die Kontakte, ohne dass die Benutzende dies explizit erlaubt haben.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "App sendet Daten an unberechtigte Dritte",
+                    "type": "Threat",
+                    "text": "Die App sendet Daten an unberechtigte Dritte, z. B. an Werbenetzwerke oder an andere Unternehmen, ohne dass die Benutzende dies explizit erlaubt haben.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "App verursacht Kosten",
+                    "type": "Threat",
+                    "text": "Die App verursacht Kosten, z. B. durch Telefonanrufe, SMS oder In-App-Käufe, ohne dass die Benutzende dies explizit erlaubt haben.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ungewollte Funktionen in Apps",
+            "handle": "APP.1.4.A3",
+            "text": "Zwar prüfen manche App-Store-Betreibende die angebotenen Apps, dennoch können diese Sicherheitslücken oder bewusst eingesetzte Schadfunktionen enthalten. Das Risiko ist insbesondere dann hoch, wenn Apps aus ungeprüften oder unzuverlässigen Quellen bezogen werden. Dann kann die Vertraulichkeit, Integrität und Verfügbarkeit der Informationen gefährdet werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "App enthält Schadcode",
+                    "type": "Threat",
+                    "text": "Die App enthält Schadcode, der Daten stiehlt, das Gerät beschädigt oder andere schädliche Aktionen ausführt.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "App enthält Sicherheitslücken",
+                    "type": "Threat",
+                    "text": "Die App enthält Sicherheitslücken, die von Angreifern ausgenutzt werden können, um auf das Gerät zuzugreifen oder Daten zu stehlen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Software-Schwachstellen und Fehler in Apps",
+            "handle": "APP.1.4.A4",
+            "text": "Apps können Schwachstellen enthalten, über die sie direkt am Gerät oder über Netzverbindungen angegriffen werden können. Außerdem werden viele Apps nach einiger Zeit von den Entwickelnden nicht mehr weiter gepflegt. Dadurch werden erkannte Sicherheitsmängel nicht mehr durch entsprechende Updates behoben.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "App wird durch eine Sicherheitslücke angegriffen",
+                    "type": "Threat",
+                    "text": "Die App wird durch eine Sicherheitslücke angegriffen, die von den Entwicklern nicht behoben wurde.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unsichere Speicherung lokaler Anwendungsdaten",
+            "handle": "APP.1.4.A5",
+            "text": "Einige Apps speichern Daten auf dem Endgerät, beispielsweise Profile der Benutzenden oder Dokumente. Falls diese Daten unzureichend geschützt sind, können möglicherweise andere Apps darauf zugreifen. Dies betrifft neben bewusst abgelegten Daten auch temporäre Daten, wie beispielsweise im Cache zwischengespeicherte Informationen. Auch sind sie für Unberechtigte leicht lesbar, z. B. wenn Mitarbeitende ihre Geräte verloren haben. Außerdem werden lokal gespeicherte Informationen oft nicht im Datensicherungskonzept berücksichtigt. Fällt das Endgerät aus oder geht verloren, sind die lokal gespeicherten Informationen ebenfalls nicht mehr verfügbar.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "App speichert Daten unsicher",
+                    "type": "Threat",
+                    "text": "Die App speichert Daten unsicher auf dem Gerät, z. B. ohne Verschlüsselung oder ohne Zugriffsschutz.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "App verliert Daten",
+                    "type": "Threat",
+                    "text": "Die App verliert Daten, z. B. durch einen Diebstahl oder einen Verlust des Geräts.",
+                    "hasOrigin": [
+                        "human",
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ableitung vertraulicher Informationen aus Metadaten",
+            "handle": "APP.1.4.A6",
+            "text": "Durch Apps sammeln sich viele Metadaten an. Mithilfe dieser Metadaten können Dritte auf vertrauliche Informationen schließen, z. B. über Telefon- und Netzverbindungen, Bewegungsdaten oder besuchte Webseiten. Daraus lassen sich dann weitere Informationen ableiten, beispielsweise die Organisationsstruktur der Institution, genaue Positionen von Standorten sowie deren personelle Besetzung.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Metadaten werden ausgewertet",
+                    "type": "Threat",
+                    "text": "Dritte werten die Metadaten aus, um vertrauliche Informationen über die Institution zu erhalten.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Abfluss von vertraulichen Daten",
+            "handle": "APP.1.4.A7",
+            "text": "Daten werden über verschiedene Wege von und zu einer App übertragen. Dafür stellen mobile Betriebssysteme verschiedene Schnittstellen bereit. Benutzende haben ebenfalls verschiedene Möglichkeiten, Daten mit einer App auszutauschen, etwa lokal über eine Speicherkarte, die Zwischenablage, die Gerätekamera oder andere Anwendungen. Außerdem können Daten über Cloud-Dienste oder Server der App- oder Geräte-anbietenden Institution übertragen werden. Darüber können Dritte Zugriff auf die vertraulichen Daten erlangen. Schließlich kann auch das Betriebssystem selbst Daten für den schnelleren Zugriff zwischenspeichern (Caching). Dabei können Daten versehentlich abfließen oder Angreifende auf vertrauliche Informationen zugreifen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Daten werden über Cloud-Dienste übertragen",
+                    "type": "Threat",
+                    "text": "Die App überträgt Daten über Cloud-Dienste, die nicht von der Institution kontrolliert werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Daten werden über das Betriebssystem abgefangen",
+                    "type": "Threat",
+                    "text": "Angreifende greifen über das Betriebssystem auf die Daten zu, die von der App verarbeitet werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unsichere Kommunikation mit Backend-Systemen",
+            "handle": "APP.1.4.A8",
+            "text": "Viele Apps kommunizieren mit Backend-Systemen, über die Daten mit dem Datennetz der Institution ausgetauscht werden. Die Daten werden bei mobilen Geräten zumeist über unsichere Netze wie ein Mobilfunknetz oder WLAN-Hotspots übertragen. Werden für die Kommunikation mit Backend-Systemen aber unsichere Protokolle verwendet, können Informationen abgehört oder manipuliert werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Kommunikation wird abgefangen",
+                    "type": "Threat",
+                    "text": "Angreifende fangen die Kommunikation zwischen der App und dem Backend-System ab.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Daten werden manipuliert",
+                    "type": "Threat",
+                    "text": "Angreifende manipulieren die Daten, die zwischen der App und dem Backend-System ausgetauscht werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Kommunikationswege außerhalb der Infrastruktur der Institution",
+            "handle": "APP.1.4.A9",
+            "text": "Wenn Apps unkontrolliert mit Dritten kommunizieren können, kann dies Kommunikationswege schaffen, die nicht von der Institution erkannt und kontrolliert werden können. So können Benutzende beispielsweise die App eines Cloud-Datenspeicherdienstes nutzen, um Informationen vom Endgerät nach außen zu übertragen. Auch die enge Verzahnung von Social-Media-Diensten mit vielen Apps erschwert die Kontrolle, ob und wie Informationen das Endgerät verlassen. Diese Art von Kommunikationswegen ist nur schwer nachzuvollziehen. Dies kann noch weitere Probleme verursachen, etwa wenn Informationen oder Vorgänge archiviert werden müssen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Daten werden über Cloud-Dienste übertragen",
+                    "type": "Threat",
+                    "text": "Die App überträgt Daten über Cloud-Dienste, die nicht von der Institution kontrolliert werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Daten werden über Social-Media-Dienste übertragen",
+                    "type": "Threat",
+                    "text": "Die App überträgt Daten über Social-Media-Dienste, die nicht von der Institution kontrolliert werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Anforderungsanalyse für die Nutzung von Apps",
+            "handle": "APP.1.4.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "In der Anforderungsanalyse MÜSSEN insbesondere Risiken betrachtet werden, die sich aus der mobilen Nutzung ergeben. Die Institution MUSS prüfen, ob ihre Kontroll- und Einflussmöglichkeiten auf die Betriebssystemumgebung mobiler Endgeräte ausreichend sind, um sie sicher nutzen zu können.",
+            "isresponsible": "Fachverantwortliche",
+            "mitigates": [
+                "G 0.9",
+                "G 0.14",
+                "G 0.15",
+                "G 0.16",
+                "G 0.17",
+                "G 0.18",
+                "G 0.19",
+                "G 0.25",
+                "G 0.26",
+                "G 0.38"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Minimierung und Kontrolle von App-Berechtigungen",
+            "handle": "APP.1.4.A5",
+            "level": "Low",
+            "affects": [],
+            "text": "Sicherheitsrelevante Berechtigungseinstellungen MÜSSEN so fixiert werden, dass sie nicht durch Personen oder Apps geändert werden können. Wo dies technisch nicht möglich ist, MÜSSEN die Berechtigungseinstellungen regelmäßig geprüft und erneut gesetzt werden.",
+            "isresponsible": "Fachverantwortliche",
+            "mitigates": [
+                "G 0.14",
+                "G 0.15",
+                "G 0.19",
+                "G 0.21",
+                "G 0.32",
+                "G 0.38",
+                "G 0.39",
+                "G 0.42"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Speicherung lokaler App-Daten",
+            "handle": "APP.1.4.A7",
+            "level": "Low",
+            "affects": [],
+            "text": "Wenn Apps auf interne Dokumente der Institution zugreifen können, MUSS sichergestellt sein, dass die lokale Datenhaltung der App angemessen abgesichert ist. Insbesondere MÜSSEN Zugriffsschlüssel verschlüsselt abgelegt werden. Außerdem DÜRFEN vertrauliche Daten NICHT vom Betriebssystem an anderen Ablageorten zwischengespeichert werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.14",
+                "G 0.16",
+                "G 0.17",
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verhinderung von Datenabfluss",
+            "handle": "APP.1.4.A8",
+            "level": "Low",
+            "affects": [],
+            "text": "Um zu verhindern, dass Apps ungewollt vertrauliche Daten versenden oder aus den gesendeten Daten Profile über die Benutzenden erstellt werden, MUSS die App-Kommunikation geeignet eingeschränkt werden. Dazu SOLLTE die Kommunikation im Rahmen des Test- und Freigabeverfahrens analysiert werden. Weiterhin SOLLTE überprüft werden, ob eine App ungewollte Protokollierungs- oder Hilfsdateien schreibt, die möglicherweise vertrauliche Informationen enthalten.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.14",
+                "G 0.15",
+                "G 0.19",
+                "G 0.38"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verteilung schutzbedürftiger Apps",
+            "handle": "APP.1.4.A3",
+            "level": "Medium",
+            "affects": [],
+            "text": "Interne Apps der Institution und Apps, die schutzbedürftige Informationen verarbeiten, SOLLTEN über einen institutionseigenen App Store oder via MDM verteilt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.14",
+                "G 0.18",
+                "G 0.19",
+                "G 0.20",
+                "G 0.21",
+                "G 0.23",
+                "G 0.32",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Deinstallation von Apps",
+            "handle": "APP.1.4.A12",
+            "level": "Medium",
+            "affects": [],
+            "text": "Werden Apps deinstalliert, SOLLTEN auch Daten gelöscht werden, die auf externen Systemen, beispielsweise bei den App-Anbietenden, gespeichert wurden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.14",
+                "G 0.18",
+                "G 0.19",
+                "G 0.38"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unterstützung zusätzlicher Authentisierungsmerkmale bei Apps",
+            "handle": "APP.1.4.A14",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Falls möglich, SOLLTE für die Authentisierung in Apps ein zweiter Faktor benutzt werden. Hierbei SOLLTE darauf geachtet werden, dass eventuell benötigte Sensoren oder Schnittstellen in allen verwendeten Geräten vorhanden sind. Zusätzlich SOLLTE bei biometrischen Verfahren berücksichtigt werden, wie resistent die Authentisierung gegen mögliche Fälschungsversuche ist.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.14",
+                "G 0.16",
+                "G 0.17",
+                "G 0.18",
+                "G 0.19",
+                "G 0.23",
+                "G 0.32",
+                "G 0.36"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Durchführung von Penetrationstests für Apps",
+            "handle": "APP.1.4.A15",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Bevor eine App für den Einsatz freigegeben wird, SOLLTE ein Penetrationstest durchgeführt werden. Dabei SOLLTEN alle Kommunikationsschnittstellen zu Backend-Systemen sowie die lokale Speicherung von Daten auf mögliche Sicherheitslücken untersucht werden. Die Penetrationstests SOLLTEN regelmäßig und zusätzlich bei größeren Änderungen an der App wiederholt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.21",
+                "G 0.23",
+                "G 0.25",
+                "G 0.26",
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Mobile Application Management",
+            "handle": "APP.1.4.A16",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Falls möglich, SOLLTE für das zentrale Konfigurieren von dienstlichen Apps ein Mobile Application Management verwendet werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.31"
+            ]
+        }
+    ]
+}

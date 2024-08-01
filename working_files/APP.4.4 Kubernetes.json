@@ -1,0 +1,486 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "APP.4.4 Kubernetes",
+    "handle": "APP.4.4",
+    "text": "Kubernetes ist ein Orchestrierungssystem für Container, das in der Public und Private Cloud, aber auch für IoT und andere Anwendungsfälle eingesetzt wird. Es ist ein De-facto-Standard für die Orchestrierung von Containern. Der sogenannte Cloud Native Stack, der aus vielen verschiedenen Komponenten besteht, baut auf dem von Kubernetes etablierten Standard auf.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Mangelhafte Authentisierung und Autorisierung in der Control Plane",
+            "handle": "2.1",
+            "text": "Um Runtimes, Nodes und auch Kubernetes selbst zu verwalten, benötigen sowohl Administrierende als auch die toolgestützte Bereitstellung administrative Zugänge. Diese Zugänge sind entweder als Unix-Sockets oder Netzports ausgeführt. Mechanismen zur Authentisierung und Verschlüsselung der administrativen Zugänge sind häufig vorhanden, aber nicht bei allen Produkten standardmäßig aktiviert.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unbefugter Zugriff auf die Control Plane",
+                    "type": "Threat",
+                    "text": "Wenn Unbefugte auf das Datennetz oder auf die Nodes zugreifen, können sie über ungeschützte administrative Zugänge Befehle ausführen, die der Verfügbarkeit, Vertraulichkeit und Integrität der verarbeiteten Daten schaden können.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Vertraulichkeitsverlust von Zugangsdaten",
+            "handle": "2.2",
+            "text": "Oft benötigen Pods Zugangsdaten (Access Token) für Kubernetes. Über einen Angriff auf den Pod können diese Zugangsdaten in unbefugte Hände gelangen. Mit diesen Zugangsdaten ist es bei Angriffen möglich, mit der Control Plane authentifiziert zu interagieren und, sofern die Berechtigungen ausreichen, auch Veränderungen an der Orchestrierung vorzunehmen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Kompromittierung von Pods",
+                    "type": "Threat",
+                    "text": "Durch einen Angriff auf einen Pod können Zugangsdaten für Kubernetes gestohlen werden, die dann für weitere Angriffe auf das System verwendet werden können.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ressourcenkonflikte auf Nodes",
+            "handle": "2.3",
+            "text": "Einzelne Pods können den Node oder auch die Orchestrierung überlasten und so die Verfügbarkeit aller anderen Pods auf dem Node oder auch den Betrieb des Nodes selbst gefährden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Überlastung des Nodes",
+                    "type": "Threat",
+                    "text": "Ein einzelner Pod kann durch hohe CPU- oder Speichernutzung die Ressourcen des Nodes so stark beanspruchen, dass andere Pods nicht mehr ordnungsgemäß funktionieren können.",
+                    "hasOrigin": [
+                        "human",
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "deliberate",
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unautorisierte Änderungen an Clustern",
+            "handle": "2.4",
+            "text": "Die Automatisierung mit CI/CD und die daraus folgende Notwendigkeit, den Werkzeugen privilegierte Zugangsberechtigungen zu erteilen, birgt das Risiko, dass nicht autorisierte Änderungen an Clustern erfolgen. So kann z. B. eine neue Version einer Anwendung auf dem Cluster aufgebracht werden, die nicht ausreichend getestet ist oder die den Freigabeprozess nicht durchlaufen hat. Auch ist es bei Fehlern in den Berechtigungen auf der CI/CD-Umgebung möglich, dass Schadsoftware in die Cluster eindringen und dort Daten auslesen, löschen oder verändern kann.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Einsatz von Schadsoftware",
+                    "type": "Threat",
+                    "text": "Durch fehlerhafte Konfigurationen oder Sicherheitslücken in der CI/CD-Umgebung kann Schadsoftware in den Cluster gelangen und dort Daten auslesen, löschen oder verändern.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unberechtigte Kommunikation",
+            "handle": "2.5",
+            "text": "Alle Pods in einem Cluster sind grundsätzlich in der Lage, miteinander, mit den Nodes im eigenen Cluster sowie beliebigen anderen IT-Systemen zu kommunizieren. Sofern diese Kommunikation nicht eingeschränkt ist, kann dies ausgenutzt werden, um z. B. die Control Plane, andere Pods oder die Nodes anzugreifen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Angriff auf die Control Plane",
+                    "type": "Threat",
+                    "text": "Ein Angreifer kann einen Pod dazu bringen, mit der Control Plane zu kommunizieren und so deren Funktionsweise zu stören oder sogar zu deaktivieren.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Planung der Separierung der Anwendungen",
+            "handle": "APP.4.4.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Vor der Inbetriebnahme MUSS geplant werden, wie die in den Pods betriebenen Anwendungen und deren unterschiedlichen Test- und Produktions-Betriebsumgebungen separiert werden. Auf Basis des Schutzbedarfs der Anwendungen MUSS festgelegt werden, welche Architektur der Namespaces, Meta-Tags, Cluster und Netze angemessen auf die Risiken eingeht und ob auch virtualisierte Server und Netze zum Einsatz kommen sollen. Die Planung MUSS Regelungen zu Netz-, CPU- und Festspeicherseparierung enthalten. Die Separierung SOLLTE auch das Netzzonenkonzept und den Schutzbedarf beachten und auf diese abgestimmt sein. Anwendungen SOLLTEN jeweils in einem eigenen Kubernetes-Namespace laufen, der alle Programme der Anwendung umfasst. Nur Anwendungen mit ähnlichem Schutzbedarf und ähnlichen möglichen Angriffsvektoren SOLLTEN einen Kubernetes-Cluster teilen.",
+            "isresponsible": "[B]",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.23",
+                "G 0.28",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Planung der Automatisierung mit CI/CD",
+            "handle": "APP.4.4.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Wenn eine Automatisierung des Betriebs von Anwendungen in Kubernetes mithilfe von CI/CD stattfindet, DARF diese NUR nach einer geeigneten Planung erfolgen. Die Planung MUSS den gesamten Lebenszyklus von Inbetrieb- bis Außerbetriebnahme inklusive Entwicklung, Tests, Betrieb, Überwachung und Updates umfassen. Das Rollen- und Rechtekonzept sowie die Absicherung von Kubernetes Secrets MÜSSEN Teil der Planung sein.",
+            "isresponsible": "[B]",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.20",
+                "G 0.21",
+                "G 0.23",
+                "G 0.25",
+                "G 0.27",
+                "G 0.28",
+                "G 0.30",
+                "G 0.37",
+                "G 0.39",
+                "G 0.45",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Identitäts- und Berechtigungsmanagement bei Kubernetes",
+            "handle": "APP.4.4.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Kubernetes und alle anderen Anwendungen der Control Plane MÜSSEN jede Aktion eines Benutzenden oder, im automatisierten Betrieb, einer entsprechenden Software authentifizieren und autorisieren, unabhängig davon, ob die Aktionen über einen Client, eine Weboberfläche oder über eine entsprechende Schnittstelle (API) erfolgt. Administrative Handlungen DÜRFEN NICHT anonym erfolgen. Benutzende DÜRFEN NUR die unbedingt notwendigen Rechte erhalten. Berechtigungen ohne Einschränkungen MÜSSEN sehr restriktiv vergeben werden. Nur ein kleiner Kreis von Personen SOLLTE berechtigt sein, Prozesse der Automatisierung zu definieren. Nur ausgewählte Administrierende SOLLTEN in Kubernetes das Recht erhalten, Freigaben für Festspeicher (Persistent Volumes) anzulegen oder zu ändern.",
+            "isresponsible": "[B]",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.23",
+                "G 0.30",
+                "G 0.37",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Separierung von Pods",
+            "handle": "APP.4.4.A4",
+            "level": "Low",
+            "affects": [],
+            "text": "Der Betriebssystem-Kernel der Nodes MUSS über Isolationsmechanismen zur Beschränkung von Sichtbarkeit und Ressourcennutzung der Pods untereinander verfügen (vergleiche Linux Namespaces und cgroups). Die Trennung MUSS dabei mindestens IDs von Prozessen sowie Benutzenden, Inter-Prozess-Kommunikation, Dateisystem und Netz inklusive Hostname umfassen.",
+            "isresponsible": "[B]",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.21",
+                "G 0.23",
+                "G 0.28",
+                "G 0.39",
+                "G 0.45",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Datensicherung im Cluster",
+            "handle": "APP.4.4.A5",
+            "level": "Low",
+            "affects": [],
+            "text": "Es MUSS eine Datensicherung des Clusters erfolgen. Die Datensicherung MUSS umfassen: Festspeicher (Persistent Volumes), Konfigurationsdateien von Kubernetes und den weiteren Programmen der Control Plane, den aktuellen Zustand des Kubernetes-Clusters inklusive der Erweiterungen, Datenbanken der Konfiguration, namentlich hier etcd, alle Infrastrukturanwendungen, die zum Betrieb des Clusters und der darin befindlichen Dienste notwendig sind und die Datenhaltung der Code und Image Registries. Es SOLLTEN auch Snapshots für den Betrieb der Anwendungen betrachtet werden. Snapshots DÜRFEN die Datensicherung NICHT ersetzen.",
+            "isresponsible": "[B]",
+            "mitigates": [
+                "G 0.45"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Initialisierung von Pods",
+            "handle": "APP.4.4.A6",
+            "level": "Medium",
+            "affects": [],
+            "text": "Sofern im Pod zum Start eine Initialisierung z. B. einer Anwendung erfolgt, SOLLTE diese in einem eigenen Init-Container stattfinden. Es SOLLTE sichergestellt sein, dass die Initialisierung alle bereits laufenden Prozesse beendet. Kubernetes SOLLTE nur bei erfolgreicher Initialisierung die weiteren Container starten.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.25"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Separierung der Netze bei Kubernetes",
+            "handle": "APP.4.4.A7",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Netze für die Administration der Nodes, der Control Plane sowie die einzelnen Netze der Anwendungsdienste SOLLTEN separiert werden. Es SOLLTEN NUR die für den Betrieb notwendigen Netzports der Pods in die dafür vorgesehenen Netze freigegeben werden. Bei mehreren Anwendungen auf einem Kubernetes-Cluster SOLLTEN zunächst alle Netzverbindungen zwischen den Kubernetes-Namespaces untersagt und nur benötigte Netzverbindungen gestattet sein (Whitelisting). Die zur Administration der Nodes, der Runtime und von Kubernetes inklusive seiner Erweiterungen notwendigen Netzports SOLLTEN NUR aus dem Administrationsnetz und von Pods, die diese benötigen, erreichbar sein. Nur ausgewählte Administrierende SOLLTEN in Kubernetes berechtigt sein, das CNI zu verwalten und Regeln für das Netz anzulegen oder zu ändern.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.21",
+                "G 0.23",
+                "G 0.28",
+                "G 0.39",
+                "G 0.45",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Absicherung von Konfigurationsdateien bei Kubernetes",
+            "handle": "APP.4.4.A8",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Konfigurationsdateien des Kubernetes-Clusters, inklusive aller Erweiterungen und Anwendungen, SOLLTEN versioniert und annotiert werden. Zugangsrechte auf die Verwaltungssoftware der Konfigurationsdateien SOLLTEN minimal vergeben werden. Zugriffsrechte für lesenden und schreibenden Zugriff auf die Konfigurationsdateien der Control Plane SOLLTEN besonders sorgfältig vergeben und eingeschränkt sein.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.21",
+                "G 0.23",
+                "G 0.28",
+                "G 0.39",
+                "G 0.45",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Nutzung von Kubernetes Service-Accounts",
+            "handle": "APP.4.4.A9",
+            "level": "Medium",
+            "affects": [],
+            "text": "Pods SOLLTEN NICHT den \"default\"-Service-Account nutzen. Dem \"default\"-Service-Account SOLLTEN keine Rechte eingeräumt werden. Pods für unterschiedliche Anwendungen SOLLTEN jeweils unter eigenen Service-Accounts laufen. Berechtigungen für die Service-Accounts der Pods der Anwendungen SOLLTEN auf die unbedingt notwendigen Rechte beschränkt werden. Pods, die keinen Service-Account benötigen, SOLLTEN diesen nicht einsehen können und keinen Zugriff auf entsprechende Token haben. Nur Pods der Control Plane und Pods, die diese unbedingt benötigen, SOLLTEN privilegierte Service-Accounts nutzen. Programme der Automatisierung SOLLTEN jeweils eigene Token erhalten, auch wenn sie aufgrund ähnlicher Aufgaben einen gemeinsamen Service-Account nutzen.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.14",
+                "G 0.21",
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Absicherung von Prozessen der Automatisierung",
+            "handle": "APP.4.4.A10",
+            "level": "Medium",
+            "affects": [],
+            "text": "Alle Prozesse der Automatisierungssoftware, wie CI/CD und deren Pipelines, SOLLTEN nur mit unbedingt notwendigen Rechten arbeiten. Wenn unterschiedliche Gruppen von Benutzenden die Konfiguration über die Automatisierungssoftware verändern oder Pods starten können, SOLLTE dies für jede Gruppe durch eigene Prozesse durchgeführt werden, die nur die für die jeweilige Gruppe notwendigen Rechte besitzen.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.21",
+                "G 0.23",
+                "G 0.25",
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Überwachung der Container",
+            "handle": "APP.4.4.A11",
+            "level": "Medium",
+            "affects": [],
+            "text": "In Pods SOLLTE jeder Container einen Health Check für den Start und den Betrieb (\"readiness\" und \"liveness\") definieren. Diese Checks SOLLTEN Auskunft über die Verfügbarkeit der im Pod ausgeführten Software geben. Die Checks SOLLTEN fehlschlagen, wenn die überwachte Software ihre Aufgaben nicht ordnungsgemäß wahrnehmen kann. Für jede dieser Kontrollen SOLLTE eine dem im Pod betriebenen Dienst angemessene Zeitspanne definieren. Auf Basis dieser Checks SOLLTE Kubernetes die Pods löschen oder neu starten.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.25",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Absicherung der Infrastruktur-Anwendungen",
+            "handle": "APP.4.4.A12",
+            "level": "Medium",
+            "affects": [],
+            "text": "Sofern eine eigene Registry für Images oder eine Software zur Automatisierung, zur Verwaltung des Festspeichers, zur Speicherung von Konfigurationsdateien oder ähnliches im Einsatz ist, SOLLTE deren Absicherung mindestens betrachten: Verwendung von personenbezogenen und Service-Accounts für den Zugang, verschlüsselte Kommunikation auf allen Netzports, minimale Vergabe der Berechtigungen an Benutzende und Service Accounts, Protokollierung der Veränderungen und regelmäßige Datensicherung.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.21",
+                "G 0.23",
+                "G 0.28",
+                "G 0.39",
+                "G 0.45",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Automatisierte Auditierung der Konfiguration",
+            "handle": "APP.4.4.A13",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Es SOLLTE ein automatisches Audit der Einstellungen der Nodes, von Kubernetes und der Pods der Anwendungen gegen eine definierte Liste der erlaubten Einstellungen und gegen standardisierte Benchmarks erfolgen.",
+            "isresponsible": "[H]",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.21",
+                "G 0.23",
+                "G 0.30",
+                "G 0.39",
+                "G 0.45",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung dedizierter Nodes",
+            "handle": "APP.4.4.A14",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "In einem Kubernetes-Cluster SOLLTEN die Nodes dedizierte Aufgaben zugewiesen bekommen und jeweils nur Pods betreiben, welche der jeweiligen Aufgabe zugeordnet sind. Bastion Nodes SOLLTEN alle ein- und ausgehenden Datenverbindungen der Anwendungen zu anderen Netzen übernehmen. Management Nodes SOLLTEN die Pods der Control Plane betreiben und sie SOLLTEN nur die Datenverbindungen der Control Plane übernehmen. Sofern eingesetzt, SOLLTEN Speicher-Nodes nur die Pods der Festspeicherdienste im Cluster betreiben.",
+            "isresponsible": "[H]",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.23",
+                "G 0.28",
+                "G 0.45",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Trennung von Anwendungen auf Node- und Cluster-Ebene",
+            "handle": "APP.4.4.A15",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Anwendungen mit einem sehr hohen Schutzbedarf SOLLTEN jeweils eigene Kubernetes-Cluster oder dedizierte Nodes nutzen, die nicht für andere Anwendungen bereitstehen.",
+            "isresponsible": "[H]",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.23",
+                "G 0.28",
+                "G 0.45",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung von Operatoren",
+            "handle": "APP.4.4.A16",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Die Automatisierung von Betriebsaufgaben in Operatoren SOLLTE bei besonders kritischen Anwendungen und den Programmen der Control Plane zum Einsatz kommen.",
+            "isresponsible": "[H]",
+            "mitigates": [
+                "G 0.25"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Attestierung von Nodes",
+            "handle": "APP.4.4.A17",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Nodes SOLLTEN eine kryptografisch und möglichst mit einem TPM verifizierte gesicherte Zustandsmeldung an die Control Plane senden. Die Control Plane SOLLTE nur Nodes in den Cluster aufnehmen, die erfolgreich ihre Unversehrtheit nachweisen konnten.",
+            "isresponsible": "[H]",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.23",
+                "G 0.28",
+                "G 0.45",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung von Mikro-Segmentierung",
+            "handle": "APP.4.4.A18",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Die Pods SOLLTEN auch innerhalb eines Kubernetes-Namespace nur über die notwendigen Netzports miteinander kommunizieren können. Es SOLLTEN Regeln innerhalb des CNI existieren, die alle bis auf die für den Betrieb notwendigen Netzverbindungen innerhalb des Kubernetes-Namespace unterbinden. Diese Regeln SOLLTEN Quelle und Ziel der Verbindungen genau definieren und dafür mindestens eines der folgenden Kriterien nutzen: Service-Name, Metadaten (\"Labels\"), die Kubernetes Service Accounts oder zertifikatsbasierte Authentifizierung. Alle Kriterien, die als Bezeichnung für diese Verbindung dienen, SOLLTEN so abgesichert sein, dass sie nur von berechtigten Personen und Verwaltungs-Diensten verändert werden können.",
+            "isresponsible": "[H]",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.23",
+                "G 0.28",
+                "G 0.45",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Hochverfügbarkeit von Kubernetes",
+            "handle": "APP.4.4.A19",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Der Betrieb SOLLTE so aufgebaut sein, dass bei Ausfall eines Standortes die Cluster und damit die Anwendungen in den Pods entweder ohne Unterbrechung weiterlaufen oder in kurzer Zeit an einem anderen Standort neu anlaufen können. Für den Wiederanlauf SOLLTEN alle notwendigen Konfigurationsdateien, Images, Nutzdaten, Netzverbindungen und sonstige für den Betrieb benötigten Ressourcen inklusive der zum Betrieb nötigen Hardware bereits an diesem Standort verfügbar sein. Für den unterbrechungsfreien Betrieb des Clusters SOLLTEN die Control Plane von Kubernetes, die Infrastruktur-Anwendungen der Cluster sowie die Pods der Anwendungen anhand von Standort-Daten der Nodes über mehrere Brandabschnitte so verteilt werden, dass der Ausfall eines Brandabschnitts nicht zum Ausfall der Anwendung führt.",
+            "isresponsible": "[H]",
+            "mitigates": [
+                "G 0.25"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verschlüsselte Datenhaltung bei Pods",
+            "handle": "APP.4.4.A20",
+            "level": "High",
+            "affects": [
+                "C"
+            ],
+            "text": "Die Dateisysteme mit den persistenten Daten der Control Plane (hier besonders etcd) und der Anwendungsdienste SOLLTEN verschlüsselt werden.",
+            "isresponsible": "[H]",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.23",
+                "G 0.28",
+                "G 0.45",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Regelmäßiger Restart von Pods",
+            "handle": "APP.4.4.A21",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Bei einem erhöhten Risiko für Fremdeinwirkung und einem sehr hohen Schutzbedarf SOLLTEN Pods regelmäßig gestoppt und neu gestartet werden. Kein Pod SOLLTE länger als 24 Stunden laufen. Dabei SOLLTE die Verfügbarkeit der Anwendungen im Pod sichergestellt sein.",
+            "isresponsible": "[H]",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.23",
+                "G 0.28",
+                "G 0.45",
+                "G 0.46"
+            ]
+        }
+    ]
+}

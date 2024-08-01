@@ -1,0 +1,489 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "DNS-Server",
+    "handle": "APP.3.6",
+    "text": "Domain Name System (DNS) is a network service used to translate hostnames of IT systems into IP addresses. DNS can be compared to a telephone directory that does not resolve names into telephone numbers, but into IP addresses. Usually, the corresponding IP address is searched for a hostname via DNS (forward resolution). If, on the other hand, the IP address is known and the hostname is searched for, this is called reverse resolution.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ausfall des DNS-Servers",
+            "handle": "2.1",
+            "text": "If a DNS server fails, the entire IT operation can be affected. If clients and other servers in the institution are then no longer able to resolve internal and external addresses based on the hostnames, no data connections can be established. External IT systems, e.g. from mobile employees, customers as well as business partners and business partners, cannot access the institution's servers. As a result, essential business processes are usually disrupted.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "DNS-Server Ausfall",
+                    "type": "Threat",
+                    "text": "A DNS server failure can be caused by a variety of factors, including hardware failure, software bugs, network outages, and malicious attacks. If a DNS server fails, it can prevent users from accessing websites, email, and other online services. This can have a significant impact on businesses and individuals.",
+                    "hasOrigin": [
+                        "human",
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "deliberate",
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Leitungskapazitäten",
+            "handle": "2.2",
+            "text": "If the bandwidth for a DNS server is insufficient, access times to internal and external services may increase. As a result, these services may only be partially available or not at all. The DNS server can then also be more easily overloaded by a denial-of-service (DoS) attack.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "DoS-Attack",
+                    "type": "Threat",
+                    "text": "A DoS attack can be launched against a DNS server by sending a large number of requests to the server, overwhelming its resources and making it unavailable to legitimate users. This can be done by sending requests from multiple computers, or by using a botnet, which is a network of compromised computers that can be controlled remotely.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlende oder unzureichende Planung des DNS-Einsatzes",
+            "handle": "2.3",
+            "text": "Errors in planning often turn out to be particularly serious, as security vulnerabilities can easily be created. If DNS deployment is not planned or only insufficiently planned, this can lead to problems and security vulnerabilities during ongoing operation. If, for example, the firewall rules that control DNS traffic are too lenient, this can lead to an attack under certain circumstances. If the rules are too restrictive, legitimate clients cannot send requests to the DNS servers and are affected if they use services such as email or FTP.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Firewall Misconfiguration",
+                    "type": "Threat",
+                    "text": "A firewall misconfiguration can allow attackers to access sensitive data or systems that should be protected. For example, if a firewall is not properly configured to block access to a DNS server, attackers could use the server to launch a DoS attack against other systems.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlerhafte Domain-Informationen",
+            "handle": "2.4",
+            "text": "Even if DNS deployment is carefully planned and all security-relevant points are taken into account, this is not sufficient if semantically and syntactically incorrect domain information is created. This applies, for example, if a hostname is assigned an incorrect IP address, data is missing, prohibited characters are used, or the forward and reverse resolution are inconsistent. If domain information contains errors, services that use this information will only function to a limited extent due to the incorrect information.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "DNS Spoofing",
+                    "type": "Threat",
+                    "text": "DNS spoofing is a type of attack where an attacker intercepts DNS requests and sends false responses to the requesting computer. This can be used to redirect users to malicious websites or to steal sensitive information.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlerhafte Konfiguration eines DNS-Servers",
+            "handle": "2.5",
+            "text": "Security-critical default settings, self-configured security-critical settings or incorrect configurations can lead to a DNS server not functioning properly. If, for example, a resolving DNS server is configured to accept recursive requests unrestrictedly, both from the internal data network and from the Internet, the server's availability can be severely impaired due to the increased load. In addition, it could become vulnerable to DNS reflection attacks.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "DNS Reflection Attack",
+                    "type": "Threat",
+                    "text": "A DNS reflection attack is a type of DoS attack that uses DNS servers to amplify the attack traffic. The attacker sends spoofed DNS requests to multiple DNS servers, which then send large responses to the victim's IP address. This can overwhelm the victim's network and make it unavailable.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "DNS-Manipulation",
+            "handle": "2.6",
+            "text": "With a DNS cache poisoning attack, the goal is to ensure that the attacked IT system stores incorrect mappings of IP addresses and names. This exploits the fact that DNS servers cache received domain information for a certain period of time. So, forged data can spread widely. If corresponding requests are then made to the manipulated DNS server, it provides the forged data as a response. The IT system that receives this response stores it and its cache is therefore also \"poisoned\". The stored data has a defined shelf life (Time-To-Live, TTL). If the resolving DNS server is asked for a manipulated address, it will only request another DNS server again when the shelf life has expired. So, manipulated DNS information can persist for a long time, even though it has already been corrected on the originally attacked DNS server. If attackers manage to take over the name resolution for a domain by manipulating the entries so that their DNS servers are queried, all subdomains are automatically affected. DNS cache poisoning attacks are often carried out with the aim of redirecting requests to malicious servers.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "DNS Cache Poisoning",
+                    "type": "Threat",
+                    "text": "DNS cache poisoning is a type of attack where an attacker injects false information into a DNS server's cache. This can be used to redirect users to malicious websites or to steal sensitive information.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "DNS-Hijacking",
+            "handle": "2.7",
+            "text": "DNS hijacking is an attack method that is used to redirect communication between advertising DNS servers and resolvers via the IT system of the attackers. The attackers can use this man-in-the-middle attack to listen in on and record the communication. The far greater danger, however, is that any data traffic between the two IT systems can be arbitrarily changed in the event of a successful attack. If a request is sent from a resolver of a client to a DNS server after a successful DNS hijacking attack, attackers can, for example, change the mapping of names and IP addresses. DNS hijacking can also be combined with other attacks, such as phishing.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Man-in-the-Middle Attack",
+                    "type": "Threat",
+                    "text": "A man-in-the-middle attack is a type of attack where an attacker intercepts communication between two parties. The attacker can then eavesdrop on the communication, modify the data being exchanged, or even impersonate one of the parties.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "DNS-DOS",
+            "handle": "2.8",
+            "text": "In a DoS attack on a DNS server, so many requests are sent to it that the network connection to the DNS server or the DNS server itself is overloaded. As a rule, the requests are sent via botnets to achieve the necessary data rate. An overloaded DNS server can no longer answer legitimate requests.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Botnet Attack",
+                    "type": "Threat",
+                    "text": "A botnet is a network of compromised computers that can be controlled remotely by an attacker. Botnets can be used to launch DoS attacks, spam campaigns, and other malicious activities.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "DNS-Reflection",
+            "handle": "2.9",
+            "text": "In a DNS reflection attack, the target is not the DNS server to which the requests are sent, but the IT system that receives the responses. This exploits the fact that certain requests generate a relatively large amount of response data. It is possible to achieve an amplification factor of 100 or more. This means that the response, measured in bytes, is at least one hundred times larger than the request. Due to the number and size of the responses, the network bandwidth or the receiving IT system itself is overloaded beyond its capacity. Thus, any technical IT component can be the target. DNS reflection attacks are facilitated by open resolvers.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Open Resolver",
+                    "type": "Threat",
+                    "text": "An open resolver is a DNS server that is accessible to the public and can be used to resolve domain names. Attackers can use open resolvers to launch DNS reflection attacks, which can be used to overwhelm a victim's network and make it unavailable.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Planung des DNS-Einsatzes",
+            "handle": "APP.3.6.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Der Einsatz von DNS-Servern MUSS sorgfältig geplant werden. Es MUSS zuerst festgelegt werden, wie der Netzdienst DNS aufgebaut werden soll. Es MUSS festgelegt werden, welche Domain-Informationen schützenswert sind. Es MUSS geplant werden, wie DNS-Server in das Netz des Informationsverbunds eingebunden werden sollen. Die getroffenen Entscheidungen MÜSSEN geeignet dokumentiert werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz redundanter DNS-Server",
+            "handle": "APP.3.6.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Advertising DNS-Server MÜSSEN redundant ausgelegt werden. Für jeden Advertising DNS-Server MUSS es mindestens einen zusätzlichen Secondary DNS-Server geben.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.25",
+                "G 0.40"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung von separaten DNS-Servern für interne und externe Anfragen",
+            "handle": "APP.3.6.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Advertising DNS-Server und Resolving DNS-Server MÜSSEN serverseitig getrennt sein. Die Resolver der internen IT-Systeme DÜRFEN NUR die internen Resolving DNS-Server verwenden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.22"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Grundkonfiguration eines DNS-Servers",
+            "handle": "APP.3.6.A4",
+            "level": "Low",
+            "affects": [],
+            "text": "Ein Resolving DNS-Server MUSS so konfiguriert werden, dass er ausschließlich Anfragen aus dem internen Netz akzeptiert. Wenn ein Resolving DNS-Server Anfragen versendet, MUSS er zufällige Source Ports benutzen. Sind DNS-Server bekannt, die falsche Domain-Informationen liefern, MUSS der Resolving DNS-Server daran gehindert werden, Anfragen dorthin zu senden. Ein Advertising DNS-Server MUSS so konfiguriert werden, dass er Anfragen aus dem Internet immer iterativ behandelt. Es MUSS sichergestellt werden, dass DNS-Zonentransfers zwischen Primary und Secondary DNS-Servern funktionieren. Zonentransfers MÜSSEN so konfiguriert werden, dass diese nur zwischen Primary und Secondary DNS-Servern möglich sind. Zonentransfers MÜSSEN auf bestimmte IP-Adressen beschränkt werden. Die Version des verwendeten DNS-Server-Produktes MUSS verborgen werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.19",
+                "G 0.22",
+                "G 0.30",
+                "G 0.31",
+                "G 0.43",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Absicherung von dynamischen DNS-Updates",
+            "handle": "APP.3.6.A6",
+            "level": "Low",
+            "affects": [],
+            "text": "Es MUSS sichergestellt werden, dass nur legitimierte IT-Systeme Domain-Informationen ändern dürfen. Es MUSS festgelegt werden, welche Domain-Informationen die IT-Systeme ändern dürfen.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.22",
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Überwachung von DNS-Servern",
+            "handle": "APP.3.6.A7",
+            "level": "Low",
+            "affects": [],
+            "text": "DNS-Server MÜSSEN laufend überwacht werden. Es MUSS überwacht werden, wie ausgelastet die DNS-Server sind, um rechtzeitig die Leistungskapazität der Hardware anpassen zu können. DNS-Server MÜSSEN so konfiguriert werden, dass mindestens die folgenden sicherheitsrelevanten Ereignisse protokolliert werden:\n• Anzahl der DNS-Anfragen,\n• Anzahl der Fehler bei DNS-Anfragen,\n• EDNS-Fehler (EDNS - Extension Mechanisms for DNS),\n• auslaufende Zonen sowie\n• fehlgeschlagene Zonentransfers.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.25",
+                "G 0.26",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwaltung von Domainnamen",
+            "handle": "APP.3.6.A8",
+            "level": "Low",
+            "affects": [],
+            "text": "Es MUSS sichergestellt sein, dass die Registrierungen für alle Domains, die von einer Institution benutzt werden, regelmäßig und rechtzeitig verlängert werden. Eine Person MUSS bestimmt werden, die dafür zuständig ist, die Internet-Domainnamen zu verwalten. Falls Dienstleistende mit der Domainverwaltung beauftragt werden, MUSS darauf geachtet werden, dass die Institution die Kontrolle über die Domains behält.",
+            "isresponsible": "Zentrale Verwaltung",
+            "mitigates": [
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erstellen eines Notfallplans für DNS-Server",
+            "handle": "APP.3.6.A9",
+            "level": "Low",
+            "affects": [],
+            "text": "Ein Notfallplan für DNS-Server MUSS erstellt werden. Der Notfallplan für DNS-Server MUSS in die bereits vorhandenen Notfallpläne der Institution integriert werden. Im Notfallplan für DNS-Server MUSS ein Datensicherungskonzept für die Zonen- und Konfigurationsdateien beschrieben sein. Das Datensicherungskonzept für die Zonen- und Konfigurationsdateien MUSS in das existierende Datensicherungskonzept der Institution integriert werden. Der Notfallplan für DNS-Server MUSS einen Wiederanlaufplan für alle DNS-Server im Informationsverbund enthalten.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.25",
+                "G 0.40",
+                "G 0.45"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Auswahl eines geeigneten DNS-Server-Produktes",
+            "handle": "APP.3.6.A10",
+            "level": "Medium",
+            "affects": [],
+            "text": "Wird ein DNS-Server-Produkt beschafft, dann SOLLTE darauf geachtet werden, dass es sich in der Praxis ausreichend bewährt hat. Das DNS-Server-Produkt SOLLTE die aktuellen RFC-Standards unterstützen. Das DNS-Server-Produkt SOLLTE die Zuständigen dabei unterstützen, syntaktisch korrekte Master Files zu erstellen.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.20",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ausreichende Dimensionierung der DNS-Server",
+            "handle": "APP.3.6.A11",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Hardware des DNS-Servers SOLLTE ausreichend dimensioniert sein. Die Hardware des DNS-Servers SOLLTE ausschließlich für den Betrieb dieses DNS-Servers benutzt werden. Die Netzanbindungen sämtlicher DNS-Server im Informationsverbund SOLLTEN ausreichend bemessen sein.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.25",
+                "G 0.27",
+                "G 0.40"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einschränkung der Sichtbarkeit von Domain-Informationen",
+            "handle": "APP.3.6.A13",
+            "level": "Medium",
+            "affects": [],
+            "text": "Der Namensraum eines Informationsverbunds SOLLTE in einen öffentlichen und einen institutionsinternen Bereich aufgeteilt werden. Im öffentlichen Teil SOLLTEN nur solche Domain-Informationen enthalten sein, die von Diensten benötigt werden, die von extern erreichbar sein sollen. IT-Systeme im internen Netz SOLLTEN selbst dann keinen von außen auflösbaren DNS-Namen erhalten, wenn sie eine öffentliche IP-Adresse besitzen.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Platzierung der Nameserver",
+            "handle": "APP.3.6.A14",
+            "level": "Medium",
+            "affects": [],
+            "text": "Primary und Secondary Advertising DNS-Server SOLLTEN in verschiedenen Netzsegmenten platziert werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.19",
+                "G 0.22",
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Auswertung der Logdaten",
+            "handle": "APP.3.6.A15",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Logdateien des DNS-Servers SOLLTEN regelmäßig überprüft werden. Die Logdateien des DNS-Servers SOLLTEN regelmäßig ausgewertet werden. Mindestens die folgenden sicherheitsrelevanten Ereignisse SOLLTEN ausgewertet werden:\n• Anzahl der DNS-Anfragen,\n• Anzahl der Fehler bei DNS-Anfragen,\n• EDNS-Fehler,\n• auslaufende Zonen,\n• fehlgeschlagene Zonentransfers sowie\n• Veränderungen im Verhältnis von Fehlern zu DNS-Anfragen.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.22",
+                "G 0.25",
+                "G 0.27",
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Integration eines DNS-Servers in eine \"P-A-P\"-Struktur",
+            "handle": "APP.3.6.A16",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die DNS-Server SOLLTEN in eine „Paketfilter - Application-Level-Gateway - Paketfilter“-(P-A-P)-Struktur integriert werden (siehe auch NET.1.1 Netzarchitektur und -design). Der Advertising DNS-Server SOLLTE in diesem Fall in einer demilitarisierten Zone (DMZ) des äußeren Paketfilters angesiedelt sein. Der Resolving DNS-Server SOLLTE in einer DMZ des inneren Paketfilters aufgestellt sein.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.19",
+                "G 0.22",
+                "G 0.30",
+                "G 0.43"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz von DNSSEC",
+            "handle": "APP.3.6.A17",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die DNS-Protokollerweiterung DNSSEC SOLLTE sowohl auf Resolving DNS-Servern als auch auf Advertising DNS-Servern aktiviert werden. Die dabei verwendeten Schlüssel Key-Signing-Keys (KSK) und Zone-Signing-Keys (ZSK) SOLLTEN regelmäßig gewechselt werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.22",
+                "G 0.30",
+                "G 0.43",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erweiterte Absicherung von Zonentransfers",
+            "handle": "APP.3.6.A18",
+            "level": "Medium",
+            "affects": [],
+            "text": "Um Zonentransfers stärker abzusichern, SOLLTEN zusätzlich Transaction Signatures (TSIG) eingesetzt werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.22",
+                "G 0.30",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Aussonderung von DNS-Servern",
+            "handle": "APP.3.6.A19",
+            "level": "Medium",
+            "affects": [],
+            "text": "Der DNS-Server SOLLTE sowohl aus dem Domain-Namensraum als auch aus dem Netzverbund gelöscht werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Prüfung des Notfallplans auf Durchführbarkeit",
+            "handle": "APP.3.6.A20",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Es SOLLTE regelmäßig überprüft werden, ob der Notfallplan für DNS-Server durchführbar ist.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.25",
+                "G 0.26",
+                "G 0.27",
+                "G 0.40",
+                "G 0.45"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Hidden Master",
+            "handle": "APP.3.6.A21",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Um Angriffe auf den primären Advertising DNS-Server zu erschweren, SOLLTE eine sogenannte Hidden-Master-Anordnung vorgenommen werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.19",
+                "G 0.22",
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Anbindung der DNS-Server über unterschiedliche Provider",
+            "handle": "APP.3.6.A22",
+            "level": "High",
+            "affects": [
+                "IA"
+            ],
+            "text": "Extern erreichbare DNS-Server SOLLTEN über unterschiedliche Provider angebunden werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.9"
+            ]
+        }
+    ]
+}

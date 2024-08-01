@@ -1,0 +1,615 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "Terminalserver",
+    "handle": "SYS.1.9",
+    "text": "Ein Terminalserver ist ein Server, auf dem Client-Anwendungen (kurz Anwendungen) direkt ausgeführt werden und der nur deren grafische Oberfläche (Bedienoberfläche) an die Clients weiterleitet. Hierfür wird eine Terminalserver-Software verwendet. Der Terminalserver ist dann das zugrundeliegende IT-System, auf dem diese Software ausgeführt wird. Die Eingaben am Client, z. B. über Tastatur und Maus, werden an die Terminalserver-Software übertragen, die diese Eingaben dann dem Terminalserver übergibt. In der bereitgestellten Anwendung auf dem Terminalserver werden daraufhin die Aktionen ausgeführt, die gegebenenfalls durch die Eingaben ausgelöst werden und der Terminalserver ermittelt die neue (möglicherweise geänderte) Bedienoberfläche. Diese Bedienoberfläche wird dann von der Terminalserver-Software an den Client übertragen.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Qualitätsverlust der Anwendungsbereitstellung",
+            "handle": "2.1",
+            "text": "Eine vom Terminalserver bereitgestellte Anwendung wird in Echtzeit genutzt. Da die Bedienoberfläche auf dem Terminalserver vorbereitet und an die Clients übertragen wird, kann nur reibungslos gearbeitet werden, wenn die Antwort des Terminalservers auf eine Eingabe ohne merkliche Zeitverzögerung und klar erkennbar bei den Clients ankommt. Empfangen die Clients die Antworten des Terminalservers zeitlich verzögert, kann die Bedienbarkeit soweit einschränkt sein, dass dies einem Ausfall des Dienstes gleichkommt. Sowohl eine konstant hohe Verzögerung als auch häufig auftretende und nicht vorhersehbare Spitzen können diesen Effekt hervorrufen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Hohe Latenz",
+                    "type": "Threat",
+                    "text": "Eine zu hohe Verzögerung kann durch eine zu hohe Latenz der Übertragungsstrecken oder Netzkomponenten hervorgerufen werden. Wird die Kommunikation beispielsweise über weitere Sicherheitskomponenten wie VPN-Gateways abgesichert, die möglicherweise unzureichend dimensioniert sind, kann die Verzögerung weiter erhöht werden. Dies kann dazu führen, dass die Anwendung nur noch eingeschränkt genutzt werden kann.",
+                    "hasOrigin": [
+                        "human",
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental",
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Überlastung des Terminalservers",
+                    "type": "Threat",
+                    "text": "Ist der Terminalserver stark ausgelastet, kann dieser nur verzögert antworten. Ist beispielsweise die CPU oder der Arbeitsspeicher unzureichend dimensioniert, kann der Terminalserver schnell überlasten und schließlich nur verzögert antworten. Ähnliches gilt, wenn der Terminalserver von zu vielen Personen zeitgleich genutzt wird.",
+                    "hasOrigin": [
+                        "human",
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental",
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Schlechte Bildqualität",
+                    "type": "Threat",
+                    "text": "Ist der Bildschirminhalt nicht klar genug erkennbar, kann mit dem Terminalserver nicht mehr effizient gearbeitet werden. Beispielsweise können Schrift oder Mauszeiger aufgrund von Kompressionsartefakten schwer zu erkennen sein, falls nicht genügend Leitungskapazität zur Verfügung steht.",
+                    "hasOrigin": [
+                        "human",
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental",
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ausfall der Anwendungsbereitstellung",
+            "handle": "2.2",
+            "text": "In einer Terminalserver-gestützten Umgebung werden Anwendungen zentral ausgeführt und deren Ausgabe an die entsprechenden Clients übertragen. Ist der Terminalserver nicht verfügbar, können keine Eingaben mehr verarbeitet werden und die von dem Terminalserver bereitgestellten Anwendungen versagen unmittelbar ihren Dienst. Beziehen die Clients ihre gesamte Bedienoberfläche vom Terminalserver, fällt aus der Perspektive der Benutzenden das IT-System vollständig aus.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Ausfall des Terminalservers",
+                    "type": "Threat",
+                    "text": "Wenn der Client ausfällt, kann hierüber nicht auf die vom Terminalserver bereitgestellten Anwendungen zugriffen werden, auch wenn diese dort verfügbar sind. Ähnliches gilt, wenn die Verbindung zwischen Client und Terminalserver gestört ist.",
+                    "hasOrigin": [
+                        "human",
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental",
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Ausfall des Netzes",
+                    "type": "Threat",
+                    "text": "Von Ausfällen des Netzes oder des Terminalservers sind in der Regel nicht nur einzelne Clients betroffen. In vielen Fällen sind zahlreiche oder sogar alle Clients einer Institution auf den Terminalserver angewiesen. Fällt der Terminalserver aus, ist in diesem Fall eine große Anzahl von Clients gleichzeitig betroffen.",
+                    "hasOrigin": [
+                        "human",
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental",
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Netztrennung für Terminalserver",
+            "handle": "2.3",
+            "text": "Auf Terminalservern werden meist Anwendungen bereitgestellt, die als Client fungieren. Hierdurch ähnelt ein Terminalserver von der Vertrauenswürdigkeit her eher einem Client als einem Server.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Zugriff auf weitere Serveranwendungen",
+                    "type": "Threat",
+                    "text": "Wird dies bei der Netztrennung nicht geeignet berücksichtigt, kann unter Umständen über den Terminalserver unberechtigterweise auf weitere Serveranwendungen zugegriffen werden, beispielsweise über einen Webbrowser. Hierdurch kann der Terminalserver als Ausgangspunkt für Angriffe auf weitere IT-Systeme und Anwendungen missbraucht werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Ausnutzen von Schwachstellen",
+                    "type": "Threat",
+                    "text": "Durch die Eingaben am Client ist ein hoher Grad an Interaktion mit dem Terminalserver zu erwarten. Hierdurch können mögliche Schwachstellen leichter ausgenutzt werden. Dies ist insbesondere dann relevant, wenn ein Terminalserver Anwendungen für Benutzendengruppen bereitstellt, die unterschiedlichen Netzsegmenten zugeordnet sind. In diesem Fall könnte vom Terminalserver aus unautorisiert auf weitere Anwendungen in diesen Netzsegmenten zugegriffen werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Absicherung von Sitzungen auf dem Terminalserver",
+            "handle": "2.4",
+            "text": "Terminalserver können unterschiedlichen Clients dedizierte Anwendungsinstanzen bereitstellen, die auf demselben Betriebssystem ausgeführt werden. Dabei teilen sich die Anwendungen unter anderem gemeinsam genutzte Bibliotheken, den Kernel und die benötigten Ressourcen des Terminalservers (z. B. CPU oder RAM).",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Fehlkonfigurationen oder Software-Schwachstellen",
+                    "type": "Threat",
+                    "text": "Aufgrund von Fehlkonfigurationen oder Software-Schwachstellen können einzelne Anwendungsinstanzen gegebenenfalls miteinander kommunizieren, ohne dass dies ursprünglich vorgesehen war. Werden beispielsweise Sitzungen auf Terminalservern mit zu weitreichenden Berechtigungen ausgeführt, kann unter Umständen aus einer Anwendung heraus auf beliebige Teile des Dateisystems zugegriffen werden. Dies kann beispielsweise über Programmdialoge zum Speichern oder Öffnen von Dateien ausgenutzt werden, über die nicht vorgesehene Bereiche der Festplatte beschrieben oder gelesen werden.",
+                    "hasOrigin": [
+                        "human",
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental",
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "RDP Session Hijacking",
+                    "type": "Threat",
+                    "text": "Ein weiteres Beispiel ist das sogenannte RDP Session Hijacking, das auf den Sitzungen des Terminalservers selbst beruht. Bleiben Benutzende weiterhin angemeldet, nachdem ihre Sitzungen am Terminalserver beendet sind, kann dies zu Problemen führen. Sind Angreifende mit entsprechenden Rechten ausgestattet, die sie beispielsweise durch ein unzureichendes Rechtemanagement oder durch Ausnutzen von Software-Schwachstellen zuvor erhalten haben, können sie unter Umständen aus einer anderen Sitzung heraus eine bestehende Sitzung übernehmen. In diesem Fall können Angreifende die Sitzung im Kontext des oder der Benutzenden fortsetzen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Zugriff auf Ressourcen anderer Sitzungen",
+                    "type": "Threat",
+                    "text": "Wird das Betriebssystem von mehreren Anwendungen oder Anwendungsinstanzen gemeinsam genutzt, können gegebenenfalls Sitzungen anderer Benutzenden über CPU oder RAM beeinflusst werden. Hierfür müssen in den entsprechenden Anwendungen entsprechende Sicherheitslücken vorhanden sein, über die die benötigte Schadsoftware ausgeführt werden kann. Beispielsweise kann dann eine spezielle Schadsoftware Passwörter aus dem RAM auslesen. Auch ohne Sicherheitslücken in der Software können durch Sicherheitslücken in der Hardware (z. B. Meltdown) Angreifende beliebige schützenswerte Daten anderer Sitzungen auslesen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Absicherung des Terminalserver-Protokolls",
+            "handle": "2.5",
+            "text": "Viele Terminalserver-Protokolle bieten die Möglichkeit einer authentisierten und verschlüsselten Kommunikation. Diese Möglichkeit ist jedoch nicht immer ausreichend, um die Kommunikation abzusichern. Nutzt das Terminalserver-Protokoll veraltete und angreifbare Mechanismen oder werden durch Fehlkonfigurationen wichtige Sicherheitsfunktionen abgeschaltet, kann die Kommunikation zwischen Clients und Terminalserver abgehört werden. Informationen, die zwischen dem Terminalserver und den Clients übertragen werden und unter Umständen abgehört oder verändert werden, sind insbesondere:",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Abhören der Kommunikation",
+                    "type": "Threat",
+                    "text": "Aber auch wenn die Protokollmechanismen die Kommunikation grundsätzlich stark genug absichern, kann die Implementierung des Protokolls innerhalb eines Terminalservers oder einer Terminal-Client-Software Schwachstellen beinhalten. Dies kann dazu führen, dass der Terminalserver direkt angreifbar wird, ohne dass die Kommunikation ausgespäht werden muss.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unberechtigte Nutzung von Sammelkonten",
+            "handle": "2.6",
+            "text": "Falls mehrere Personen eine Anwendung auf einem Terminalserver zu unterschiedlichen Zeiten nutzen wollen, werden oft Sammelkonten eingerichtet. Dies kann jedoch internen Regelungen oder den Lizenzbedingungen der über den Terminalserver bereitgestellten Software widersprechen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Verletzung von Regelungen",
+                    "type": "Threat",
+                    "text": "Werden Sammelkonten verwendet, verhindert dies auch, dass die auf dem Terminalserver ausgeführten Aktionen konkreten Personen zugeordnet werden können. Hierdurch kann nicht mehr nachvollzogen werden, wer was getan hat. Dies kann insbesondere ein rechtliches Risiko bedeuten, wenn es gesetzliche Anforderungen an die Nachvollziehbarkeit gibt, z. B. falls auf dem Terminalserver personenbezogene Daten verarbeitet werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ungeeignete Einschränkung der Zugriffsrechte der Benutzenden",
+            "handle": "2.7",
+            "text": "Ein Terminalserver kann zeitgleich sowohl als Server und bezogen auf die auf ihm ausgeführten Anwendungen auch als Client fungieren. Dies kann zu Fehlern in der Vergabe der Zugriffsrechte führen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Zu strenge Rechtevergabe",
+                    "type": "Threat",
+                    "text": "Sichere Konfigurationen von IT-Systemen und Anwendungen sehen zumeist eine möglichst restriktive Rechtevergabe vor. Dies gilt insbesondere auch für Terminalserver. Werden die Berechtigungen für die Benutzung eines Terminalservers jedoch zu weit eingeschränkt, können die Benutzenden die bereitgestellten Anwendungen nur noch stark eingeschränkt nutzen. Dies kann sowohl aus einer zu strengen Richtlinie als auch aus einer Fehlkonfiguration resultieren.",
+                    "hasOrigin": [
+                        "human",
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental",
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unerwünschte Auswirkungen",
+                    "type": "Threat",
+                    "text": "Wird die Arbeit durch solche Einschränkungen zu sehr erschwert, indem beispielsweise der Schreibzugriff auf lokale Laufwerke komplett verboten wird, kann dies unerwünschte Auswirkungen haben. Beispielsweise könnten Benutzende auf nicht vorgesehene Workarounds ausweichen und Daten z. B. nach einem Export über Datenaustauschplattformen an ungeeigneter Stelle verarbeiten.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ungeeignete Anwendungen für den Einsatz auf Terminalservern",
+            "handle": "2.8",
+            "text": "Nicht alle Anwendungen lassen sich auf beliebigen Terminalservern bereitstellen. Werden beispielsweise notwendige Funktionen der Graphics Processing Unit (GPU) in der emulierten Grafikeinheit nicht unterstützt, können 3D-Anwendungen über einen Terminalserver nicht oder nur eingeschränkt genutzt werden. Ähnliches gilt, wenn Eingaben von anwendungs- oder branchenspezifischen Peripheriegeräten vom Terminalserver, der Terminal-Client-Software oder dem Terminalserver-Protokoll nicht unterstützt werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Einschränkungen im laufenden Betrieb",
+                    "type": "Threat",
+                    "text": "Werden einzelne Anwendungsfunktionen oder die Anbindung von Peripheriegeräten vor der Beschaffung nicht oder nur unzureichend getestet, werden diese Einschränkungen möglicherweise erst im laufenden Betrieb festgestellt. Dadurch kann die Verfügbarkeit der Anwendung erheblich eingeschränkt sein und der Terminalserver kann möglicherweise nicht wie vorgesehen eingesetzt werden. Gegebenenfalls muss er sogar komplett ersetzt werden.",
+                    "hasOrigin": [
+                        "human",
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental",
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erstellung einer Sicherheitsrichtlinie für den Einsatz von Terminalservern",
+            "handle": "SYS.1.9.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Für den Einsatz von Terminalservern MUSS eine Sicherheitsrichtlinie erstellt werden. Bei der Erstellung der Sicherheitsrichtlinie MÜSSEN mindestens folgende Punkte berücksichtigt werden: Anwendungen, die auf Terminalservern bereitgestellt werden dürfen, Anwendungen, die gemeinsam auf Terminalservern bereitgestellt werden dürfen, Anforderungen an die Sicherheit von Clients, auf denen die Terminal-Client-Software ausgeführt wird, physisches Umfeld, in dem die Clients eingesetzt werden dürfen, Netze, aus denen heraus Kommunikationsverbindungen zu den Terminalservern initiiert werden dürfen, Netze, in die Anwendungen auf den Terminalservern kommunizieren dürfen, Kommunikationsprotokolle, die zwischen Clients und Terminalservern erlaubt sind, Verschlüsselungsmechanismen und Authentisierungsmethoden, die zwischen Clients und Terminalservern zu benutzen sind, Möglichkeiten, wie Dateien und Anwendungsdaten zusätzlich zur Bildschirmausgabe über das Terminalserver-Protokoll übertragen werden dürfen sowie Peripheriegeräte, die neben Ein- und Ausgabegeräten zusätzlich an den Client angebunden werden dürfen.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.14",
+                "G 0.15",
+                "G 0.19",
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Planung des Einsatzes von Terminalservern",
+            "handle": "SYS.1.9.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Für die Anwendungen, die auf einem Terminalserver bereitgestellt werden sollen, MÜSSEN die Anforderungen an die Funktionalität (Anforderungsprofil) ermittelt werden. Für alle benötigten Funktionen MUSS sichergestellt werden, dass diese tatsächlich auch über den Terminalserver abgerufen werden können. Darüber hinaus MUSS getestet werden, ob die Anwendungen die Anforderungen bei der Bereitstellung über den Terminalserver grundlegend erfüllen. Die Gesamtzahl der einzurichtenden Benutzenden MUSS prognostiziert werden. Dabei MÜSSEN alle Anwendungen mitgezählt werden, die auf dem Terminalserver bereitgestellt werden. Die Anzahl der Benutzenden, die den Terminalserver potenziell gleichzeitig benutzen, MUSS prognostiziert werden. Diese Prognosen MÜSSEN den Einsatzzeitraum des Terminalservers abdecken. Abhängig von der prognostizierten Anzahl der Benutzenden und den Anforderungen der bereitgestellten Anwendungen MÜSSEN die Leistungsanforderungen (z. B. hinsichtlich CPU und Arbeitsspeicher) an den Terminalserver ermittelt werden. Der Terminalserver MUSS anhand dieser Leistungsanforderungen dimensioniert und ausgestattet werden. Das Lizenzschema der eingesetzten Anwendungen MUSS daraufhin geprüft werden, ob es dafür geeignet ist, diese Anwendungen auf Terminalservern einzusetzen.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.9",
+                "G 0.18",
+                "G 0.27",
+                "G 0.29",
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Festlegung der Rollen und Berechtigungen für den Terminalserver",
+            "handle": "SYS.1.9.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Auf Terminalservern DÜRFEN KEINE Sammelkonten verwendet werden, wenn dies gegen interne Regelungen oder Lizenzbedingungen verstößt. Bei der Festlegung von Rollen und Berechtigungen für die Benutzung des Terminalservers MÜSSEN alle auf dem Terminalserver bereitgestellten Anwendungen und deren Anforderungen mit ausreichenden Berechtigungen ausgestattet werden. Die Rollen und Berechtigungen MÜSSEN so vergeben werden, dass zwischen Terminalserver-Sitzungen nur in dem Umfang kommuniziert werden kann, wie es für die Funktionalität der Anwendung erforderlich ist. Mindestens MÜSSEN die Berechtigungen für folgende Tätigkeiten festgelegt werden: Ausführen von Anwendungen in fremdem Kontext (insbesondere als „root“), Zugriff auf betriebssystemspezifische Funktionen, Zugriff auf das Dateisystem des Terminalservers, Zugriff auf Schnittstellen und Dateisystem des verwendeten zugreifenden Clients, Zugriff der auf dem Terminalserver bereitgestellten Anwendungen auf nachgelagerte Dienste, Datei- und Objekttransfer zwischen Clients und Terminalservern (z. B. zum Drucken am Client) sowie Anbindung von Peripheriegeräten am Client.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.31",
+                "G 0.41",
+                "G 0.43"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Konfiguration des Terminalservers",
+            "handle": "SYS.1.9.A4",
+            "level": "Low",
+            "affects": [],
+            "text": "Abhängig von den Anforderungen an die Sicherheit und Funktionalität der bereitgestellten Anwendungen MÜSSEN Vorgaben für die Konfiguration von Terminalservern erstellt werden. Diese Vorgaben MÜSSEN vollständig umgesetzt und dokumentiert werden. Es MUSS geprüft werden, ob das Unternehmen, das den Terminalserver herstellt, Vorgaben oder Empfehlungen zur sicheren Konfiguration oder Härtung bereitstellt. Ist dies der Fall, MÜSSEN diese für die Erstellung der Konfigurationsvorgaben angemessen berücksichtigt werden. Sowohl die Konfigurationsvorgaben als auch deren Umsetzung MÜSSEN regelmäßig geprüft und gegebenenfalls angepasst werden. Es MÜSSEN mindestens folgende Punkte für die Konfigurationsvorgaben berücksichtigt werden: Rollen und Berechtigungen, Umfang der Verschlüsselung des Terminalserver-Protokolls, benötigte Authentisierungsfunktionen des Terminalserver-Protokolls, Möglichkeit zum Anzeigen der Ausgabe fremder Sitzungen, Kommunikation zwischen Anwendungen in den Terminalserver-Sitzungen und Anwendungen auf anderen Servern, Kommunikation zwischen Terminalserver und anderen Servern",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.19",
+                "G 0.41",
+                "G 0.43"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Planung der eingesetzten Clients und Terminal-Client-Software",
+            "handle": "SYS.1.9.A5",
+            "level": "Low",
+            "affects": [],
+            "text": "Es MUSS festgelegt werden, über welche Terminal-Client-Software auf den Terminalserver zugegriffen werden darf. Zusätzlich MUSS festgelegt werden, auf welchen Clients diese Software ausgeführt werden darf, um sich mit dem Terminalserver zu verbinden. Hierbei MÜSSEN mindestens die folgenden Punkte berücksichtigt werden: Einsatz von Thin Clients oder Fat Clients, Hardware-Konfiguration der zugreifenden Clients sowie Betriebssystem der zugreifenden Clients. Es MUSS festgelegt werden, welche Software neben der Terminal-Client-Software zusätzlich auf den Clients zugelassen ist. Zusätzlich MUSS festgelegt werden, ob ein Client parallel Anwendungen auf unterschiedlichen Terminalservern benutzen darf.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.19",
+                "G 0.22"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Planung der verwendeten Netze",
+            "handle": "SYS.1.9.A6",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Netze, über die Clients mit Terminalservern kommunizieren, MÜSSEN anhand der Anforderungen der bereitgestellten Anwendungen geplant und gegebenenfalls angepasst werden. Hierbei MÜSSEN mindestens folgende Punkte berücksichtigt werden: zu erwartende Anzahl gleichzeitiger Terminalserver-Sitzungen, benötigte Übertragungskapazität, maximal vertretbarer Paketverlust, maximal vertretbarer Jitter sowie maximal tolerierbare Latenzzeit des Netzes.",
+            "isresponsible": "Planende",
+            "mitigates": [
+                "G 0.9",
+                "G 0.18",
+                "G 0.23",
+                "G 0.27",
+                "G 0.31",
+                "G 0.36",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sicherer Zugriff auf den Terminalserver",
+            "handle": "SYS.1.9.A7",
+            "level": "Low",
+            "affects": [],
+            "text": "Es MUSS festgelegt werden, über welche Netze zwischen zugreifendem Client und Terminalserver kommuniziert werden darf. Zusätzlich MUSS festgelegt werden, wie die Kommunikation abgesichert werden soll. Es MUSS festgelegt werden, ob und wie mit dem Terminalserver-Protokoll verschlüsselt werden soll. Falls das Terminalserver-Protokoll in diesem Fall keine ausreichende Verschlüsselung bietet, MUSS die Kommunikation zusätzlich abgesichert werden. Falls die Clients und der Terminalserver über unzureichend vertrauenswürdige Netze kommunizieren, MÜSSEN sich sowohl die Benutzenden als auch der Terminalserver beim Kommunikationsaufbau authentisieren.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.14",
+                "G 0.15",
+                "G 0.19",
+                "G 0.22",
+                "G 0.28",
+                "G 0.36"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Zuordnung des Terminalservers zu Netzsegmenten",
+            "handle": "SYS.1.9.A8",
+            "level": "Low",
+            "affects": [],
+            "text": "Der Terminalserver MUSS in dedizierten Netzsegmenten oder in Client-Netzsegmenten positioniert werden. Innerhalb von Client-Netzsegmenten MÜSSEN Terminalserver identifizierbar sein. Eine bestehende Netztrennung DARF NICHT über einen Terminalserver umgangen werden können.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.15",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sensibilisierung der Benutzenden",
+            "handle": "SYS.1.9.A9",
+            "level": "Low",
+            "affects": [],
+            "text": "Alle Benutzenden von Terminalservern MÜSSEN über den sicheren Umgang mit Terminalservern sensibilisiert werden. Den Benutzenden MÜSSEN mindestens die folgenden Inhalte vermittelt werden: grundsätzliche Funktionsweise und die Auswirkungen von Latenz und verfügbarer Bandbreite auf die Bedienbarkeit, mögliche und erlaubte Speicherorte von Daten, zugelassene Austauschmöglichkeiten von Informationen zwischen dem Betriebssystem des Clients und dem Terminalserver (z. B. Zwischenablage), Auswirkung des eigenen Ressourcenverbrauchs auf die zur Verfügung stehenden Ressourcen für andere Benutzende, eingerichtete Rollen und Berechtigungen für Terminalserver-Zugriffe, genutzte Authentisierung und Autorisierung der Benutzenden für die zur Verfügung gestellten Anwendungen, maximale Sitzungsdauer und automatische Abmeldevorgänge",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.19",
+                "G 0.27",
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz eines zentralen Identitäts- und Berechtigungsmanagements für Terminalserver",
+            "handle": "SYS.1.9.A10",
+            "level": "Medium",
+            "affects": [],
+            "text": "Für die Benutzung von Terminalservern SOLLTE ein zentrales System zum Identitäts- und Berechtigungsmanagement eingesetzt werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.14",
+                "G 0.15",
+                "G 0.19",
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Konfiguration von Profilen",
+            "handle": "SYS.1.9.A11",
+            "level": "Medium",
+            "affects": [],
+            "text": "Benutzende SOLLTEN ihre spezifischen Einstellungen (Benutzendenprofile) NICHT derart ändern dürfen, dass die Informationssicherheit oder die Nutzung des Terminalservers eingeschränkt wird. Für die Benutzendenprofile SOLLTE eine geeignete maximale Größe festgelegt werden. Wenn Verbünde aus Terminalservern eingesetzt werden, SOLLTEN die Benutzendenprofile zentral abgelegt werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.9"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Automatisches Beenden inaktiver Sitzungen",
+            "handle": "SYS.1.9.A12",
+            "level": "Medium",
+            "affects": [],
+            "text": "Inaktive Sitzungen auf Terminalservern SOLLTEN nach einem vordefinierten Zeitraum beendet werden. Der Zeitraum, während dessen eine Sitzung maximal aktiv bleiben soll, SOLLTE abhängig von der jeweiligen Benutzendengruppe festgelegt werden. Falls eine Sitzung automatisch beendet wird, SOLLTEN die Betroffenen darüber benachrichtigt werden. Wenn eine Sitzung beendet wird, SOLLTE auch der oder die Benutzende automatisch vom Betriebssystem des Terminalservers abgemeldet werden, sofern die Sitzung am Betriebssystem nicht weiterhin für laufende Anwendungen benötigt wird.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.27",
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Protokollierung bei Terminalservern",
+            "handle": "SYS.1.9.A13",
+            "level": "Medium",
+            "affects": [],
+            "text": "Für die Terminalserver SOLLTE entschieden werden, welche Ereignisse an eine zentrale Protokollierungsinfrastruktur (siehe OPS.1.1.5 Protokollierung) übermittelt werden sollen. Hierbei SOLLTEN mindestens die folgenden spezifischen Ereignisse an Terminalservern protokolliert werden: Anbindung von Peripheriegeräten der zugreifenden Clients über das Terminalserver-Protokoll, Aktionen auf dem Terminalserver durch zugreifende Clients, die erweiterte Rechte benötigen sowie Konfigurationsänderungen mit Auswirkungen auf den Terminalserver-Dienst.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.23",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Monitoring des Terminalservers",
+            "handle": "SYS.1.9.A14",
+            "level": "Medium",
+            "affects": [],
+            "text": "Der Terminalserver SOLLTE zentral überwacht werden. Hierfür SOLLTEN mindestens folgende Parameter überwacht werden: Auslastung der Ressourcen des Terminalservers, Auslastung der Netzschnittstellen des Terminalservers, verfügbare und genutzte Bandbreite der verbundenen Clients sowie Latenz an den verbundenen Clients unter Berücksichtigung der jeweiligen Anforderungsprofile. Für das Monitoring SOLLTEN vorab die jeweiligen Schwellwerte ermittelt werden (Baselining). Diese Schwellwerte SOLLTEN regelmäßig überprüft und bei Bedarf angepasst werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.27",
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Härtung des Terminalservers",
+            "handle": "SYS.1.9.A15",
+            "level": "Medium",
+            "affects": [],
+            "text": "Nicht benötigte Anwendungen auf dem Terminalserver SOLLTEN entfernt werden. Ist das nicht möglich, SOLLTE deren Ausführung unterbunden werden. Der Zugriff aus einer Sitzung auf Peripheriegeräte SOLLTE auf die benötigten Geräte eingeschränkt werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.19",
+                "G 0.22",
+                "G 0.43"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Optimierung der Kompression",
+            "handle": "SYS.1.9.A16",
+            "level": "Medium",
+            "affects": [],
+            "text": "Der Grad der Kompression bei der Übertragung der Daten von und zum Terminalserver SOLLTE entsprechend der Anforderungen der jeweiligen Anwendung an die grafische Qualität optimiert werden. Die Anforderungen der bereitgestellten Anwendungen an Genauigkeit von grafischen Elementen, an Farbtreue und die für die Nutzung notwendige Bildrate SOLLTEN berücksichtigt werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.9"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verschlüsselung der Übertragung",
+            "handle": "SYS.1.9.A17",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Jegliche Kommunikation zwischen Client und Terminalserver SOLLTE geeignet verschlüsselt werden. Dabei SOLLTEN sichere Protokolle gemäß BSI TR-02102 verwendet werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.14",
+                "G 0.15",
+                "G 0.22",
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Nutzung von Thin Clients",
+            "handle": "SYS.1.9.A18",
+            "level": "High",
+            "affects": [
+                "IA"
+            ],
+            "text": "Physische Thin Clients SOLLTEN verwendet werden. Es SOLLTEN NUR Thin Clients eingesetzt werden, die das Unternehmen, das die Terminal-Client-Software herstellt, als kompatibel ausgewiesen hat.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erweitertes Monitoring des Terminalservers",
+            "handle": "SYS.1.9.A19",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Für den Terminalserver SOLLTE kontinuierlich überwacht werden, ob die in SYS.1.9.A13 Protokollierung bei Terminalservern beschriebenen Ereignisse auftreten. Wird ein Security Information and Event Management (SIEM) genutzt, SOLLTE der Terminalserver darin eingebunden werden. Im SIEM SOLLTEN die überwachten Ereignisse hinsichtlich Anomalien inklusive Angriffsmustern automatisiert analysiert werden. Der Terminalserver SOLLTE regelmäßig auf Schwachstellen überprüft werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.23",
+                "G 0.36",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unterschiedliche Terminalserver für unterschiedliche Gruppen von Benutzenden oder Geschäftsprozesse",
+            "handle": "SYS.1.9.A20",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Die Benutzenden von Terminalservern SOLLTEN anhand ähnlicher Berechtigungen und benötigter Anwendungen gruppiert werden. Ein Terminalserver SOLLTE NICHT mehreren Gruppen von Benutzenden zur Verfügung gestellt werden. Ist dies nicht möglich, SOLLTEN dedizierte Terminalserver pro Geschäftsprozess eingesetzt werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.22",
+                "G 0.23",
+                "G 0.43"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Nutzung hochverfügbarer IT-Systeme",
+            "handle": "SYS.1.9.A21",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Der Terminalserver SOLLTE hochverfügbar betrieben werden. Dazu SOLLTEN der Terminalserver sowie dessen Netzanbindung redundant ausgelegt werden. Die verwendeten Terminalserver SOLLTEN im Verbund betrieben werden. Für die zugreifenden Clients SOLLTEN Ersatzgeräte bereitgehalten werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.9",
+                "G 0.41"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unterbinden des Transfers von Anwendungsdaten zwischen Client und Terminalserver",
+            "handle": "SYS.1.9.A22",
+            "level": "High",
+            "affects": [
+                "IA"
+            ],
+            "text": "Der Transfer von Anwendungsdaten zwischen dem Client und dem Terminalserver SOLLTE deaktiviert werden. Auch der Transfer der Zwischenablage SOLLTE deaktiviert werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.14",
+                "G 0.15",
+                "G 0.19",
+                "G 0.28",
+                "G 0.41"
+            ]
+        }
+    ]
+}

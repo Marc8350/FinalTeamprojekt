@@ -1,0 +1,467 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "SYS.2.5 Client-Virtualisierung",
+    "handle": "SYS.2.5",
+    "text": "Client-Virtualisierung bezeichnet die virtualisierte Bereitstellung von Clients. Sowohl lokal auf einem physischen Client als auch mittels einer (zentralen) Virtualisierungsinfrastruktur können Clients virtualisiert werden. Virtualisierungsinfrastrukturen können genutzt werden, um virtuelle Clients von einem entfernten Arbeitsplatz aus zu bedienen.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Dimensionierung der Netzanbindung virtueller Clients",
+            "handle": "2.1",
+            "text": "Werden bei der Planung der virtuellen Clients die Leistungsanforderungen an deren Netzanbindung nicht oder nur unzureichend berücksichtigt, könnten die virtuellen Clients nicht richtig funktionieren. Ist beispielsweise die Netzanbindung an nachgelagerte Dienste (z. B. Videokonferenzlösungen oder Dateiablagen) nicht leistungsfähig genug, können die virtuellen Clients unter Umständen nur noch eingeschränkt auf Informationen zugreifen, z. B. bei latenzkritischen Anwendungen. Ähnliches gilt, wenn die virtuellen Clients nicht mit hinreichender Netzkapazität an die zugreifenden Clients angebunden sind.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Überlastung der Netzanbindung",
+                    "type": "Threat",
+                    "text": "Die Netzanbindung der virtuellen Clients ist nicht ausreichend dimensioniert, um die Anforderungen der Anwendungen zu erfüllen. Dies führt zu einer langsamen Performance und einer schlechten Benutzererfahrung.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Leistung der virtuellen Clients durch Ressourcenknappheit",
+            "handle": "2.2",
+            "text": "Um auf virtuellen Clients möglichst reibungslos arbeiten zu können, ist es wichtig, dass sie leistungsfähig sind. Werden einem virtuellen Client nur unzureichende Ressourcen (z. B. CPU, Arbeitsspeicher oder Grafikleistung) zugewiesen, kann die Verfügbarkeit der auf dem virtuellen Client installierten Anwendungen beeinträchtigt werden. Beispielsweise können bestimmte grafisch anspruchsvolle Programme nicht ohne dedizierte Grafikprozessoren auf dem virtuellen Client ausgeführt werden. Auch ein zu niedriger Prozessortakt führt zu einer langsamen Verarbeitungsgeschwindigkeit.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Ressourcenmangel",
+                    "type": "Threat",
+                    "text": "Die virtuellen Clients haben nicht genügend Ressourcen (z. B. CPU, Arbeitsspeicher) zur Verfügung, um die Anforderungen der Anwendungen zu erfüllen. Dies führt zu einer langsamen Performance und einer schlechten Benutzererfahrung.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Gegenseitiges Stören der virtuellen Clients",
+            "handle": "2.3",
+            "text": "Die Dimensionierung der zugrundeliegenden Virtualisierungsinfrastruktur ist maßgeblich für die tatsächlich abrufbare Leistung mehrerer parallel ausgeführter virtueller Clients. Werden auf einem Virtualisierungsserver zusätzlich zu einem virtuellen Client viele andere virtuelle IT-Systeme gleichzeitig ausgeführt, könnte der Virtualisierungsserver den Ressourcenbedarf nicht mehr decken. Dies wiederum kann dazu führen, dass die tatsächliche Leistung des virtuellen Clients begrenzt und nicht mehr vorhersehbar wird. Prozessorleistung und Arbeitsspeicher spielen dabei die größte Rolle, wenn sie dynamisch zugewiesen werden. Rufen nun zu viele verschiedene Personen zeitgleich Leistung ab, konkurrieren sie um diese.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Überlastung des Virtualisierungsservers",
+                    "type": "Threat",
+                    "text": "Der Virtualisierungsserver ist überlastet, da zu viele virtuelle Clients gleichzeitig ausgeführt werden. Dies führt zu einer langsamen Performance und einer schlechten Benutzererfahrung.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Trennung der virtuellen Clients auf Netzebene",
+            "handle": "2.4",
+            "text": "Bei den virtuellen Clients handelt es sich um Clients im Sinne des Bausteins SYS.2.1 Allgemeiner Client, die gegebenenfalls einen unterschiedlichen Schutzbedarf haben können. Werden diese Clients auf einer gemeinsamen Virtualisierungsinfrastruktur betrieben, könnte eine bestehende Trennung auf Port-Ebene durch den eingesetzten Virtualisierungsserver aufgehoben werden (auf Ebene der virtuellen Switches).",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Falsche Konfiguration der virtuellen Switches",
+                    "type": "Threat",
+                    "text": "Die virtuellen Clients sind nicht korrekt in den virtuellen Switches konfiguriert, so dass sie auf Netze zugreifen können, für die sie nicht berechtigt sind. Dies kann zu einem Datenverlust oder einer Sicherheitsverletzung führen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verlust von virtuellen Clients und darauf gespeicherten Daten",
+            "handle": "2.5",
+            "text": "Bei der Client-Virtualisierung werden die Images der virtuellen Clients an zentraler Stelle gespeichert und verwaltet. Durch fehlerhafte Administration oder Fehlbedienung von virtuellen Clients können diese beschädigt oder gelöscht werden. Der Verlust virtueller Clients im laufenden Betrieb kann dazu führen, dass auch Informationen gelöscht werden, die auf diesen virtuellen Clients gespeichert sind. Zusätzlich bedeutet der Verlust virtueller Clients, dass Informationen, die auf diesen virtuellen Clients verarbeitet werden, nicht mehr verfügbar sind.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Fehlerhafte Administration",
+                    "type": "Threat",
+                    "text": "Die Administration der virtuellen Clients ist fehlerhaft, so dass virtuelle Clients gelöscht oder beschädigt werden. Dies kann zu einem Datenverlust führen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Nicht-Erreichbarkeit von virtuellen Clients und darauf gespeicherten Daten",
+            "handle": "2.6",
+            "text": "In der Regel können virtuelle Clients nicht von den Benutzenden selber eingeschaltet werden, sondern nur vom IT-Betrieb, der auch die Virtualisierungsinfrastruktur administriert. Bei Updates oder generell Wartungsarbeiten an der Virtualisierungsinfrastruktur ist es üblich, dass virtuelle Clients ausgeschaltet werden. Wird vergessen, sie hinterher wieder einzuschalten, bleiben sie ausgeschaltet und sind somit nicht erreichbar.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Vergessen, virtuelle Clients einzuschalten",
+                    "type": "Threat",
+                    "text": "Nach Wartungsarbeiten werden die virtuellen Clients nicht wieder eingeschaltet. Dies führt dazu, dass die Benutzer nicht mehr auf die virtuellen Clients zugreifen können.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Software-Schwachstellen auf den virtuellen Clients",
+            "handle": "2.7",
+            "text": "Virtuelle Clients setzen sich aus den festgelegten virtuellen Hardware-Ressourcen wie CPU und Arbeitsspeicher und dem zugehörigen Festplatten-Abbild zusammen. Diese Abbilder werden üblicherweise anhand von Vorlagen erzeugt. Wenn diese Vorlagen erzeugt werden, sind sie in der Regel auf einem aktuellen Software-Stand ohne bekannte Schwachstellen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Ausnutzung von Software-Schwachstellen",
+                    "type": "Threat",
+                    "text": "Ein Angreifer nutzt eine bekannte Schwachstelle in der Software des virtuellen Clients aus, um auf das System zuzugreifen oder Daten zu stehlen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Umgehen der Isolation zwischen einem virtuellen Client und anderen virtualisierten IT-Systemen",
+            "handle": "2.8",
+            "text": "Virtuelle IT-Systeme werden oft auf einer gemeinsam genutzten Virtualisierungsinfrastruktur eingesetzt, um Ressourcen effizienter zu nutzen und flexibler bereitzustellen. Dadurch können sich die verschiedenen virtualisierten IT-Systeme gegenseitig beeinflussen. Im Gegensatz zu einem virtuellen Server können virtuelle Clients einfacher kompromittiert werden, da die auf den virtuellen Clients ausgeführten Anwendungen vielfältiger und interaktiver sind.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Angriff auf den Virtualisierungsserver",
+                    "type": "Threat",
+                    "text": "Ein Angreifer greift einen virtuellen Client an und nutzt diesen, um auf den Virtualisierungsserver zuzugreifen. Von dort aus kann der Angreifer dann auf andere virtuelle IT-Systeme zugreifen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Planung des Einsatzes virtueller Clients",
+            "handle": "SYS.2.5.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Es MUSS festgelegt werden, welche Anwendungen auf den virtuellen Clients eingesetzt werden sollen. Die Aufgaben, die mit diesen Anwendungen gelöst werden sollen, MÜSSEN festgelegt werden. Für diese Anwendungen MUSS überprüft und dokumentiert werden, welche Anforderungen an die Virtualisierungsinfrastruktur und deren etwaige Zusatzhardware (z. B. Grafikkarten) gestellt werden. Der genutzte Virtualisierungsserver MUSS die notwendigen Ressourcen hinsichtlich CPU, Arbeitsspeicher und Datenspeicher bereitstellen.",
+            "isresponsible": "Planende",
+            "mitigates": [
+                "G 0.18",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Planung der verwendeten Netze für virtuelle Clients",
+            "handle": "SYS.2.5.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Netze für die Verbindung zwischen zugreifenden Clients und virtuellen Clients sowie die Netze zur Anbindung nachgelagerter Dienste an die virtuellen Clients (z. B. Verzeichnisdienst, E-Mail oder Internetzugriff) MÜSSEN ausreichend leistungsfähig ausgelegt werden. Es MUSS geplant werden, welche Netzsegmente für die virtuellen Clients verwendet werden sollen. Die Netzsegmente für virtuelle Clients MÜSSEN von Netzsegmenten für Server getrennt sein. Eine bestehende Netztrennung DARF NICHT mithilfe eines virtuellen Clients oder eines Virtualisierungsservers umgangen werden. Für virtuelle Clients MUSS festgelegt werden, ob und in welchem Ausmaß die Kommunikation in nicht vertrauenswürdige Netze eingeschränkt werden soll.",
+            "isresponsible": "Planende",
+            "mitigates": [
+                "G 0.18",
+                "G 0.23",
+                "G 0.27",
+                "G 0.28",
+                "G 0.30",
+                "G 0.32",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Schutz vor Schadsoftware auf den virtuellen Clients",
+            "handle": "SYS.2.5.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Für die virtuellen Clients MUSS ein Schutz vor Schadsoftware gemäß den Bausteinen OPS.1.1.4 Schutz vor Schadprogrammen und SYS.2.1 Allgemeiner Client sowie unter Berücksichtigung der betriebssystemspezifischen Bausteine umgesetzt werden. Wird ein Virenschutzprogramm eingesetzt, MUSS festgelegt und dokumentiert werden, ob dieser Schutz zentralisiert in der Virtualisierungsinfrastruktur, dezentralisiert auf den virtuellen Clients oder in Mischformen umgesetzt wird. Falls die virtuellen Clients mit zentralen Komponenten geschützt werden sollen, MÜSSEN diese zentralen Komponenten über eine ausreichende Leistung verfügen. Falls ein Virenschutzprogramm auf den virtuellen Clients ausgeführt wird, MUSS sichergestellt werden, dass die Leistung der Virtualisierungsinfrastruktur ausreicht.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.28",
+                "G 0.30",
+                "G 0.31",
+                "G 0.32",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung einer dedizierten Virtualisierungsinfrastruktur für die virtuellen Clients",
+            "handle": "SYS.2.5.A4",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die virtuellen Clients SOLLTEN auf einer dedizierten Virtualisierungsinfrastruktur betrieben werden. Virtuelle Server SOLLTEN NICHT auf derselben Virtualisierungsinfrastruktur ausgeführt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.23",
+                "G 0.27",
+                "G 0.28",
+                "G 0.30",
+                "G 0.31",
+                "G 0.32"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Zusätzliche Netzsegmentierung für virtuelle Clients",
+            "handle": "SYS.2.5.A5",
+            "level": "Medium",
+            "affects": [],
+            "text": "Folgende Kriterien SOLLTEN für eine zusätzliche Netztrennung der virtuellen Clients berücksichtigt werden: Nutzungsszenario für die virtuellen Clients und Gruppenzugehörigkeit der Benutzenden aus der Gruppenzugehörigkeit abgeleitete Berechtigungen der Benutzenden auf den virtuellen Clients installierte und den Benutzenden zur Verfügung gestellte Anwendungen Schutzbedarf der auf den virtuellen Clients verarbeiteten Informationen Vertrauenswürdigkeit der virtuellen Clients für die Funktionsfähigkeit der virtuellen Clients notwendige Netzanbindungen",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.23",
+                "G 0.28",
+                "G 0.30",
+                "G 0.32"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Keine lokale Datenablage auf virtuellen Clients",
+            "handle": "SYS.2.5.A6",
+            "level": "Medium",
+            "affects": [],
+            "text": "Durch die Benutzenden erstellte oder verarbeitete Daten SOLLTEN zentral gespeichert werden. Die Daten SOLLTEN NICHT dauerhaft auf den virtuellen Clients abgelegt werden. Benutzende, die sich mit virtuellen Clients verbinden, SOLLTEN NICHT in der Lage sein, Daten aus den virtuellen Clients auf ihre lokalen IT-Systeme zu übertragen. Falls eine solche Übertragung nachvollziehbar notwendig ist, SOLLTE sie auf das notwendige Minimum beschränkt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.25",
+                "G 0.31",
+                "G 0.45"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Automatische Sperrung von Sitzungen",
+            "handle": "SYS.2.5.A7",
+            "level": "Medium",
+            "affects": [],
+            "text": "Nachdem ein zugreifender Client seine Terminalserver-Sitzung beendet hat, SOLLTE die aktive Sitzung auf dem virtuellen Client gesperrt werden. Nach einer definierten Zeit der Inaktivität SOLLTEN Verbindungen zwischen zugreifendem und virtuellem Client beendet werden. Falls der Einsatzzweck des jeweiligen virtuellen Clients dies zulässt, SOLLTEN die virtuellen Clients in einen inaktiven Zustand versetzt werden, nachdem die Verbindung beendet ist.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.27",
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Härtung der virtuellen Clients",
+            "handle": "SYS.2.5.A8",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die virtuellen Clients SOLLTEN gehärtet werden. Hierbei SOLLTEN die folgenden Aspekte berücksichtigt werden: Einschränkung der Datenübertragung zwischen zugreifenden und virtuellen Clients Weiterleitungen von Peripheriegeräten oder externen Datenträgern von zugreifenden an die virtuellen Clients Explizite Freigabe der Ausführung von Anwendungen Deaktivierung von Netzdiensten, die in der Virtualisierungsinfrastruktur nicht benötigt werden",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.23",
+                "G 0.30",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einbindung der virtuellen Clients in das Patch- und Änderungsmanagement",
+            "handle": "SYS.2.5.A9",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Client-Anwendungen SOLLTEN zentral provisioniert werden. Dazu SOLLTE eine geeignete zentral verwaltbare Lösung eingesetzt werden. Templates für die virtuellen Clients SOLLTEN regelmäßig aktualisiert und getestet werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.25",
+                "G 0.28",
+                "G 0.31",
+                "G 0.39",
+                "G 0.45"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Bedarfsgerechte Zuweisung von Ressourcen zu virtuellen Clients und Gruppen",
+            "handle": "SYS.2.5.A10",
+            "level": "Medium",
+            "affects": [],
+            "text": "Anhand von Rollen und Tätigkeiten SOLLTEN die Leistungsanforderungen der einzelnen Benutzendengruppen an die virtuellen Clients identifiziert werden. Anhand dieser Anforderungen SOLLTE entschieden werden, wie viele Ressourcen (z. B. Prozessorkerne oder Arbeitsspeicher) den einzelnen virtuellen Clients zur Verfügung gestellt werden. Zusätzliche Ressourcen wie GPUs (Graphics Processing Units) SOLLTEN den Benutzenden nur bei Bedarf bereitgestellt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.27",
+                "G 0.28",
+                "G 0.30",
+                "G 0.31",
+                "G 0.32"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Vermeidung von verschachtelter Virtualisierung auf virtuellen Clients",
+            "handle": "SYS.2.5.A11",
+            "level": "Medium",
+            "affects": [],
+            "text": "Auf virtuellen Clients SOLLTEN keine weiteren virtuellen IT-Systeme eingerichtet werden. Falls technisch möglich, SOLLTEN in der zugrundeliegenden Virtualisierungsinfrastruktur Funktionen aktiviert werden, die eine verschachtelte Virtualisierung erschweren oder unterbinden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.23",
+                "G 0.28",
+                "G 0.31",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sensibilisierung der Benutzenden",
+            "handle": "SYS.2.5.A12",
+            "level": "Medium",
+            "affects": [],
+            "text": "Alle Benutzenden von virtuellen Clients SOLLTEN über den sicheren Umgang mit virtuellen Clients sensibilisiert werden. Falls die Ressourcen dynamisch anhand der abgerufenen Leistung zwischen mehreren virtuellen Clients aufgeteilt werden, SOLLTEN die Benutzenden darüber aufgeklärt werden, dass ihr Verhalten potenziell andere Benutzende beeinflussen kann. Falls die Sicherheitsanforderungen der auf virtuellen Clients ausgeführten Anwendungen besonders sind, SOLLTE kommuniziert werden, wie diese gegenüber physischen Clients abweichen. Es SOLLTE auch kommuniziert werden, welche spezifischen Sicherheitsaspekte zu beachten sind.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.27",
+                "G 0.31",
+                "G 0.45"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verhinderung der Kommunikation zwischen virtuellen Clients an einem gemeinsam genutzten virtuellen Switch",
+            "handle": "SYS.2.5.A13",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Mechanismen SOLLTEN aktiviert werden, die eine unkontrollierte Layer-2-Kommunikation zwischen virtuellen Clients an einem gemeinsam genutzten virtuellen Switch unterbinden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.23",
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erweiterte Sicherheitsfunktionen für den Einsatz von virtuellen Clients",
+            "handle": "SYS.2.5.A14",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Die virtuellen Clients SOLLTEN mit zusätzlichen Sicherheitsfunktionen geschützt werden. Dabei SOLLTEN mindestens die folgenden Techniken berücksichtigt werden: Mikrosegmentierung für die virtuellen Clients Intrusion-Detection- oder Intrusion-Prevention-Systeme, die entweder zentralisiert auf der Virtualisierungsinfrastruktur oder dezentral auf den virtuellen Clients bereitgestellt werden",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.23"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Monitoring der virtuellen Clients",
+            "handle": "SYS.2.5.A15",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Der Zustand der virtuellen Clients SOLLTE zentral überwacht werden. Folgende Parameter SOLLTEN mindestens überwacht werden: Erreichbarkeit der virtuellen Clients über alle vorgesehenen Netzschnittstellen, Auslastung von CPU und Arbeitsspeicher der virtuellen Clients, freie Festplattenkapazität der virtuellen Clients sowie Verfügbarkeit der für den Zugriff eingesetzten Terminalserver-Dienste. Für das Monitoring SOLLTEN vorab die jeweiligen Schwellwerte ermittelt werden (Baselining). Diese Schwellwerte SOLLTEN regelmäßig überprüft und bei Bedarf angepasst werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.25",
+                "G 0.27",
+                "G 0.30",
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erweiterte Protokollierung für virtuelle Clients",
+            "handle": "SYS.2.5.A16",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Für virtuelle Clients SOLLTEN zusätzliche Ereignisse an eine zentrale Protokollierungsinfrastruktur (siehe OPS.1.1.5 Protokollierung) übermittelt werden. Hierbei SOLLTEN mindestens die folgenden Ereignisse protokolliert werden: Aktionen, die mit administrativen Rechten ausgeführt werden, Konfigurationsänderungen, Installation von Software, erfolgreiche und fehlgeschlagene Updates und alle Ereignisse, die durch den Schutz vor Schadsoftware entstehen.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.23",
+                "G 0.30",
+                "G 0.32"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erweitertes Monitoring der virtuellen Clients",
+            "handle": "SYS.2.5.A17",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Die virtuellen Clients SOLLTEN kontinuierlich darauf überwacht werden, ob die in SYS.2.5.A16 Erweiterte Protokollierung für virtuelle Clients beschriebenen Ereignisse auftreten. Wird ein Security Information and Event Management (SIEM) genutzt, SOLLTEN die virtuellen Clients darin eingebunden werden. Im SIEM SOLLTEN die überwachten Ereignisse auf Anomalien inklusive Angriffsmustern automatisiert analysiert werden. Die virtuellen Clients SOLLTEN automatisch und regelmäßig auf Schwachstellen überprüft werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.28",
+                "G 0.30",
+                "G 0.31",
+                "G 0.32",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Hochverfügbare Bereitstellung der Virtualisierungsinfrastruktur",
+            "handle": "SYS.2.5.A18",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Die virtuellen Clients SOLLTEN hochverfügbar bereitgestellt werden. Dies SOLLTE durch die zugrundeliegende Virtualisierungsinfrastruktur sichergestellt werden. Die Virtualisierungsserver SOLLTEN redundant an die relevanten Netze angeschlossen werden. Bei Ressourcenknappheit SOLLTEN die virtuellen Clients automatisch zwischen den Virtualisierungsservern migriert werden. Bei Ausfall eines Virtualisierungsservers SOLLTEN die virtuellen Clients automatisiert auf einem anderen Virtualisierungsserver gestartet werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.25"
+            ]
+        }
+    ]
+}

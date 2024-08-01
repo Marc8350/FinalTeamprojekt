@@ -1,0 +1,315 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "Laptops",
+    "handle": "SYS.3.1",
+    "text": "A laptop (also called a notebook) is a PC that can be used mobile. It has a compact design, integrated peripherals such as a keyboard and screen, is powered by batteries for a certain time without an external power supply, and often consists of hardware components specifically designed for mobile use. Laptops are common in most institutions and often replace the classic desktop PC.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Beeinträchtigung durch wechselnde Einsatzumgebung",
+            "handle": "2.1",
+            "text": "Laptops are used in a variety of environments and are therefore exposed to many risks. These include damaging environmental influences such as too high or too low temperatures, dust or humidity. Laptops are also always at risk of transport damage. In addition, laptops often communicate with unknown IT systems or networks while on the move, which always poses a risk to the device itself. This can lead to malware being transmitted or sensitive information being copied.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Malware infection through unknown network",
+                    "type": "Threat",
+                    "text": "A laptop connects to an unknown network, such as a public Wi-Fi hotspot, and downloads malware.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Data theft through unauthorized access",
+                    "type": "Threat",
+                    "text": "A laptop is connected to an untrusted network, and an attacker gains access to sensitive data stored on the laptop.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "SYS.3.1.A1",
+                "SYS.3.1.A3"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Diebstahl und Verlust von Laptops",
+            "handle": "2.2",
+            "text": "Employees often use their laptops outside of the institution. The devices are transported in private vehicles or on public transport, left unattended in break rooms, or left unattended in hotel rooms. Laptops are therefore at a higher risk of theft and can also be easily forgotten or lost. If a laptop is lost, costs and effort are incurred for its replacement. Unsaved data is also lost. Unauthorized persons could also access sensitive data, which could lead to further damage. In many cases, this is much more serious than the mere material loss of the laptop.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Laptop theft",
+                    "type": "Threat",
+                    "text": "A laptop is stolen from an employee's car or office.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Data loss due to laptop loss",
+                    "type": "Threat",
+                    "text": "An employee loses their laptop, and sensitive data stored on the laptop is lost.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "SYS.3.1.A10",
+                "SYS.3.1.A12",
+                "SYS.3.1.A13",
+                "SYS.3.1.A18"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ungeordnete Weitergabe von Laptops",
+            "handle": "2.3",
+            "text": "If employees only need mobile IT systems in exceptional cases, such as for infrequent business trips, it is often more practical to have only a few laptops centrally available. These can then be passed on to each other. However, if the laptop is simply passed on to the next employee, there is a risk that sensitive data still on the device will be passed on. It is also possible that the laptop is infected with malware. Without appropriate regulations, it is difficult to track who used the laptop when or who is currently using it.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Malware spread through laptop sharing",
+                    "type": "Threat",
+                    "text": "A laptop infected with malware is passed on to another employee, who then becomes infected.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Data leakage through laptop sharing",
+                    "type": "Threat",
+                    "text": "An employee passes on a laptop containing sensitive data to another employee, who then accesses the data without authorization.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "SYS.3.1.A7"
+            ]
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Regelungen zur mobilen Nutzung von Laptops",
+            "handle": "SYS.3.1.A1",
+            "level": "Low",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "text": "Es MUSS klar geregelt werden, was Mitarbeitende bei der mobilen Nutzung von Laptops berücksichtigen müssen. Es MUSS insbesondere festgelegt werden, welche Laptops mobil genutzt werden dürfen, wer sie mitnehmen darf und welche grundlegenden Sicherheitsmaßnahmen dabei zu beachten sind. Die Benutzenden MÜSSEN auf die Regelungen hingewiesen werden.",
+            "isresponsible": "IT-Betrieb"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz von Personal Firewalls",
+            "handle": "SYS.3.1.A3",
+            "level": "Low",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "text": "Auf Laptops MUSS eine Personal Firewall aktiv sein, wenn sie außerhalb von Netzen der Institution eingesetzt werden. Die Filterregeln der Firewall MÜSSEN so restriktiv wie möglich sein. Die Filterregeln MÜSSEN regelmäßig getestet werden. Die Personal Firewall MUSS so konfiguriert werden, dass die Benutzenden nicht durch Warnmeldungen belästigt werden, die sie nicht interpretieren können.",
+            "isresponsible": "IT-Betrieb"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sicherer Fernzugriff mit Laptops",
+            "handle": "SYS.3.1.A9",
+            "level": "Low",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "text": "Aus öffentlich zugänglichen Netzen DARF NUR über einen sicheren Kommunikationskanal auf das interne Netz der Institution zugegriffen werden.",
+            "isresponsible": "IT-Betrieb"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sicherheitsrichtlinien für Laptops",
+            "handle": "SYS.3.1.A6",
+            "level": "Medium",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "text": "Für Laptops SOLLTE eine Sicherheitsrichtlinie erstellt werden, die regelt, wie die Geräte benutzt werden dürfen. Die Benutzenden SOLLTEN hinsichtlich des Schutzbedarfs von Laptops und der dort gespeicherten Daten sensibilisiert werden. Auch SOLLTEN sie auf die spezifischen Gefährdungen bzw. die entsprechenden Anforderungen für die Nutzung aufmerksam gemacht werden. Sie SOLLTEN außerdem darüber informiert werden, welche Art von Informationen sie auf Laptops verarbeiten dürfen.",
+            "isresponsible": "IT-Betrieb"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Geregelte Übergabe und Rücknahme eines Laptops",
+            "handle": "SYS.3.1.A7",
+            "level": "Medium",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "text": "Wenn Laptops von verschiedenen Personen abwechselnd genutzt werden, SOLLTE geregelt werden, wie sie sicher übergeben werden können. Auch SOLLTE geregelt werden, wie sie wieder sicher zurückzunehmen sind. Vor der Weitergabe eines Laptops SOLLTEN eventuell vorhandene schützenswerte Daten sicher gelöscht werden. Falls der Laptop vor der Weitergabe nicht neu aufgesetzt wird, SOLLTE sichergestellt sein, dass sich auf dem IT-System und allen damit verbundenen Datenträgern keine Schadsoftware befindet. Gemeinsam mit einem Laptop SOLLTE ein Merkblatt für den sicheren Umgang mit dem Gerät ausgehändigt werden.",
+            "isresponsible": "Benutzende"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sicherer Anschluss von Laptops an Datennetze",
+            "handle": "SYS.3.1.A8",
+            "level": "Medium",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "text": "Es SOLLTE geregelt werden, wie Laptops sicher an eigene oder fremde Datennetze und an das Internet angeschlossen werden. Nur zugelassene Laptops SOLLTEN sich am internen Netz der Institution anmelden können.",
+            "isresponsible": "Benutzende"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Abgleich der Datenbestände von Laptops",
+            "handle": "SYS.3.1.A10",
+            "level": "Medium",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "text": "Es SOLLTE geregelt werden, wie Daten von Laptops in den Informationsverbund der Institution übernommen werden. Wenn ein Synchronisationstool benutzt wird, SOLLTE sichergestellt sein, dass Synchronisationskonflikte aufgelöst werden können. Der Synchronisationsvorgang SOLLTE protokolliert werden. Außerdem SOLLTEN die Benutzenden angewiesen werden, die Synchronisationsprotokolle zu prüfen.",
+            "isresponsible": "Benutzende"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sicherstellung der Energieversorgung von Laptops",
+            "handle": "SYS.3.1.A11",
+            "level": "Medium",
+            "affects": [
+                "Availability"
+            ],
+            "text": "Alle Benutzenden SOLLTEN darüber informiert werden, wie sie die Energieversorgung von Laptops im mobilen Einsatz optimal sicherstellen können. Vorhandene Ersatzakkus SOLLTEN in geeigneten Hüllen gelagert und transportiert werden.",
+            "isresponsible": "Benutzende"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verlustmeldung für Laptops",
+            "handle": "SYS.3.1.A12",
+            "level": "Medium",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "text": "Benutzende SOLLTEN umgehend melden, wenn ein Laptop verloren gegangen ist oder gestohlen wurde. Dafür SOLLTE es in der Institution klare Meldewege geben. Wenn verlorene Laptops wieder auftauchen, SOLLTE untersucht werden, ob sie eventuell manipuliert wurden. Die darauf eingesetzte Software inklusive des Betriebssystems SOLLTE komplett neu installiert werden.",
+            "isresponsible": "Benutzende"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verschlüsselung von Laptops",
+            "handle": "SYS.3.1.A13",
+            "level": "Medium",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "text": "In Laptops verbaute Datenträger wie Festplatten oder SSDs SOLLTEN verschlüsselt werden.",
+            "isresponsible": "IT-Betrieb"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Geeignete Aufbewahrung von Laptops",
+            "handle": "SYS.3.1.A14",
+            "level": "Medium",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "text": "Alle Benutzenden SOLLTEN darauf hingewiesen werden, wie Laptops außerhalb der Institution sicher aufzubewahren sind. Abhängig vom Schutzbedarf der darauf gespeicherten Daten SOLLTEN Laptops auch in den Räumen der Institution außerhalb der Nutzungszeiten gegen Diebstahl gesichert bzw. verschlossen aufbewahrt werden.",
+            "isresponsible": "Benutzende"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Geeignete Auswahl von Laptops",
+            "handle": "SYS.3.1.A15",
+            "level": "Medium",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "text": "Bevor Laptops beschafft werden, SOLLTE eine Anforderungsanalyse durchgeführt werden. Anhand der Ergebnisse SOLLTEN alle infrage kommenden Geräte bewertet werden. Die Beschaffungsentscheidung SOLLTE mit dem IT-Betrieb abgestimmt sein.",
+            "isresponsible": "Beschaffungsstelle"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Zentrale Administration und Verwaltung von Laptops",
+            "handle": "SYS.3.1.A16",
+            "level": "High",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "text": "Es SOLLTE eine geeignete Regelung definiert werden, wie Laptops zentral zu administrieren und verwalten sind. Ein Tool zum zentralen Laptop-Management SOLLTE möglichst alle eingesetzten Betriebssysteme unterstützen.",
+            "isresponsible": "IT-Betrieb"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sammelaufbewahrung von Laptops",
+            "handle": "SYS.3.1.A17",
+            "level": "High",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "text": "Nicht benutzte Laptops SOLLTEN in einem geeignet abgesicherten Raum vorgehalten werden. Der dafür genutzte Raum SOLLTE den Anforderungen aus dem Baustein INF.5 Raum sowie Schrank für technische Infrastruktur entsprechen.",
+            "isresponsible": "IT-Betrieb"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz von Diebstahl-Sicherungen",
+            "handle": "SYS.3.1.A18",
+            "level": "High",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "text": "Es SOLLTE geregelt werden, welche Diebstahlsicherungen für Laptops eingesetzt werden sollen. Bei mechanischen Sicherungen SOLLTE besonders auf ein gutes Schloss geachtet werden.",
+            "isresponsible": "IT-Betrieb"
+        }
+    ]
+}

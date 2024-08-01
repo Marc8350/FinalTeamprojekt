@@ -1,0 +1,317 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "Faxgeräte und Faxserver",
+    "handle": "NET.4.3",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende oder falsche Versorgung mit Verbrauchsgütern",
+            "handle": "2.1",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Kein Papier oder Toner im Faxgerät",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "NET.4.3.A6",
+                "NET.4.3.A8"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlerhafte Faxübertragung",
+            "handle": "2.2",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Störungen im öffentlichen Telekommunikationsnetz",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Falsche Eingabe der Rufnummer",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "NET.4.3.A1",
+                "NET.4.3.A9"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Manipulation von Adressbüchern und Verteilerlisten",
+            "handle": "2.3",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Änderung von Adressbüchern oder Verteilerlisten durch Unbefugte",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "NET.4.3.A10"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unbefugtes Lesen von Faxsendungen",
+            "handle": "2.4",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Zugriff auf Faxgerät durch Unbefugte",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "NET.4.3.A1"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Auswertung von Restinformationen in Faxgeräten und Faxservern",
+            "handle": "2.5",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Wiederherstellung von Restinformationen aus dem Faxgerät",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Auswertung von Restinformationen auf dem Faxserver",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "NET.4.3.A8"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Vortäuschen eines falschen Absendenden bei Faxsendungen",
+            "handle": "2.6",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Manipulation von Faxsendungen durch Fälschung von Unterschriften",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "NET.4.3.A7"
+            ]
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Geeignete Aufstellung eines Faxgerätes",
+            "handle": "NET.4.3.A1",
+            "level": "Low",
+            "affects": [
+                "Confidentiality"
+            ],
+            "isresponsible": "Haustechnik"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Informationen für Mitarbeitende über die Faxnutzung",
+            "handle": "NET.4.3.A2",
+            "level": "Low",
+            "affects": [
+                "Confidentiality"
+            ],
+            "isresponsible": null
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sicherer Betrieb eines Faxservers",
+            "handle": "NET.4.3.A3",
+            "level": "Low",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "IT-Betrieb"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erstellung einer Sicherheitsrichtlinie für die Faxnutzung",
+            "handle": "NET.4.3.A4",
+            "level": "Medium",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": null
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Beschaffung geeigneter Faxgeräte und Faxserver",
+            "handle": "NET.4.3.A6",
+            "level": "Medium",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "Beschaffungsstelle"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Geeignete Kennzeichnung ausgehender Faxsendungen",
+            "handle": "NET.4.3.A7",
+            "level": "Medium",
+            "affects": [
+                "Confidentiality"
+            ],
+            "isresponsible": "Benutzende"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Geeignete Entsorgung von Fax-Verbrauchsgütern und Ersatzteilen",
+            "handle": "NET.4.3.A8",
+            "level": "Medium",
+            "affects": [
+                "Confidentiality"
+            ],
+            "isresponsible": null
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Nutzung von Sende- und Empfangsprotokollen",
+            "handle": "NET.4.3.A9",
+            "level": "Medium",
+            "affects": [
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": null
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Kontrolle programmierbarer Zieladressen, Protokolle und Verteilerlisten",
+            "handle": "NET.4.3.A10",
+            "level": "Medium",
+            "affects": [
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": null
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Schutz vor Überlastung des Faxgerätes",
+            "handle": "NET.4.3.A11",
+            "level": "High",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "IT-Betrieb"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sperren bestimmter Quell- und Ziel-Faxnummern",
+            "handle": "NET.4.3.A12",
+            "level": "High",
+            "affects": [
+                "Confidentiality"
+            ],
+            "isresponsible": null
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Festlegung berechtigter Faxbedienenden",
+            "handle": "NET.4.3.A13",
+            "level": "High",
+            "affects": [
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "Benutzende"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fertigung von Kopien eingehender Faxsendungen",
+            "handle": "NET.4.3.A14",
+            "level": "High",
+            "affects": [
+                "Confidentiality"
+            ],
+            "isresponsible": "Benutzende"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ankündigung und Rückversicherung im Umgang mit Faxsendungen",
+            "handle": "NET.4.3.A15",
+            "level": "High",
+            "affects": [
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "Benutzende"
+        }
+    ]
+}

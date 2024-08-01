@@ -1,0 +1,301 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "ORP.1 Organisation",
+    "handle": "ORP.1",
+    "text": "Jede Institution benötigt eine hierfür zuständige Dienststelle, um den allgemeinen Betrieb zu steuern und zu regeln sowie um Verwaltungsdienstleistungen zu planen, zu organisieren und durchzuführen. Die meisten Institutionen haben hierfür eine Organisationseinheit, die dieses Zusammenspiel der verschiedenen Rollen und Einheiten mit den entsprechenden Geschäftsprozessen und Ressourcen steuert. Bereits auf dieser übergreifenden Ebene sind Aspekte der Informationssicherheit einzubringen und verbindlich festzulegen.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlende oder unzureichende Regelungen",
+            "handle": "2.1",
+            "text": "Fehlende Regelungen können zu massiven Sicherheitslücken führen, wenn beispielsweise Mitarbeitende nicht wissen, wie sie bei Vorfällen reagieren sollen. Probleme können auch dadurch entstehen, dass Regelungen veraltet, unpraktikabel oder unverständlich formuliert sind. Die Bedeutung dieser übergreifenden organisatorischen Regelungen nimmt mit der Komplexität der Geschäftsprozesse und dem Umfang der Informationsverarbeitung, aber auch mit dem Schutzbedarf der zu verarbeitenden Informationen zu.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unzureichende Reaktion auf Vorfälle",
+                    "type": "Threat",
+                    "text": "Mitarbeitende wissen nicht, wie sie bei Vorfällen reagieren sollen, da es keine Regelungen gibt.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Veraltete Regelungen",
+                    "type": "Threat",
+                    "text": "Regelungen sind veraltet und nicht mehr an die aktuelle Situation angepasst.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unverständliche Regelungen",
+                    "type": "Threat",
+                    "text": "Regelungen sind unverständlich formuliert und werden von den Mitarbeitenden nicht verstanden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Nichtbeachtung von Regelungen",
+            "handle": "2.2",
+            "text": "Allen Mitarbeitenden müssen die geltenden Regelungen bekannt gemacht werden und zum Nachlesen zur Verfügung stehen. Die Erfahrung zeigt, dass es nicht ausreicht, Sicherheitsregeln lediglich festzulegen. Ihre Kommunikation an die Mitarbeitenden ist elementar wichtig, damit die Vorgaben auch von allen Betroffenen im Arbeitsalltag gelebt werden können.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Diskussion vertraulicher Informationen in Hörweite fremder Personen",
+                    "type": "Threat",
+                    "text": "Vertrauliche Informationen werden in Hörweite fremder Personen diskutiert, beispielsweise in Pausengesprächen von Besprechungen oder über Mobiltelefonate in öffentlichen Umgebungen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Veröffentlichung von Dokumenten ohne Prüfung",
+                    "type": "Threat",
+                    "text": "Dokumente werden auf einem Webserver veröffentlicht, ohne dass geprüft wurde, ob diese tatsächlich zur Veröffentlichung vorgesehen und freigegeben sind.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Änderung von Daten durch Mitarbeitende",
+                    "type": "Threat",
+                    "text": "Aufgrund von fehlerhaft administrierten Zugriffsrechten können Mitarbeitende Daten ändern, ohne die Brisanz dieser Integritätsverletzung einschätzen zu können.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlende, ungeeignete oder inkompatible Betriebsmittel",
+            "handle": "2.3",
+            "text": "Wenn benötigte Betriebsmittel in zu geringer Menge vorhanden sind oder nicht termingerecht bereitgestellt werden, können in der Institution Störungen eintreten. Ebenso kann es vorkommen, dass ungeeignete oder sogar inkompatible Betriebsmittel beschafft werden, die infolgedessen nicht eingesetzt werden können.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Mangelnder Speicherplatz",
+                    "type": "Threat",
+                    "text": "Der Speicherplatz von Festplatten bei Clients und Servern sowie mobiler Datenträger steigt ständig. Dabei wird häufig vergessen, IT-Komponenten und Datenträger zu beschaffen, die für eine regelmäßige Datensicherung ausreichend Kapazität bieten.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Nicht durchgeführte Wartung",
+                    "type": "Threat",
+                    "text": "Ebenso muss die Funktionsfähigkeit der eingesetzten Betriebsmittel gewährleistet sein. Wenn Wartungsarbeiten nicht oder nur unzureichend durchgeführt werden, können daraus hohe Schäden entstehen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Gefährdung durch Institutionsfremde",
+            "handle": "2.4",
+            "text": "Bei Institutionsfremden kann grundsätzlich nicht vorausgesetzt werden, dass sie mit ihnen zugänglichen Informationen und der Informationstechnik entsprechend den Vorgaben der besuchten Institution umgehen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unbefugter Zugriff auf Informationen",
+                    "type": "Threat",
+                    "text": "Unbegleitete Besuchende können auf Unterlagen und Datenträger zugreifen oder Zugang zu Geräten haben, diese beschädigen oder schützenswerte Informationen ausspähen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Beschädigung von Geräten",
+                    "type": "Threat",
+                    "text": "Reinigungskräfte können versehentlich Steckverbindungen lösen, Wasser in Geräte laufen lassen, Unterlagen verlegen oder mit dem Abfall entsorgen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Festlegung von Verantwortlichkeiten und Regelungen",
+            "handle": "ORP.1.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Innerhalb einer Institution MÜSSEN alle relevanten Aufgaben und Funktionen klar definiert und voneinander abgegrenzt sein. Es MÜSSEN verbindliche Regelungen für die Informationssicherheit für die verschiedenen betrieblichen Aspekte übergreifend festgelegt werden. Die Organisationsstrukturen sowie verbindliche Regelungen MÜSSEN anlassbezogen überarbeitet werden. Die Änderungen MÜSSEN allen Mitarbeitenden bekannt gegeben werden.",
+            "isresponsible": "Institutionsleitung",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Zuweisung der Zuständigkeiten",
+            "handle": "ORP.1.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Für alle Geschäftsprozesse, Anwendungen, IT-Systeme, Räume und Gebäude sowie Kommunikationsverbindungen MUSS festgelegt werden, wer für diese und deren Sicherheit zuständig ist. Alle Mitarbeitenden MÜSSEN darüber informiert sein, insbesondere wofür sie zuständig sind und welche damit verbundenen Aufgaben sie wahrnehmen.",
+            "isresponsible": "Institutionsleitung",
+            "mitigates": [
+                "G 0.18",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Beaufsichtigung oder Begleitung von Fremdpersonen",
+            "handle": "ORP.1.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Institutionsfremde Personen MÜSSEN von Mitarbeitenden zu den Räumen begleitet werden. Die Mitarbeitenden der Institution MÜSSEN institutionsfremde Personen in sensiblen Bereichen beaufsichtigen. Die Mitarbeitenden SOLLTEN dazu angehalten werden, institutionsfremde Personen in den Räumen der Institution nicht unbeaufsichtigt zu lassen.",
+            "isresponsible": "Mitarbeitende",
+            "mitigates": [
+                "G 0.14",
+                "G 0.16",
+                "G 0.19",
+                "G 0.21",
+                "G 0.30",
+                "G 0.44"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Funktionstrennung zwischen unvereinbaren Aufgaben",
+            "handle": "ORP.1.A4",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Aufgaben und die hierfür erforderlichen Rollen und Funktionen MÜSSEN so strukturiert sein, dass unvereinbare Aufgaben wie operative und kontrollierende Funktionen auf verschiedene Personen verteilt werden. Für unvereinbare Funktionen MUSS eine Funktionstrennung festgelegt und dokumentiert sein. Auch Vertreter MÜSSEN der Funktionstrennung unterliegen.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.19",
+                "G 0.22",
+                "G 0.29",
+                "G 0.32"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ansprechperson zu Informationssicherheitsfragen",
+            "handle": "ORP.1.A15",
+            "level": "Low",
+            "affects": [],
+            "text": "In jeder Institution MUSS es Ansprechpersonen für Sicherheitsfragen geben, die sowohl scheinbar einfache wie auch komplexe oder technische Fragen beantworten können. Die Ansprechpersonen MÜSSEN allen Mitarbeitenden der Institution bekannt sein. Diesbezügliche Informationen MÜSSEN in der Institution für alle verfügbar und leicht zugänglich sein.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Betriebsmittel- und Geräteverwaltung",
+            "handle": "ORP.1.A8",
+            "level": "Medium",
+            "affects": [],
+            "text": "Alle Geräte und Betriebsmittel, die Einfluss auf die Informationssicherheit haben und die zur Aufgabenerfüllung und zur Einhaltung der Sicherheitsanforderungen erforderlich sind, SOLLTEN in ausreichender Menge vorhanden sein. Es SOLLTE geeignete Prüf- und Genehmigungsverfahren vor Einsatz der Geräte und Betriebsmittel geben. Geräte und Betriebsmittel SOLLTEN in geeigneten Bestandsverzeichnissen aufgelistet werden. Um den Missbrauch von Daten zu verhindern, SOLLTE die zuverlässige Löschung oder Vernichtung von Geräten und Betriebsmitteln geregelt sein (siehe hierzu CON.6 Löschen und Vernichten).",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.19",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sicherheit bei Umzügen",
+            "handle": "ORP.1.A13",
+            "level": "Medium",
+            "affects": [],
+            "text": "Vor einem Umzug SOLLTEN frühzeitig Sicherheitsrichtlinien erarbeitet bzw. aktualisiert werden. Alle Mitarbeitenden SOLLTEN über die vor, während und nach dem Umzug relevanten Sicherheitsmaßnahmen informiert werden. Nach dem Umzug SOLLTE überprüft werden, ob das transportierte Umzugsgut vollständig und unbeschädigt bzw. unverändert angekommen ist.",
+            "isresponsible": "IT-Betrieb, Haustechnik",
+            "mitigates": [
+                "G 0.14",
+                "G 0.16",
+                "G 0.17",
+                "G 0.18",
+                "G 0.19",
+                "G 0.22"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Richtlinie zur sicheren IT-Nutzung",
+            "handle": "ORP.1.A16",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTE eine Richtlinie erstellt werden, in der für alle Mitarbeitenden transparent beschrieben wird, welche Rahmenbedingungen bei der IT-Nutzung eingehalten werden müssen und welche Sicherheitsmaßnahmen zu ergreifen sind. Die Richtlinie SOLLTE folgende Punkte abdecken:\n• Sicherheitsziele der Institution,\n• wichtige Begriffe,\n• Aufgaben und Rollen mit Bezug zur Informationssicherheit,\n• Ansprechperson zu Fragen der Informationssicherheit sowie\n• von den Mitarbeitenden umzusetzende und einzuhaltende Sicherheitsmaßnahmen.\nDie Richtlinie SOLLTE allen Benutzenden zur Kenntnis gegeben werden. Jeder neue Benutzende SOLLTE die Kenntnisnahme und Beachtung der Richtlinie schriftlich bestätigen, bevor er die Informationstechnik nutzen darf. Benutzende SOLLTEN die Richtlinie regelmäßig oder nach größeren Änderungen erneut bestätigen. Die Richtlinie sollte zum Nachlesen für alle Mitarbeitenden frei zugänglich abgelegt werden, beispielsweise im Intranet.",
+            "isresponsible": "Benutzende",
+            "mitigates": [
+                "G 0.18",
+                "G 0.27",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Mitführverbot von Mobiltelefonen",
+            "handle": "ORP.1.A17",
+            "level": "High",
+            "affects": [
+                "C"
+            ],
+            "text": "Mobiltelefone SOLLTEN NICHT zu vertraulichen Besprechungen und Gesprächen mitgeführt werden. Falls erforderlich, SOLLTE dies durch Mobilfunk-Detektoren überprüft werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.14",
+                "G 0.15"
+            ]
+        }
+    ]
+}

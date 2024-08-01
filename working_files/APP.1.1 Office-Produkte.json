@@ -1,0 +1,260 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "APP.1.1 Office-Produkte",
+    "handle": "APP.1.1",
+    "text": "Die Gruppe der Office-Produkte umfasst in erster Linie Anwendungen, die dazu dienen, Dokumente zu erstellen, zu bearbeiten oder zu betrachten. Dazu zählen unter anderem die freie Anwendung LibreOffice und die proprietäre Anwendung Microsoft Office, die in vielen Institutionen genutzt werden. Office-Produkte gehören für die meisten Institutionen zur notwendigen IT-Grundausstattung. Sie umfassen unter anderem Programme zur Textverarbeitung, Tabellenkalkulation und Erstellung von Präsentationen sowie Zeichenprogramme und einfache Datenbanksysteme.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlende Anpassung der Office-Produkte an den Bedarf der Institution",
+            "handle": "2.1",
+            "text": "Werden Office-Produkte beschafft oder angepasst, ohne die Anforderungen an diese Software zu beachten, kann der Betrieb erheblich gestört werden. Es kann beispielsweise sein, dass vorhandene Vorlagen und Dokumente nicht kompatibel sind oder mit Anwendungen von Geschäftspartnern und -partnerinnen nicht interoperabel ist. Sollten Office-Produkte nicht an den Bedarf der Institution angepasst werden, kann dies zu Performance-Verlusten, Störungen oder Fehlern innerhalb der Geschäftsprozesse führen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Inkompatibilität von Dokumenten",
+                    "type": "Threat",
+                    "text": "Vorhandene Vorlagen und Dokumente sind nicht kompatibel mit Anwendungen von Geschäftspartnern und -partnerinnen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Nicht interoperable Software",
+                    "type": "Threat",
+                    "text": "Office-Produkte sind nicht mit Anwendungen von Geschäftspartnern und -partnerinnen interoperabel.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Schädliche Inhalte in Office-Dokumenten",
+            "handle": "2.2",
+            "text": "Office-Dokumente können in der Regel verschiedene sogenannte „Aktive Inhalte“ oder Makros enthalten, die mitunter für komplexe Automatisierungen genutzt werden. Aktive Inhalte können aber auch Schadcode enthalten, der ausgeführt wird, wenn das Dokument geöffnet wird. Solche Schadfunktionen in Office-Dokumenten können die betroffenen Dokumente selbst, aber auch andere Daten und Programme manipulieren. Darüber hinaus kann sich der Schadcode weiter ausbreiten. Alle betroffenen Geschäftsprozesse der Institution können in ihren Funktionen gestört oder blockiert werden. Im schlimmsten Fall bleibt die Manipulation unerkannt und führt zu Sicherheitslücken und zur Verarbeitung von verfälschten Informationen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Schadcode in Makros",
+                    "type": "Threat",
+                    "text": "Office-Dokumente enthalten Schadcode in Makros, der ausgeführt wird, wenn das Dokument geöffnet wird.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Manipulation von Dokumenten",
+                    "type": "Threat",
+                    "text": "Schadcode in Office-Dokumenten manipuliert die betroffenen Dokumente selbst, aber auch andere Daten und Programme.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Integritätsverlust von Office-Dokumenten",
+            "handle": "2.3",
+            "text": "Die Integrität von Office-Dokumenten kann verfälscht werden, wenn unbeabsichtigt oder vorsätzlich die Inhalte geändert werden. Durch einen unbedachten Umgang mit Office-Produkten oder durch Unkenntnis der Benutzenden im Umgang mit Office-Dokumenten können Dokumente unerkannt geändert werden. Dies ist dann besonders problematisch, wenn es sich um produktiv eingesetzte Dokumente handelt. Wird mit Dokumenten weitergearbeitet, die unerkannt verfälscht wurden, werden möglicherweise falsche Entscheidungen getroffen oder es kann ein Image-Schaden für die Institution entstehen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unerkannte Änderungen an Dokumenten",
+                    "type": "Threat",
+                    "text": "Dokumente werden unerkannt geändert, da Benutzenden den Umgang mit Office-Produkten nicht kennen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Falsche Entscheidungen aufgrund verfälschter Dokumente",
+                    "type": "Threat",
+                    "text": "Falsche Entscheidungen werden getroffen, da mit Dokumenten weitergearbeitet wird, die unerkannt verfälscht wurden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einschränken von Aktiven Inhalten",
+            "handle": "APP.1.1.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Funktion, dass eingebettete Aktive Inhalte automatisch ausgeführt werden, MUSS deaktiviert werden. Falls es dennoch notwendig ist, Aktive Inhalte auszuführen, MUSS darauf geachtet werden, dass Aktive Inhalte nur ausgeführt werden, wenn sie aus vertrauenswürdigen Quellen stammen. Alle Benutzenden MÜSSEN hinsichtlich der Funktionen, die Aktive Inhalte einschränken, eingewiesen werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.20",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sicheres Öffnen von Dokumenten aus externen Quellen",
+            "handle": "APP.1.1.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Alle aus externen Quellen bezogenen Dokumente MÜSSEN auf Schadsoftware überprüft werden, bevor sie geöffnet werden. Alle als problematisch eingestuften und alle innerhalb der Institution nicht benötigten Dateiformate MÜSSEN verboten werden. Falls möglich, SOLLTEN sie blockiert werden. Durch technische Maßnahmen SOLLTE erzwungen werden, dass Dokumente aus externen Quellen geprüft werden.",
+            "isresponsible": "Benutzende",
+            "mitigates": [
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sensibilisierung zu spezifischen Office-Eigenschaften",
+            "handle": "APP.1.1.A17",
+            "level": "Low",
+            "affects": [],
+            "text": "Alle Benutzenden MÜSSEN geeignet bezüglich der Gefährdungen durch Aktive Inhalte in Office-Dateien sensibilisiert werden. Die Benutzenden MÜSSEN zum Umgang mit Dokumenten aus externen Quellen geeignet sensibilisiert werden.\n\nDie Benutzenden SOLLTEN über die Möglichkeiten und Grenzen von Sicherheitsfunktionen der eingesetzten Software und der genutzten Speicherformate informiert werden. Den Benutzenden SOLLTE vermittelt werden, mit welchen Funktionen sie Dokumente vor nachträglicher Veränderung und Bearbeitung schützen können.\n\nBenutzende SOLLTEN im Umgang mit den Verschlüsselungsfunktionen in Office-Produkten sensibilisiert werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Testen neuer Versionen von Office-Produkten",
+            "handle": "APP.1.1.A6",
+            "level": "Medium",
+            "affects": [],
+            "text": "Neue Versionen von Office-Produkten SOLLTEN vor dem produktiven Einsatz auf Kompatibilität mit etablierten Arbeitsmitteln wie Makros, Dokumentenvorlagen oder Formularen der Institution geprüft werden (Siehe hierzu OPS.1.1.6 Software-Tests und -Freigaben). Es SOLLTE sichergestellt sein, dass wichtige Arbeitsmittel auch mit der neuen Software-Version einwandfrei funktionieren. Bei entdeckten Inkompatibilitäten SOLLTEN geeignete Lösungen für die betroffenen Arbeitsmittel gefunden werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.25",
+                "G 0.26",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Regelung der Software-Entwicklung durch Endbenutzende",
+            "handle": "APP.1.1.A10",
+            "level": "Medium",
+            "affects": [],
+            "text": "Für die Software-Entwicklung auf Basis von Office-Anwendungen, z. B. mit Makros, SOLLTEN verbindliche Regelungen getroffen werden (siehe auch APP.1.1.A2 Einschränken von Aktiven Inhalten). Zunächst SOLLTE in jeder Institution die Grundsatzentscheidung getroffen werden, ob solche Eigenentwicklungen überhaupt erwünscht sind. Die Entscheidung SOLLTE in den betroffenen Sicherheitsrichtlinien dokumentiert werden. Werden Eigenentwicklungen erlaubt, SOLLTE ein Verfahren für den Umgang mit entsprechenden Funktionen der Office-Produkte für die Endbenutzenden erstellt werden. Zuständigkeiten SOLLTEN klar definiert werden. Alle notwendigen Informationen über die erstellten Anwendungen SOLLTEN angemessen dokumentiert werden. Aktuelle Versionen der Regelungen SOLLTEN allen betroffenen Benutzenden zeitnah zugänglich gemacht und von diesen beachtet werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Geregelter Einsatz von Erweiterungen für Office-Produkte",
+            "handle": "APP.1.1.A11",
+            "level": "Medium",
+            "affects": [],
+            "text": "Alle Erweiterungen von Office-Produkten, wie Add-ons und Extensions, SOLLTEN vor dem produktiven Einsatz genauso getestet werden wie neue Versionen. Hierbei SOLLTE ausschließlich auf isolierten Testsystemen getestet werden. Die Tests SOLLTEN prüfen, ob Erweiterungen negative Auswirkungen auf die Office-Produkte und die laufenden IT-Systeme haben. Die Tests der eingesetzten Erweiterungen SOLLTEN einem definierten Testplan folgen. Dieser Testplan SOLLTE so gestaltet sein, dass Dritte das Vorgehen nachvollziehen können.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verzicht auf Cloud-Speicherung",
+            "handle": "APP.1.1.A12",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die in einigen Office-Produkten integrierten Funktionen für Cloud-Speicher SOLLTEN grundsätzlich deaktiviert werden. Alle Cloud-Laufwerke SOLLTEN deaktiviert werden. Alle Dokumente SOLLTEN durch die Benutzenden auf zentral verwalteten Fileservern der Institution gespeichert werden. Um Dokumente für Dritte freizugeben, SOLLTEN spezialisierte Anwendungen eingesetzt werden. Diese Anwendungen SOLLTEN mindestens über eine verschlüsselte Datenablage und -versendung sowie ein geeignetes System zur Konten- und Rechteverwaltung verfügen.",
+            "isresponsible": "Benutzende",
+            "mitigates": [
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung von Viewer-Funktionen",
+            "handle": "APP.1.1.A13",
+            "level": "Medium",
+            "affects": [],
+            "text": "Daten aus potenziell unsicheren Quellen SOLLTEN automatisch in einem geschützten Modus geöffnet werden. Diese Funktion SOLLTE NICHT durch die Benutzenden deaktivierbar sein. Eine Liste vertrauenswürdiger Quellen SOLLTE definiert werden, von denen Inhalte unmittelbar geöffnet und bearbeitet werden können.\n\nIn dem geschützten Modus SOLLTEN Daten NICHT unmittelbar bearbeitet werden können. Aktive Inhalte, wie Makros und Skripte, SOLLTEN im geschützten Modus NICHT automatisch ausgeführt werden. Nur eine allgemeine Navigation SOLLTE ermöglicht werden. Wenn die Dokumente lediglich betrachtet werden sollen, SOLLTEN entsprechende Viewer-Anwendungen verwendet werden, wenn diese verfügbar sind.",
+            "isresponsible": "Benutzende",
+            "mitigates": [
+                "G 0.20",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Schutz gegen nachträgliche Veränderungen von Dokumenten",
+            "handle": "APP.1.1.A14",
+            "level": "Medium",
+            "affects": [],
+            "text": "Je nach geplantem Verwendungszweck von Dokumenten SOLLTEN Dokumente geeignet gegen nachträgliche Veränderung geschützt werden.",
+            "isresponsible": "Benutzende",
+            "mitigates": [
+                "G 0.22",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz von Verschlüsselung und Digitalen Signaturen",
+            "handle": "APP.1.1.A15",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Daten mit erhöhtem Schutzbedarf SOLLTEN nur verschlüsselt gespeichert bzw. übertragen werden. Bevor ein in ein Office-Produkt integriertes Verschlüsselungsverfahren genutzt wird, SOLLTE geprüft werden, ob es einen ausreichenden Schutz bietet. Zusätzlich SOLLTE ein Verfahren eingesetzt werden, mit dem Makros und Dokumente digital signiert werden können.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.22",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Integritätsprüfung von Dokumenten",
+            "handle": "APP.1.1.A16",
+            "level": "High",
+            "affects": [
+                "I"
+            ],
+            "text": "Wenn Daten mit erhöhtem Schutzbedarf gespeichert oder übertragen werden, SOLLTEN geeignete Verfahren zur Integritätsprüfung eingesetzt werden. Falls Daten vor Manipulation geschützt werden sollen, SOLLTEN darüber hinaus kryptografische Verfahren eingesetzt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.22",
+                "G 0.46"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,476 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "OPS.1.1.3 Patch- und Änderungsmanagement",
+    "handle": "OPS.1.1.3",
+    "text": "It is a major challenge to keep the components of information technology used in an institution up-to-date. In practice, it is often the case that security vulnerabilities or operational disruptions are due to missing or inadequate patches and changes. A missing or neglected patch and change management system quickly leads to potential attack points. The task of patch and change management is generally to make changes to applications, infrastructure, documentation, processes and procedures controllable and manageable.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Mangelhaft festgelegte Zuständigkeiten",
+            "handle": "2.1",
+            "text": "Due to poorly defined, overlapping or unclear responsibilities, change requests may be categorized and prioritized more slowly. This can slow down the overall distribution of patches and changes. Even if patches and changes are released prematurely without testing and taking all (technical) aspects into account, this can have a serious impact on security. In extreme cases, poorly defined responsibilities can completely or significantly affect the entire institution. Operational disruptions have a negative impact on availability. If security-relevant patches are not distributed or distributed late, confidentiality and integrity may be compromised.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unclear Responsibilities",
+                    "type": "Threat",
+                    "text": "If responsibilities are unclear, changes may be delayed due to the need to involve multiple parties, leading to a longer time to implement security patches.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Overlapping Responsibilities",
+                    "type": "Threat",
+                    "text": "If responsibilities overlap, there may be confusion about who is responsible for implementing changes, leading to delays or conflicting actions.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Mangelhafte Kommunikation beim Änderungsmanagement",
+            "handle": "2.2",
+            "text": "If patch and change management within the institution is poorly accepted or if those involved communicate poorly, this can lead to change requests being processed slowly or to incorrect decisions being made about a change request. This can reduce the overall security level and seriously disrupt IT operations. In any case, poor communication makes the change process inefficient, as too much time and resources have to be invested. This has a negative impact on the institution's responsiveness and can, in extreme cases, lead to security vulnerabilities arising or important institutional goals not being achieved.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Lack of Communication",
+                    "type": "Threat",
+                    "text": "If there is a lack of communication between IT staff and users, security vulnerabilities may not be reported or addressed promptly, leading to a higher risk of exploitation.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Miscommunication",
+                    "type": "Threat",
+                    "text": "Miscommunication about the scope or urgency of changes can lead to delays in implementation, increasing the risk of exploitation.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Mangelhafte Berücksichtigung von Geschäftsprozessen und Fachaufgaben",
+            "handle": "2.3",
+            "text": "Inappropriate changes can, among other things, disrupt the smooth running of business processes or tasks, or even lead to the complete failure of the IT systems involved. Even the most comprehensive testing procedure cannot completely rule out that a change will prove to be faulty in later production operation. If the impact, category or priority of a submitted change request is misjudged in terms of business processes or tasks, the desired security level may be reduced. Such misjudgments occur mainly when those responsible for IT and the responsible departments do not coordinate sufficiently.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Insufficient Testing",
+                    "type": "Threat",
+                    "text": "If changes are not adequately tested before deployment, they may introduce vulnerabilities or disrupt business processes, increasing the risk of exploitation.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Lack of Coordination",
+                    "type": "Threat",
+                    "text": "If there is a lack of coordination between IT and business units, changes may be implemented without considering the impact on business processes, leading to disruptions or vulnerabilities.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Ressourcen beim Patch- und Änderungsmanagement",
+            "handle": "2.4",
+            "text": "For an effective patch and change management system, adequate personnel, time and financial resources are required. If these are not available, the necessary roles may be filled with unsuitable people. This can also prevent interfaces for certain information from being created, for example between IT and the relevant contact persons in the specialist departments. The necessary capacities for the infrastructure of the test and distribution environments may also not be provided. While personnel, time and financial shortfalls can often be compensated for in regular operation, they become all the more apparent under time pressure, for example when emergency patches have to be installed.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Insufficient Resources",
+                    "type": "Threat",
+                    "text": "If there are insufficient resources, patches and changes may not be implemented in a timely manner, increasing the risk of exploitation.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Inadequate Staff",
+                    "type": "Threat",
+                    "text": "If the staff responsible for patch and change management are not adequately trained or experienced, they may not be able to implement changes effectively, increasing the risk of errors or vulnerabilities.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Probleme bei der automatisierten Verteilung von Patches und Änderungen",
+            "handle": "2.5",
+            "text": "Patches and changes are often not distributed manually, but centrally using software support. If such software is used, faulty patches and changes can be distributed automatically throughout the entire information network, which can lead to major security problems. It is particularly serious if software containing security vulnerabilities is installed on many IT systems at the same time. If only isolated errors occur, they can often be corrected manually. However, it becomes problematic if IT systems are unavailable for a longer period of time. For example, field staff only connect their IT systems to the institution's LAN infrequently and irregularly. If the tool is configured so that updates are only distributed within a certain time frame and then not all IT systems are accessible, these IT systems cannot be updated.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Faulty Software",
+                    "type": "Threat",
+                    "text": "If the software used to distribute patches and changes contains vulnerabilities, attackers could exploit these vulnerabilities to gain access to systems or data.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Misconfiguration",
+                    "type": "Threat",
+                    "text": "If the software used to distribute patches and changes is misconfigured, it may not be able to distribute patches and changes effectively, increasing the risk of vulnerabilities.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Mangelhafte Wiederherstellungsoptionen beim Patch- und Änderungsmanagement",
+            "handle": "2.6",
+            "text": "If patches or changes are distributed without a recovery option being provided, or if the recovery routines of the software used are not or not adequately implemented, faulty updated software cannot be corrected promptly. This can lead to important IT systems failing and causing significant consequential damage. In addition to data loss, the availability and integrity of the data and the affected IT systems are also at risk.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Lack of Recovery Options",
+                    "type": "Threat",
+                    "text": "If there are no recovery options in place, a faulty patch or change could lead to a system outage, disrupting business operations and potentially causing data loss.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Ineffective Recovery Routines",
+                    "type": "Threat",
+                    "text": "If the recovery routines are not effective, it may be difficult or impossible to restore a system to a working state after a faulty patch or change has been applied, leading to prolonged downtime and potential data loss.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehleinschätzung der Relevanz von Patches und Änderungen",
+            "handle": "2.7",
+            "text": "If changes are prioritized incorrectly, for example, unimportant patches may be installed first. Important patches are then installed too late. Security vulnerabilities remain for longer. Patch and change management is often supported by software-based tools. These tools can also contain software errors and thus provide inadequate or incorrect information about a change. If the information that such a tool provides about a change is not checked and tested for plausibility, the actual implementation may differ from the assumed implementation of changes.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Incorrect Prioritization",
+                    "type": "Threat",
+                    "text": "If patches and changes are not prioritized correctly, critical security vulnerabilities may not be addressed promptly, increasing the risk of exploitation.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Faulty Tools",
+                    "type": "Threat",
+                    "text": "If the tools used for patch and change management are faulty, they may not be able to identify or implement changes correctly, increasing the risk of vulnerabilities.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Manipulation von Daten und Werkzeugen beim Änderungsmanagement",
+            "handle": "2.8",
+            "text": "Patch and change management often operates from a central location. Due to its exposed position, it is particularly vulnerable. If an attack were to succeed in taking over the servers involved, manipulated software versions could be distributed to a large number of IT systems from this central point. Further attack points often arise because these IT systems are operated by external partner institutions (outsourcing). There may also be maintenance access that allows access to the central server for distributing changes. These could also be used for attacks.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Compromised Server",
+                    "type": "Threat",
+                    "text": "If the server used for patch and change management is compromised, attackers could distribute malicious software to systems throughout the organization.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Exploited Maintenance Access",
+                    "type": "Threat",
+                    "text": "Attackers could exploit maintenance access to the patch and change management server to distribute malicious software or gain unauthorized access to systems.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Konzept für das Patch- und Änderungsmanagement",
+            "handle": "OPS.1.1.3.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Wenn IT-Komponenten, Software oder Konfigurationsdaten geändert werden, MUSS es dafür Vorgaben geben, die auch Sicherheitsaspekte berücksichtigen. Diese MÜSSEN in einem Konzept für das Patch- und Änderungsmanagement festgehalten und befolgt werden. Alle Patches und Änderungen SOLLTEN vorab geeignet getestet werden (siehe hierzu auch OPS.1.1.6 Software-Tests und Freigaben). Wenn Patches installiert und Änderungen durchgeführt werden, MÜSSEN Rückfall-Lösungen vorhanden sein. Bei größeren Änderungen MUSS zudem der oder die ISB beteiligt sein. Insgesamt MUSS sichergestellt werden, dass das angestrebte Sicherheitsniveau während und nach den Änderungen erhalten bleibt. Insbesondere SOLLTEN auch die gewünschten Sicherheitseinstellungen erhalten bleiben.",
+            "isresponsible": "Fachverantwortliche",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Festlegung der Zuständigkeiten",
+            "handle": "OPS.1.1.3.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Für alle Organisationsbereiche MÜSSEN Zuständige für das Patch- und Änderungsmanagement festgelegt werden. Die definierten Zuständigkeiten MÜSSEN sich auch im Berechtigungskonzept widerspiegeln.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Konfiguration von Autoupdate-Mechanismen",
+            "handle": "OPS.1.1.3.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Innerhalb der Strategie zum Patch- und Änderungsmanagement MUSS definiert werden, wie mit integrierten Update-Mechanismen (Autoupdate) der eingesetzten Software umzugehen ist. Insbesondere MUSS festgelegt werden, wie diese Mechanismen abgesichert und passend konfiguriert werden. Außerdem SOLLTEN neue Komponenten daraufhin überprüft werden, welche Update-Mechanismen sie haben.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.19",
+                "G 0.20",
+                "G 0.23",
+                "G 0.25",
+                "G 0.26",
+                "G 0.28",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Regelmäßige Aktualisierung von IT-Systemen und Software",
+            "handle": "OPS.1.1.3.A15",
+            "level": "Low",
+            "affects": [],
+            "text": "IT-Systeme und Software SOLLTEN regelmäßig aktualisiert werden. Grundsätzlich SOLLTEN Patches zeitnah nach Veröffentlichung eingespielt werden. Basierend auf dem Konzept für das Patch- und Änderungsmanagement MÜSSEN Patches zeitnah nach Veröffentlichung bewertet und entsprechend priorisiert werden. Für die Bewertung SOLLTE geprüft werden, ob es zu diesem Patch bekannte Schwachstellen gibt. Es MUSS entschieden werden, ob der Patch eingespielt werden soll. Wenn ein Patch eingespielt wird, SOLLTE kontrolliert werden, ob dieser auf allen relevanten Systemen zeitnah erfolgreich eingespielt wurde. Wenn ein Patch nicht eingespielt wird, MÜSSEN die Entscheidung und die Gründe dafür dokumentiert werden. Falls Hardware- oder Software-Produkte eingesetzt werden sollen, die nicht mehr von den Herstellenden unterstützt werden oder für die kein Support mehr vorhanden ist, MUSS geprüft werden, ob diese dennoch sicher betrieben werden können. Ist dies nicht der Fall, DÜRFEN diese Hardware- oder Software-Produkte NICHT mehr verwendet werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.23",
+                "G 0.25",
+                "G 0.26",
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Umgang mit Änderungsanforderungen",
+            "handle": "OPS.1.1.3.A5",
+            "level": "Medium",
+            "affects": [],
+            "text": "Alle Änderungsanforderungen (Request for Changes, RfCs) SOLLTEN erfasst und dokumentiert werden. Die Änderungsanforderungen SOLLTEN von den jeweiligen Fachverantwortlichen für das Patch- und Änderungsmanagement daraufhin kontrolliert werden, ob die Aspekte der Informationssicherheit ausreichend berücksichtigt wurden.",
+            "isresponsible": "Fachverantwortliche",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Abstimmung von Änderungsanforderungen",
+            "handle": "OPS.1.1.3.A6",
+            "level": "Medium",
+            "affects": [],
+            "text": "Der zu einer Änderung zugehörige Abstimmungsprozess SOLLTE alle relevanten Zielgruppen und die Auswirkungen auf die Informationssicherheit berücksichtigen. Die von der Änderung betroffenen Zielgruppen SOLLTEN sich nachweisbar dazu äußern können. Auch SOLLTE es ein festgelegtes Verfahren geben, wodurch wichtige Änderungsanforderungen beschleunigt werden können.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Integration des Änderungsmanagements in die Geschäftsprozesse",
+            "handle": "OPS.1.1.3.A7",
+            "level": "Medium",
+            "affects": [],
+            "text": "Der Änderungsmanagementprozess SOLLTE in die Geschäftsprozesse beziehungsweise Fachaufgaben integriert werden. Bei geplanten Änderungen SOLLTE die aktuelle Situation der davon betroffenen Geschäftsprozesse berücksichtigt werden. Alle relevanten Fachabteilungen SOLLTEN über anstehende Änderungen informiert werden. Auch SOLLTE es eine Eskalationsebene geben, deren Mitglieder der Leitungsebene der Institution angehören. Die Mitglieder dieser Eskalationsebene SOLLTEN in Zweifelsfällen über Priorität und Terminplanung einer Hard- oder Software-Änderung entscheiden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sicherer Einsatz von Werkzeugen für das Patch- und Änderungsmanagement",
+            "handle": "OPS.1.1.3.A8",
+            "level": "Medium",
+            "affects": [],
+            "text": "Anforderungen und Rahmenbedingungen SOLLTEN definiert werden, nach denen Werkzeuge für das Patch- und Änderungsmanagement ausgewählt werden. Außerdem SOLLTE eine spezifische Sicherheitsrichtlinie für die eingesetzten Werkzeuge erstellt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Test- und Abnahmeverfahren für neue Hardware",
+            "handle": "OPS.1.1.3.A9",
+            "level": "Medium",
+            "affects": [],
+            "text": "Wenn neue Hardware ausgewählt wird, SOLLTE geprüft werden, ob die eingesetzte Software und insbesondere die relevanten Betriebssysteme mit der Hardware und deren Treibersoftware kompatibel sind. Neue Hardware SOLLTE getestet werden, bevor sie eingesetzt wird. Diese SOLLTE ausschließlich in einer isolierten Umgebung getestet werden. Für IT-Systeme SOLLTE es ein Abnahmeverfahren und eine Freigabeerklärung geben. Die Zuständigen SOLLTEN die Freigabeerklärungen an geeigneter Stelle schriftlich hinterlegen. Für den Fall, dass trotz der Abnahme- und Freigabeverfahren im laufenden Betrieb Fehler festgestellt werden, SOLLTE es ein Verfahren zur Fehlerbehebung geben.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.25",
+                "G 0.26",
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sicherstellung der Integrität und Authentizität von Softwarepaketen",
+            "handle": "OPS.1.1.3.A10",
+            "level": "Medium",
+            "affects": [],
+            "text": "Während des gesamten Patch- oder Änderungsprozesses SOLLTE die Authentizität und Integrität von Softwarepaketen sichergestellt werden. Dazu SOLLTE geprüft werden, ob für die eingesetzten Softwarepakete Prüfsummen oder digitale Signaturen verfügbar sind. Falls ja, SOLLTEN diese vor der Installation des Pakets überprüft werden. Ebenso SOLLTE darauf geachtet werden, dass die notwendigen Programme zur Überprüfung vorhanden sind. Software und Updates SOLLTEN grundsätzlich nur aus vertrauenswürdigen Quellen bezogen werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.20",
+                "G 0.23",
+                "G 0.28",
+                "G 0.39",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Kontinuierliche Dokumentation der Informationsverarbeitung",
+            "handle": "OPS.1.1.3.A11",
+            "level": "Medium",
+            "affects": [],
+            "text": "Änderungen SOLLTEN in allen Phasen, allen Anwendungen und allen Systemen dokumentiert werden. Dazu SOLLTEN entsprechende Regelungen erarbeitet werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz von Werkzeugen beim Änderungsmanagement",
+            "handle": "OPS.1.1.3.A12",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Bevor ein Werkzeug zum Änderungsmanagement benutzt wird, SOLLTE sorgfältig geprüft werden, ob damit die Änderungen angemessen im Informationsverbund verteilt werden können. Zusätzlich SOLLTEN Unterbrechungspunkte definiert werden können, an denen die Verteilung einer fehlerhaften Änderung gestoppt wird.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.25",
+                "G 0.26",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erfolgsmessung von Änderungsanforderungen",
+            "handle": "OPS.1.1.3.A13",
+            "level": "High",
+            "affects": [
+                "IA"
+            ],
+            "text": "Um zu überprüfen, ob eine Änderung erfolgreich war, SOLLTEN die jeweiligen Fachverantwortlichen für das Patch- und Änderungsmanagement sogenannte Nachtests durchführen. Dazu SOLLTEN sie geeignete Referenzsysteme als Qualitätssicherungssysteme auswählen. Die Ergebnisse der Nachtests SOLLTEN im Rahmen des Änderungsprozesses dokumentiert werden.",
+            "isresponsible": "Fachverantwortliche",
+            "mitigates": [
+                "G 0.18",
+                "G 0.26"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Synchronisierung innerhalb des Änderungsmanagements",
+            "handle": "OPS.1.1.3.A14",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Im Änderungsmanagementprozess SOLLTE durch geeignete Mechanismen sichergestellt werden, dass auch zeitweise oder längerfristig nicht erreichbare Geräte die Patches und Änderungen erhalten.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18"
+            ]
+        }
+    ]
+}

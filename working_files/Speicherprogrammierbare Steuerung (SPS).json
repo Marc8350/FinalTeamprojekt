@@ -1,0 +1,60 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "Speicherprogrammierbare Steuerung (SPS)",
+    "handle": "IND.2.2",
+    "text": "Eine Speicherprogrammierbare Steuerung (SPS, englisch Programmable Logic Controller, PLC) ist eine ICS-Komponente. Sie übernimmt Steuerungs- und Regelaufgaben in der Betriebstechnik (englisch Operational Technology, OT). Die Grenzen zwischen verschiedenen Geräteklassen und Bauformen sind fließend, so kann z. B. auch ein Fernwirkgerät (englisch Remote Terminal Unit, RTU) die Funktionen einer SPS übernehmen oder ein Programmable Automation Controller (PAC) kann versuchen, die Vorteile einer SPS und eines Industrie-PCs zu vereinen. Jedoch ist die SPS immer noch das klassische Automatisierungsgerät, sodass in diesem Baustein die Begriffe SPS, RTU und PAC synonym verwendet werden.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unvollständige Dokumentation",
+            "handle": "2.1",
+            "text": "Speicherprogrammierbare Steuerungen sind oft unvollständig dokumentiert, sodass nicht alle Produktfunktionen bekannt sind. Besonders lückenhaft sind häufig die Angaben über die verwendeten Dienste, Protokolle und Kommunikationsports sowie zur Berechtigungsverwaltung. Das erschwert jedoch die Gefährdungsanalyse, denn dadurch werden Schnittstellen, Funktionen sowie sicherheitsrelevante Mechanismen übersehen. Potenzielle Gefährdungen können dann nicht berücksichtigt werden. Zudem kann nicht oder nur eingeschränkt auf neue Schwachstellen reagiert werden, wenn diese nicht erfasst sind.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unvollständige Dokumentation",
+                    "type": "Threat",
+                    "text": "Angreifer können sich die fehlende Dokumentation zunutze machen, um Schwachstellen in der SPS zu finden und auszunutzen. So können sie z. B. unbekannte Dienste oder Protokolle nutzen, um sich Zugriff auf die SPS zu verschaffen oder um die Steuerung zu manipulieren.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erweiterte Systemdokumentation für Speicherprogrammierbare Steuerungen (S) [OT-Betrieb (Operational Technology, OT)]",
+            "handle": "IND.2.2.A1",
+            "level": "Medium",
+            "affects": [],
+            "text": "Steuerungsprogramme und Konfigurationen SOLLTEN immer gesichert werden, bevor an ihnen etwas verändert wird. Änderungen an der Konfiguration oder der Tausch von Komponenten SOLLTEN vollständig dokumentiert werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.41"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Zeitsynchronisation (S) [OT-Betrieb (Operational Technology, OT)]",
+            "handle": "IND.2.2.A3",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Systemzeit SOLLTE automatisch über eine zentrale automatisierte Zeitsynchronisation eingestellt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.21",
+                "G 0.22"
+            ]
+        }
+    ]
+}

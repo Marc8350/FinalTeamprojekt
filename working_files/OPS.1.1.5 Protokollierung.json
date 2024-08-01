@@ -1,0 +1,440 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "OPS.1.1.5 Protokollierung",
+    "handle": "OPS.1.1.5",
+    "text": "Um einen verlässlichen IT-Betrieb zu gewährleisten, sollten IT-Systeme und Anwendungen entweder alle oder zumindest ausgewählte betriebs- und sicherheitsrelevante Ereignisse protokollieren, d. h. sie automatisch speichern und für die Auswertung bereitstellen. Eine Protokollierung wird in vielen Institutionen eingesetzt, um Hard- und Softwareprobleme sowie Ressourcenengpässe rechtzeitig entdecken zu können. Aber auch Sicherheitsprobleme und Angriffe auf die betriebenen Netzdienste können anhand von Protokollierungsdaten nachvollzogen werden. Ebenso können mit solchen Daten durch forensische Untersuchungen Beweise gesichert werden, nachdem ein Angriff auf IT-Systeme oder Anwendungen bekannt wurde.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlende oder unzureichende Protokollierung",
+            "handle": "2.1",
+            "text": "In einem Informationsverbund gibt es häufig IT-Systeme oder Anwendungen, bei denen die Protokollierung in der Grundeinstellung nicht aktiviert wurde. Auch können einzelne IT-Systeme oder Anwendungen manchmal gar nicht protokollieren. In beiden Fällen können wichtige Informationen verloren gehen und Angriffe nicht rechtzeitig erkannt werden. Das ist auch dann möglich, wenn die Protokollierung bei einzelnen IT-Systemen oder Anwendungen zwar genutzt wird, aber die Protokollierungsdaten nicht an einer zentralen Stelle zusammengeführt werden. In Informationsverbünden ohne zentrale Protokollierung lässt sich schwer sicherstellen, dass die relevanten Protokollinformationen aller IT-Systeme und Anwendungen erhalten bleiben und ausgewertet werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Fehlende Protokollierung",
+                    "type": "Threat",
+                    "text": "IT-Systeme oder Anwendungen protokollieren nicht, obwohl dies notwendig wäre.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unzureichende Protokollierung",
+                    "type": "Threat",
+                    "text": "IT-Systeme oder Anwendungen protokollieren zwar, aber nicht alle relevanten Ereignisse.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Zentrale Protokollierung fehlt",
+                    "type": "Threat",
+                    "text": "Protokollierungsdaten werden nicht an einer zentralen Stelle zusammengeführt.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlerhafte Auswahl von relevanten Protokollierungsdaten",
+            "handle": "2.2",
+            "text": "Protokollierungsdaten liefern oft wichtige Informationen, die dabei helfen, Sicherheitsvorfälle zu erkennen. Eine besondere Herausforderung ist es, die relevanten Meldungen aus der großen Menge der verschiedenen Protokollierungsereignisse herauszufiltern. Denn viele Protokollierungsereignisse haben nur informativen Charakter und lenken von den wirklich wichtigen Meldungen ab. Werden zu viele Protokollierungsereignisse ausgewählt, lässt sich die Fülle an Informationen nur schwer und mit hohem Zeitaufwand auswerten.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Zu viele Protokollierungsdaten",
+                    "type": "Threat",
+                    "text": "Es werden zu viele Protokollierungsdaten aufgezeichnet, sodass die relevanten Informationen in der Masse untergehen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Falsche Protokollierungsdaten",
+                    "type": "Threat",
+                    "text": "Es werden nicht die relevanten Protokollierungsdaten aufgezeichnet.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlende oder fehlerhafte Zeitsynchronisation bei der Protokollierung",
+            "handle": "2.3",
+            "text": "Wenn in einem Informationsverbund die Zeit nicht auf allen IT-Systemen synchronisiert wird, können die Protokollierungsdaten eventuell nicht miteinander korreliert werden bzw. kann die Korrelation eventuell zu fehlerhaften Aussagen führen. Grund dafür ist, dass die unterschiedlichen Zeitstempel von Ereignissen keine gemeinsame Basis aufweisen. Eine fehlende Zeitsynchronisation erschwert es somit, erhobene Protokollierungsdaten auszuwerten, insbesondere, wenn diese auf einem zentralen Logserver gespeichert werden. Weiterhin kann eine fehlerhafte oder fehlende Zeitsynchronisation dazu führen, dass die Protokollierung nicht zur Beweissicherung herangezogen werden kann.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Fehlende Zeitsynchronisation",
+                    "type": "Threat",
+                    "text": "Die Zeit auf den IT-Systemen ist nicht synchronisiert, sodass Protokollierungsdaten nicht korrekt miteinander korreliert werden können.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Fehlerhafte Zeitsynchronisation",
+                    "type": "Threat",
+                    "text": "Die Zeit auf den IT-Systemen ist nicht korrekt synchronisiert, sodass Protokollierungsdaten nicht korrekt miteinander korreliert werden können.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlplanung bei der Protokollierung",
+            "handle": "2.4",
+            "text": "Wird die Protokollierung nicht ausreichend geplant, dann kann dies dazu führen, dass IT-Systeme oder Anwendungen nicht überwacht und sicherheitsrelevante Ereignisse somit nicht erkannt und angemessen behandelt werden. Datenschutzverstöße könnten ebenfalls nicht nachvollzogen werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unzureichende Planung",
+                    "type": "Threat",
+                    "text": "Die Protokollierung wurde nicht ausreichend geplant, sodass wichtige Ereignisse nicht protokolliert werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Vertraulichkeits- und Integritätsverlust von Protokollierungsdaten",
+            "handle": "2.5",
+            "text": "Einige IT-Systeme in einem Informationsverbund generieren Protokollierungsdaten wie Anmeldenamen, IP-Adressen, E-Mail-Adressen und Rechnernamen, die konkreten Personen zugeordnet werden können. Solche Informationen lassen sich kopieren, abhören und manipulieren, wenn sie nicht verschlüsselt übertragen und gesichert gespeichert werden. Dies kann dazu führen, dass Angreifende auf vertrauliche Informationen zugreifen oder dass, durch manipulierte Protokollierungsdaten, Sicherheitsvorfälle bewusst verschleiert werden. Ebenso können Angreifende, wenn sie an eine größere Menge von Protokollierungsdaten gelangen, diese Informationen nutzen, um die interne Struktur des Informationsverbunds aufzudecken und dadurch ihre Angriffe gezielter ausrichten.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Abhören von Protokollierungsdaten",
+                    "type": "Threat",
+                    "text": "Angreifende können Protokollierungsdaten abhören und so vertrauliche Informationen abgreifen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Manipulieren von Protokollierungsdaten",
+                    "type": "Threat",
+                    "text": "Angreifende können Protokollierungsdaten manipulieren, um Sicherheitsvorfälle zu verschleiern.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Falsch konfigurierte Protokollierung",
+            "handle": "2.6",
+            "text": "Wenn die Protokollierung in IT-Systemen falsch konfiguriert ist, werden wichtige Informationen entweder fehlerhaft oder gar nicht aufgezeichnet. Auch kann es sein, dass zu viele oder falsche Informationen protokolliert werden. So können z. B. personenbezogene Daten unberechtigt protokolliert und gespeichert werden. Die Institution könnte dadurch gegen gesetzliche Anforderungen verstoßen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Fehlerhafte Protokollierung",
+                    "type": "Threat",
+                    "text": "Protokollierungsdaten werden fehlerhaft aufgezeichnet.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unzureichende Protokollierung",
+                    "type": "Threat",
+                    "text": "Wichtige Informationen werden nicht protokolliert.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Protokollierung von unnötigen Daten",
+                    "type": "Threat",
+                    "text": "Es werden zu viele oder unnötige Informationen protokolliert.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Protokollierung von sensiblen Daten",
+                    "type": "Threat",
+                    "text": "Es werden personenbezogene Daten protokolliert.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ausfall von Datenquellen für Protokollierungsdaten",
+            "handle": "2.7",
+            "text": "Liefern IT-Systeme in einem Informationsverbund nicht mehr die notwendigen Protokollierungsdaten, lassen sich Sicherheitsvorfälle nicht mehr angemessen detektieren. Ursache für solche Ausfälle von Datenquellen können Fehler in der Hard- und Software oder auch fehlerhaft administrierte IT-Systeme sein. Besonders, wenn nicht bemerkt wird, dass Datenquellen ausgefallen sind, kann dies zu einem falschen Bild der Sicherheitslage in der Institution führen. Dadurch können Angreifende z. B. sehr lange unbemerkt bleiben und institutionskritische Informationen abgreifen oder Produktionssysteme manipulieren.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Ausfall von IT-Systemen",
+                    "type": "Threat",
+                    "text": "IT-Systeme, die Protokollierungsdaten liefern, fallen aus.",
+                    "hasOrigin": [
+                        "natural",
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental",
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ungenügend dimensionierte Protokollierungsinfrastruktur",
+            "handle": "2.8",
+            "text": "Aufgrund der komplexen Informationsverbünde und der vielfältigen Angriffsszenarien steigen die Anforderungen an die Protokollierung, da sehr viele Protokollierungsdaten gespeichert und verarbeitet werden müssen. Weiterhin ist es bei Sicherheitsvorfällen üblich, die Intensität der Protokollierung zu erhöhen. Ist die Protokollierungsinfrastruktur dafür jedoch nicht ausgelegt, kann es passieren, dass Protokollierungsdaten unvollständig gespeichert werden. Somit lassen sich sicherheitsrelevante Ereignisse nicht mehr oder nur unzureichend auswerten und Sicherheitsvorfälle bleiben unentdeckt.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Überlastung der Protokollierungsinfrastruktur",
+                    "type": "Threat",
+                    "text": "Die Protokollierungsinfrastruktur ist überlastet, sodass nicht alle Protokollierungsdaten gespeichert werden können.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erstellung einer Sicherheitsrichtlinie für die Protokollierung",
+            "handle": "OPS.1.1.5.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Ausgehend von der allgemeinen Sicherheitsrichtlinie der Institution MUSS eine spezifische Sicherheitsrichtlinie für die Protokollierung erstellt werden. In dieser Sicherheitsrichtlinie MÜSSEN nachvollziehbar Anforderungen und Vorgaben beschrieben sein, wie die Protokollierung zu planen, aufzubauen und sicher zu betreiben ist. In der spezifischen Sicherheitsrichtlinie MUSS geregelt werden, wie, wo und was zu protokollieren ist. Dabei SOLLTEN sich Art und Umfang der Protokollierung am Schutzbedarf der Informationen orientieren.\n\nDie spezifische Sicherheitsrichtlinie MUSS von dem oder der ISB gemeinsam mit den Fachverantwortlichen erstellt werden. Sie MUSS allen für die Protokollierung zuständigen Mitarbeitenden bekannt und grundlegend für ihre Arbeit sein. Wird die spezifische Sicherheitsrichtlinie verändert oder wird von den Anforderungen abgewichen, MUSS dies mit dem oder der ISB abgestimmt und dokumentiert werden. Es MUSS regelmäßig überprüft werden, ob die spezifische Sicherheitsrichtlinie noch korrekt umgesetzt ist. Die Ergebnisse der Überprüfung MÜSSEN dokumentiert werden.",
+            "isresponsible": "Fachverantwortliche",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Konfiguration der Protokollierung auf System- und Netzebene",
+            "handle": "OPS.1.1.5.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Alle sicherheitsrelevanten Ereignisse von IT-Systemen und Anwendungen MÜSSEN protokolliert werden. Sofern die in der Protokollierungsrichtlinie als relevant definierten IT-Systeme und Anwendungen über eine Protokollierungsfunktion verfügen, MUSS diese benutzt werden. Wenn die Protokollierung eingerichtet wird, MÜSSEN dabei die Vorgaben des herstellenden Unternehmens für die jeweiligen IT-Systeme oder Anwendungen beachtet werden.\n\nIn angemessenen Intervallen MUSS stichpunktartig überprüft werden, ob die Protokollierung noch korrekt funktioniert. Die Prüfintervalle MÜSSEN in der Protokollierungsrichtlinie definiert werden.\n\nFalls betriebs- und sicherheitsrelevante Ereignisse nicht auf einem IT-System protokolliert werden können, MÜSSEN zusätzliche IT-Systeme zur Protokollierung (z. B. von Ereignissen auf Netzebene) integriert werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.29",
+                "G 0.37"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Zeitsynchronisation der IT-Systeme",
+            "handle": "OPS.1.1.5.A4",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Systemzeit aller protokollierenden IT-Systeme und Anwendungen MUSS immer synchron sein. Es MUSS sichergestellt sein, dass das Datums- und Zeitformat der Protokolldateien einheitlich ist.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.37"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einhaltung rechtlicher Rahmenbedingungen",
+            "handle": "OPS.1.1.5.A5",
+            "level": "Low",
+            "affects": [],
+            "text": "Bei der Protokollierung MÜSSEN die Bestimmungen aus den aktuellen Gesetzen zum Bundes- sowie Landesdatenschutz eingehalten werden (siehe CON.2 Datenschutz).\n\nDarüber hinaus MÜSSEN eventuelle Persönlichkeitsrechte bzw. Mitbestimmungsrechte der Mitarbeitendenvertretungen gewahrt werden.\n\nEbenso MUSS sichergestellt sein, dass alle weiteren relevanten gesetzlichen Bestimmungen beachtet werden.\n\nProtokollierungsdaten MÜSSEN nach einem festgelegten Prozess gelöscht werden. Es MUSS technisch unterbunden werden, dass Protokollierungsdaten unkontrolliert gelöscht oder verändert werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.29",
+                "G 0.32",
+                "G 0.38",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Aufbau einer zentralen Protokollierungsinfrastruktur",
+            "handle": "OPS.1.1.5.A6",
+            "level": "Medium",
+            "affects": [],
+            "text": "Alle gesammelten sicherheitsrelevanten Protokollierungsdaten SOLLTEN an einer zentralen Stelle gespeichert werden. Dafür SOLLTE eine zentrale Protokollierungsinfrastruktur im Sinne eines Logserver-Verbunds aufgebaut und in einem hierfür eingerichteten Netzsegment platziert werden (siehe NET.1.1 Netzarchitektur und -design).\n\nZusätzlich zu sicherheitsrelevanten Ereignissen (siehe OPS.1.1.5.A3 Konfiguration der Protokollierung auf System- und Netzebene) SOLLTE eine zentrale Protokollierungsinfrastruktur auch allgemeine Betriebsereignisse protokollieren, die auf einen Fehler hindeuten.\n\nDie Protokollierungsinfrastruktur SOLLTE ausreichend dimensioniert sein. Die Möglichkeit einer Skalierung im Sinne einer erweiterten Protokollierung SOLLTE berücksichtigt werden. Dafür SOLLTEN genügend technische, finanzielle und personelle Ressourcen verfügbar sein.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.26",
+                "G 0.27",
+                "G 0.37"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Archivierung von Protokollierungsdaten",
+            "handle": "OPS.1.1.5.A8",
+            "level": "Medium",
+            "affects": [],
+            "text": "Protokollierungsdaten SOLLTEN archiviert werden. Dabei SOLLTEN die gesetzlich vorgeschriebenen Regelungen berücksichtigt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Bereitstellung von Protokollierungsdaten für die Auswertung",
+            "handle": "OPS.1.1.5.A9",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die gesammelten Protokollierungsdaten SOLLTEN gefiltert, normalisiert, aggregiert und korreliert werden. Die so bearbeiteten Protokollierungsdaten SOLLTEN geeignet verfügbar gemacht werden, damit sie ausgewertet werden können.\n\nDamit sich die Daten automatisiert auswerten lassen, SOLLTEN die Protokollanwendungen über entsprechende Schnittstellen für die Auswertungsprogramme verfügen.\n\nEs SOLLTE sichergestellt sein, dass bei der Auswertung von Protokollierungsdaten die Sicherheitsanforderungen eingehalten werden, die in der Protokollierungsrichtlinie definiert sind. Auch wenn die Daten bereitgestellt werden, SOLLTEN betriebliche und interne Vereinbarungen berücksichtigt werden.\n\nDie Protokollierungsdaten SOLLTEN zusätzlich in unveränderter Originalform aufbewahrt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.27",
+                "G 0.29",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Zugriffsschutz für Protokollierungsdaten",
+            "handle": "OPS.1.1.5.A10",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTE sichergestellt sein, dass die ausführenden Administrierenden selbst keine Berechtigung haben, die aufgezeichneten Protokollierungsdaten zu verändern oder zu löschen.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.22",
+                "G 0.32"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Steigerung des Protokollierungsumfangs",
+            "handle": "OPS.1.1.5.A11",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Bei erhöhtem Schutzbedarf von Anwendungen oder IT-Systemen SOLLTEN grundsätzlich mehr Ereignisse protokolliert werden, sodass sicherheitsrelevante Vorfälle möglichst lückenlos nachvollziehbar sind.\n\nUm die Protokollierungsdaten in Echtzeit auswerten zu können, SOLLTEN sie in verkürzten Zeitabständen von den protokollierenden IT-Systemen und Anwendungen zentral gespeichert werden. Die Protokollierung SOLLTE eine Auswertung über den gesamten Informationsverbund ermöglichen. Anwendungen und IT-Systeme, mit denen eine zentrale Protokollierung nicht möglich ist, SOLLTEN bei einem erhöhten Schutzbedarf NICHT eingesetzt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.29",
+                "G 0.37"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verschlüsselung der Protokollierungsdaten",
+            "handle": "OPS.1.1.5.A12",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Um Protokollierungsdaten sicher übertragen zu können, SOLLTEN sie verschlüsselt werden. Alle gespeicherten Protokolle SOLLTEN digital signiert werden. Auch archivierte und außerhalb der Protokollierungsinfrastruktur gespeicherte Protokollierungsdaten SOLLTEN immer verschlüsselt gespeichert werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.14",
+                "G 0.15",
+                "G 0.19",
+                "G 0.22",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Hochverfügbare Protokollierungsinfrastruktur",
+            "handle": "OPS.1.1.5.A13",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Eine hochverfügbare Protokollierungsinfrastruktur SOLLTE aufgebaut werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.9",
+                "G 0.25",
+                "G 0.27"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,267 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "NET.3.3 VPN",
+    "handle": "NET.3.3",
+    "text": "Der Baustein definiert Anforderungen, mit denen sich ein VPN zielgerichtet und sicher planen, umsetzen und betreiben lässt.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlende oder unzureichende Planung des VPN-Einsatzes",
+            "handle": "2.1",
+            "text": "Bei einem nicht sorgfältig geplanten, aufgebauten oder konfigurierten VPN können Sicherheitslücken entstehen, die alle IT-Systeme betreffen könnten, die mit dem VPN verbunden sind. Angreifenden kann es so möglich sein, auf vertrauliche Informationen der Institution zuzugreifen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unzureichende Schulung der Benutzer",
+                    "type": "Threat",
+                    "text": "So ist es durch eine unzureichende VPN-Planung beispielsweise möglich, dass die Benutzenden nicht ordnungsgemäß geschult wurden. Dadurch könnten sie das VPN in einer unsicheren Umgebung benutzen oder sich von unsicheren Clients aus einwählen. Dies ermöglicht es Angreifenden eventuell, auf das gesamte Institutionsnetz zuzugreifen."
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unzureichende Kontrolle der Zugriffe",
+                    "type": "Threat",
+                    "text": "Auch wenn die regelmäßige Kontrolle der Zugriffe auf das VPN unzureichend geplant wurde, könnten Angriffe nicht rechtzeitig erkannt werden. Somit kann nicht zeitnah reagiert werden und Angreifende unbemerkt Daten stehlen oder ganze Prozesse sabotieren."
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unsichere VPN-Dienstleistende",
+            "handle": "2.2",
+            "text": "Hat eine Institution seine VPN-Dienstleistenden nicht sorgfältig ausgewählt, könnte dadurch das gesamte Netz der Institution unsicher werden. So könnte beispielsweise ein von den Dienstleistenden unsicher angebotener VPN-Zugang für Angriffe genutzt werden, um gezielt Informationen zu stehlen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unsicherer VPN-Zugang",
+                    "type": "Threat",
+                    "text": "So könnte beispielsweise ein von den Dienstleistenden unsicher angebotener VPN-Zugang für Angriffe genutzt werden, um gezielt Informationen zu stehlen."
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unsichere Konfiguration der VPN-Clients für den Fernzugriff",
+            "handle": "2.3",
+            "text": "Wird ein VPN-Client nicht sicher konfiguriert, könnten die Benutzenden dessen Sicherheitsmechanismen falsch oder gar nicht benutzen. Auch verändern sie eventuell die Konfiguration des VPN-Clients. Ebenso ist es durch eine unsichere Konfiguration möglich, dass von den Benutzenden installierte Software auch die Sicherheit des VPN-Clients gefährdet.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Falsche Konfiguration des VPN-Clients",
+                    "type": "Threat",
+                    "text": "Wird ein VPN-Client nicht sicher konfiguriert, könnten die Benutzenden dessen Sicherheitsmechanismen falsch oder gar nicht benutzen."
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Veränderung der Konfiguration des VPN-Clients",
+                    "type": "Threat",
+                    "text": "Auch verändern sie eventuell die Konfiguration des VPN-Clients."
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unsichere Software auf dem VPN-Client",
+                    "type": "Threat",
+                    "text": "Ebenso ist es durch eine unsichere Konfiguration möglich, dass von den Benutzenden installierte Software auch die Sicherheit des VPN-Clients gefährdet."
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unsichere Standard-Einstellungen auf VPN-Komponenten",
+            "handle": "2.4",
+            "text": "In der Standard-Einstellung sind VPN-Komponenten meist ohne oder nur mit unzureichenden Sicherheitsmechanismen vorkonfiguriert. Oft wird mehr auf Nutzungsfreundlichkeit und problemlose Integration in bestehende IT-Systeme als auf Sicherheit geachtet. Werden VPN-Komponenten nicht oder nur mangelhaft an die konkreten Sicherheitsbedürfnisse der Institution angepasst, können Schwachstellen und somit gefährliche Angriffspunkte entstehen. Werden beispielsweise werksseitig voreingestellte Passwörter nicht geändert, könnte das gesamte VPN und damit das interne Netz der Institution angegriffen werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unzureichende Sicherheitsmechanismen",
+                    "type": "Threat",
+                    "text": "In der Standard-Einstellung sind VPN-Komponenten meist ohne oder nur mit unzureichenden Sicherheitsmechanismen vorkonfiguriert."
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Mangelhafte Anpassung an die Sicherheitsbedürfnisse",
+                    "type": "Threat",
+                    "text": "Werden VPN-Komponenten nicht oder nur mangelhaft an die konkreten Sicherheitsbedürfnisse der Institution angepasst, können Schwachstellen und somit gefährliche Angriffspunkte entstehen."
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unveränderte Standard-Passwörter",
+                    "type": "Threat",
+                    "text": "Werden beispielsweise werksseitig voreingestellte Passwörter nicht geändert, könnte das gesamte VPN und damit das interne Netz der Institution angegriffen werden."
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Planung des VPN-Einsatzes",
+            "handle": "NET.3.3.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Einführung eines VPN MUSS sorgfältig geplant werden. Dabei MÜSSEN die Verantwortlichkeiten für den VPN-Betrieb festgelegt werden. Es MÜSSEN für das VPN zudem Benutzendengruppen und deren Berechtigungen geplant werden. Ebenso MUSS definiert werden, wie erteilte, geänderte oder entzogene Zugriffsberechtigungen zu dokumentieren sind.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.32"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Auswahl von VPN-Dienstleistenden",
+            "handle": "NET.3.3.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Falls VPN-Dienstleistende eingesetzt werden, MÜSSEN mit diesen Service Level Agreements (SLAs) ausgehandelt und schriftlich dokumentiert werden. Es MUSS regelmäßig kontrolliert werden, ob die VPN-Dienstleistenden die vereinbarten SLAs einhalten.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.11",
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Installation von VPN-Endgeräten",
+            "handle": "NET.3.3.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Wird eine Appliance eingesetzt, die eine Wartung benötigt, MUSS es dafür einen gültigen Wartungsvertrag geben. Es MUSS sichergestellt werden, dass nur qualifiziertes Personal VPN-Komponenten installiert. Die Installation der VPN-Komponenten sowie eventuelle Abweichungen von den Planungsvorgaben SOLLTEN dokumentiert werden. Die Funktionalität und die gewählten Sicherheitsmechanismen des VPN MÜSSEN vor Inbetriebnahme geprüft werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.9",
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Konfiguration eines VPN",
+            "handle": "NET.3.3.A4",
+            "level": "Low",
+            "affects": [],
+            "text": "Für alle VPN-Komponenten MUSS eine sichere Konfiguration festgelegt werden. Diese SOLLTE geeignet dokumentiert werden. Auch MUSS die für die Administration zuständige Person regelmäßig kontrollieren, ob die Konfiguration noch sicher ist und sie eventuell für alle IT-Systeme anpassen.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sperrung nicht mehr benötigter VPN-Zugänge",
+            "handle": "NET.3.3.A5",
+            "level": "Low",
+            "affects": [],
+            "text": "Es MUSS regelmäßig geprüft werden, ob ausschließlich berechtigte IT-Systeme und Benutzende auf das VPN zugreifen können. Nicht mehr benötigte VPN-Zugänge MÜSSEN zeitnah deaktiviert werden. Der VPN-Zugriff MUSS auf die benötigten Benutzungszeiten beschränkt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.30",
+                "G 0.32"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Durchführung einer VPN-Anforderungsanalyse",
+            "handle": "NET.3.3.A6",
+            "level": "Medium",
+            "affects": [],
+            "text": "Eine Anforderungsanalyse SOLLTE durchgeführt werden, um für das jeweilige VPN die Einsatzszenarien zu bestimmen und daraus Anforderungen an die benötigten Hard- und Software-Komponenten ableiten zu können. In der Anforderungsanalyse SOLLTEN folgende Punkte betrachtet werden:\n• Geschäftsprozesse beziehungsweise Fachaufgaben,\n• Zugriffswege,\n• Identifikations- und Authentisierungsverfahren,\n• Benutzende und ihre Berechtigungen,\n• Zuständigkeiten sowie\n• Meldewege.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Planung der technischen VPN-Realisierung",
+            "handle": "NET.3.3.A7",
+            "level": "Medium",
+            "affects": [],
+            "text": "Neben der allgemeinen Planung (siehe NET.3.3.A1 Planung des VPN-Einsatzes) SOLLTEN die technischen Aspekte eines VPN sorgfältig geplant werden. So SOLLTEN für das VPN die Verschlüsselungsverfahren, VPN-Endpunkte, erlaubten Zugangsprotokolle, Dienste und Ressourcen festgelegt werden. Zudem SOLLTEN die Teilnetze definiert werden, die über das VPN erreichbar sind. (siehe NET.1.1 Netzarchitektur und -design).",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erstellung einer Sicherheitsrichtlinie zur VPN-Nutzung",
+            "handle": "NET.3.3.A8",
+            "level": "Medium",
+            "affects": [],
+            "text": "Eine Sicherheitsrichtlinie zur VPN-Nutzung SOLLTE erstellt werden. Diese SOLLTE allen Mitarbeitenden bekannt gegeben werden. Die in der Sicherheitsrichtlinie beschriebenen Sicherheitsmaßnahmen SOLLTEN im Rahmen von Schulungen erläutert werden. Wird für Mitarbeitende ein VPN-Zugang eingerichtet, SOLLTE diesen ein Merkblatt mit den wichtigsten VPN-Sicherheitsmechanismen ausgehändigt werden. Alle VPN-Benutzende SOLLTEN verpflichtet werden, die Sicherheitsrichtlinien einzuhalten.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Geeignete Auswahl von VPN-Produkten",
+            "handle": "NET.3.3.A9",
+            "level": "Medium",
+            "affects": [],
+            "text": "Bei der Auswahl von VPN-Produkten SOLLTEN die Anforderungen der Institutionen an die Vernetzung unterschiedlicher Standorte und die Anbindung von mobilen Mitarbeitenden oder Telearbeitsplätzen berücksichtigt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sicherer Betrieb eines VPN",
+            "handle": "NET.3.3.A10",
+            "level": "Medium",
+            "affects": [],
+            "text": "Für VPNs SOLLTE ein Betriebskonzept erstellt werden. Darin SOLLTEN die Aspekte Qualitätsmanagement, Überwachung, Wartung, Schulung und Autorisierung beachtet werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Anbindung eines externen Netzes",
+            "handle": "NET.3.3.A11",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTE sichergestellt werden, dass VPN-Verbindungen NUR zwischen den dafür vorgesehenen IT-Systemen und Diensten aufgebaut werden. Die dabei eingesetzten Tunnel-Protokolle SOLLTEN für den Einsatz geeignet sein.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.14",
+                "G 0.23",
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Konten- und Zugriffsverwaltung bei Fernzugriff-VPNs",
+            "handle": "NET.3.3.A12",
+            "level": "Medium",
+            "affects": [],
+            "text": "Für Fernzugriff-VPNs SOLLTE eine zentrale und konsistente Konten- und Zugriffsverwaltung gewährleistet werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.30",
+                "G 0.32"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Integration von VPN-Komponenten in eine Firewall",
+            "handle": "NET.3.3.A13",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die VPN-Komponenten SOLLTEN in die Firewall integriert werden. Dies SOLLTE dokumentiert werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18"
+            ]
+        }
+    ]
+}

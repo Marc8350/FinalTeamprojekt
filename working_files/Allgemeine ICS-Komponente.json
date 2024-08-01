@@ -1,0 +1,358 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "Allgemeine ICS-Komponente",
+    "handle": "IND.2.1",
+    "text": "Eine ICS-Komponente ist eine elektronische Komponente, die eine Maschine oder Anlage steuert oder regelt. Sie ist damit Bestandteil eines industriellen Steuerungssystems (englisch Industrial Control System, ICS) oder allgemeiner einer Betriebstechnik (englisch Operational Technology, OT). Diese Komponenten können Speicherprogrammierbare Steuerungen (SPS) (englisch Programmable Logic Controller, PLC), Sensoren, Aktoren, eine Maschine oder andere Teile eines ICS sein. Aufgrund der im OT-Umfeld typischen hohen Verfügbarkeitsanforderungen und der oft extremen Umgebungsbedingungen wie Hitze oder Kälte, Staub, Vibration oder Korrosion wurden ICS-Komponenten schon immer als robuste Geräte mit hoher Zuverlässigkeit und langer Lebensdauer konstruiert.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unsichere Systemkonfiguration",
+            "handle": "2.1",
+            "text": "Die Standardkonfiguration von ICS-Komponenten ist häufig darauf ausgelegt, dass die Komponenten korrekt funktionieren und sich leicht in Betrieb nehmen lassen. Sicherheitsmechanismen spielen dabei oft eine untergeordnete Rolle. So sind in der Standardeinstellung häufig alle Dienste, Protokolle und Anschlüsse eingeschaltet und bleiben aktiv, auch wenn sie nicht benutzt werden. Ebenso bleiben voreingestellte Berechtigungen häufig unverändert.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Angriff durch Ausnutzung der unsicheren Systemkonfiguration",
+                    "type": "Threat",
+                    "text": "Es ist für Angreifende leicht, diese ICS-Komponenten zu übernehmen und zu manipulieren. Ebenso ist es möglich, dass bei einem Angriff die unsichere Systemkonfiguration ausgenutzt wird, um die ICS-Komponente als Ausgangspunkt für weitere Angriffe zu nutzen. In der Folge können institutionskritische Informationen abfließen oder auch der gesamte Betrieb der Institution beeinträchtigt werden."
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichendes Benutzenden- und Berechtigungsmanagement",
+            "handle": "2.2",
+            "text": "Einige ICS-Komponenten verfügen über ein eigenes Benutzenden- und Berechtigungsmanagement. Ist dieses unzureichend konzipiert, kann es passieren, dass Mitarbeitende gemeinsam Konten nutzen oder dass Berechtigungen von ausgeschiedenen Mitarbeitenden oder Dienstleistenden nicht gelöscht werden. Insgesamt können so unberechtigte Personen auf ICS-Komponenten zugreifen.",
+            "exploitedBy_examples": [],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Protokollierung",
+            "handle": "2.3",
+            "text": "Bei ICS-Komponenten beschränkt sich die Protokollierung häufig auf prozessrelevante Ereignisse. Für die Informationssicherheit relevante Daten werden oft nicht aufgezeichnet. Dadurch lassen sich Sicherheitsvorfälle nur schwer detektieren und hinterher nicht mehr rekonstruieren.",
+            "exploitedBy_examples": [],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Manipulation und Sabotage einer ICS-Komponente",
+            "handle": "2.4",
+            "text": "Die vielfältigen Schnittstellen von ICS-Komponenten führen zu einem erhöhten Manipulationsrisiko für IT-Systeme, die Software und übertragene Informationen. Je nach Motivation und Kenntnissen der Angreifenden kann sich das lokal, aber auch standortübergreifend auswirken. Zudem können Status- und Alarmmeldungen oder sonstige Messwerte unterdrückt oder verändert werden. Manipulierte Messwerte können Fehlentscheidungen von ICS-Komponenten bzw. des Bedienpersonals nach sich ziehen. Manipulierte Systeme können dazu genutzt werden, um andere Systeme oder Standorte anzugreifen oder um eine laufende Manipulation zu vertuschen.",
+            "exploitedBy_examples": [],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz unsicherer Protokolle",
+            "handle": "2.5",
+            "text": "Die im Umfeld industrieller Steuerungsanlagen eingesetzten Protokolle bieten teilweise keine oder nur eingeschränkte Sicherheitsmechanismen. Technische Informationen wie Mess- und Steuerwerte werden häufig im Klartext und ohne Integritätssicherung oder Authentisierung übertragen. Dritte mit Zugang zum Übertragungsmedium können dann die Inhalte der Kommunikation auslesen und verändern oder Steuerbefehle einschleusen. So können Handlungen provoziert bzw. der Betrieb direkt beeinflusst werden. Ein Angriff auf Protokollebene ist auch dann möglich, wenn die ICS-Komponente ansonsten sicher konfiguriert ist und selbst keine Schwachstellen aufweist.",
+            "exploitedBy_examples": [],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Denial-of-Service-(DoS)-Angriffe",
+            "handle": "2.6",
+            "text": "Angreifende können den Betrieb von ICS-Komponenten durch DoS-Angriffe beeinträchtigen. Bei Prozessen, die unter Echtzeitbedingungen ablaufen, kann bereits eine kürzere Störung zu Informations- oder Kontrollverlusten führen.",
+            "exploitedBy_examples": [],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Schadprogramme",
+            "handle": "2.7",
+            "text": "Die Bedrohung durch Schadprogramme verschärft sich auch für industrielle Steuerungsanlagen immer mehr. Infektionsmöglichkeiten ergeben sich durch Schnittstellen zur Office-IT (vertikale Integration) und zur Außenwelt. Aber auch mobile Endgeräte wie Service-Notebooks oder Wechseldatenträger, die bei der Programmierung und Wartung von ICS-Komponenten eingesetzt werden, stellen eine Gefahr dar. Denn durch Letztere können Schadprogramme auch in isolierte Umgebungen eingebracht werden.",
+            "exploitedBy_examples": [],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ausspionieren von Informationen",
+            "handle": "2.8",
+            "text": "ICS-Komponenten enthalten häufig detaillierte Informationen über den geregelten oder überwachten Prozess bzw. Vorgang. Auch aus sonstigen übertragenen Werten wie Mess- oder Steuerungsdaten lassen sich diese Informationen teilweise rekonstruieren. Gleiches gilt für Steuerungsprogramme oder -parameter.",
+            "exploitedBy_examples": [],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Manipulierte Firmware",
+            "handle": "2.9",
+            "text": "Bei ICS-Komponenten lässt sich neben dem Anwendungsprogramm auch das Betriebssystem (Firmware) verändern. Dadurch kann manipulierte Software in das System gelangen. Die internen Speicher könnten durch ein kompromittiertes Programmiergerät, über eine lokale Datenschnittstelle (z. B. USB) oder über eine andere bestehende Netzverbindung von Angreifenden verändert werden. Ebenso könnte ein Software-Update auf dem Weg vom herstellenden Unternehmen zum Betreibenden manipuliert worden sein. Schließlich könnte eine ICS-Komponente mit bereits kompromittierter Firmware beim Betreibenden eintreffen, etwa bei manipulierter Lieferkette (englisch supply chain) oder einem Einkauf aus unsicheren Quellen. Angreifende erhalten dadurch die Möglichkeit, Prozesse und Abläufe zu verändern bzw. zu verfälschen.",
+            "exploitedBy_examples": [],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einschränkung des Zugriffs auf Konfigurations- und Wartungsschnittstellen",
+            "handle": "IND.2.1.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Standardmäßig eingerichtete bzw. vom herstellenden Unternehmen gesetzte Passwörter MÜSSEN gewechselt werden (siehe ORP.4 Identitäts- und Berechtigungsmanagement). Der Wechsel MUSS dokumentiert werden. Die Passwörter MÜSSEN sicher hinterlegt werden. Es MUSS sichergestellt werden, dass nur berechtigte Mitarbeitende auf Konfigurations- und Wartungsschnittstellen von ICS-Komponenten zugreifen können. Die Konfiguration von ICS-Komponenten DARF NUR nach einer Freigabe durch die verantwortliche Person oder nach einer Authentisierung geändert werden.",
+            "isresponsible": "OT-Betrieb (Operational Technology, OT)",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.21",
+                "G 0.23",
+                "G 0.30",
+                "G 0.32",
+                "G 0.41",
+                "G 0.43",
+                "G 0.45",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Nutzung sicherer Übertragungs-Protokolle für die Konfiguration und Wartung",
+            "handle": "IND.2.1.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Für die Konfiguration und Wartung von ICS-Komponenten MÜSSEN sichere Protokolle eingesetzt werden. Die Informationen MÜSSEN geschützt übertragen werden.",
+            "isresponsible": "Wartungspersonal, OT-Betrieb (Operational Technology, OT)",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.21",
+                "G 0.23",
+                "G 0.39",
+                "G 0.41",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Deaktivierung oder Deinstallation nicht genutzter Dienste, Funktionen und Schnittstellen",
+            "handle": "IND.2.1.A4",
+            "level": "Low",
+            "affects": [],
+            "text": "Alle nicht genutzten Dienste, Funktionen und Schnittstellen der ICS-Komponenten MÜSSEN deaktiviert oder deinstalliert werden.",
+            "isresponsible": "Wartungspersonal, OT-Betrieb (Operational Technology, OT)",
+            "mitigates": [
+                "G 0.14",
+                "G 0.15",
+                "G 0.19",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.30",
+                "G 0.41"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Netzsegmentierung",
+            "handle": "IND.2.1.A6",
+            "level": "Low",
+            "affects": [],
+            "text": "ICS-Komponenten MÜSSEN von der Office-IT getrennt werden. Hängen ICS-Komponenten von anderen Diensten im Netz ab, SOLLTE das ausreichend dokumentiert werden. ICS-Komponenten SOLLTEN so wenig wie möglich mit anderen ICS-Komponenten kommunizieren.",
+            "isresponsible": "OT-Betrieb (Operational Technology, OT), Planende",
+            "mitigates": [
+                "G 0.14",
+                "G 0.15",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.30",
+                "G 0.31",
+                "G 0.32",
+                "G 0.39",
+                "G 0.40",
+                "G 0.41"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erstellung von Datensicherungen",
+            "handle": "IND.2.1.A7",
+            "level": "Medium",
+            "affects": [],
+            "text": "Vor jeder Systemänderung an einer ICS-Komponente MÜSSEN Backups erstellt werden.",
+            "isresponsible": "OT-Betrieb (Operational Technology, OT)",
+            "mitigates": [
+                "G 0.2",
+                "G 0.4",
+                "G 0.8",
+                "G 0.9",
+                "G 0.10",
+                "G 0.12",
+                "G 0.25",
+                "G 0.39",
+                "G 0.40",
+                "G 0.41",
+                "G 0.45"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Schutz vor Schadsoftware",
+            "handle": "IND.2.1.A8",
+            "level": "Medium",
+            "affects": [],
+            "text": "ICS-Komponenten SOLLTEN durch geeignete Mechanismen vor Schadprogrammen geschützt werden (siehe OPS.1.1.4 Schutz vor Schadprogrammen). Wird dafür ein Virenschutzprogramm benutzt, SOLLTEN das Programm und die Virensignaturen nach der Freigabe durch das herstellende Unternehmen immer auf dem aktuellen Stand sein. Wenn die Ressourcen auf der ICS-Komponente nicht ausreichend sind oder die Echtzeitanforderung durch den Einsatz von Virenschutzprogrammen gefährdet werden könnte, SOLLTEN alternative Maßnahmen ergriffen werden, etwa die Abschottung der ICS-Komponente oder des Produktionsnetzes.",
+            "isresponsible": "OT-Betrieb (Operational Technology, OT)",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.25",
+                "G 0.28",
+                "G 0.30",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Wartung der ICS-Komponenten",
+            "handle": "IND.2.1.A11",
+            "level": "Medium",
+            "affects": [],
+            "text": "Bei der Wartung einer ICS-Komponente SOLLTEN immer die aktuellen und freigegebenen Sicherheitsupdates eingespielt werden. Updates für das Betriebssystem SOLLTEN erst nach Freigabe durch das herstellende Unternehmen einer ICS-Komponente installiert werden. Alternativ SOLLTE die Aktualisierung in einer Testumgebung erprobt werden, bevor diese in einer produktiven ICS-Komponente eingesetzt wird. Für kritische Sicherheitsupdates SOLLTE kurzfristig eine Wartung durchgeführt werden.",
+            "isresponsible": "Mitarbeitende, OT-Betrieb (Operational Technology, OT), Wartungspersonal",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.21",
+                "G 0.23",
+                "G 0.28",
+                "G 0.30",
+                "G 0.31",
+                "G 0.32",
+                "G 0.39",
+                "G 0.41"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Geeignete Inbetriebnahme von ICS-Komponenten",
+            "handle": "IND.2.1.A13",
+            "level": "Medium",
+            "affects": [],
+            "text": "Bevor ICS-Komponenten in Betrieb genommen werden, SOLLTEN sie dem aktuellen, intern freigegebenen Firmware-, Software- und Patch-Stand entsprechen. Neue ICS-Komponenten SOLLTEN in die bestehenden Betriebs-, Überwachungs- und Informationssicherheitsmanagement-Prozesse eingebunden werden.",
+            "isresponsible": "OT-Betrieb (Operational Technology, OT)",
+            "mitigates": [
+                "G 0.12",
+                "G 0.14",
+                "G 0.15",
+                "G 0.21",
+                "G 0.23",
+                "G 0.25",
+                "G 0.28",
+                "G 0.39",
+                "G 0.41"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Schutz externer Schnittstellen",
+            "handle": "IND.2.1.A16",
+            "level": "Medium",
+            "affects": [],
+            "text": "Von außen erreichbare Schnittstellen SOLLTEN vor Missbrauch geschützt werden.",
+            "isresponsible": "OT-Betrieb (Operational Technology, OT)",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.30",
+                "G 0.39",
+                "G 0.41",
+                "G 0.45"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Nutzung sicherer Protokolle für die Übertragung von Mess- und Steuerdaten",
+            "handle": "IND.2.1.A17",
+            "level": "Medium",
+            "affects": [],
+            "text": "Mess- oder Steuerdaten SOLLTEN bei der Übertragung vor unberechtigten Zugriffen oder Veränderungen geschützt werden. Bei Anwendungen mit Echtzeitanforderungen SOLLTE geprüft werden, ob dies umsetzbar ist. Werden Mess- oder Steuerdaten über öffentliche Netze übertragen, SOLLTEN sie angemessen geschützt werden.",
+            "isresponsible": "OT-Betrieb (Operational Technology, OT)",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.21",
+                "G 0.22",
+                "G 0.30",
+                "G 0.37",
+                "G 0.39",
+                "G 0.41",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Kommunikation im Störfall",
+            "handle": "IND.2.1.A18",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Es SOLLTE alternative und unabhängige Kommunikationsmöglichkeiten geben, die bei einem Störfall benutzt werden können, um handlungsfähig zu bleiben.",
+            "isresponsible": "OT-Betrieb (Operational Technology, OT), Mitarbeitende",
+            "mitigates": [
+                "G 0.9",
+                "G 0.45"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Security-Tests",
+            "handle": "IND.2.1.A19",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Mithilfe von regelmäßigen Security-Tests SOLLTE geprüft werden, ob die technischen Sicherheitsmaßnahmen noch effektiv umgesetzt sind. Die Security-Tests SOLLTEN nicht im laufenden Anlagenbetrieb erfolgen. Die Tests SOLLTEN auf die Wartungszeiten geplant werden. Die Ergebnisse SOLLTEN dokumentiert werden. Erkannte Risiken SOLLTEN bewertet und behandelt werden.",
+            "isresponsible": "OT-Betrieb (Operational Technology, OT)",
+            "mitigates": [
+                "G 0.8",
+                "G 0.9",
+                "G 0.14",
+                "G 0.21",
+                "G 0.23",
+                "G 0.28",
+                "G 0.30",
+                "G 0.39",
+                "G 0.40",
+                "G 0.41",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Vertrauenswürdiger Code",
+            "handle": "IND.2.1.A20",
+            "level": "High",
+            "affects": [
+                "IA"
+            ],
+            "text": "Firmware-Updates oder neue Steuerungsprogramme SOLLTEN NUR eingespielt werden, wenn vorher ihre Integrität überprüft wurde. Sie SOLLTEN nur aus vertrauenswürdigen Quellen stammen.",
+            "isresponsible": "OT-Betrieb (Operational Technology, OT)",
+            "mitigates": [
+                "G 0.14",
+                "G 0.21",
+                "G 0.23",
+                "G 0.28",
+                "G 0.39"
+            ]
+        }
+    ]
+}

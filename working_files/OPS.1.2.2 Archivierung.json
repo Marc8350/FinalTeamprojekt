@@ -1,0 +1,504 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "OPS.1.2.2 Archivierung",
+    "handle": "OPS.1.2.2",
+    "text": "Die Archivierung spielt im Dokumentenmanagementprozess eine besondere Rolle. Denn es wird einerseits erwartet, dass die digitalen Dokumente bis zum Ablauf einer vorgegebenen Aufbewahrungsfrist verfügbar sind. Andererseits soll ihre Vertraulichkeit und Integrität bewahrt bleiben. Zusätzlich muss der Kontext erhalten werden, damit der jeweilige gespeicherte Vorgang rekonstruierbar ist.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Überalterung von Archivsystemen",
+            "handle": "2.1",
+            "text": "Archivierte Daten sollen typischerweise über einen sehr langen Zeitraum gespeichert bleiben. Während dieses Zeitraums können die zugrundeliegenden technischen Systemkomponenten, Speichermedien und Datenformate aber physisch oder technisch altern und dadurch unbrauchbar werden. Es können sich z. B. im Laufe der Zeit Probleme mit der Kompatibilität der verwendeten Datenformate ergeben.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Verlust der Datenlesbarkeit",
+                    "type": "Threat",
+                    "text": "Wird auf den Alterungsprozess nicht reagiert, ist langfristig damit zu rechnen, dass beispielsweise archivierte Rohdaten nicht mehr von den Archivmedien lesbar sind.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Veränderung der Daten durch physische Fehler",
+                    "type": "Threat",
+                    "text": "Auch können archivierte Daten durch physische Fehler an Archivsystem und -medien verändert werden.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Ordnungskriterien für Archive",
+            "handle": "2.2",
+            "text": "Elektronische Archive können sehr große Datenmengen enthalten. Die einzelnen Datensätze werden dabei nach bestimmten Ordnungskriterien abgelegt, die nach Indexdaten der Geschäftsanwendungen und Indexdaten des Archivsystems unterschieden werden. Werden ungeeignete Ordnungskriterien verwendet, können archivierte Dokumente eventuell nicht mehr oder nur sehr aufwändig recherchiert werden. Auch ist es möglich, dass die Semantik der Dokumente nicht eindeutig bestimmbar ist.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Verlust der Auffindbarkeit",
+                    "type": "Threat",
+                    "text": "Durch eine ungeeignete oder begrenzte Auswahl von Ordnungskriterien könnten auch die Ziele der Aufbewahrung verfehlt werden, z. B. die Nachweisfähigkeit gegenüber Dritten.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unbefugte Archivzugriffe aufgrund unzureichender Protokollierung",
+            "handle": "2.3",
+            "text": "Unbefugte Archivzugriffe werden üblicherweise mithilfe von Protokolldateien aufgedeckt. Wurde jedoch nicht umfangreich genug protokolliert, könnten solche Zugriffe nicht entdeckt werden. In der Folge könnten Angreifende unbemerkt an die dort gespeicherten Informationen gelangen und sie z. B. kopieren oder verändern.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Verlust der Datenintegrität",
+                    "type": "Threat",
+                    "text": "Angreifende könnten unbemerkt an die dort gespeicherten Informationen gelangen und sie z. B. kopieren oder verändern.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzulängliche Übertragung von Papierdaten in ein elektronisches Archiv",
+            "handle": "2.4",
+            "text": "Wenn Dokumente eingescannt werden, kann dabei das Erscheinungsbild oder die Semantik der aufgenommenen Daten verfälscht werden. Auch können dabei Dokumente verloren gehen. Dadurch können die Informationen im Dokument falsch interpretiert und berechnet werden, z. B. wenn wichtige Teile des Dokuments oder des Dokumentenstapels beim Scannen vergessen werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Falsche Interpretation der Daten",
+                    "type": "Threat",
+                    "text": "Durch die Verfälschung des Erscheinungsbildes oder der Semantik der Daten können die Informationen im Dokument falsch interpretiert und berechnet werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Verlust von Dokumenten",
+                    "type": "Threat",
+                    "text": "Auch können dabei Dokumente verloren gehen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Erneuerung von kryptografischen Verfahren bei der Archivierung",
+            "handle": "2.5",
+            "text": "Kryptografische Verfahren, die z. B. bei Signaturen, Siegeln, Zeitstempeln, technischen Beweisdaten (Evidence Records) oder Verschlüsselungen verwendet werden, müssen regelmäßig an den aktuellen Stand der Technik angepasst werden, damit die Schutzwirkung erhalten bleibt. Geschieht dies nicht, kann beispielsweise aufgrund einer veralteten unsicheren Signatur die Integrität des Dokumentes nicht mehr garantiert werden. Darüber hinaus wird die Datei eventuell nicht als Beweismittel vor Gericht zugelassen, selbst wenn das Dokument noch völlig korrekt ist. Auch geht so die Vertraulichkeit eines verschlüsselten Dokumentes verloren.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Verlust der Datenintegrität",
+                    "type": "Threat",
+                    "text": "Aufgrund einer veralteten unsicheren Signatur kann die Integrität des Dokumentes nicht mehr garantiert werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Verlust der Beweisfähigkeit",
+                    "type": "Threat",
+                    "text": "Die Datei wird eventuell nicht als Beweismittel vor Gericht zugelassen, selbst wenn das Dokument noch völlig korrekt ist.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Verlust der Vertraulichkeit",
+                    "type": "Threat",
+                    "text": "Die Vertraulichkeit eines verschlüsselten Dokumentes geht verloren.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Revisionen der Archivierung",
+            "handle": "2.6",
+            "text": "Wenn der Archivierungsprozess zu selten oder zu ungenau überprüft wird, kann dies dazu führen, dass die Fehlfunktionen nicht erkannt werden. Damit kann die Integrität der archivierten Dokumente selbst angezweifelt werden. Hieraus können sich für die Institution rechtliche und wirtschaftliche Nachteile ergeben: So kann unter Umständen eine Datei nicht als Beweismittel vor Gericht zugelassen werden, weil nicht ausgeschlossen werden kann, dass sie manipuliert wurde.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Verlust der Beweisfähigkeit",
+                    "type": "Threat",
+                    "text": "Eine Datei kann nicht als Beweismittel vor Gericht zugelassen werden, weil nicht ausgeschlossen werden kann, dass sie manipuliert wurde.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verstoß gegen rechtliche Rahmenbedingungen beim Einsatz von Archivierung",
+            "handle": "2.7",
+            "text": "Bei der Archivierung von elektronischen Dokumenten sind verschiedene rechtliche Rahmenbedingungen zu beachten. Werden diese nicht eingehalten, kann das zivil- oder strafrechtliche Konsequenzen haben, z. B. bei Mindestaufbewahrungsfristen, die sich aus steuerlichen, haushaltsrechtlichen oder sonstigen Gründen ergeben.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Zivil- oder strafrechtliche Konsequenzen",
+                    "type": "Threat",
+                    "text": "Werden die rechtlichen Rahmenbedingungen nicht eingehalten, kann das zivil- oder strafrechtliche Konsequenzen haben.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ermittlung von Einflussfaktoren für die elektronische Archivierung",
+            "handle": "OPS.1.2.2.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Bevor entschieden wird, welche Verfahren und Produkte für die elektronische Archivierung eingesetzt werden, MÜSSEN die technischen, rechtlichen und organisatorischen Einflussfaktoren ermittelt und dokumentiert werden. Die Ergebnisse MÜSSEN in das Archivierungskonzept einfließen.",
+            "isresponsible": "Benutzende",
+            "mitigates": [
+                "G 0.18",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Entwicklung eines Archivierungskonzepts",
+            "handle": "OPS.1.2.2.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Es MUSS definiert werden, welche Ziele mit der Archivierung erreicht werden sollen. Hierbei MUSS insbesondere berücksichtigt werden, welche Regularien einzuhalten sind, welche Mitarbeitende zuständig sind und welcher Funktions- und Leistungsumfang angestrebt wird. Die Ergebnisse MÜSSEN in einem Archivierungskonzept erfasst werden. Die Institutionsleitung MUSS in diesen Prozess einbezogen werden. Das Archivierungskonzept MUSS regelmäßig an die aktuellen Gegebenheiten der Institution angepasst werden.",
+            "isresponsible": "Benutzende",
+            "mitigates": [
+                "G 0.18",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Geeignete Aufstellung von Archivsystemen und Lagerung von Archivmedien",
+            "handle": "OPS.1.2.2.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Die IT-Komponenten eines Archivsystems MÜSSEN in gesicherten Räumen aufgestellt werden. Es MUSS sichergestellt sein, dass nur berechtigte Personen die Räume betreten dürfen. Archivspeichermedien MÜSSEN geeignet gelagert werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.2",
+                "G 0.4",
+                "G 0.44"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Konsistente Indizierung von Daten bei der Archivierung",
+            "handle": "OPS.1.2.2.A4",
+            "level": "Low",
+            "affects": [],
+            "text": "Alle in einem Archiv abgelegten Daten, Dokumente und Datensätze MÜSSEN eindeutig indiziert werden. Dazu MUSS bereits während der Konzeption festgelegt werden, welche Struktur und welchen Umfang die Indexangaben für ein Archiv haben sollen.",
+            "isresponsible": "IT-Betrieb, Benutzende",
+            "mitigates": [
+                "G 0.18",
+                "G 0.45"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Regelmäßige Aufbereitung von archivierten Datenbeständen",
+            "handle": "OPS.1.2.2.A5",
+            "level": "Low",
+            "affects": [],
+            "text": "Über den gesamten Archivierungszeitraum hinweg MUSS sichergestellt werden, dass das verwendete Datenformat von den benutzten Anwendungen verarbeitet werden kann, die gespeicherten Daten auch zukünftig lesbar und so reproduzierbar sind, dass Semantik und Beweiskraft beibehalten werden, das benutzte Dateisystem auf dem Speichermedium von allen beteiligten Komponenten verarbeitet werden kann, die Speichermedien jederzeit technisch einwandfrei gelesen werden können sowie die verwendeten kryptografischen Verfahren zur Verschlüsselung und zum Beweiswerterhalt mittels digitaler Signatur, Siegel, Zeitstempel oder technischen Beweisdaten (Evidence Records) dem Stand der Technik entsprechen.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.29",
+                "G 0.45"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Schutz der Integrität der Indexdatenbank von Archivsystemen",
+            "handle": "OPS.1.2.2.A6",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Integrität der Indexdatenbank MUSS sichergestellt und überprüfbar sein. Außerdem MUSS die Indexdatenbank regelmäßig gesichert werden. Die Datensicherungen MÜSSEN wiederherstellbar sein. Mittlere und große Archive SOLLTEN über redundante Indexdatenbanken verfügen.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.25",
+                "G 0.26",
+                "G 0.28",
+                "G 0.45",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Regelmäßige Datensicherung der System- und Archivdaten",
+            "handle": "OPS.1.2.2.A7",
+            "level": "Low",
+            "affects": [],
+            "text": "Alle Archivdaten, die zugehörigen Indexdatenbanken sowie die Systemdaten MÜSSEN regelmäßig gesichert werden (siehe CON.3 Datensicherungskonzept).",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.45",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Protokollierung der Archivzugriffe",
+            "handle": "OPS.1.2.2.A8",
+            "level": "Low",
+            "affects": [],
+            "text": "Alle Zugriffe auf elektronische Archive MÜSSEN protokolliert werden. Dafür SOLLTEN Datum, Uhrzeit, Benutzender, Client und die ausgeführten Aktionen sowie Fehlermeldungen aufgezeichnet werden. Im Archivierungskonzept SOLLTE festgelegt werden, wie lange die Protokolldaten aufbewahrt werden. Die Protokolldaten der Archivzugriffe SOLLTEN regelmäßig ausgewertet werden. Dabei SOLLTEN die institutionsinternen Vorgaben beachtet werden. Auch SOLLTE definiert sein, welche Ereignisse welchen Mitarbeitenden angezeigt werden, wie z. B. Systemfehler, Timeouts oder wenn Datensätze kopiert werden. Kritische Ereignisse SOLLTEN sofort nach der Erkennung geprüft und, falls nötig, weiter eskaliert werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.29",
+                "G 0.37"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Auswahl geeigneter Datenformate für die Archivierung von Dokumenten",
+            "handle": "OPS.1.2.2.A9",
+            "level": "Low",
+            "affects": [],
+            "text": "Für die Archivierung MUSS ein geeignetes Datenformat ausgewählt werden. Es MUSS gewährleisten, dass sich Archivdaten sowie ausgewählte Merkmale des ursprünglichen Dokumentmediums langfristig und originalgetreu reproduzieren lassen. Die Dokumentstruktur des ausgewählten Datenformats MUSS eindeutig interpretierbar und elektronisch verarbeitbar sein. Die Syntax und Semantik der verwendeten Datenformate SOLLTE dokumentiert und von einer Standardisierungsorganisation veröffentlicht sein. Es SOLLTE für eine beweis- und revisionssichere Archivierung ein verlustfreies Bildkompressionsverfahren benutzt werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.45",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erstellung einer Richtlinie für die Nutzung von Archivsystemen",
+            "handle": "OPS.1.2.2.A10",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTE sichergestellt werden, dass Mitarbeitende das Archivsystem so benutzen, wie es im Archivierungskonzept vorgesehen ist. Dazu SOLLTE eine Administrations- und eine Benutzungsrichtlinie erstellt werden. Die Administrationsrichtlinie SOLLTE folgende Punkte enthalten: Festlegung der Verantwortung für Betrieb und Administration, Vereinbarungen über Leistungsparameter beim Betrieb (unter anderem Service Level Agreements), Modalitäten der Vergabe von Zutritts- und Zugriffsrechten, Modalitäten der Vergabe von Zugangsrechten zu den vom Archiv bereitgestellten Diensten, Regelungen zum Umgang mit archivierten Daten und Archivmedien, Überwachung des Archivsystems und der Umgebungsbedingungen, Regelungen zur Datensicherung, Regelungen zur Protokollierung sowie Trennung von Produzenten und Konsumenten (OAIS-Modell).",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.29",
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einweisung in die Administration und Bedienung des Archivsystems",
+            "handle": "OPS.1.2.2.A11",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die zuständigen Mitarbeitende des IT-Betriebs und die Benutzenden SOLLTEN für ihren Aufgabenbereich geschult werden. Die Schulung der Mitarbeitenden des IT-Betriebs SOLLTE folgende Themen umfassen: Systemarchitektur und Sicherheitsmechanismen des verwendeten Archivsystems und des darunterliegenden Betriebssystems, Installation und Bedienung des Archivsystems und Umgang mit Archivmedien, Dokumentation der Administrationstätigkeiten sowie Eskalationsprozeduren. Die Schulung der Benutzende SOLLTE folgende Themen umfassen: Umgang mit dem Archivsystem, Bedienung des Archivsystems sowie rechtliche Rahmenbedingungen der Archivierung. Die Durchführung der Schulungen sowie die Teilnahme SOLLTEN dokumentiert werden.",
+            "isresponsible": "IT-Betrieb, Benutzende",
+            "mitigates": [
+                "G 0.25",
+                "G 0.26",
+                "G 0.30",
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Überwachung der Speicherressourcen von Archivmedien",
+            "handle": "OPS.1.2.2.A12",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die auf den Archivmedien vorhandene freie Speicherkapazität SOLLTE kontinuierlich überwacht werden. Sobald ein definierter Grenzwert unterschritten wird, MÜSSEN zuständige Mitarbeitende automatisch alarmiert werden. Die Alarmierung SOLLTE rollenbezogen erfolgen. Es MÜSSEN immer ausreichend leere Archivmedien verfügbar sein, um Speicherengpässen schnell vorbeugen zu können.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Regelmäßige Revision der Archivierungsprozesse",
+            "handle": "OPS.1.2.2.A13",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTE regelmäßig überprüft werden, ob die Archivierungsprozesse noch korrekt und ordnungsgemäß funktionieren. Dazu SOLLTE eine Checkliste erstellt werden, die Fragen zu Verantwortlichkeiten, Organisationsprozessen, zum Einsatz der Archivierung, zur Redundanz der Archivdaten, zur Administration und zur technischen Beurteilung des Archivsystems enthält. Die Auditergebnisse SOLLTEN nachvollziehbar dokumentiert und mit dem Soll-Zustand abgeglichen werden. Abweichungen SOLLTE nachgegangen werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Regelmäßige Beobachtung des Marktes für Archivsysteme",
+            "handle": "OPS.1.2.2.A14",
+            "level": "Medium",
+            "affects": [],
+            "text": "Der Markt für Archivsysteme SOLLTE regelmäßig und systematisch beobachtet werden. Dabei SOLLTEN unter anderem folgende Kriterien beobachtet werden: Veränderungen bei Standards, Wechsel der Technik bei herstellenden Unternehmen von Hard- und Software, veröffentlichte Sicherheitslücken oder Schwachstellen sowie der Verlust der Sicherheitseignung bei kryptografischen Algorithmen.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.25",
+                "G 0.26",
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Regelmäßige Aufbereitung von kryptografisch gesicherten Daten bei der Archivierung",
+            "handle": "OPS.1.2.2.A15",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTE kontinuierlich beobachtet werden, wie sich das Gebiet der Kryptografie entwickelt, um beurteilen zu können, ob ein Algorithmus weiterhin zuverlässig und ausreichend sicher ist (siehe auch OPS.1.2.2.A20 Geeigneter Einsatz kryptografischer Verfahren bei der Archivierung). Archivdaten, die mit kryptografischen Verfahren gesichert wurden, die sich in absehbarer Zeit nicht mehr zur Sicherung eignen werden, SOLLTEN rechtzeitig mit geeigneten Verfahren neu gesichert werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.45"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Regelmäßige Erneuerung technischer Archivsystem-Komponenten",
+            "handle": "OPS.1.2.2.A16",
+            "level": "Medium",
+            "affects": [],
+            "text": "Archivsysteme SOLLTEN über lange Zeiträume auf dem aktuellen technischen Stand gehalten werden. Neue Hard- und Software SOLLTE vor der Installation in einem laufenden Archivsystem ausführlich getestet werden. Wenn neue Komponenten in Betrieb genommen oder neue Dateiformate eingeführt werden, SOLLTE ein Migrationskonzept erstellt werden. Darin SOLLTEN alle Änderungen, Tests und erwarteten Testergebnisse beschrieben sein. Die Konvertierung der einzelnen Daten SOLLTE dokumentiert werden (Transfervermerk). Wenn Archivdaten in neue Formate konvertiert werden, SOLLTE geprüft werden, ob die Daten aufgrund rechtlicher Anforderungen zusätzlich in ihren ursprünglichen Formaten zu archivieren sind.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.29",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Auswahl eines geeigneten Archivsystems",
+            "handle": "OPS.1.2.2.A17",
+            "level": "Medium",
+            "affects": [],
+            "text": "Ein neues Archivsystem SOLLTE immer auf Basis der im Archivierungskonzept beschriebenen Vorgaben ausgewählt werden. Es SOLLTE die dort formulierten Anforderungen erfüllen.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.25",
+                "G 0.26"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung geeigneter Archivmedien",
+            "handle": "OPS.1.2.2.A18",
+            "level": "Medium",
+            "affects": [],
+            "text": "Für die Archivierung SOLLTEN geeignete Medien ausgewählt und benutzt werden. Dabei SOLLTEN folgende Aspekte berücksichtigt werden: das zu archivierende Datenvolumen, die mittleren Zugriffszeiten sowie die mittleren gleichzeitigen Zugriffe auf das Archivsystem. Ebenfalls SOLLTEN die Archivmedien die Anforderungen an eine Langzeitarchivierung hinsichtlich Revisionssicherheit und Lebensdauer erfüllen.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.28",
+                "G 0.29",
+                "G 0.45"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Regelmäßige Funktions- und Recoverytests bei der Archivierung",
+            "handle": "OPS.1.2.2.A19",
+            "level": "Medium",
+            "affects": [],
+            "text": "Für die Archivierung SOLLTEN regelmäßige Funktions- und Recoverytests durchgeführt werden. Die Archivierungsdatenträger SOLLTEN mindestens einmal jährlich daraufhin überprüft werden, ob sie noch lesbar und integer sind. Für die Fehlerbehebung SOLLTEN geeignete Prozesse definiert werden. Weiterhin SOLLTEN die Hardwarekomponenten des Archivsystems regelmäßig auf ihre einwandfreie Funktion hin geprüft werden. Es SOLLTE regelmäßig geprüft werden, ob alle Archivierungsprozesse fehlerfrei funktionieren.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.25",
+                "G 0.26",
+                "G 0.45",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Geeigneter Einsatz kryptografischer Verfahren bei der Archivierung",
+            "handle": "OPS.1.2.2.A20",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Um lange Aufbewahrungsfristen abdecken zu können, SOLLTEN Archivdaten nur mit kryptografischen Verfahren auf Basis aktueller Standards und Normen gesichert werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Übertragung von Papierdaten in elektronische Archive",
+            "handle": "OPS.1.2.2.A21",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Werden z. B. Dokumente auf Papier digitalisiert und in ein elektronisches Archiv überführt, SOLLTE sichergestellt werden, dass die digitale Kopie mit dem Originaldokument bildlich und inhaltlich übereinstimmt.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.45",
+                "G 0.46"
+            ]
+        }
+    ]
+}

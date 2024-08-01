@@ -1,0 +1,413 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "APP.4.6 SAP ABAP-Programmierung",
+    "handle": "APP.4.6",
+    "text": "Häufig werden in SAP-Systemen Eigenentwicklungen programmiert. Die Gründe dafür sind vielfältig, so können Geschäftsprozesse oder Anforderungen an das Reporting mit Hilfe von Eigenentwicklungen individuell an die Institution angepasst werden. Außerdem ist es möglich, spezielle Funktionen zu erstellen, die in der Standard-Auslieferung nicht vorhanden sind.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlende Berechtigungsprüfungen",
+            "handle": "2.1",
+            "text": "In SAP werden Berechtigungen nur dann geprüft, wenn eine entsprechende Berechtigungsprüfung von Entwickelnden im Programm implementiert wurde. Ohne eine solche Prüfung im Programm-Code wird also nicht getestet, ob Benutzende auch wirklich berechtigt sind eine Aktion auszuführen. In selbst entwickeltem Programm-Code werden Berechtigungsprüfungen aber häufig vergessen. Somit greift das gesamte Berechtigungskonzept oftmals nicht und unberechtigte Personen können auf die im SAP-System gespeicherten Daten zugreifen. Dadurch kann etwa auch gegen Compliance-Anforderungen verstoßen werden. Dies kann besonders bei Wirtschaftsprüfungen schwerwiegende Folgen nach sich ziehen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unberechtigter Zugriff auf Daten",
+                    "type": "Threat",
+                    "text": "Unberechtigte Personen können auf die im SAP-System gespeicherten Daten zugreifen, wenn keine Berechtigungsprüfung im Programm-Code implementiert wurde.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verlust von Vertraulichkeit oder Integrität von kritischen Daten",
+            "handle": "2.2",
+            "text": "SAP-Systeme enthalten viele institutionskritische Informationen. Der SAP-Standard sieht verschiedene Mechanismen vor, diese Daten zu schützen. Allerdings könnte durch fehlerhafte ABAP-Eigenentwicklungen unerlaubt auf institutionskritische Informationen zugegriffen werden. Mitarbeitende oder Angreifende könnten die Daten so in eine nicht mehr kontrollierbare Umgebung transferieren. Ebenso könnten mit Hilfe von ABAP-Programmen kritische Daten manipuliert werden, indem die Sicherheitsmechanismen des SAP-Standards umgangen werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Datenverlust durch unberechtigten Zugriff",
+                    "type": "Threat",
+                    "text": "Unberechtigte Personen können auf institutionskritische Informationen zugreifen und diese in eine nicht mehr kontrollierbare Umgebung transferieren.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Datenmanipulation",
+                    "type": "Threat",
+                    "text": "Kritische Daten können durch fehlerhafte ABAP-Eigenentwicklungen manipuliert werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Injection-Schwachstellen",
+            "handle": "2.3",
+            "text": "Injection-Schwachstellen entstehen dadurch, dass Angreifende Steuerzeichen bzw. Kommandos über das Eingabefeld in eine Anwendung einschleust. Ein erfolgreicher Angriff kann den geplanten Programmablauf durch unerwartete Kommandos stören.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "SQL-Injection",
+                    "type": "Threat",
+                    "text": "Angreifende können SQL-Befehle über das Eingabefeld in eine Anwendung einschleusen und so den Programmablauf stören.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Cross-Site-Scripting",
+                    "type": "Threat",
+                    "text": "Angreifende können JavaScript-Code über das Eingabefeld in eine Anwendung einschleusen und so den Programmablauf stören.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Umgehung von vorhandenen SAP-Sicherheitsmechanismen",
+            "handle": "2.4",
+            "text": "Der SAP-Standard stellt verschiedene Schutzmechanismen für Daten zur Verfügung. Dazu gehören unter anderem die Mandantentrennung, Identity-Management sowie Rollen und Berechtigungen. Diese Sicherheitsmechanismen können im Code jedoch bewusst umgangen oder ungewollt weggelassen werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Umgehung der Mandantentrennung",
+                    "type": "Threat",
+                    "text": "Angreifende können die Mandantentrennung umgehen und so auf Daten anderer Mandanten zugreifen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Umgehung des Identity-Managements",
+                    "type": "Threat",
+                    "text": "Angreifende können das Identity-Management umgehen und so unter falschen Identitäten auf Daten zugreifen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Umgehung der Rollen und Berechtigungen",
+                    "type": "Threat",
+                    "text": "Angreifende können die Rollen und Berechtigungen umgehen und so auf Daten zugreifen, auf die sie eigentlich keinen Zugriff haben sollten.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Absicherung von Reports mit Berechtigungsprüfungen",
+            "handle": "APP.4.6.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Es MUSS sichergestellt sein, dass nur berechtigte Personen selbst programmierte Auswertungen (Reports) starten können. Deswegen MUSS jeder Report explizite, zum Kontext passende Berechtigungsprüfungen durchführen.",
+            "isresponsible": "[B]",
+            "mitigates": [
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Formal korrekte Auswertung von Berechtigungsprüfungen",
+            "handle": "APP.4.6.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Jede Berechtigungsprüfung im Code MUSS durch Abfrage des Rückgabewertes SY-SUBRC ausgewertet werden.",
+            "isresponsible": "[B]",
+            "mitigates": [
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Berechtigungsprüfung vor dem Start einer Transaktion",
+            "handle": "APP.4.6.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Wenn Entwickelnde den Befehl CALL TRANSACTION verwenden, MUSS vorher immer eine Startberechtigungsprüfung durchgeführt werden.",
+            "isresponsible": "[B]",
+            "mitigates": [
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verzicht auf proprietäre Berechtigungsprüfungen",
+            "handle": "APP.4.6.A4",
+            "level": "Low",
+            "affects": [],
+            "text": "Jede Berechtigungsprüfung MUSS technisch über den dafür vorgesehenen Befehl AUTHORITY-CHECK erfolgen. Proprietäre Berechtigungsprüfungen, z. B. basierend auf Konto-Kennungen, DÜRFEN NICHT benutzt werden.",
+            "isresponsible": "[B]",
+            "mitigates": [
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erstellung einer Richtlinie für die ABAP-Entwicklung",
+            "handle": "APP.4.6.A5",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTE eine Richtlinie für die Entwicklung von ABAP-Programmen erstellt werden. Die Richtlinie SOLLTE neben Namenskonventionen auch Vorgaben zu ABAP-Elementen beinhalten, die verwendet bzw. nicht verwendet werden dürfen. Die Anforderungen aus diesem Baustein SOLLTEN in die Richtlinie aufgenommen werden. Die Richtlinie SOLLTE für die Entwickelnden verbindlich sein.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.18",
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Vollständige Ausführung von Berechtigungsprüfungen",
+            "handle": "APP.4.6.A6",
+            "level": "Medium",
+            "affects": [],
+            "text": "Bei einer Berechtigungsprüfung im ABAP-Code (AUTHORITY-CHECK <OBJECT>) SOLLTE sichergestellt sein, dass alle Felder des relevanten Berechtigungsobjekts überprüft werden. Wenn einzelne Felder tatsächlich nicht benötigt werden, SOLLTEN sie als DUMMY gekennzeichnet werden. Zusätzlich SOLLTE am Feld der Grund für die Ausnahme dokumentiert werden.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Berechtigungsprüfung während der Eingabeverarbeitung",
+            "handle": "APP.4.6.A7",
+            "level": "Medium",
+            "affects": [],
+            "text": "Funktionscodes und Bildschirmelemente von ABAP-Dynpro-Anwendungen SOLLTEN konsistent sein. Wenn ein Bildschirmelement abgeschaltet wurde, dann SOLLTE eine Anwendung NICHT ohne adäquate Berechtigungsprüfungen auf Ereignisse dieses Elements reagieren. Wenn bestimmte Einträge eines Dynpro-Menüs ausgeblendet oder einzelne Schaltflächen deaktiviert werden, dann SOLLTEN auch die zugehörigen Funktionscodes nicht ausgeführt werden.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Schutz vor unberechtigten oder manipulierenden Zugriffen auf das Dateisystem",
+            "handle": "APP.4.6.A8",
+            "level": "Medium",
+            "affects": [],
+            "text": "Wenn Zugriffe auf Dateien des SAP-Servers von Eingaben der Benutzenden abhängen, SOLLTEN diese Eingaben vor dem Zugriff validiert werden.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Berechtigungsprüfung in remote-fähigen Funktionsbausteinen",
+            "handle": "APP.4.6.A9",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTE sichergestellt werden, dass alle remote-fähigen Funktionsbausteine im Programmcode explizit prüfen, ob der Aufrufende berechtigt ist, die zugehörige Businesslogik auszuführen.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verhinderung der Ausführung von Betriebssystemkommandos",
+            "handle": "APP.4.6.A10",
+            "level": "Medium",
+            "affects": [],
+            "text": "Jedem Aufruf eines erlaubten Betriebssystemkommandos SOLLTE eine entsprechende Berechtigungsprüfung (Berechtigungsobjekt S_LOG_COM) vorangestellt werden. Eingaben von Benutzenden SOLLTEN NICHT Teil eines Kommandos sein. Deswegen SOLLTEN Betriebssystemaufrufe ausschließlich über dafür vorgesehene SAP-Standardfunktionsbausteine ausgeführt werden.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Vermeidung von eingeschleustem Schadcode",
+            "handle": "APP.4.6.A11",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die ABAP-Befehle INSERT REPORT und GENERATE SUBROUTINE POOL SOLLTEN NICHT verwendet werden.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Vermeidung von generischer Modulausführung",
+            "handle": "APP.4.6.A12",
+            "level": "Medium",
+            "affects": [],
+            "text": "Transaktionen, Programme, Funktionsbausteine und Methoden SOLLTEN NICHT generisch ausführbar sein. Sollte es wichtige Gründe für eine generische Ausführung geben, SOLLTE detailliert dokumentiert werden, wo und warum dies geschieht. Zusätzlich SOLLTE eine Allowlist definiert werden, die alle erlaubten Module enthält. Bevor ein Modul aufgerufen wird, SOLLTE die Eingabe von Benutzenden mit der Allowlist abgeglichen werden.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Vermeidung von generischem Zugriff auf Tabelleninhalte",
+            "handle": "APP.4.6.A13",
+            "level": "Medium",
+            "affects": [],
+            "text": "Tabelleninhalte SOLLTEN NICHT generisch ausgelesen werden. Sollte es wichtige Gründe dafür geben, dies doch zu tun, SOLLTE detailliert dokumentiert werden, wo und warum dies geschieht. Außerdem SOLLTE dann gewährleistet sein, dass sich der dynamische Tabellenname auf eine kontrollierbare Liste von Werten beschränkt.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Vermeidung von nativen SQL-Anweisungen",
+            "handle": "APP.4.6.A14",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Schnittstelle ABAP Database Connectivity (ADBC) SOLLTE NICHT verwendet werden. Eingaben von Benutzenden SOLLTEN NICHT Teil von ADBC-Befehlen sein.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Vermeidung von Datenlecks",
+            "handle": "APP.4.6.A15",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTE eine ausreichend sichere Berechtigungsprüfung durchgeführt werden, bevor geschäftskritische Daten angezeigt, übermittelt oder exportiert werden. Vorgesehene (gewollte) Möglichkeiten des Exports SOLLTEN dokumentiert werden.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verzicht auf systemabhängige Funktionsausführung",
+            "handle": "APP.4.6.A16",
+            "level": "Medium",
+            "affects": [],
+            "text": "ABAP-Programme SOLLTEN NICHT systemabhängig programmiert werden, so dass sie nur auf einem bestimmten SAP-System ausgeführt werden können. Sollte dies jedoch unbedingt erforderlich sein, SOLLTE es detailliert dokumentiert werden. Außerdem SOLLTE der Code dann manuell überprüft werden.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verzicht auf mandantenabhängige Funktionsausführung",
+            "handle": "APP.4.6.A17",
+            "level": "Medium",
+            "affects": [],
+            "text": "ABAP-Programme SOLLTEN NICHT mandantenabhängig programmiert werden, so dass sie nur von einem bestimmten Mandanten ausgeführt werden können. Sollte dies jedoch unbedingt erforderlich sein, SOLLTE es detailliert dokumentiert werden. Außerdem SOLLTEN dann zusätzliche Sicherheitsmaßnahmen ergriffen werden, wie beispielsweise eine manuelle Code-Überprüfung (manuelles Code-Review) oder eine Qualitätssicherung auf dem entsprechenden Mandanten.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Vermeidung von Open-SQL-Injection-Schwachstellen",
+            "handle": "APP.4.6.A18",
+            "level": "Medium",
+            "affects": [],
+            "text": "Dynamisches Open SQL SOLLTE NICHT verwendet werden. Falls Datenbankzugriffe mit dynamischen SQL-Bedingungen notwendig sind, SOLLTEN KEINE Eingaben von Benutzenden in der jeweiligen Abfrage übertragen werden. Wenn das dennoch der Fall ist, SOLLTEN die Eingaben von Benutzenden zwingend geprüft werden (Output Encoding).",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Schutz vor Cross-Site-Scripting",
+            "handle": "APP.4.6.A19",
+            "level": "Medium",
+            "affects": [],
+            "text": "Auf selbst entwickeltes HTML in Business-Server-Pages-(BSP)-Anwendungen oder HTTP-Handlern SOLLTE möglichst verzichtet werden.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Keine Zugriffe auf Daten eines anderen Mandanten",
+            "handle": "APP.4.6.A20",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die automatische Mandantentrennung SOLLTE NICHT umgangen werden. Auf Daten anderer Mandanten SOLLTE NICHT mittels EXEC SQL oder der Open SQL Option CLIENT SPECIFIED zugegriffen werden.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verbot von verstecktem ABAP-Quelltext",
+            "handle": "APP.4.6.A21",
+            "level": "Medium",
+            "affects": [],
+            "text": "Der Quelltext eines selbst erstellten ABAP-Programms SOLLTE immer lesbar sein. Techniken, die das verhindern (Obfuskation), SOLLTEN NICHT verwendet werden.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz von ABAP-Codeanalyse Werkzeugen",
+            "handle": "APP.4.6.A22",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Zur automatisierten Überprüfung von ABAP-Code auf sicherheitsrelevante Programmierfehler, funktionale und technische Fehler sowie auf qualitative Schwachstellen SOLLTE ein AВАР-Codeanalyse-Werkzeug eingesetzt werden.",
+            "isresponsible": "[H]",
+            "mitigates": [
+                "G 0.28"
+            ]
+        }
+    ]
+}

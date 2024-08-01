@@ -1,0 +1,524 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "ISMS.1 Sicherheitsmanagement",
+    "handle": "ISMS.1",
+    "text": "The ISMS.1 chapter describes the process of establishing and maintaining an Information Security Management System (ISMS). It emphasizes the importance of a systematic approach to security, including risk assessment, vulnerability management, and incident response. The chapter also highlights the need for clear responsibilities, documented procedures, and regular reviews.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlende persönliche Verantwortung im Sicherheitsprozess",
+            "handle": "2.1",
+            "text": "If roles and responsibilities in the security process are not clearly defined, employees may not take ownership of security measures. This can lead to a lack of implementation and a reliance on higher-level management to address security concerns.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Lack of Security Awareness",
+                    "type": "Threat",
+                    "text": "Employees may not understand the importance of security measures or their role in protecting sensitive information. This can lead to careless actions that compromise security.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Resistance to Change",
+                    "type": "Threat",
+                    "text": "Employees may resist implementing security measures because they perceive them as an inconvenience or a burden on their workflow.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Mangelnde Unterstützung durch die Institutionsleitung",
+            "handle": "2.2",
+            "text": "Without strong support from leadership, security initiatives may face resistance and lack the necessary resources to be successful. This can lead to a lack of commitment to security and a perception that security is not a priority.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Lack of Funding",
+                    "type": "Threat",
+                    "text": "Leadership may not allocate sufficient funds for security measures, leading to a lack of resources for implementation and maintenance.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Lack of Authority",
+                    "type": "Threat",
+                    "text": "Security personnel may lack the authority to enforce security measures, leading to a lack of compliance and a perception that security is not a priority.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende strategische und konzeptionelle Vorgaben",
+            "handle": "2.3",
+            "text": "A lack of clear strategic direction and a well-defined security concept can lead to inconsistent implementation of security measures. This can result in a fragmented approach to security and a lack of overall effectiveness.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Lack of Alignment",
+                    "type": "Threat",
+                    "text": "Security measures may not be aligned with the organization's overall business objectives, leading to a lack of support and a perception that security is not a priority.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Lack of Resources",
+                    "type": "Threat",
+                    "text": "The organization may not allocate sufficient resources for security measures, leading to a lack of implementation and maintenance.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende oder fehlgeleitete Investitionen",
+            "handle": "2.4",
+            "text": "Insufficient or misdirected investments in security can lead to a lack of effectiveness and a perception that security is not a priority. This can result in a fragmented approach to security and a lack of overall effectiveness.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Overspending on Technology",
+                    "type": "Threat",
+                    "text": "The organization may invest heavily in security technology without addressing underlying organizational weaknesses, leading to a false sense of security.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Underinvestment in Training",
+                    "type": "Threat",
+                    "text": "The organization may not invest enough in security training for employees, leading to a lack of awareness and understanding of security best practices.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Durchsetzbarkeit von Sicherheitsmaßnahmen",
+            "handle": "2.5",
+            "text": "A lack of coordination and cooperation between different departments can hinder the implementation and effectiveness of security measures. This can lead to a fragmented approach to security and a lack of overall effectiveness.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Lack of Communication",
+                    "type": "Threat",
+                    "text": "Different departments may not communicate effectively about security risks and measures, leading to a lack of awareness and coordination.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Lack of Collaboration",
+                    "type": "Threat",
+                    "text": "Different departments may not collaborate effectively on security initiatives, leading to a lack of ownership and a perception that security is not a priority.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlende Aktualisierung im Sicherheitsprozess",
+            "handle": "2.6",
+            "text": "A lack of regular review and updating of security measures can lead to a decline in effectiveness and a false sense of security. This can result in a fragmented approach to security and a lack of overall effectiveness.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Outdated Security Policies",
+                    "type": "Threat",
+                    "text": "Security policies may not be updated to reflect changes in technology, threats, and business practices, leading to a lack of effectiveness.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Lack of Awareness of New Threats",
+                    "type": "Threat",
+                    "text": "The organization may not be aware of new threats and vulnerabilities, leading to a lack of preparedness and a false sense of security.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verstoß gegen gesetzliche Regelungen und vertragliche Vereinbarungen",
+            "handle": "2.7",
+            "text": "Failure to comply with legal and contractual obligations related to information security can lead to significant legal and financial consequences. This can result in a loss of trust, reputation, and business.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Data Breaches",
+                    "type": "Threat",
+                    "text": "A data breach can lead to the unauthorized disclosure of sensitive information, resulting in legal penalties, reputational damage, and financial losses.",
+                    "hasOrigin": [
+                        "human",
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "deliberate",
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Contractual Violations",
+                    "type": "Threat",
+                    "text": "Failure to comply with contractual obligations related to information security can lead to financial penalties, termination of contracts, and reputational damage.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Störung der Geschäftsabläufe aufgrund von Sicherheitsvorfällen",
+            "handle": "2.8",
+            "text": "Security incidents can disrupt business operations, leading to financial losses, reputational damage, and loss of customer trust. This can result in a loss of productivity, efficiency, and competitive advantage.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "System Downtime",
+                    "type": "Threat",
+                    "text": "A security incident can cause a system to go down, leading to a loss of productivity and revenue.",
+                    "hasOrigin": [
+                        "human",
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "deliberate",
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Data Loss",
+                    "type": "Threat",
+                    "text": "A security incident can lead to the loss of sensitive data, resulting in financial losses, reputational damage, and legal penalties.",
+                    "hasOrigin": [
+                        "human",
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "deliberate",
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unwirtschaftlicher Umgang mit Ressourcen durch unzureichendes Sicherheitsmanagement",
+            "handle": "2.9",
+            "text": "Inefficient use of resources for security can lead to a lack of effectiveness and a perception that security is not a priority. This can result in a fragmented approach to security and a lack of overall effectiveness.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Overspending on Security Technology",
+                    "type": "Threat",
+                    "text": "The organization may invest heavily in security technology without addressing underlying organizational weaknesses, leading to a false sense of security.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Underinvestment in Security Training",
+                    "type": "Threat",
+                    "text": "The organization may not invest enough in security training for employees, leading to a lack of awareness and understanding of security best practices.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Übernahme der Gesamtverantwortung für Informationssicherheit durch die Leitung",
+            "handle": "ISMS.1.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Institutionsleitung MUSS die Gesamtverantwortung für Informationssicherheit in der Institution übernehmen. Dies MUSS für alle Beteiligten deutlich erkennbar sein. Die Institutionsleitung MUSS den Sicherheitsprozess initiieren, steuern und kontrollieren. Die Institutionsleitung MUSS Informationssicherheit vorleben.\n\nDie Institutionsleitung MUSS die Zuständigkeiten für Informationssicherheit festlegen. Die zuständigen Mitarbeitenden MÜSSEN mit den erforderlichen Kompetenzen und Ressourcen ausgestattet werden.\n\nDie Institutionsleitung MUSS sich regelmäßig über den Status der Informationssicherheit informieren lassen. Insbesondere MUSS sich die Institutionsleitung über mögliche Risiken und Konsequenzen aufgrund fehlender Sicherheitsmaßnahmen informieren lassen.",
+            "isresponsible": "Institutionsleitung",
+            "mitigates": [
+                "G 0.18",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Festlegung der Sicherheitsziele und -strategie",
+            "handle": "ISMS.1.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Institutionsleitung MUSS den Sicherheitsprozess initiieren und etablieren. Dafür MUSS die Institutionsleitung angemessene Sicherheitsziele sowie eine Strategie für Informationssicherheit festlegen und dokumentieren. Es MÜSSEN konzeptionelle Vorgaben erarbeitet und organisatorische Rahmenbedingungen geschaffen werden, um den ordnungsgemäßen und sicheren Umgang mit Informationen innerhalb aller Geschäftsprozesse des Unternehmens oder Fachaufgaben der Behörde zu ermöglichen.\n\nDie Institutionsleitung MUSS die Sicherheitsstrategie und die Sicherheitsziele tragen und verantworten. Die Institutionsleitung MUSS die Sicherheitsziele und die Sicherheitsstrategie regelmäßig dahingehend überprüfen, ob sie noch aktuell und angemessen sind und wirksam umgesetzt werden können.",
+            "isresponsible": "Institutionsleitung",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erstellung einer Leitlinie zur Informationssicherheit",
+            "handle": "ISMS.1.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Institutionsleitung MUSS eine übergeordnete Leitlinie zur Informationssicherheit verabschieden. Diese MUSS den Stellenwert der Informationssicherheit, die Sicherheitsziele, die wichtigsten Aspekte der Sicherheitsstrategie sowie die Organisationsstruktur für Informationssicherheit beschreiben. Für die Sicherheitsleitlinie MUSS ein klarer Geltungsbereich festgelegt sein. In der Leitlinie zur Informationssicherheit MÜSSEN die Sicherheitsziele und der Bezug der Sicherheitsziele zu den Geschäftszielen und Aufgaben der Institution erläutert werden.\n\nDie Institutionsleitung MUSS die Leitlinie zur Informationssicherheit allen Mitarbeitenden und sonstigen Mitgliedern der Institution bekannt geben. Die Leitlinie zur Informationssicherheit SOLLTE regelmäßig aktualisiert werden.",
+            "isresponsible": "Institutionsleitung",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Benennung eines oder einer Informationssicherheitsbeauftragten",
+            "handle": "ISMS.1.A4",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Institutionsleitung MUSS einen oder eine ISB benennen. Der oder die ISB MUSS die Informationssicherheit in der Institution fördern und den Sicherheitsprozess mitsteuern und koordinieren.\n\nDie Institutionsleitung MUSS den oder die ISB mit angemessenen Ressourcen ausstatten. Die Institutionsleitung MUSS dem oder der ISB die Möglichkeit einräumen, bei Bedarf direkt an sie selbst zu berichten.\n\nDer oder die ISB MUSS bei allen größeren Projekten sowie bei der Einführung neuer Anwendungen und IT-Systeme frühzeitig beteiligt werden.",
+            "isresponsible": "Institutionsleitung",
+            "mitigates": [
+                "G 0.18",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Vertragsgestaltung bei Bestellung eines oder einer externen Informationssicherheitsbeauftragten",
+            "handle": "ISMS.1.A5",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Institutionsleitung MUSS einen externen oder eine externe ISB bestellen, wenn die Rolle des oder der ISB nicht durch einen internen Mitarbeitenden besetzt werden kann. Der Vertrag mit einem oder einer externen ISB MUSS alle Aufgaben des oder der ISB sowie die damit verbundenen Rechte und Pflichten umfassen. Der Vertrag MUSS eine geeignete Vertraulichkeitsvereinbarung umfassen. Der Vertrag MUSS eine kontrollierte Beendigung des Vertragsverhältnisses, einschließlich der Übergabe der Aufgaben an die Auftraggebenden, gewährleisten.",
+            "isresponsible": "Institutionsleitung",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Aufbau einer geeigneten Organisationsstruktur für Informationssicherheit",
+            "handle": "ISMS.1.A6",
+            "level": "Low",
+            "affects": [],
+            "text": "Eine geeignete übergreifende Organisationsstruktur für Informationssicherheit MUSS vorhanden sein. Dafür MÜSSEN Rollen definiert sein, die konkrete Aufgaben übernehmen, um die Sicherheitsziele zu erreichen. Außerdem MÜSSEN qualifizierte Personen benannt werden, denen ausreichend Ressourcen zur Verfügung stehen, um diese Rollen zu übernehmen. Die Aufgaben, Rollen, Verantwortungen und Kompetenzen im Sicherheitsmanagement MÜSSEN nachvollziehbar definiert und zugewiesen sein. Für alle wichtigen Funktionen der Organisation für Informationssicherheit MUSS es wirksame Vertretungsregelungen geben.\n\nKommunikationswege MÜSSEN geplant, beschrieben, eingerichtet und bekannt gemacht werden. Es MUSS für alle Aufgaben und Rollen festgelegt sein, wer wen informiert und wer bei welchen Aktionen in welchem Umfang informiert werden muss.\n\nEs MUSS regelmäßig geprüft werden, ob die Organisationsstruktur für Informationssicherheit noch angemessen ist oder ob sie an neue Rahmenbedingungen angepasst werden muss.",
+            "isresponsible": "Institutionsleitung",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Festlegung von Sicherheitsmaßnahmen",
+            "handle": "ISMS.1.A7",
+            "level": "Low",
+            "affects": [],
+            "text": "Im Rahmen des Sicherheitsprozesses MÜSSEN für die gesamte Informationsverarbeitung ausführliche und angemessene Sicherheitsmaßnahmen festgelegt werden. Alle Sicherheitsmaßnahmen SOLLTEN systematisch in Sicherheitskonzepten dokumentiert werden. Die Sicherheitsmaßnahmen SOLLTEN regelmäßig aktualisiert werden.",
+            "isresponsible": "Institutionsleitung",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Integration der Mitarbeitenden in den Sicherheitsprozess",
+            "handle": "ISMS.1.A8",
+            "level": "Low",
+            "affects": [],
+            "text": "Alle Mitarbeitenden MÜSSEN in den Sicherheitsprozess integriert sein. Hierfür MÜSSEN sie über Hintergründe und die für sie relevanten Gefährdungen informiert sein. Sie MÜSSEN Sicherheitsmaßnahmen kennen und umsetzen, die ihren Arbeitsplatz betreffen.\n\nAlle Mitarbeitenden MÜSSEN in die Lage versetzt werden, Sicherheit aktiv mitzugestalten. Daher SOLLTEN die Mitarbeitenden frühzeitig beteiligt werden, wenn Sicherheitsmaßnahmen zu planen oder organisatorische Regelungen zu gestalten sind.\n\nBei der Einführung von Sicherheitsrichtlinien und Sicherheitswerkzeugen MÜSSEN die Mitarbeitenden ausreichend informiert sein, wie diese anzuwenden sind.\n\nDie Mitarbeitenden MÜSSEN darüber aufgeklärt werden, welche Konsequenzen eine Verletzung der Sicherheitsvorgaben haben kann.",
+            "isresponsible": "Vorgesetzte",
+            "mitigates": [
+                "G 0.18",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Integration der Informationssicherheit in organisationsweite Abläufe und Prozesse",
+            "handle": "ISMS.1.A9",
+            "level": "Low",
+            "affects": [],
+            "text": "Informationssicherheit MUSS in alle Geschäftsprozesse sowie Fachaufgaben integriert werden. Es MUSS dabei gewährleistet sein, dass nicht nur bei neuen Prozessen und Projekten, sondern auch bei laufenden Aktivitäten alle erforderlichen Sicherheitsaspekte berücksichtigt werden. Der oder die Informationssicherheitsbeauftragte (ISB) MUSS an sicherheitsrelevanten Entscheidungen ausreichend beteiligt werden.\n\nInformationssicherheit SOLLTE außerdem mit anderen Bereichen in der Institution, die sich mit Sicherheit und Risikomanagement beschäftigen, abgestimmt werden.",
+            "isresponsible": "Institutionsleitung",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erstellung eines Sicherheitskonzepts",
+            "handle": "ISMS.1.A10",
+            "level": "Medium",
+            "affects": [],
+            "text": "Für den festgelegten Geltungsbereich (Informationsverbund) SOLLTE ein angemessenes Sicherheitskonzept als das zentrale Dokument im Sicherheitsprozess erstellt werden. Es SOLLTE entschieden werden, ob das Sicherheitskonzept aus einem oder aus mehreren Teilkonzepten bestehen soll, die sukzessive erstellt werden, um zunächst in ausgewählten Bereichen das erforderliche Sicherheitsniveau herzustellen.\n\nIm Sicherheitskonzept MÜSSEN aus den Sicherheitszielen der Institution, dem identifizierten Schutzbedarf und der Risikobewertung konkrete Sicherheitsmaßnahmen passend zum betrachteten Informationsverbund abgeleitet werden. Sicherheitsprozess und Sicherheitskonzept MÜSSEN die individuell geltenden Vorschriften und Regelungen berücksichtigen.\n\nDie im Sicherheitskonzept vorgesehenen Maßnahmen MÜSSEN zeitnah in die Praxis umgesetzt werden. Dies MUSS geplant und die Umsetzung MUSS kontrolliert werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Aufrechterhaltung der Informationssicherheit",
+            "handle": "ISMS.1.A11",
+            "level": "Medium",
+            "affects": [],
+            "text": "Der Sicherheitsprozess, die Sicherheitskonzepte, die Leitlinie zur Informationssicherheit und die Organisationsstruktur für Informationssicherheit SOLLTEN regelmäßig auf Wirksamkeit und Angemessenheit überprüft und aktualisiert werden. Dazu SOLLTEN regelmäßig Vollständigkeits- bzw. Aktualisierungsprüfungen des Sicherheitskonzeptes durchgeführt werden.\n\nEbenso SOLLTEN regelmäßig Sicherheitsrevisionen durchgeführt werden. Dazu SOLLTE geregelt sein, welche Bereiche und Sicherheitsmaßnahmen wann und von wem zu überprüfen sind. Überprüfungen des Sicherheitsniveaus SOLLTEN regelmäßig (mindestens jährlich) sowie anlassbezogen durchgeführt werden.\n\nDie Prüfungen SOLLTEN von qualifizierten und unabhängigen Personen durchgeführt werden. Die Ergebnisse der Überprüfungen SOLLTEN nachvollziehbar dokumentiert sein. Darauf aufbauend SOLLTEN Mängel beseitigt und Korrekturmaßnahmen ergriffen werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Management-Berichte zur Informationssicherheit",
+            "handle": "ISMS.1.A12",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Institutionsleitung SOLLTE sich regelmäßig über den Stand der Informationssicherheit informieren, insbesondere über die aktuelle Gefährdungslage sowie die Wirksamkeit und Effizienz des Sicherheitsprozesses. Dazu SOLLTEN Management-Berichte geschrieben werden, welche die wesentlichen relevanten Informationen über den Sicherheitsprozess enthalten, insbesondere über Probleme, Erfolge und Verbesserungsmöglichkeiten. Die Management-Berichte SOLLTEN klar priorisierte Maßnahmenvorschläge enthalten. Die Maßnahmenvorschläge SOLLTEN mit realistischen Abschätzungen zum erwarteten Umsetzungsaufwand versehen sein. Die Management-Berichte SOLLTEN revisionssicher archiviert werden.\n\nDie Management-Entscheidungen über erforderliche Aktionen, den Umgang mit Restrisiken und mit Veränderungen von sicherheitsrelevanten Prozessen SOLLTEN dokumentiert sein. Die Management-Entscheidungen SOLLTEN revisionssicher archiviert werden.",
+            "isresponsible": "Institutionsleitung",
+            "mitigates": [
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Dokumentation des Sicherheitsprozesses",
+            "handle": "ISMS.1.A13",
+            "level": "Medium",
+            "affects": [],
+            "text": "Der Ablauf des Sicherheitsprozesses SOLLTE dokumentiert werden. Wichtige Entscheidungen und die Arbeitsergebnisse der einzelnen Phasen wie Sicherheitskonzept, Richtlinien oder Untersuchungsergebnisse von Sicherheitsvorfällen SOLLTEN ausreichend dokumentiert werden.\n\nEs SOLLTE eine geregelte Vorgehensweise für die Erstellung und Archivierung von Dokumentationen im Rahmen des Sicherheitsprozesses geben. Regelungen SOLLTEN existieren, um die Aktualität und Vertraulichkeit der Dokumentationen zu wahren. Von den vorhandenen Dokumenten SOLLTE die jeweils aktuelle Version kurzfristig zugänglich sein. Außerdem SOLLTEN alle Vorgängerversionen zentral archiviert werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Wirtschaftlicher Einsatz von Ressourcen für Informationssicherheit",
+            "handle": "ISMS.1.A15",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Sicherheitsstrategie SOLLTE wirtschaftliche Aspekte berücksichtigen. Werden Sicherheitsmaßnahmen festgelegt, SOLLTEN die dafür erforderlichen Ressourcen beziffert werden. Die für Informationssicherheit eingeplanten Ressourcen SOLLTEN termingerecht bereitgestellt werden. Bei Arbeitsspitzen oder besonderen Aufgaben SOLLTEN zusätzliche interne Mitarbeitenden eingesetzt oder externe Expertise hinzugezogen werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erstellung von zielgruppengerechten Sicherheitsrichtlinien",
+            "handle": "ISMS.1.A16",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Neben den allgemeinen SOLLTE es auch zielgruppenorientierte Sicherheitsrichtlinien geben, die jeweils bedarfsgerecht die relevanten Sicherheitsthemen abbilden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Abschließen von Versicherungen",
+            "handle": "ISMS.1.A17",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Es SOLLTE geprüft werden, ob für Restrisiken Versicherungen abgeschlossen werden können. Es SOLLTE regelmäßig überprüft werden, ob die bestehenden Versicherungen der aktuellen Lage entsprechen.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18"
+            ]
+        }
+    ]
+}

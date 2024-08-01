@@ -1,0 +1,335 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "SYS.2.6 Virtual Desktop Infrastructure",
+    "handle": "SYS.2.6",
+    "text": "Eine Virtual Desktop Infrastructure (VDI) steuert und verwaltet standardisierte virtuelle Clients. Hierdurch können zentralisiert einzelne Anwendungen (z. B. Office-Programme) oder ganze Desktops zur Verfügung gestellt werden. Virtuelle Clients sind dabei virtualisierte IT-Systeme, auf die über Terminalserver-Protokolle zugegriffen werden kann. Die virtuellen Clients werden auf Virtualisierungsservern ausgeführt, die mit einem Managementsystem zu einer Virtualisierungsinfrastruktur zusammengefasst werden (siehe Bausteine SYS.1.5 Virtualisierung und SYS.2.5 Client-Virtualisierung).",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Qualitätsverlust der Bereitstellung virtueller Clients",
+            "handle": "2.1",
+            "text": "Eine VDI wird in vielen Fällen dazu eingesetzt, um Ressourcen zu optimieren. Werden jedoch viele virtuelle Clients auf einzelnen Virtualisierungsservern platziert, können die verfügbaren Ressourcen überbucht werden. Auch wenn die geplante Anzahl der Benutzenden unzutreffend eingeschätzt wurde, können die Ressourcen überbucht werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Überlastung der Ressourcen",
+                    "type": "Threat",
+                    "text": "Hierdurch können virtuelle Clients in der VDI stark um Ressourcen konkurrieren und die Leistung kann unvorhersehbar einbrechen. Das kann dazu führen, dass die virtuellen Clients temporär nicht mehr verfügbar sind."
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Falsche Zuweisung von virtuellen Clients zu Benutzenden",
+            "handle": "2.2",
+            "text": "Den Benutzenden werden virtuelle Clients und deren Ressourcen anhand von Profilen von der VDI zentralisiert zugewiesen. Sollte eine solche Zuweisung fehlerhaft sein, können hierdurch hohe Kosten entstehen, wenn leistungsstarke virtuelle Clients an Benutzende ohne großen Ressourcenbedarf zugewiesen werden, virtuelle Clients mit geringer Leistung an Benutzende mit hohem Ressourcenbedarf oder besonderen Hardwareanforderungen, z. B. für CAD-Aufgaben, zugewiesen werden, Benutzende auf IT-Systeme und Informationen unberechtigt zugreifen oder externe USB-Geräte angebunden und Informationen an nicht dafür vorgesehene virtuelle Clients übertragen werden.",
+            "exploitedBy_examples": [],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Netztrennung durch Fehlkonfiguration in der VDI",
+            "handle": "2.3",
+            "text": "Typischerweise werden in einer VDI-Lösung unterschiedliche virtuelle Clients betrieben, die sich stark in ihren Anwendungsbereichen unterscheiden und entsprechend auch unterschiedlichen Netzen zugeordnet sein können. Die VDI-Managementkomponente verwaltet alle diese Clients. Ist die VDI-Managementkomponente fehlerhaft konfiguriert, kann eine notwendige Netztrennung aufgehoben werden. Unter Umständen können hierdurch virtuelle Clients unerlaubt miteinander kommunizieren. Diese Situation ergibt sich beispielsweise, wenn die virtuellen Clients den Benutzenden auf Basis von Eigenschaften wie Gruppenzugehörigkeiten zugewiesen und falsch zugeordnet werden. In diesem Fall kann eine Netztrennung umgangen werden, die eigentlich zwischen Clients verschiedener Gruppen bestehen sollte.",
+            "exploitedBy_examples": [],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verlust von virtuellen Clients durch Fehlkonfiguration in der VDI",
+            "handle": "2.4",
+            "text": "Eine Stärke von VDI ist es, dass viele verschiedene virtuelle Clients über wenige Vorlagen (Templates) einfach verwaltet werden können. Damit können neue Desktops schnell provisioniert sowie fehlerhafte Desktops repariert oder ausgetauscht werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Verlust von Daten",
+                    "type": "Threat",
+                    "text": "Durch diese zentralisierte Verwaltung können aber durch gelöschte oder korrumpierte Templates virtuelle Clients verloren gehen. Werden bestimmte Daten von Benutzenden ausschließlich auf dem Speicher der virtuellen Clients abgelegt, führt der Verlust eines virtuellen Clients auch zu einem Verlust dieser Daten."
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ausfall von VDI-Komponenten",
+            "handle": "2.5",
+            "text": "Eine VDI besteht typischerweise aus mehreren Komponenten, die voneinander abhängen. Fällt auch nur eine dieser Komponenten aus, beispielsweise aufgrund von Hard- oder Software-Fehlern oder aufgrund von Fehlkonfigurationen, kann dies die Verfügbarkeit der gesamten VDI-Lösung und damit die Arbeitsfähigkeit der Benutzenden beeinträchtigen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Ausfall der VDI-Managementkomponente",
+                    "type": "Threat",
+                    "text": "Ein Ausfall einer oder mehrerer Komponenten kann sehr unterschiedliche Auswirkungen haben. Beispielsweise ist beim Ausfall der VDI-Managementkomponente prinzipiell ein normaler Arbeitsbetrieb möglich, aber es können keine Anpassungen vorgenommen werden. Dies kann unter anderem dazu führen, dass neue virtuelle Clients nicht bereitgestellt werden können, virtuelle Clients nach Fehlern nicht in einen funktionsfähigen Basiszustand zurückgesetzt werden können, das Troubleshooting erschwert wird, da die gesammelten Informationen der Managementfunktionen nicht verfügbar sind oder die Ressourcen eines virtuellen Clients nicht angepasst werden können, falls diese für Einzelne nicht ausreichen."
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Ausfall der Zugangs- oder Steuerungskomponenten",
+                    "type": "Threat",
+                    "text": "Die Zugangs- oder Steuerungskomponenten mancher VDI-Produkte bieten ohne die Managementkomponente nicht ihren vollen Funktionsumfang."
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unberechtigter Zugriff auf virtuelle Clients",
+            "handle": "2.6",
+            "text": "Eine VDI-Managementkomponente verwaltet alle zugehörigen Clients. Wird die VDI-Managementkomponente kompromittiert (beispielsweise aufgrund ausgenutzter Schwachstellen oder Fehlkonfiguration), kann von dort aus auf die virtuellen Clients zugegriffen werden. In diesem Fall können Verfügbarkeit, Vertraulichkeit oder Integrität der virtuellen Clients beeinträchtigt werden. Einige VDI-Lösungen bringen eine Agentensoftware mit sich, die innerhalb der virtuellen Clients genutzt und für bestimmte VDI-Funktionen (z. B. Verbindungsaufbau, 3D-Beschleunigung, Optimierung des Speicherverbrauchs) benötigt wird. Wirkt sich eine Fehlkonfiguration auf diese Agentensoftware aus, können die virtuellen Clients gefährdet sein.",
+            "exploitedBy_examples": [],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Nutzung von Templates mit Software-Schwachstellen",
+            "handle": "2.7",
+            "text": "In einer VDI können schnell und zentralisiert virtuelle Clients aus einer definierten Menge von Templates erzeugt werden. Wenn diese Templates erzeugt werden, sind sie in der Regel auf einem aktuellen Software-Stand ohne bekannte Schwachstellen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Ausnutzung von Schwachstellen",
+                    "type": "Threat",
+                    "text": "Ohne eine regelmäßige Aktualisierung dieser Templates ist es jedoch möglich, dass ein neu erzeugter virtueller Client Schwachstellen aufweist, die bekannt wurden, nachdem das Template erzeugt wurde. Können andere IT-Systeme auf diesen virtuellen Client zugreifen, kann die bekannte Schwachstelle ausgenutzt werden und somit der virtuelle Client kompromittiert werden."
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Planung des Einsatzes einer VDI",
+            "handle": "SYS.2.6.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Leistungsanforderungen und Anzahl der benötigten virtuellen Clients sowie die daraus resultierenden Anforderungen an die Dimensionierung der VDI MÜSSEN identifiziert werden. Die VDI-Komponenten MÜSSEN anhand dieser Dimensionierungsanforderungen bedarfsgerecht geplant werden. Die VDI-Komponenten und die genutzte Virtualisierungsinfrastruktur MÜSSEN aufeinander abgestimmt geplant werden. Bei der Dimensionierung der VDI MUSS berücksichtigt werden, ob und wie sich die Anforderungen hieran über den geplanten Einsatzzeitraum der VDI-Lösung ändern. Der Support MUSS für den gesamten geplanten Einsatzzeitraum der VDI-Lösung bei der Planung mitberücksichtig werden. Die Anzahl virtueller Clients und deren benötigte Leistung pro Virtualisierungsserver MUSS festgelegt werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.9",
+                "G 0.18",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Installation und Konfiguration der VDI-Komponenten",
+            "handle": "SYS.2.6.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Wenn die VDI-Komponenten installiert und konfiguriert werden, MUSS mindestens berücksichtigt werden, wie: auf betrieblich und technisch notwendige Funktionen beschränkt wird, die Kommunikation zwischen VDI-Komponenten abgesichert wird sowie virtuelle Clients sicher den Benutzenden oder Gruppen hiervon zugewiesen werden. Empfehlungen von dem herstellenden Unternehmen der VDI-Lösung für die sichere Konfiguration MÜSSEN berücksichtigt werden. Die Konfigurationen der VDI-Komponenten MÜSSEN geeignet dokumentiert werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.9",
+                "G 0.28",
+                "G 0.30",
+                "G 0.31",
+                "G 0.36",
+                "G 0.45"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Installation und Konfiguration der virtuellen Clients mithilfe der VDI",
+            "handle": "SYS.2.6.A3",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die VDI-Lösung SOLLTE genutzt werden, um die virtuellen Clients zu installieren und zu konfigurieren. Virtuelle Clients SOLLTEN NICHT manuell in die VDI-Lösung integriert werden. In der für die VDI verwendeten Virtualisierungsinfrastruktur SOLLTEN virtuelle Clients NICHT unabhängig von der VDI erzeugt werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.28",
+                "G 0.31",
+                "G 0.36"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Netzsegmentierung der VDI-Komponenten",
+            "handle": "SYS.2.6.A4",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die VDI-Komponenten inklusive der virtuellen Clients SOLLTEN bei der Netzsegmentierung gesondert berücksichtigt werden. Netze SOLLTEN dabei mindestens mit Hilfe der Virtualisierungsinfrastruktur getrennt werden. Dedizierte Netzsegmente SOLLTEN mindestens für das Administrationsnetz der VDI-Komponenten und für die Netze der internen Kommunikation zwischen VDI-Komponenten eingerichtet werden.",
+            "isresponsible": "Planende",
+            "mitigates": [
+                "G 0.23"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Standardisierter Zugriff auf virtuelle Clients",
+            "handle": "SYS.2.6.A5",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Mechanismen und Dienste der VDI-Lösung SOLLTEN genutzt werden, um die Zugriffe auf die virtuellen Clients zu steuern und abzusichern. Falls eine zusätzliche Software für diese Zugriffe auf den zugreifenden Clients eingesetzt wird, SOLLTE diese Software standardisiert und zentralisiert bereitgestellt werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.23",
+                "G 0.28",
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung einer dedizierten Infrastruktur für virtuelle VDI-Komponenten",
+            "handle": "SYS.2.6.A6",
+            "level": "Medium",
+            "affects": [],
+            "text": "Falls die VDI-Komponenten virtualisiert betrieben werden, SOLLTEN sie auf einer dedizierten Virtualisierungsinfrastruktur betrieben werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.23",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Härtung der virtualisierten Clients durch die VDI-Lösung",
+            "handle": "SYS.2.6.A7",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Möglichkeiten der VDI-Lösung SOLLTEN für die Härtung der virtuellen Clients entsprechend den Anforderungen des Bausteins SYS.2.5 Client-Virtualisierung genutzt werden. Die Betriebssysteme der Clients SOLLTEN ausschließlich über die Managementkomponente der VDI-Lösung konfiguriert werden. Eine individuelle Konfiguration bestehender virtueller Clients über die Virtualisierungsinfrastruktur SOLLTE mit technischen Mitteln unterbunden werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.23",
+                "G 0.28",
+                "G 0.36"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Härtung der VDI-Lösung",
+            "handle": "SYS.2.6.A8",
+            "level": "Medium",
+            "affects": [],
+            "text": "Eine automatische Anmeldung an der VDI SOLLTE nicht möglich sein. Die Authentisierung SOLLTE nur erfolgen, nachdem die Benutzenden mit der VDI interagiert haben.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.23",
+                "G 0.28",
+                "G 0.31",
+                "G 0.36"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einbindung der virtuellen Clients in das Patch- und Änderungsmanagement",
+            "handle": "SYS.2.6.A9",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die virtuellen Clients SOLLTEN, wenn möglich, zentral über die Managementkomponenten der VDI-Lösung verwaltet werden. Die virtuellen Clients SOLLTEN auch im ausgeschalteten Zustand gepatcht werden, falls dies von der VDI-Lösung unterstützt wird. Die Templates, aus denen virtuelle Clients erzeugt werden, SOLLTEN regelmäßig aktualisiert werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.28",
+                "G 0.31",
+                "G 0.36",
+                "G 0.45"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Monitoring von Verfügbarkeit und Nutzungsgrad der VDI",
+            "handle": "SYS.2.6.A10",
+            "level": "Medium",
+            "affects": [],
+            "text": "Der Zustand der VDI-Komponenten SOLLTE zentral überwacht werden. Es SOLLTEN mindestens folgende Parameter für jede VDI-Komponente überwacht werden: Erreichbarkeit der benötigten Netzschnittstellen Verfügbarkeit der von der VDI-Komponente bereitgestellten Dienste Auslastung der CPU und des Arbeitsspeichers",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Monitoring von sicherheitsrelevanten Ereignissen der VDI",
+            "handle": "SYS.2.6.A11",
+            "level": "Medium",
+            "affects": [],
+            "text": "Für die VDI-Komponenten SOLLTEN mindestens die folgenden Ereignisse an ein zentrales Monitoring weitergeleitet werden: erfolgreiche und fehlgeschlagene Anmeldeversuche Konfigurationsänderungen an VDI-Komponenten oder virtuellen Clients erfolgreiche und fehlgeschlagene Updates an VDI-Komponenten fehlgeschlagene Updates an virtuellen Clients Die VDI-Komponenten SOLLTEN regelmäßig auf Schwachstellen überprüft werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.23",
+                "G 0.30",
+                "G 0.36"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verteilung von virtuellen Clients auf Virtualisierungsservern",
+            "handle": "SYS.2.6.A12",
+            "level": "Medium",
+            "affects": [],
+            "text": "Pro Virtualisierungsserver SOLLTE die maximale Leistung festgelegt werden, die dieser für virtuelle Clients zur Verfügung stellen darf. Diese Grenzwerte SOLLTEN in der VDI-Managementkomponente genutzt werden, um bei hoher Auslastung die virtuellen Clients auf verschiedene Virtualisierungsserver zu verteilen.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung getrennter VDI-Lösungen für unterschiedliche Benutzendengruppen",
+            "handle": "SYS.2.6.A13",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Es SOLLTE geprüft werden, ob es Benutzendengruppen gibt, die sich in ihren Berechtigungen so stark unterscheiden, dass die Nutzung einer gemeinsamen VDI-Lösung nicht sinnvoll ist. In diesem Fall SOLLTE jeweils eine eigene VDI-Lösung pro Benutzendengruppe verwendet werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.23",
+                "G 0.36"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung von nicht-persistenten virtuellen Clients",
+            "handle": "SYS.2.6.A14",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Nachdem sie benutzt wurden oder zu einem definierten Zeitpunkt SOLLTEN die virtuellen Clients auf ihren Grundzustand, d. h. auf das zugrundeliegende Template, zurückgesetzt oder bei Bedarf neu provisioniert werden. Diese Zeitfenster SOLLTEN dokumentiert und an die Betroffenen kommuniziert werden. Nicht zurückgesetzte virtuelle Clients SOLLTEN NICHT von mehreren unterschiedlichen Benutzenden verwendet werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.28",
+                "G 0.36"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Hochverfügbare Bereitstellung der VDI-Komponenten",
+            "handle": "SYS.2.6.A15",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Die VDI-Komponenten SOLLTEN redundant ausgelegt werden. Jede Komponente SOLLTE darüber hinaus redundant an die relevanten Netze angeschlossen werden. Falls die VDI-Komponenten auf physischen IT-Systemen betrieben werden, SOLLTEN diese IT-Systeme über redundante Stromversorgung und Datenspeicher verfügen. Falls die VDI-Komponenten virtualisiert betrieben werden, SOLLTEN Mechanismen der Virtualisierungsinfrastruktur für die Hochverfügbarkeit eingesetzt werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.9",
+                "G 0.45"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Integration der VDI in ein SIEM",
+            "handle": "SYS.2.6.A16",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Wird ein Security Information and Event Management (SIEM) genutzt, SOLLTEN die VDI-Komponenten darin eingebunden werden. Im SIEM SOLLTEN die überwachten Ereignisse automatisiert hinsichtlich Anomalien inklusive Angriffsmustern analysiert werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.23",
+                "G 0.30"
+            ]
+        }
+    ]
+}

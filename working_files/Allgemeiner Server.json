@@ -1,0 +1,602 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "Allgemeiner Server",
+    "handle": "SYS.1.1",
+    "text": "Als \"Allgemeiner Server\" werden IT-Systeme mit einem beliebigen Betriebssystem bezeichnet, die Benutzenden und anderen IT-Systemen Dienste bereitstellen. Diese Dienste können Basisdienste für das lokale oder externe Netz sein, oder auch den E-Mail-Austausch ermöglichen oder Datenbanken und Druckerdienste anbieten. Server-IT-Systeme haben eine zentrale Bedeutung für die Informationstechnik und damit für funktionierende Arbeitsabläufe einer Institution. Oft erfüllen Server Aufgaben im Hintergrund, ohne dass Benutzende direkt mit ihnen im Austausch stehen. Auf der anderen Seite gibt es Serverdienste, die direkt mit den Benutzenden interagieren und nicht auf den ersten Blick als Serverdienst wahrgenommen werden. Ein bekanntes Beispiel sind X-Server unter Unix.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Planung",
+            "handle": "2.1",
+            "text": "Server sind komplexe IT-Systeme mit einer großen Anzahl an Funktionen und Konfigurationsoptionen. Auch wenn moderne Server-Betriebssysteme in vielen Bereichen gute Standardeinstellungen mitbringen, ist die Grundkonfiguration immer noch nicht in jedem Fall die sicherste. Dies kann bei unzureichender Planung zu einer Vielzahl von Schwachstellen und Schwächen durch Fehlkonfiguration führen, die von unberechtigten Dritten leicht ausgenutzt werden können. Werden außerdem nicht schon vor der Installation zentrale Entscheidungen getroffen, werden Server oft in einem unsicheren und undefinierten Zustand ausgeführt, der sich nachträglich kaum mehr beheben lässt.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Fehlkonfiguration",
+                    "type": "Threat",
+                    "text": "Fehlkonfigurationen können zu einer Vielzahl von Schwachstellen und Schwächen führen, die von unberechtigten Dritten leicht ausgenutzt werden können.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlerhafte Administration von Servern",
+            "handle": "2.2",
+            "text": "Neue Versionen von Server-Betriebssystemen werden im Vergleich zu den Vorgängerversionen regelmäßig um neue Funktionen erweitert. Auch bei bereits vorhandenen Features können sich Teilfunktionen, Parameter oder Standardkonfigurationen in neuen Versionen verändern. Ist der IT-Betrieb der Institution nicht ausreichend in den Besonderheiten der Betriebssysteme geschult, drohen Konfigurationsfehler und menschliche Fehlhandlungen, die neben der Funktionalität auch die Sicherheit des IT-Systems beeinträchtigen können.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Konfigurationsfehler",
+                    "type": "Threat",
+                    "text": "Konfigurationsfehler können neben der Funktionalität auch die Sicherheit des IT-Systems beeinträchtigen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Menschliche Fehlhandlungen",
+                    "type": "Threat",
+                    "text": "Menschliche Fehlhandlungen können neben der Funktionalität auch die Sicherheit des IT-Systems beeinträchtigen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unberechtigtes Erlangen oder Missbrauch von Administrationsrechten",
+            "handle": "2.3",
+            "text": "Die reguläre Arbeit mit Administrationsrechten, wie beispielsweise die Erledigung von Aufgaben und Tätigkeiten, die auf einem Client-System grundsätzlich mit Standardberechtigungen vorgesehen und möglich sind, stellt auf einem Server ein Sicherheitsrisiko dar. Sind gesonderte administrative Konten nicht auf die minimal notwendigen Rechte zur Durchführung administrativer Tätigkeiten beschränkt (\"Least Privilege“-Prinzip), können bei Übernahme solcher Konten weitreichende Rechte auf dem Server oder weiteren IT-Systemen erlangt und hoher Schaden verursacht werden. Auch ein Missbrauch von Rechten durch legitime Administrierende ist ein relevantes Schadensszenario. Da die Rollen oft sehr mächtig sind, sind hier die Auswirkungen in der Regel beträchtlich, etwa bei den sogenannten Domänenadministratoren. Auch ohne Passwörter zu erraten oder zu brechen, können z. B. durch sogenannte Pass-the-Hash-Verfahren geeignete Credentials ausgelesen und missbraucht werden, um sich lateral im Netz weiterzubewegen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Übernahme von Administrationskonten",
+                    "type": "Threat",
+                    "text": "Bei Übernahme von Administrationskonten können weitreichende Rechte auf dem Server oder weiteren IT-Systemen erlangt und hoher Schaden verursacht werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Missbrauch von Rechten durch legitime Administrierende",
+                    "type": "Threat",
+                    "text": "Missbrauch von Rechten durch legitime Administrierende kann zu beträchtlichen Schäden führen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Datenverlust",
+            "handle": "2.4",
+            "text": "Der Verlust von Daten kann besonders bei Servern erhebliche Auswirkungen auf Geschäftsprozesse und Fachaufgaben und damit auf die gesamte Institution haben. Sehr viele IT-Systeme wie Clients oder andere Server sind in der Regel darauf angewiesen, dass die dort zentral gespeicherten Daten immer verfügbar sind.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Zerstörung oder Verfälschung von Daten",
+                    "type": "Threat",
+                    "text": "Zerstörung oder Verfälschung von Daten kann zu langfristigen Konsequenzen wie Vertrauenseinbußen in Geschäftsbeziehungen, zu juristischen Auswirkungen sowie zu einem negativen Eindruck in der Öffentlichkeit führen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Denial-of-Service-Angriffe",
+            "handle": "2.5",
+            "text": "Ein Angriff auf die Verfügbarkeit von Datenbeständen, der \"Denial of Service\" genannt wird, zielt darauf ab, zu verhindern, dass benötigte und normalerweise verfügbare Funktionen oder Geräte verwendet werden können. Dieser Angriff steht häufig im Zusammenhang mit verteilten Ressourcen. Indem diese Ressourcen bei Angriffen sehr stark in Anspruch genommen werden, kann nicht mehr regulär darauf zugegriffen werden. In der Regel sind IT-Systeme auch stark voneinander abhängig. Somit sind von der Verknappung der Ressourcen eines Servers schnell weitere Server betroffen. Es können zum Beispiel CPU-Zeit, Speicherplatz oder Bandbreite künstlich verknappt werden. Dies kann dazu führen, dass Dienste oder Ressourcen überhaupt nicht mehr genutzt werden können.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Verknappung von Ressourcen",
+                    "type": "Threat",
+                    "text": "Verknappung von Ressourcen kann dazu führen, dass Dienste oder Ressourcen überhaupt nicht mehr genutzt werden können.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Bereitstellung unnötiger Applikationen und Dienste",
+            "handle": "2.6",
+            "text": "Schon bei der Installation des Server-Betriebssystems ist es möglich, mitgelieferte Applikationen und Dienste zu installieren, von denen einige unter Umständen gar nicht genutzt werden. Auch im späteren Betrieb wird oft Software installiert, die kurz getestet, aber danach nicht mehr benötigt wird. Oft ist gar nicht bekannt, dass diese nicht genutzten Anwendungen und Dienste vorhanden sind. Auf diese Weise befinden sich zahlreiche Applikationen und Dienste auf den Servern, die nicht eingesetzt werden und die ihn so unnötig belasten.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unbekannte Anwendungen und Dienste",
+                    "type": "Threat",
+                    "text": "Unbekannte Anwendungen und Dienste können Schwachstellen enthalten, etwa wenn sie nicht mehr aktualisiert werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Überlastung von Servern",
+            "handle": "2.7",
+            "text": "Wenn Server nicht ausreichend dimensioniert sind, ist irgendwann der Punkt erreicht, an dem sie den Anforderungen der Institution nicht mehr gerecht werden. Je nach Art der betroffenen IT-Systeme kann dies eine Vielzahl von negativen Auswirkungen haben. So können die Server oder Dienste beispielsweise vorübergehend nicht verfügbar sein oder es können Datenverluste auftreten. Die Überlastung eines einzelnen Servers kann bei komplexen IT-Landschaften außerdem dazu führen, dass bei weiteren Servern Probleme oder Ausfälle auftreten.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Überlastung durch falsch konfigurierte Dienste",
+                    "type": "Threat",
+                    "text": "Falsch konfigurierte Dienste können zu einer Überlastung des Servers führen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Überlastung durch zu viele Anfragen",
+                    "type": "Threat",
+                    "text": "Zu viele Anfragen zur gleichen Zeit können ein IT-System überbeanspruchen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Zugriffsschutz und Nutzung",
+            "handle": "SYS.1.1.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Physische Server MÜSSEN an Orten betrieben werden, zu denen nur berechtigte Personen Zutritt haben. Physische Server MÜSSEN daher in Rechenzentren, Serverräumen oder abschließbaren Serverschränken aufgestellt beziehungsweise eingebaut werden (siehe hierzu die entsprechenden Bausteine der Schicht INF Infrastruktur). Bei virtualisierten Servern MUSS der Zugriff auf die Ressourcen der Instanz und deren Konfiguration ebenfalls auf die berechtigten Personen begrenzt werden. Server DÜRFEN NICHT als Arbeitsplatzrechner genutzt werden. Server DÜRFEN NICHT zur Erledigung von Aufgaben und Tätigkeiten verwendet werden, die grundsätzlich auf einem Client-System aus- und durchgeführt werden können. Insbesondere DÜRFEN vorhandene Anwendungen, wie Webbrowser, auf dem Server NICHT für das Abrufen von Informationen aus dem Internet oder das Herunterladen von Software, Treibern und Updates verwendet werden. Als Arbeitsplatz genutzte IT-Systeme DÜRFEN NICHT als Server genutzt werden.",
+            "isresponsible": "[B]",
+            "mitigates": [
+                "G 0.16",
+                "G 0.21"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Authentisierung an Servern",
+            "handle": "SYS.1.1.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Für die Anmeldung von Benutzenden und Diensten am Server MÜSSEN Authentisierungsverfahren eingesetzt werden, die dem Schutzbedarf der Server angemessen sind. Dies SOLLTE in besonderem Maße für administrative Zugänge berücksichtigt werden. Soweit möglich, SOLLTE dabei auf zentrale, netzbasierte Authentisierungsdienste zurückgegriffen werden.",
+            "isresponsible": "[B]",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.22",
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Schutz von Schnittstellen",
+            "handle": "SYS.1.1.A5",
+            "level": "Low",
+            "affects": [],
+            "text": "Es MUSS gewährleistet werden, dass nur dafür vorgesehene Wechselspeicher und sonstige Geräte an die Server angeschlossen werden können. Alle Schnittstellen, die nicht verwendet werden, MÜSSEN deaktiviert werden.",
+            "isresponsible": "[B]",
+            "mitigates": [
+                "G 0.21",
+                "G 0.23"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Deaktivierung nicht benötigter Dienste",
+            "handle": "SYS.1.1.A6",
+            "level": "Low",
+            "affects": [],
+            "text": "Alle nicht benötigten Serverrollen, Features und Funktionen, sonstige Software und Dienste MÜSSEN deaktiviert oder deinstalliert werden, vor allem Netzdienste. Auch alle nicht benötigten Funktionen in der Firmware MÜSSEN deaktiviert werden. Die Empfehlungen des Betriebssystemherstellers SOLLTEN hierbei als Orientierung berücksichtigt werden. Auf Servern SOLLTE der Speicherplatz für die einzelnen Benutzenden, aber auch für Anwendungen, geeignet beschränkt werden. Die getroffenen Entscheidungen SOLLTEN so dokumentiert werden, dass nachvollzogen werden kann, welche Konfiguration und Softwareausstattung für die Server gewählt wurden.",
+            "isresponsible": "[B]",
+            "mitigates": [
+                "G 0.14",
+                "G 0.18",
+                "G 0.19",
+                "G 0.23"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz von Virenschutz-Programmen auf Servern",
+            "handle": "SYS.1.1.A9",
+            "level": "Low",
+            "affects": [],
+            "text": "Abhängig vom installierten Betriebssystem, den bereitgestellten Diensten und von anderen vorhandenen Schutzmechanismen des Servers MUSS geprüft werden, ob Viren-Schutzprogramme eingesetzt werden sollen und können. Soweit vorhanden, MÜSSEN konkrete Aussagen, ob ein Virenschutz notwendig ist, aus den betreffenden Betriebssystem-Bausteinen des IT-Grundschutz-Kompendiums berücksichtigt werden.",
+            "isresponsible": "[B]",
+            "mitigates": [
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Protokollierung",
+            "handle": "SYS.1.1.A10",
+            "level": "Low",
+            "affects": [],
+            "text": "Generell MÜSSEN alle sicherheitsrelevanten Systemereignisse protokolliert werden, dazu gehören mindestens: Systemstarts und Reboots, erfolgreiche und erfolglose Anmeldungen am IT-System (Betriebssystem und Anwendungssoftware), fehlgeschlagene Berechtigungsprüfungen, blockierte Datenströme (Verstöße gegen ACLs oder Firewallregeln), Einrichtung oder Änderungen von Benutzenden, Gruppen und Berechtigungen, sicherheitsrelevante Fehlermeldungen (z. B. Hardwaredefekte, Überschreitung von Kapazitätsgrenzen) sowie Warnmeldungen von Sicherheitssystemen (z. B. Virenschutz).",
+            "isresponsible": "[B]",
+            "mitigates": [
+                "G 0.37"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Festlegung einer Sicherheitsrichtlinie für Server",
+            "handle": "SYS.1.1.A11",
+            "level": "Medium",
+            "affects": [],
+            "text": "Ausgehend von der allgemeinen Sicherheitsrichtlinie der Institution SOLLTEN die Anforderungen an Server in einer separaten Sicherheitsrichtlinie konkretisiert werden. Diese Richtlinie SOLLTE allen Administrierenden und anderen Personen, die an der Beschaffung und dem Betrieb der Server beteiligt sind, bekannt und Grundlage für deren Arbeit sein. Die Umsetzung der in der Richtlinie geforderten Inhalte SOLLTE regelmäßig überprüft werden. Die Ergebnisse SOLLTEN sinnvoll dokumentiert werden.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.18",
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Planung des Server-Einsatzes",
+            "handle": "SYS.1.1.A12",
+            "level": "Medium",
+            "affects": [],
+            "text": "Jedes Server-System SOLLTE geeignet geplant werden. Dabei SOLLTEN mindestens folgende Punkte berücksichtigt werden: Auswahl der Plattform (Hardware oder virtualisierte Ressourcen), des Betriebssystems und der Anwendungssoftware, Dimensionierung der Hardware (Leistung, Speicher, Bandbreite etc.), Art und Anzahl der Kommunikationsschnittstellen, Leistungsaufnahme, Wärmelast, Platzbedarf und Bauform, administrative Zugänge (siehe SYS.1.1.A5 Schutz von Schnittstellen), Protokollierung (siehe SYS.1.1.A10 Protokollierung), Zugriffe von Benutzenden, Aktualisierung von Betriebssystem und Anwendungen sowie Einbindung ins System- und Netzmanagement, in die Datensicherung und die Schutzsysteme (Virenschutz, IDS etc.). Alle Entscheidungen, die in der Planungsphase getroffen wurden, SOLLTEN so dokumentiert werden, dass sie zu einem späteren Zeitpunkt nachvollzogen werden können.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Beschaffung von Servern",
+            "handle": "SYS.1.1.A13",
+            "level": "Medium",
+            "affects": [],
+            "text": "Bevor ein oder mehrere Server beschafft werden, SOLLTE eine Anforderungsliste erstellt werden, anhand derer die am Markt erhältlichen Produkte bewertet werden.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unterbrechungsfreie und stabile Stromversorgung",
+            "handle": "SYS.1.1.A15",
+            "level": "Medium",
+            "affects": [],
+            "text": "[Haustechnik] Jeder Server SOLLTE an eine unterbrechungsfreie Stromversorgung (USV) angeschlossen werden.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.8"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Installation und Grundkonfiguration von Servern",
+            "handle": "SYS.1.1.A16",
+            "level": "Medium",
+            "affects": [],
+            "text": "Der vollständige Installations- und Konfigurationsvorgang SOLLTE soweit wie möglich innerhalb einer gesonderten und von Produktivsystemen abgetrennten Installationsumgebung vorgenommen werden. Die Konfiguration des Betriebssystems SOLLTE vor produktiver Inbetriebnahme des Servers bereits vorgenommen sein. Mehrere wesentliche Funktionen und Rollen SOLLTEN NICHT durch einen einzigen Server erfüllt, sondern geeignet aufgeteilt werden. Alle sicherheitsrelevanten Einstellungen der aktivierten Dienste und Funktionen (vgl. SYS.1.1.A6 Deaktivierung nicht benötigter Dienste) SOLLTEN entsprechend den Vorgaben der Sicherheitsrichtlinie für Server (siehe SYS.1.1.A11 Festlegung einer Sicherheitsrichtlinie für Server) konfiguriert, getestet und regelmäßig inhaltlich überprüft werden. Dabei SOLLTE der Server unter Berücksichtigung der Empfehlungen des Betriebssystemherstellers und des voreingestellten Standardverhaltens konfiguriert werden, sofern dies nicht anderen Anforderungen aus dem IT-Grundschutz oder der Organisation widerspricht. Die Entscheidungen SOLLTEN dokumentiert und begründet werden. Konfigurationsoptionen SOLLTEN in jedem Fall gesetzt werden, auch dann, wenn das voreingestellte Standardverhalten dadurch nicht verändert wird. Sofern der Server eine Verbindung in das Internet benötigt oder aus dem Internet erreichbar sein muss, SOLLTE er erst mit dem Internet verbunden werden, nachdem die Installation und die Konfiguration abgeschlossen sind.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.18",
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einrichtung lokaler Paketfilter",
+            "handle": "SYS.1.1.A19",
+            "level": "Medium",
+            "affects": [],
+            "text": "Vorhandene lokale Paketfilter SOLLTEN über ein Regelwerk so ausgestaltet werden, dass die eingehende und ausgehende Kommunikation auf die erforderlichen Kommunikationspartner, Kommunikationsprotokolle sowie Ports und Schnittstellen beschränkt wird. Die Identität von Remote-Systemen und die Integrität der Verbindungen mit diesen SOLLTE kryptografisch abgesichert sein.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.23",
+                "G 0.43"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Betriebsdokumentation für Server",
+            "handle": "SYS.1.1.A21",
+            "level": "Medium",
+            "affects": [],
+            "text": "Betriebliche Aufgaben, die an einem Server durchgeführt werden, SOLLTEN nachvollziehbar dokumentiert werden (Wer?, Wann?, Was?). Aus der Dokumentation SOLLTEN insbesondere Konfigurationsänderungen nachvollziehbar sein. Sicherheitsrelevante Aufgaben, z. B. wer befugt ist, neue Festplatten einzubauen, SOLLTEN dokumentiert werden. Alles, was automatisch dokumentiert werden kann, SOLLTE auch automatisch dokumentiert werden. Die Dokumentation SOLLTE gegen unbefugten Zugriff und Verlust geschützt werden.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.18",
+                "G 0.22",
+                "G 0.37",
+                "G 0.45"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einbindung in die Notfallplanung",
+            "handle": "SYS.1.1.A22",
+            "level": "Medium",
+            "affects": [],
+            "text": "Der Server SOLLTE im Notfallmanagementprozess berücksichtigt werden. Dazu SOLLTEN die Notfallanforderungen an den Server ermittelt und geeignete Notfallmaßnahmen umgesetzt werden, z. B. indem Wiederanlaufpläne erstellt oder Passwörter und kryptografische Schlüssel sicher hinterlegt werden.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.18",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Systemüberwachung und Monitoring von Servern",
+            "handle": "SYS.1.1.A23",
+            "level": "Medium",
+            "affects": [],
+            "text": "Das Server-System SOLLTE in ein geeignetes Systemüberwachungs- oder Monitoringkonzept eingebunden werden. Der Systemzustand sowie die Funktionsfähigkeit des Servers und der darauf betriebenen Dienste SOLLTEN laufend überwacht werden. Fehlerzustände sowie die Überschreitung definierter Grenzwerte SOLLTEN an das Betriebspersonal gemeldet werden.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.18",
+                "G 0.25",
+                "G 0.26",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sicherheitsprüfungen für Server",
+            "handle": "SYS.1.1.A24",
+            "level": "Medium",
+            "affects": [],
+            "text": "Server SOLLTEN regelmäßigen Sicherheitstests unterzogen werden, die überprüfen, ob alle Sicherheitsvorgaben eingehalten werden und gegebenenfalls vorhandene Schwachstellen identifizieren. Diese Sicherheitsprüfungen SOLLTEN insbesondere auf Servern mit externen Schnittstellen durchgeführt werden. Um mittelbare Angriffe über infizierte IT-Systeme im eigenen Netz zu vermeiden, SOLLTEN jedoch auch interne Server in festgelegten Zyklen entsprechend überprüft werden. Es SOLLTE geprüft werden, ob die Sicherheitsprüfungen automatisiert, z. B. mittels geeigneter Skripte, realisiert werden können.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Geregelte Außerbetriebnahme eines Servers",
+            "handle": "SYS.1.1.A25",
+            "level": "Medium",
+            "affects": [],
+            "text": "Bei der Außerbetriebnahme eines Servers SOLLTE sichergestellt werden, dass keine wichtigen Daten, die eventuell auf den verbauten Datenträgern gespeichert sind, verloren gehen und dass keine schutzbedürftigen Daten zurückbleiben. Es SOLLTE einen Überblick darüber geben, welche Daten wo auf dem Server gespeichert sind. Es SOLLTE rechtzeitig sichergestellt werden, dass vom Server angebotene Dienste durch einen anderen Server übernommen werden, wenn dies erforderlich ist. Es SOLLTE eine Checkliste erstellt werden, die bei der Außerbetriebnahme eines Servers abgearbeitet werden kann. Diese Checkliste SOLLTE mindestens Aspekte zu Datensicherung, Migration von Diensten und dem anschließenden sicheren Löschen aller Daten umfassen.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.19",
+                "G 0.27",
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erstellung und Pflege eines Betriebshandbuchs",
+            "handle": "SYS.1.1.A35",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTE ein Betriebshandbuch erstellt werden. Darin SOLLTEN alle erforderlichen Regelungen, Anforderungen und Einstellungen dokumentiert werden, die erforderlich sind, um Server zu betreiben. Für jede Art von Server SOLLTE es ein spezifisches Betriebshandbuch geben. Das Betriebshandbuch SOLLTE regelmäßig aktualisiert werden. Das Betriebshandbuch SOLLTE vor unberechtigtem Zugriff geschützt werden. Das Betriebshandbuch SOLLTE in Notfällen zur Verfügung stehen.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.14",
+                "G 0.18",
+                "G 0.19",
+                "G 0.20",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Kapselung von sicherheitskritischen Anwendungen und Betriebssystemkomponenten",
+            "handle": "SYS.1.1.A37",
+            "level": "Medium",
+            "affects": [],
+            "text": "Um sowohl den unberechtigten Zugriff auf das Betriebssystem oder andere Anwendungen bei Angriffen als auch den Zugriff vom Betriebssystem auf besonders schützenswerte Dateien zu verhindern, SOLLTEN Anwendungen und Betriebssystemkomponenten (wie beispielsweise Authentisierung oder Zertifikatsüberprüfung) ihrem Schutzbedarf entsprechend besonders gekapselt oder anderen Anwendungen und Betriebssystemkomponenten gegenüber isoliert werden. Dabei SOLLTEN insbesondere sicherheitskritische Anwendungen berücksichtigt werden, die mit Daten aus unsicheren Quellen arbeiten (z. B. Webbrowser und Bürokommunikations-Anwendungen).",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.21",
+                "G 0.31",
+                "G 0.39",
+                "G 0.45"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Zentrale Verwaltung der Sicherheitsrichtlinien von Servern",
+            "handle": "SYS.1.1.A39",
+            "level": "Medium",
+            "affects": [],
+            "text": "Alle Einstellungen des Servers SOLLTEN durch Nutzung eines zentralen Managementsystems (siehe auch OPS.1.1.7 Systemmanagement) verwaltet und entsprechend dem ermittelten Schutzbedarf sowie auf den internen Richtlinien basierend konfiguriert sein. Technisch nicht umsetzbare Konfigurationsparameter SOLLTEN dokumentiert, begründet und mit dem Sicherheitsmanagement abgestimmt werden.",
+            "isresponsible": "[S]",
+            "mitigates": [
+                "G 0.14",
+                "G 0.18",
+                "G 0.23",
+                "G 0.30",
+                "G 0.31",
+                "G 0.32"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Festplattenverschlüsselung",
+            "handle": "SYS.1.1.A34",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Bei erhöhtem Schutzbedarf SOLLTEN die Datenträger des Servers mit einem als sicher geltenden Produkt oder Verfahren verschlüsselt werden. Dies SOLLTE auch für virtuelle Maschinen mit produktiven Daten gelten. Es SOLLTE nicht nur ein TPM allein als Schlüsselschutz dienen. Das Wiederherstellungspasswort SOLLTE an einem geeigneten sicheren Ort gespeichert werden. Bei sehr hohen Anforderungen z. B. an die Vertraulichkeit SOLLTE eine Full Volume oder Full Disk Encryption erfolgen.",
+            "isresponsible": "[H]",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.22",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Absicherung des Bootvorgangs",
+            "handle": "SYS.1.1.A36",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Bootloader und Betriebssystem-Kern SOLLTEN durch selbstkontrolliertes Schlüsselmaterial signiert beim Systemstart in einer vertrauenswürdigen Kette geprüft werden (Secure Boot). Nicht benötigtes Schlüsselmaterial SOLLTE entfernt werden.",
+            "isresponsible": "[H]",
+            "mitigates": [
+                "G 0.21"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Härtung des Host-Systems mittels Read-Only-Dateisystem",
+            "handle": "SYS.1.1.A38",
+            "level": "High",
+            "affects": [
+                "I"
+            ],
+            "text": "Die Integrität des Host-Systems SOLLTE durch ein Read-Only-Dateisystem sichergestellt werden (Immutable OS).",
+            "isresponsible": "[H]",
+            "mitigates": [
+                "G 0.21",
+                "G 0.28",
+                "G 0.39",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Hostbasierte Angriffserkennung",
+            "handle": "SYS.1.1.A27",
+            "level": "High",
+            "affects": [
+                "IA"
+            ],
+            "text": "Hostbasierte Angriffserkennungssysteme (Host-based Intrusion Detection Systems, IDS und Intrusion Prevention Systems, IPS) SOLLTEN eingesetzt werden, um das Systemverhalten auf Anomalien und Missbrauch hin zu überwachen. Die eingesetzten IDS/IPS-Mechanismen SOLLTEN geeignet ausgewählt, konfiguriert und ausführlich getestet werden. Bei einer Angriffserkennung SOLLTE das Betriebspersonal in geeigneter Weise alarmiert werden. Über Betriebssystem-Mechanismen oder geeignete Zusatzprodukte SOLLTEN Veränderungen an Systemdateien und Konfigurationseinstellungen überprüft, eingeschränkt und gemeldet werden.",
+            "isresponsible": "[H]",
+            "mitigates": [
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.30",
+                "G 0.32",
+                "G 0.40"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Steigerung der Verfügbarkeit durch Redundanz",
+            "handle": "SYS.1.1.A28",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Server mit hohen Verfügbarkeitsanforderungen SOLLTEN gegen Ausfälle in geeigneter Weise geschützt sein. Hierzu SOLLTEN mindestens geeignete Redundanzen verfügbar sein sowie Wartungsverträge mit den Lieferanten abgeschlossen werden. Es SOLLTE geprüft werden, ob bei sehr hohen Anforderungen Hochverfügbarkeitsarchitekturen mit automatischem Failover, gegebenenfalls über verschiedene Standorte hinweg, erforderlich sind.",
+            "isresponsible": "[H]",
+            "mitigates": [
+                "G 0.25",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ein Dienst pro Server",
+            "handle": "SYS.1.1.A30",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Abhängig von der Bedrohungslage und dem Schutzbedarf der Dienste SOLLTE auf jedem Server jeweils nur ein Dienst betrieben werden.",
+            "isresponsible": "[H]",
+            "mitigates": [
+                "G 0.25",
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz von Ausführungskontrolle",
+            "handle": "SYS.1.1.A31",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Es SOLLTE über eine Ausführungskontrolle sichergestellt werden, dass nur explizit erlaubte Programme und Skripte ausgeführt werden können. Die Regeln SOLLTEN so eng wie möglich gefasst werden. Falls Pfade und Hashes nicht explizit angegeben werden können, SOLLTEN alternativ auch zertifikatsbasierte oder Pfad-Regeln genutzt werden.",
+            "isresponsible": "[H]",
+            "mitigates": [
+                "G 0.23",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Aktive Verwaltung der Wurzelzertifikate",
+            "handle": "SYS.1.1.A33",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Im Zuge der Beschaffung und Installation des Servers SOLLTE dokumentiert werden, welche Wurzelzertifikate für den Betrieb des Servers notwendig sind. Auf dem Server SOLLTEN lediglich die für den Betrieb notwendigen und vorab dokumentierten Wurzelzertifikate enthalten sein. Es SOLLTE regelmäßig überprüft werden, ob die vorhandenen Wurzelzertifikate noch den Vorgaben der Institution entsprechen. Es SOLLTEN alle auf dem IT-System vorhandenen Zertifikatsspeicher in die Prüfung einbezogen werden.",
+            "isresponsible": "[H]",
+            "mitigates": [
+                "G 0.14",
+                "G 0.18",
+                "G 0.23"
+            ]
+        }
+    ]
+}

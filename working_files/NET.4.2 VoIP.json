@@ -1,0 +1,338 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "NET.4.2 VoIP",
+    "handle": "NET.4.2",
+    "text": "Voice over IP (VoIP) is a technology that allows for telephone calls to be made over data networks, such as the internet. This chapter focuses on the security aspects of VoIP, specifically the end devices and the middleware used in VoIP systems. The chapter also discusses the security aspects of VoIP in relation to the security of traditional telecommunications systems.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlerhafte Konfiguration der VoIP-Middleware",
+            "handle": "2.1",
+            "text": "VoIP systems can be vulnerable to misconfigurations, similar to traditional telephone systems. These misconfigurations can lead to issues such as users being assigned incorrect phone numbers or the entire VoIP infrastructure failing. Even seemingly minor errors, such as a typo in a phone book entry, can occur.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Incorrect Phone Number Assignment",
+                    "type": "Threat",
+                    "text": "A misconfiguration in the VoIP system could lead to a user being assigned an incorrect phone number, potentially causing communication issues or allowing for unauthorized access to sensitive information.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "VoIP Infrastructure Failure",
+                    "type": "Threat",
+                    "text": "A misconfiguration in the VoIP system could lead to the entire VoIP infrastructure failing, preventing users from making or receiving calls.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Typo in Phone Book Entry",
+                    "type": "Threat",
+                    "text": "A typo in a phone book entry could lead to a user being unable to find the correct contact information, potentially causing communication issues or allowing for unauthorized access to sensitive information.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlerhafte Konfiguration der VoIP-Komponenten",
+            "handle": "2.2",
+            "text": "The configuration of VoIP components, whether they are dedicated hardware or software-based systems, is crucial for their proper functioning. This includes settings for signaling and the transmission method used for media streams. Incorrect configuration can lead to issues with transmission, such as poor audio quality or network overload.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Poor Audio Quality",
+                    "type": "Threat",
+                    "text": "An incorrect configuration of the transmission method can lead to poor audio quality, making it difficult for users to understand each other.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Network Overload",
+                    "type": "Threat",
+                    "text": "An incorrect configuration of the transmission method can lead to the network being overloaded, causing delays or dropped calls.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Abhören von Telefongesprächen",
+            "handle": "2.3",
+            "text": "If VoIP calls are not encrypted, attackers can eavesdrop on conversations or intercept data. This is easier to do with VoIP than with traditional telephone systems because all voice and data information is transmitted within a single media stream. Attackers can use techniques like spoofing and sniffing to intercept VoIP traffic.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Eavesdropping on VoIP Calls",
+                    "type": "Threat",
+                    "text": "Attackers can eavesdrop on VoIP calls if they are not encrypted, potentially gaining access to sensitive information.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Intercepting VoIP Data",
+                    "type": "Threat",
+                    "text": "Attackers can intercept VoIP data if it is not encrypted, potentially gaining access to sensitive information.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Missbrauch frei zugänglicher Telefonanschlüsse",
+            "handle": "2.4",
+            "text": "Publicly accessible phones, such as those found in printer rooms or lobbies, can be vulnerable to misuse. If these phones have an electronic phone book containing internal phone numbers, this information could be leaked. VoIP phones, due to their reliance on software and data networks, are particularly vulnerable to attacks that exploit vulnerabilities in their software or gain access to the internal network.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Leaking Internal Phone Numbers",
+                    "type": "Threat",
+                    "text": "Attackers could gain access to internal phone numbers stored in the phone book of a publicly accessible VoIP phone, potentially using this information for malicious purposes.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Exploiting VoIP Software Vulnerabilities",
+                    "type": "Threat",
+                    "text": "Attackers could exploit vulnerabilities in the software of a publicly accessible VoIP phone to gain access to the internal network or steal sensitive information.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Planung des VoIP-Einsatzes",
+            "handle": "NET.4.2.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Bedingungen, unter denen VoIP eingesetzt werden soll, MÜSSEN festgelegt werden. Es MUSS unter anderem entschieden werden, ob vollständig oder partiell auf VoIP umgestiegen werden soll. Besondere Anforderungen an die Verfügbarkeit von VoIP oder an die Vertraulichkeit und Integrität der Telefonate bzw. der Signalisierungsinformationen SOLLTEN vorab ermittelt werden. Geeignete Signalisierungs- und Medientransportprotokolle MÜSSEN vor dem Einsatz ausgewählt werden. Es SOLLTE entschieden werden, ob und wie die VoIP-Infrastruktur an öffentliche (Daten-)Netze angebunden werden soll. Die Kapazitäten und das Design von vorhandenen Datennetzen SOLLTEN bei der Planung berücksichtigt werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Administration und Konfiguration von VoIP-Endgeräten",
+            "handle": "NET.4.2.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Nicht benötigte Funktionen der Endgeräte MÜSSEN deaktiviert werden. Die Konfigurationseinstellungen DÜRFEN NICHT unberechtigt geändert werden. Alle Sicherheitsfunktionen der Endgeräte SOLLTEN vor dem produktiven Einsatz getestet werden. Die eingesetzten Sicherheitsmechanismen und die verwendeten Parameter SOLLTEN dokumentiert werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.23",
+                "G 0.28",
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einschränkung der Erreichbarkeit über VoIP",
+            "handle": "NET.4.2.A4",
+            "level": "Low",
+            "affects": [],
+            "text": "Es MUSS entschieden werden, wie externe Gesprächspartner und -partnerinnen auf die VoIP-Architektur zugreifen können. Es MUSS verhindert werden, dass IT-Systeme aus unsicheren Netzen direkte Datenverbindungen auf die VoIP-Komponenten der Institution aufbauen können. Wenn alle ein- und ausgehenden Verbindungen über ein zentrales IT-System abgewickelt werden sollen, SOLLTE sichergestellt werden, dass alle Signalisierungs- und Sprachinformationen zwischen dem öffentlichen und dem privaten Datennetz nur über dieses autorisierte IT-System ausgetauscht werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.23"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Konfiguration der VoIP-Middleware",
+            "handle": "NET.4.2.A5",
+            "level": "Low",
+            "affects": [],
+            "text": "Die VoIP-Komponenten MÜSSEN so konfiguriert sein, dass sie den Schutzbedarf angemessen erfüllen. Die Default-Konfigurationen der VoIP-Middleware MÜSSEN vor der produktiven Inbetriebnahme angepasst werden. Alle Installations- und Konfigurationsschritte SOLLTEN so dokumentiert werden, dass die Installation und Konfiguration durch sachkundige Dritte anhand der Dokumentation nachvollzogen und wiederholt werden können. Alle nicht benötigten Dienste der VoIP-Middleware MÜSSEN deaktiviert werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.23",
+                "G 0.30",
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erstellung einer Sicherheitsrichtlinie für VoIP",
+            "handle": "NET.4.2.A7",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die zentralen sicherheitstechnischen Anforderungen an VoIP sowie das zu erreichende Sicherheitsniveau SOLLTEN in der institutionsweiten Sicherheitsrichtlinie aufgenommen werden. In dieser Sicherheitsrichtlinie SOLLTEN alle allgemeinen sicherheitstechnischen Vorgaben konkretisiert werden. Außerdem SOLLTEN in der Richtlinie die Vorgaben für den Betrieb und die Nutzung der VoIP-Komponenten geregelt sein. Hierbei SOLLTEN auch die verschiedenen VoIP-Funktionen, wie zum Beispiel Voicemails, betrachtet werden. Die VoIP-Sicherheitsrichtlinie SOLLTE allen beteiligten Personen und Gruppen zugänglich und bekannt sein.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.19",
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verschlüsselung von VoIP",
+            "handle": "NET.4.2.A8",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTE entschieden werden, ob und welche Sprach- und Signalisierungsinformationen verschlüsselt werden sollen. Generell SOLLTEN alle VoIP-Datenpakete, die das gesicherte LAN verlassen, durch geeignete Sicherheitsmechanismen geschützt werden. Die Benutzenden SOLLTEN über die Nutzung der VoIP-Verschlüsselung informiert werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.15",
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Geeignete Auswahl von VoIP-Komponenten",
+            "handle": "NET.4.2.A9",
+            "level": "Medium",
+            "affects": [],
+            "text": "Bevor VoIP-Komponenten beschafft werden, SOLLTE eine Anforderungsliste erstellt werden. Anhand der Anforderungsliste SOLLTEN die am Markt erhältlichen Produkte bewertet werden. Diese Anforderungsliste SOLLTE alle Merkmale zur Erreichung des angestrebten Sicherheitsniveaus umfassen. Es SOLLTE geregelt werden, wie die am Markt erhältlichen Produkte gemäß der Anforderungsliste bewertet werden können.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sicherer Umgang mit VoIP-Endgeräten",
+            "handle": "NET.4.2.A11",
+            "level": "Medium",
+            "affects": [],
+            "text": "Benutzende, die VoIP-Endgeräte einsetzen, SOLLTEN über die grundlegenden VoIP-Gefährdungen und Sicherheitsmaßnahmen informiert sein. Außerdem SOLLTEN sie geeignete Passwörter zur Absicherung von Voicemails auswählen.",
+            "isresponsible": "Benutzende",
+            "mitigates": [
+                "G 0.30",
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Außerbetriebnahme von VoIP-Komponenten",
+            "handle": "NET.4.2.A12",
+            "level": "Medium",
+            "affects": [],
+            "text": "Wenn VoIP-Komponenten außer Betrieb genommen oder ersetzt werden, SOLLTEN alle sicherheitsrelevanten Informationen von den Geräten gelöscht werden. Nach dem Löschvorgang SOLLTE überprüft werden, ob die Daten auch tatsächlich erfolgreich entfernt wurden. Vertrauliche Informationen SOLLTEN auch von Backup-Medien gelöscht werden. Alle Beschriftungen, insbesondere der Endgeräte, SOLLTEN vor der Entsorgung entfernt werden. Es SOLLTE frühzeitig mit Herstellenden, Vertreibenden beziehungsweise Service-Unternehmen geklärt werden, welche Maßnahmen zur Löschung sicherheitsrelevanter Informationen mit den Vertrags- und Garantiebedingungen vereinbar sind.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Anforderungen an eine Firewall für den Einsatz von VoIP",
+            "handle": "NET.4.2.A13",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTE überprüft werden, ob die bestehende Firewall für den Einsatz von VoIP angepasst werden kann. Ist dies nicht der Fall, SOLLTE eine zusätzliche Firewall hierfür beschafft und installiert werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verschlüsselung der Signalisierung",
+            "handle": "NET.4.2.A14",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Die Integrität und Vertraulichkeit der Signalisierungsinformationen SOLLTE durch geeignete kryptografische Verfahren gewährleistet werden. Nicht nur die Nutzdaten, sondern auch die Authentisierungsdaten SOLLTEN durchgängig verschlüsselt werden. Der Zugriff auf das VoIP-Gateway SOLLTE durch VoIP-Adressen und H.323-Identitäten so weit wie möglich eingeschränkt werden. Es SOLLTEN zusätzlich Ende-zu-Ende-Sicherheitsmechanismen für den Medientransport und die Signalisierung benutzt werden. Es SOLLTE dokumentiert werden, wie die Signalisierung geschützt wird.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.15",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sicherer Medientransport mit SRTP",
+            "handle": "NET.4.2.A15",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Mediendaten und Informationen zur Steuerung dieser Daten, die über das Real-Time Transport Protocol (RTP) übertragen werden, SOLLTEN in geeigneter Weise geschützt werden. Die Nutzdaten SOLLTEN durch den Einsatz von Secure Real-Time Transport Protocol (SRTP) beziehungsweise Secure Real-Time Control Protocol (SRTCP) geschützt werden. Die sicherheitsrelevanten Optionen der Implementierung des Protokolls SOLLTEN dokumentiert werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.15",
+                "G 0.18",
+                "G 0.19",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Trennung des Daten- und VoIP-Netzes",
+            "handle": "NET.4.2.A16",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Das VoIP-Netz SOLLTE in geeigneter Weise vom Datennetz getrennt werden. Es SOLLTE geregelt werden, wie mit Geräten umzugehen ist, die auf das VoIP- und Datennetz zugreifen müssen. VoIP-Endgeräte in einem VoIP-Netz SOLLTEN NUR die vorgesehenen VoIP-Verbindungen zu anderen IT-Systemen aufbauen können.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.23",
+                "G 0.30"
+            ]
+        }
+    ]
+}

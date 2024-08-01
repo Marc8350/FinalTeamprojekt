@@ -1,0 +1,349 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "SYS.4.5 Wechseldatenträger",
+    "handle": "SYS.4.5",
+    "text": "Wechseldatenträger werden oft eingesetzt, um Daten zu transportieren, zu speichern oder um mobil auf sie zugreifen zu können. Zu Wechseldatenträgern gehören externe Festplatten, CD-ROMs, DVDs, Speicherkarten, Magnetbänder und USB-Sticks. Wechseldatenträger sind danach klassifizierbar, ob sie nur lesbar, einmalig beschreibbar oder wiederbeschreibbar sind. Unterschiede gibt es auch bei der Art der Datenspeicherung (analog oder digital) oder ihrer Bauform. So gibt es auswechselbare Datenträger (z. B. verbaute Festplatten) oder externe Datenspeicher (z. B. USB-Sticks).",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sorglosigkeit im Umgang mit Informationen",
+            "handle": "2.1",
+            "text": "Häufig gibt es in Institutionen zwar organisatorische Regelungen und technische Sicherheitsverfahren für Wechseldatenträger, diese werden jedoch oft durch einen sorglosen Umgang mit den Wechseldatenträgern umgangen. So kommt es etwa vor, dass Wechseldatenträger während einer Pause unbeaufsichtigt im Besprechungsraum zurück- oder auch im Zugabteil liegen gelassen werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unbeaufsichtigter Wechseldatenträger",
+                    "type": "Threat",
+                    "text": "Ein Wechseldatenträger wird unbeaufsichtigt in einem öffentlichen Bereich zurückgelassen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Kenntnis über Regelungen",
+            "handle": "2.2",
+            "text": "Wenn die Regelungen für den korrekten Umgang mit Wechseldatenträgern nicht hinreichend bekannt sind, können sie sich auch nicht eingehalten werden. So können zahlreiche Gefährdungen hinsichtlich der Informationssicherheit eintreten, zum Beispiel, wenn nicht geprüfte USB-Sticks an die IT-Systeme der Institution angeschlossen werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Anschluss eines unbekannten USB-Sticks",
+                    "type": "Threat",
+                    "text": "Ein Benutzer schließt einen USB-Stick an sein System an, ohne zu wissen, woher dieser stammt.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Diebstahl oder Verlust von Wechseldatenträgern",
+            "handle": "2.3",
+            "text": "Bei Wechseldatenträgern ist das Risiko von Datenverlusten höher als bei stationären IT-Systemen. Ursachen für Datenverluste sind etwa Diebstahl oder verlorengegangene Geräte. Die auf den Wechseldatenträgern abgelegten Informationen sind in diesen Fällen oft unwiederbringlich verloren. Außerdem können die Informationen Externen in die Hände fallen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Diebstahl eines Laptops",
+                    "type": "Threat",
+                    "text": "Ein Laptop mit sensiblen Daten wird aus einem Büro gestohlen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Verlust eines USB-Sticks",
+                    "type": "Threat",
+                    "text": "Ein USB-Stick mit sensiblen Daten geht verloren.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Defekte Datenträger",
+            "handle": "2.4",
+            "text": "Wechseldatenträger sind aufgrund ihrer Größe und Anwendungsbereiche anfällig für Beschädigungen, Fehler oder Ausfälle. Ursache sind beispielsweise ständig wechselnde Einsatzumgebungen oder mechanische Einwirkungen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Defekter USB-Stick",
+                    "type": "Threat",
+                    "text": "Ein USB-Stick wird durch einen Sturz beschädigt und die Daten sind nicht mehr zugänglich.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Beeinträchtigung durch wechselnde Einsatzumgebung",
+            "handle": "2.5",
+            "text": "Wechseldatenträger werden in sehr unterschiedlichen Umgebungen eingesetzt und sind dadurch vielen Gefährdungen ausgesetzt. Dazu gehören beispielsweise schädigende Umwelteinflüsse wie zu hohe oder zu niedrige Temperaturen und Staub oder Feuchtigkeit. Hinzu kommen beispielsweise Transportschäden. Ein weiterer wichtiger Aspekt ist, dass Wechseldatenträger oft in Bereichen mit unterschiedlichem Sicherheitsniveau benutzt werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Überhitzung eines Laptops",
+                    "type": "Threat",
+                    "text": "Ein Laptop wird in einem überhitzten Raum verwendet und die Daten auf der Festplatte werden beschädigt.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verbreitung von Schadsoftware",
+            "handle": "2.6",
+            "text": "Wechseldatenträger werden oft benutzt, um Daten zwischen verschiedenen Geräten und dem Arbeitsplatzrechner auszutauschen. Schadsoftware könnte Daten auf den Wechseldatenträgern kompromittieren und sich so auf die Arbeitsplatzrechner übertragen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Schadsoftware auf USB-Stick",
+                    "type": "Threat",
+                    "text": "Ein USB-Stick mit Schadsoftware wird an einen Computer angeschlossen und infiziert das System.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sensibilisierung zum sicheren Umgang mit Wechseldatenträgern",
+            "handle": "SYS.4.5.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Alle Benutzenden MÜSSEN für den sicheren Umgang mit Wechseldatenträgern sensibilisiert werden. Die Institution MUSS insbesondere darauf hinweisen, wie die Benutzenden mit Wechseldatenträgern umgehen sollten, um einem Verlust oder Diebstahl vorzubeugen und eine lange Lebensdauer zu gewährleisten. Die Institution MUSS die Benutzenden darüber informieren, dass sie keine Wechseldatenträger, die aus unbekannten Quellen stammen, an ihre IT-Systeme anschließen dürfen.",
+            "isresponsible": "Benutzende",
+            "mitigates": [
+                "G 0.2",
+                "G 0.4",
+                "G 0.16",
+                "G 0.17",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verlust- und Manipulationsmeldung",
+            "handle": "SYS.4.5.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Benutzenden MÜSSEN umgehend melden, wenn ein Wechseldatenträger gestohlen oder verloren wurde oder der Verdacht einer Manipulation besteht. Die Benutzenden MÜSSEN bei ihrer Meldung angeben, welche Informationen auf dem Wechseldatenträger gespeichert sind. Hierfür MUSS es in der Institution klare Meldewege und Zuständigkeiten geben. Die Institution MUSS festlegen, wie Wechseldatenträger behandelt werden sollen, die nach einem Verlust wiedergefunden wurden. Wiedergefundene Wechseldatenträger DÜRFEN NICHT ohne vorherige Überprüfung auf Manipulation und Schadsoftware verwendet werden.",
+            "isresponsible": "Benutzende",
+            "mitigates": [
+                "G 0.16",
+                "G 0.21"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Datenträgerverschlüsselung",
+            "handle": "SYS.4.5.A10",
+            "level": "Medium",
+            "affects": [],
+            "text": "Wenn Wechseldatenträger außerhalb eines sicheren Bereiches verwendet oder transportiert werden und dabei schutzbedürftige Daten enthalten, MÜSSEN die Daten mit einem sicheren Verfahren verschlüsselt werden.",
+            "isresponsible": "Benutzende",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Schutz vor Schadsoftware",
+            "handle": "SYS.4.5.A12",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Institution MUSS sicherstellen, dass nur Daten auf Wechseldatenträger übertragen werden, die auf Schadsoftware überprüft wurden. Bevor Daten von Wechseldatenträgern verarbeitet werden, MÜSSEN sie auf Schadsoftware überprüft werden.",
+            "isresponsible": "Benutzende",
+            "mitigates": [
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erstellung einer Richtlinie zum sicheren Umgang mit Wechseldatenträgern",
+            "handle": "SYS.4.5.A4",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTE eine Richtlinie für den richtigen Umgang mit Wechseldatenträgern erstellt werden. Folgende grundlegenden Aspekte SOLLTEN dabei berücksichtigt werden: welche Wechseldatenträger genutzt werden und wer diese einsetzen darf, welche Daten auf Wechseldatenträgern gespeichert werden dürfen und welche nicht, wie die auf Wechseldatenträgern gespeicherten Daten vor unbefugtem Zugriff, Manipulation und Verlust geschützt werden, wie die Daten auf den Wechseldatenträgern gelöscht werden sollen, mit welchen externen Institutionen Wechseldatenträger ausgetauscht werden dürfen und welche Sicherheitsregelungen dabei zu beachten sind, ob Wechseldatenträger an fremde IT-Systeme angeschlossen werden dürfen und was dabei zu beachten ist, wie Wechseldatenträger zu versenden sind sowie wie der Verbreitung von Schadsoftware über Wechseldatenträger vorgebeugt wird. Die Institution SOLLTE in der Sicherheitsrichtlinie festlegen, unter welchen Bedingungen Wechseldatenträger gelagert werden sollen. Insbesondere SOLLTE die Institution vorgeben, dass nur berechtigte Benutzende Zugang zu beschriebenen Wechseldatenträgern haben. Die Institution SOLLTE festlegen, dass Angaben des herstellenden Unternehmens zum Umgang mit Datenträgern berücksichtigt werden müssen. Die Institution SOLLTE die Verwendung von privaten Wechseldatenträgern untersagen. Es SOLLTE regelmäßig überprüft werden, ob die Sicherheitsvorgaben für den Umgang mit Wechseldatenträgern aktuell sind.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.19",
+                "G 0.22",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Regelung zur Mitnahme von Wechseldatenträgern",
+            "handle": "SYS.4.5.A5",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTE klare schriftliche Regeln dazu geben, ob, wie und zu welchen Anlässen Wechseldatenträger mitgenommen werden dürfen. Insbesondere SOLLTE festgelegt sein, welche Wechseldatenträger von wem außer Haus transportiert werden dürfen und welche Sicherheitsmaßnahmen dabei zu beachten sind.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.16",
+                "G 0.17",
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Datenträgerverwaltung",
+            "handle": "SYS.4.5.A6",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTE eine Verwaltung für Wechseldatenträger geben. Die Wechseldatenträger SOLLTEN einheitlich gekennzeichnet werden. Die Verwaltung für Wechseldatenträger SOLLTE gewährleisten, dass Wechseldatenträger sachgerecht behandelt und aufbewahrt sowie ordnungsgemäß eingesetzt und transportiert werden.",
+            "isresponsible": "Fachverantwortliche",
+            "mitigates": [
+                "G 0.2",
+                "G 0.4",
+                "G 0.17"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sicheres Löschen der Wechseldatenträger vor und nach der Verwendung",
+            "handle": "SYS.4.5.A7",
+            "level": "Medium",
+            "affects": [],
+            "text": "Bevor Wechseldatenträger weitergegeben, wiederverwendet oder ausgesondert werden, SOLLTEN sie in geeigneter Weise sicher gelöscht werden.",
+            "isresponsible": "Fachverantwortliche",
+            "mitigates": [
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Kennzeichnung der Wechseldatenträger beim Versand",
+            "handle": "SYS.4.5.A13",
+            "level": "Medium",
+            "affects": [],
+            "text": "Wechseldatenträger, die versendet werden sollen, SOLLTEN so gekennzeichnet werden, dass die Absendenden und die Empfangenden sie sofort identifizieren können. Die Kennzeichnung der Wechseldatenträger oder deren Verpackung SOLLTE für die Empfangenden eindeutig sein. Die Kennzeichnung von Wechseldatenträgern mit schützenswerten Informationen SOLLTE für Außenstehende keine Rückschlüsse auf Art und Inhalte der Informationen zulassen.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.17",
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Gewährleistung der Integrität und Verfügbarkeit bei Langzeitspeichern",
+            "handle": "SYS.4.5.A17",
+            "level": "Medium",
+            "affects": [],
+            "text": "Falls Wechseldatenträger verwendet werden, um Daten für lange Zeiträume zu speichern, SOLLTE die Institution sicherstellen, dass die verwendeten Wechseldatenträger geeignet sind, um die Integrität und Verfügbarkeit der Daten während des gesamten Nutzungszeitraums sicherzustellen. Die Integrität der Daten SOLLTE regelmäßig überprüft werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Integritätsschutz durch Checksummen oder digitale Signaturen",
+            "handle": "SYS.4.5.A11",
+            "level": "High",
+            "affects": [
+                "I"
+            ],
+            "text": "Es SOLLTE ein Verfahren zum Schutz gegen zufällige oder vorsätzliche Veränderungen eingesetzt werden, mit dem die Integrität von vertraulichen Informationen sichergestellt wird. Die Verfahren zum Schutz vor Veränderungen SOLLTEN dem aktuellen Stand der Technik entsprechen.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.22",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Versandart und Verpackung",
+            "handle": "SYS.4.5.A14",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Die Institution SOLLTE überprüfen, wie vertrauliche Informationen bei einem Versand angemessen geschützt werden können. Es SOLLTE eine sichere Versandverpackung für Wechseldatenträger verwendet werden, bei der Manipulationen sofort zu erkennen sind. Die Institution SOLLTE alle Beteiligten auf notwendige Versand- und Verpackungsarten hinweisen.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.2",
+                "G 0.4",
+                "G 0.17"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung zertifizierter Wechseldatenträger",
+            "handle": "SYS.4.5.A15",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Die Institution SOLLTE nur Wechseldatenträger verwenden, die zertifiziert sind. Die Zertifizierung SOLLTE insbesondere eine integere Datenerhaltung sowie möglicherweise vorhandene Verschlüsselungsverfahren umfassen.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.20"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Nutzung dedizierter IT-Systeme zur Datenprüfung",
+            "handle": "SYS.4.5.A16",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Die Institution SOLLTE dedizierte IT-Systeme als Datenschleuse verwenden, bei denen Daten von einem Wechseldatenträger auf einen anderen übertragen werden und dabei auf Schadsoftware untersucht werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.39"
+            ]
+        }
+    ]
+}

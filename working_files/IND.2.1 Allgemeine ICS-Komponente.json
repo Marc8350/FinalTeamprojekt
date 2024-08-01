@@ -1,0 +1,444 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "IND.2.1 Allgemeine ICS-Komponente",
+    "handle": "IND.2.1",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unsichere Systemkonfiguration",
+            "handle": "SYS.1.6",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Angreifer können ICS-Komponenten leicht übernehmen und manipulieren.",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Angreifer können die unsichere Systemkonfiguration ausnutzen, um die ICS-Komponente als Ausgangspunkt für weitere Angriffe zu nutzen.",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "IND.2.1.A1",
+                "IND.2.1.A4"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichendes Benutzenden- und Berechtigungsmanagement",
+            "handle": "BEN.1.1",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unzureichendes Benutzenden- und Berechtigungsmanagement kann dazu führen, dass Mitarbeitende gemeinsam Konten nutzen oder dass Berechtigungen von ausgeschiedenen Mitarbeitenden oder Dienstleistenden nicht gelöscht werden.",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "IND.2.1.A1"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Protokollierung",
+            "handle": "LOG.1.1",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Sicherheitsvorfälle lassen sich nur schwer detektieren und hinterher nicht mehr rekonstruieren.",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Manipulation und Sabotage einer ICS-Komponente",
+            "handle": "SAB.1.1",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Angreifende können sich lokal, aber auch standortübergreifend auswirken. Zudem können Status- und Alarmmeldungen oder sonstige Messwerte unterdrückt oder verändert werden.",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Manipulierte Messwerte können Fehlentscheidungen von ICS-Komponenten bzw. des Bedienpersonals nach sich ziehen.",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Manipulierte Systeme können dazu genutzt werden, um andere Systeme oder Standorte anzugreifen oder um eine laufende Manipulation zu vertuschen.",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "IND.2.1.A1",
+                "IND.2.1.A4",
+                "IND.2.1.A8",
+                "IND.2.1.A11",
+                "IND.2.1.A13",
+                "IND.2.1.A17",
+                "IND.2.1.A19",
+                "IND.2.1.A20"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz unsicherer Protokolle",
+            "handle": "PRO.1.1",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Dritte mit Zugang zum Übertragungsmedium können dann die Inhalte der Kommunikation auslesen und verändern oder Steuerbefehle einschleusen.",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "IND.2.1.A2",
+                "IND.2.1.A17"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Denial-of-Service-(DoS)-Angriffe",
+            "handle": "DOS.1.1",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Angreifende können den Betrieb von ICS-Komponenten durch DoS-Angriffe beeinträchtigen.",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Schadprogramme",
+            "handle": "MAL.1.1",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Infektionsmöglichkeiten ergeben sich durch Schnittstellen zur Office-IT (vertikale Integration) und zur Außenwelt.",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Mobile Endgeräte wie Service-Notebooks oder Wechseldatenträger, die bei der Programmierung und Wartung von ICS-Komponenten eingesetzt werden, stellen eine Gefahr dar.",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "IND.2.1.A8"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ausspionieren von Informationen",
+            "handle": "INF.1.1",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Dritte könnten hier im Rahmen von Industriespionage an Geschäftsgeheimnisse gelangen, z. B. an Rezepte, Verfahren oder anderes geistiges Eigentum.",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Auch können sie Informationen über die Funktionsweise einer ICS-Komponente und ihre Sicherheitsmechanismen gewinnen, die sie für weitere Angriffe benutzen können.",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Manipulierte Firmware",
+            "handle": "FW.1.1",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Die internen Speicher könnten durch ein kompromittiertes Programmiergerät, über eine lokale Datenschnittstelle (z. B. USB) oder über eine andere bestehende Netzverbindung von Angreifenden verändert werden.",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Ebenso könnte ein Software-Update auf dem Weg vom herstellenden Unternehmen zum Betreibenden manipuliert worden sein.",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Schließlich könnte eine ICS-Komponente mit bereits kompromittierter Firmware beim Betreibenden eintreffen, etwa bei manipulierter Lieferkette (englisch supply chain) oder einem Einkauf aus unsicheren Quellen.",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "IND.2.1.A11",
+                "IND.2.1.A20"
+            ]
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einschränkung des Zugriffs auf Konfigurations- und Wartungsschnittstellen",
+            "handle": "IND.2.1.A1",
+            "level": "Low",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "isresponsible": "OT-Betrieb (Operational Technology, OT)"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Nutzung sicherer Übertragungs-Protokolle für die Konfiguration und Wartung",
+            "handle": "IND.2.1.A2",
+            "level": "Low",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "isresponsible": "Wartungspersonal, OT-Betrieb (Operational Technology, OT)"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Deaktivierung oder Deinstallation nicht genutzter Dienste, Funktionen und Schnittstellen",
+            "handle": "IND.2.1.A4",
+            "level": "Low",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "isresponsible": "Wartungspersonal, OT-Betrieb (Operational Technology, OT)"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Netzsegmentierung",
+            "handle": "IND.2.1.A6",
+            "level": "Low",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "isresponsible": "OT-Betrieb (Operational Technology, OT), Planende"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erstellung von Datensicherungen",
+            "handle": "IND.2.1.A7",
+            "level": "Medium",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "isresponsible": "OT-Betrieb (Operational Technology, OT)"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Schutz vor Schadsoftware",
+            "handle": "IND.2.1.A8",
+            "level": "Medium",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "isresponsible": "OT-Betrieb (Operational Technology, OT)"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Wartung der ICS-Komponenten",
+            "handle": "IND.2.1.A11",
+            "level": "Medium",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "isresponsible": "Mitarbeitende, OT-Betrieb (Operational Technology, OT), Wartungspersonal"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Geeignete Inbetriebnahme von ICS-Komponenten",
+            "handle": "IND.2.1.A13",
+            "level": "Medium",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "isresponsible": "OT-Betrieb (Operational Technology, OT)"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Schutz externer Schnittstellen",
+            "handle": "IND.2.1.A16",
+            "level": "Medium",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "isresponsible": "OT-Betrieb (Operational Technology, OT)"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Nutzung sicherer Protokolle für die Übertragung von Mess- und Steuerdaten",
+            "handle": "IND.2.1.A17",
+            "level": "Medium",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "isresponsible": "OT-Betrieb (Operational Technology, OT)"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Kommunikation im Störfall",
+            "handle": "IND.2.1.A18",
+            "level": "High",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "isresponsible": "OT-Betrieb (Operational Technology, OT), Mitarbeitende"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Security-Tests",
+            "handle": "IND.2.1.A19",
+            "level": "High",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "isresponsible": "OT-Betrieb (Operational Technology, OT)"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Vertrauenswürdiger Code",
+            "handle": "IND.2.1.A20",
+            "level": "High",
+            "affects": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+            ],
+            "isresponsible": "OT-Betrieb (Operational Technology, OT)"
+        }
+    ]
+}

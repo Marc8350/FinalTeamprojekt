@@ -1,0 +1,393 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "NET.4.1 TK-Anlagen",
+    "handle": "NET.4.1",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Abhören von TK-Anlagen",
+            "handle": "2.1",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Direktes Anzapfen der Telefonleitung",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Mithören an einer TK-Anlage",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Abfangen von E-Mails mit Sprachnachrichten",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Aktivieren von Leistungsmerkmalen zur Mithörsicherung",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "NET.4.1.A10",
+                "NET.4.1.A13"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Abhören von Räumen über TK-Anlagen",
+            "handle": "2.2",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Aktivieren von Mikrofonen in Endgeräten über das öffentliche Netz oder LAN",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Missbrauch der Funktion „direktes Ansprechen“ in Kombination mit „Freisprechen“",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "NET.4.1.A10",
+                "NET.4.1.A13"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Gebührenbetrug",
+            "handle": "2.3",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Missbrauch von Leistungsmerkmalen wie Rufumleitungen oder Dial-in-Optionen",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Vergabe von Berechtigungen, die „Amtsleitungen“ belegen",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Telefonieren von fremden Apparaten",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Auslesen von Passwörtern",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Verändern von Berechtigungen",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "NET.4.1.A10",
+                "NET.4.1.A13"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Missbrauch frei zugänglicher Telefonanschlüsse",
+            "handle": "2.4",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Auslesen von Telefonnummern aus einem elektronischen Telefonbuch",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "NET.4.1.A10",
+                "NET.4.1.A13"
+            ]
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Anforderungsanalyse und Planung für TK-Anlagen",
+            "handle": "NET.4.1.A1",
+            "level": "Low",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "IT-Betrieb"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Auswahl von TK-Diensteanbietenden",
+            "handle": "NET.4.1.A2",
+            "level": "Low",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "IT-Betrieb"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Protokollierung bei TK-Anlagen",
+            "handle": "NET.4.1.A5",
+            "level": "Low",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": null
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erstellung einer Sicherheitsrichtlinie für TK-Anlagen",
+            "handle": "NET.4.1.A6",
+            "level": "Medium",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "IT-Betrieb"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Geeignete Aufstellung der TK-Anlage",
+            "handle": "NET.4.1.A7",
+            "level": "Medium",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": null
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einschränkung und Sperrung nicht benötigter oder sicherheitskritischer Leistungsmerkmale",
+            "handle": "NET.4.1.A8",
+            "level": "Medium",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": null
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Schulung zur sicheren Nutzung von TK-Anlagen",
+            "handle": "NET.4.1.A9",
+            "level": "Medium",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "Vorgesetzte"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Dokumentation und Revision der TK-Anlagenkonfiguration",
+            "handle": "NET.4.1.A10",
+            "level": "Medium",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "IT-Betrieb"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Außerbetriebnahme von TK-Anlagen und -geräten",
+            "handle": "NET.4.1.A11",
+            "level": "Medium",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "IT-Betrieb"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Datensicherung der Konfigurationsdateien",
+            "handle": "NET.4.1.A12",
+            "level": "Medium",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": null
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Beschaffung von TK-Anlagen",
+            "handle": "NET.4.1.A13",
+            "level": "Medium",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": null
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Notfallvorsorge für TK-Anlagen",
+            "handle": "NET.4.1.A14",
+            "level": "Medium",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": null
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Notrufe bei einem Ausfall der TK-Anlage",
+            "handle": "NET.4.1.A15",
+            "level": "Medium",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": null
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sicherung von Endgeräten in frei zugänglichen Räumen",
+            "handle": "NET.4.1.A16",
+            "level": "Medium",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": null
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Wartung von TK-Anlagen",
+            "handle": "NET.4.1.A17",
+            "level": "Medium",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": null
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erhöhter Zugangsschutz",
+            "handle": "NET.4.1.A18",
+            "level": "High",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": null
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Redundanter Anschluss",
+            "handle": "NET.4.1.A19",
+            "level": "High",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": null
+        }
+    ]
+}

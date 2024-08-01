@@ -1,0 +1,613 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "Rechenzentrum sowie Serverraum",
+    "handle": "INF.2",
+    "text": "Rechenzentren sind zentrale Einrichtungen, in denen die IT-Landschaft von Institutionen konzentriert wird. Sie dienen der Bereitstellung von Diensten und Daten, der Sicherstellung der Verfügbarkeit und der Sicherheit der IT. Serverräume sind Bereiche, in denen IT-Komponenten außerhalb eines Rechenzentrums betrieben werden. Sie sind in der Regel kleiner als Rechenzentren und haben einen geringeren Schutzbedarf.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlerhafte Planung",
+            "handle": "2.1",
+            "text": "Eine fehlerhafte Planung eines Rechenzentrums kann zu einem hohen Ausfallrisiko führen. So können Standortrisiken wie Luftverkehr, Erdbeben oder Hochwasser die Betriebssicherheit und Verfügbarkeit gefährden. Ebenso kann eine fehlerhafte Konzeptionierung zu einer unzureichenden Bandbreite oder Energieversorgung führen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Standortwahl in einem Gebiet mit hohem Erdbebenrisiko",
+                    "type": "Threat",
+                    "text": "Die Wahl eines Standorts für ein Rechenzentrum in einem Gebiet mit hohem Erdbebenrisiko kann zu einem Ausfall des Rechenzentrums führen, da die IT-Infrastruktur durch das Erdbeben beschädigt werden kann.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unzureichende Bandbreite",
+                    "type": "Threat",
+                    "text": "Eine unzureichende Bandbreite kann zu einer Verlangsamung oder einem Ausfall der IT-Dienste führen, da die Daten nicht schnell genug übertragen werden können.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlende oder fehlerhafte Zutrittskontrollen",
+            "handle": "2.2",
+            "text": "Fehlende oder unzureichende Zutrittskontrollen erhöhen das Risiko, dass Unberechtigte das Rechenzentrum betreten und Schaden anrichten. So können Angreifer Daten entwenden, Geräte stehlen oder Server manipulieren.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unbefugter Zugriff auf sensible Daten",
+                    "type": "Threat",
+                    "text": "Unbefugte Personen können durch fehlende oder unzureichende Zutrittskontrollen Zugang zu sensiblen Daten erhalten und diese entwenden oder manipulieren.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Sabotage von IT-Systemen",
+                    "type": "Threat",
+                    "text": "Unbefugte Personen können durch fehlende oder unzureichende Zutrittskontrollen Zugang zu IT-Systemen erhalten und diese sabotieren.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Überwachung",
+            "handle": "2.3",
+            "text": "Eine unzureichende Überwachung der IT-Infrastruktur im Rechenzentrum kann zu unbemerkten Ausfällen führen. Dies kann die Verfügbarkeit und fehlerfreie Funktion des Rechenzentrums beeinträchtigen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Ausfall eines Servers",
+                    "type": "Threat",
+                    "text": "Ein Server kann aufgrund eines technischen Defekts oder einer Überlastung ausfallen, ohne dass dies bemerkt wird. Dies kann zu einem Ausfall der IT-Dienste führen.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Klimatisierung im Rechenzentrum",
+            "handle": "2.4",
+            "text": "IT-Komponenten benötigen bestimmte Betriebsbedingungen, um zuverlässig zu funktionieren. Eine unzureichende Klimatisierung kann zu einem Ausfall der IT-Komponenten führen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Überhitzung von Servern",
+                    "type": "Threat",
+                    "text": "Server können aufgrund einer zu hohen Temperatur überhitzen und ausfallen.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Feuer",
+            "handle": "2.5",
+            "text": "Feuer kann zu schwerwiegenden Schäden im Rechenzentrum führen. Elektrobrände sind die häufigste Ursache für Feuer im IT-Betriebsbereich. Ein Feuer kann sich schnell ausbreiten, wenn der IT-Betriebsbereich oder die Supportbereiche keinen oder nur einen unzureichenden Brandschutz haben.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Brand im IT-Betriebsbereich",
+                    "type": "Threat",
+                    "text": "Ein Brand im IT-Betriebsbereich kann zu einem Ausfall der IT-Dienste führen, da die IT-Komponenten durch das Feuer beschädigt werden.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Wasser",
+            "handle": "2.6",
+            "text": "Wasser kann durch undichte Wasserleitungen, Hochwasser, Rohrbruch, defekte Sprinkler- oder Klimaanlagen in das Rechenzentrum gelangen. Dies kann zu Schäden an den Geräten führen und zu einem Ausfall des Rechenzentrums führen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Hochwasser",
+                    "type": "Threat",
+                    "text": "Hochwasser kann zu einem Ausfall des Rechenzentrums führen, da die IT-Komponenten durch das Wasser beschädigt werden.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlender oder unzureichender Einbruchschutz",
+            "handle": "2.7",
+            "text": "Selbst wenn eine gut funktionierende Zutrittskontrolle eingerichtet ist, können unbefugte Personen in ein Rechenzentrum eindringen, sofern es nicht ausreichend vor Einbrüchen geschützt wird. Täter können so IT-Komponenten stehlen oder manipulieren und an vertrauliche Informationen gelangen. Auch könnten sie die Geräte zerstören oder das Rechenzentrum insgesamt beschädigen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Einbruch in das Rechenzentrum",
+                    "type": "Threat",
+                    "text": "Einbrecher können in das Rechenzentrum eindringen und IT-Komponenten stehlen oder manipulieren.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ausfall der Stromversorgung",
+            "handle": "2.8",
+            "text": "Ein Ausfall der Stromversorgung kann zu einem Ausfall des Rechenzentrums und damit der Institution führen. So können IT-Dienste plötzlich nicht mehr erreichbar sein, Daten verloren gehen oder IT-Systeme beschädigt werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Stromausfall",
+                    "type": "Threat",
+                    "text": "Ein Stromausfall kann zu einem Ausfall des Rechenzentrums führen, da die IT-Komponenten ohne Strom nicht mehr funktionieren.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verschmutzung",
+            "handle": "2.9",
+            "text": "Staub und andere Verschmutzungen in einem Rechenzentrum können dazu führen, dass technische Komponenten nicht mehr funktionieren. Durch Verschmutzungen verschleißen Geräte früher und fallen häufiger aus.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Überhitzung von Servern durch Staub",
+                    "type": "Threat",
+                    "text": "Staub kann zu einer Überhitzung von Servern führen, da er die Kühlung der Geräte behindert.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Festlegung von Anforderungen",
+            "handle": "INF.2.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Für ein Rechenzentrum MÜSSEN angemessene technische und organisatorische Vorgaben definiert und umgesetzt werden.",
+            "isresponsible": "Haustechnik, Planende",
+            "mitigates": [
+                "G 0.18",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Bildung von Brandabschnitten",
+            "handle": "INF.2.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Es MÜSSEN geeignete Brand- und Rauchabschnitte für die Räumlichkeiten eines Rechenzentrums festgelegt werden. Die Brand- und Rauchabschnitte MÜSSEN über den baurechtlich vorgeschriebenen Rahmen hinaus auch Schutz für die darin befindlichen technischen Einrichtungen und deren Verfügbarkeit bieten. Es MUSS verhindert werden, dass sich Brand und Rauch ausbreiten. Im Falle eines Serverraums SOLLTE geprüft werden, ob geeignete Brand- und Rauchabschnitte für die Räumlichkeiten umsetzbar sind.",
+            "isresponsible": "Planende",
+            "mitigates": [
+                "G 0.1",
+                "G 0.24",
+                "G 0.25",
+                "G 0.26"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz einer unterbrechungsfreien Stromversorgung",
+            "handle": "INF.2.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Für alle betriebsrelevanten Komponenten des Rechenzentrums MUSS eine unterbrechungsfreie Stromversorgung (USV) installiert werden. Da der Leistungsbedarf von Klimaanlagen oft zu hoch für eine USV ist, MUSS mindestens die Steuerung der Anlagen an die unterbrechungsfreie Stromversorgung angeschlossen werden. Im Falle eines Serverraums SOLLTE je nach Verfügbarkeitsanforderungen der IT-Systeme geprüft werden, ob der Betrieb einer USV notwendig ist. Die USV MUSS ausreichend dimensioniert sein. Bei relevanten Änderungen an den Verbrauchern MUSS überprüft werden, ob die vorhandenen USV-Systeme noch ausreichend dimensioniert sind. Bei USV-Systemen mit Batterie als Energiespeicher MUSS die Batterie im erforderlichen Temperaturbereich gehalten werden. Sie SOLLTE dazu vorzugsweise räumlich getrennt von der Leistungselektronik der USV platziert werden. Die USV MUSS regelmäßig gewartet und auf Funktionsfähigkeit getestet werden. Dafür MÜSSEN die vom herstellenden Unternehmen vorgesehenen Wartungsintervalle eingehalten werden.",
+            "isresponsible": "Haustechnik",
+            "mitigates": [
+                "G 0.8"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Notabschaltung der Stromversorgung",
+            "handle": "INF.2.A4",
+            "level": "Low",
+            "affects": [],
+            "text": "Es MUSS geeignete Möglichkeiten geben, elektrische Verbraucher im Rechenzentrum spannungsfrei zu schalten. Dabei MUSS darauf geachtet werden, ob und wie eine vorhandene USV räumlich und funktional in die Stromversorgung eingebunden ist. Werden klassische Not-Aus-Schalter eingesetzt, MUSS darauf geachtet werden, dass darüber nicht das komplette Rechenzentrum abgeschaltet wird. Die Notabschaltung MUSS sinnvoll parzelliert und zielgerichtet erfolgen. Alle Not-Aus-Schalter MÜSSEN so geschützt sein, dass sie nicht unbeabsichtigt oder unbefugt betätigt werden können.",
+            "isresponsible": "Haustechnik",
+            "mitigates": [
+                "G 0.1",
+                "G 0.8",
+                "G 0.24",
+                "G 0.26"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einhaltung der Lufttemperatur und -feuchtigkeit",
+            "handle": "INF.2.A5",
+            "level": "Low",
+            "affects": [],
+            "text": "Es MUSS sichergestellt werden, dass die Lufttemperatur und Luftfeuchtigkeit im IT-Betriebsbereich innerhalb der vorgeschriebenen Grenzwerte liegen. Die tatsächliche Wärmelast in den gekühlten Bereichen MUSS in regelmäßigen Abständen und nach größeren Umbauten überprüft werden. Eine vorhandene Klimatisierung MUSS regelmäßig gewartet werden. Die Parameter Temperatur und Feuchtigkeit MÜSSEN mindestens so aufgezeichnet werden, dass sich rückwirkend erkennen lässt, ob Grenzwerte überschritten wurden, und dass sie bei der Lokalisierung der Ursache der Abweichung sowie bei der Beseitigung der Ursache unterstützend genutzt werden können.",
+            "isresponsible": "Haustechnik",
+            "mitigates": [
+                "G 0.2"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Zutrittskontrolle",
+            "handle": "INF.2.A6",
+            "level": "Low",
+            "affects": [],
+            "text": "Der Zutritt zum Rechenzentrum MUSS kontrolliert werden. Zutrittsrechte MÜSSEN gemäß der Vorgaben des Bausteins ORP.4 Identitäts- und Berechtigungsmanagement vergeben werden. Für im Rechenzentrum tätige Personen MUSS sichergestellt werden, dass diese keinen Zutritt zu IT-Systemen außerhalb ihres Tätigkeitsbereiches erhalten. Alle Zutrittsmöglichkeiten zum Rechenzentrum MÜSSEN mit Zutrittskontrolleinrichtungen ausgestattet sein. Jeder Zutritt zum Rechenzentrum MUSS von der Zutrittskontrolle individuell erfasst werden. Im Falle eines Serverraums SOLLTE geprüft werden, ob eine Überwachung aller Zutrittsmöglichkeiten sinnvoll ist. Es MUSS regelmäßig kontrolliert werden, ob die Regelungen zum Einsatz einer Zutrittskontrolle eingehalten werden. Die Anforderungen der Institution an ein Zutrittskontrollsystem MÜSSEN in einem Konzept ausreichend detailliert dokumentiert werden.",
+            "isresponsible": "Haustechnik",
+            "mitigates": [
+                "G 0.44"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verschließen und Sichern",
+            "handle": "INF.2.A7",
+            "level": "Low",
+            "affects": [],
+            "text": "Alle Türen des Rechenzentrums MÜSSEN stets verschlossen gehalten werden. Fenster MÜSSEN möglichst schon bei der Planung vermieden werden. Falls sie doch vorhanden sind, MÜSSEN sie ebenso wie die Türen stets verschlossen gehalten werden. Türen und Fenster MÜSSEN einen dem Sicherheitsniveau angemessenen Schutz gegen Angriffe und Umgebungseinflüsse bieten. Sie MÜSSEN mit einem Sichtschutz versehen sein. Dabei MUSS beachtet werden, dass die bauliche Ausführung aller raumbildenden Elemente in Bezug auf die erforderliche Schutzwirkung gleichwertig sein muss.",
+            "isresponsible": "Mitarbeitende, Haustechnik",
+            "mitigates": [
+                "G 0.18",
+                "G 0.19",
+                "G 0.44"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz einer Brandmeldeanlage",
+            "handle": "INF.2.A8",
+            "level": "Low",
+            "affects": [],
+            "text": "In einem Rechenzentrum MUSS eine Brandmeldeanlage installiert sein. Diese MUSS alle Flächen überwachen. Alle Meldungen der Brandmeldeanlage MÜSSEN geeignet weitergeleitet werden (siehe dazu auch INF.2.A13 Planung und Installation von Gefahrenmeldeanlagen). Die Brandmeldeanlage MUSS regelmäßig gewartet werden. Es MUSS sichergestellt werden, dass in Räumen des Rechenzentrums keine besonderen Brandlasten vorhanden sind.",
+            "isresponsible": "Planende",
+            "mitigates": [
+                "G 0.1",
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz einer Lösch- oder Brandvermeidungsanlage",
+            "handle": "INF.2.A9",
+            "level": "Low",
+            "affects": [],
+            "text": "In einem Rechenzentrum MUSS entweder eine Lösch- oder Brandvermeidungsanlage nach aktuellem Stand der Technik installiert sein oder durch technische (insbesondere durch eine flächendeckende Brandfrüherkennung, siehe INF.2.A17 Brandfrüherkennung) und organisatorische Maßnahmen (geschultes Personal und Reaktionspläne für Meldungen der Brandfrüherkennung) sichergestellt sein, dass unmittelbar (innerhalb von maximal 3 Minuten) auf Meldungen der Brandfrüherkennung mit schadensminimierenden Maßnahmen reagiert wird. In Serverräumen ohne Lösch- oder Brandvermeidungsanlage MÜSSEN Handfeuerlöscher mit geeigneten Löschmitteln in ausreichender Zahl und Größe vorhanden sein. Es MUSS beachtet werden, dass darüber hinausgehende baurechtliche Anforderungen hinsichtlich der Ausstattung mit Handfeuerlöschern davon unberührt bleiben. Die Feuerlöscher MÜSSEN so angebracht werden, dass sie im Brandfall leicht zu erreichen sind. Jeder Feuerlöscher MUSS regelmäßig geprüft und gewartet werden. Alle Mitarbeitenden, die ein Rechenzentrum oder einen Serverraum betreten dürfen, MÜSSEN in die Benutzung der Handfeuerlöscher eingewiesen werden.",
+            "isresponsible": "Haustechnik",
+            "mitigates": [
+                "G 0.1",
+                "G 0.24",
+                "G 0.25"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Inspektion und Wartung der Infrastruktur",
+            "handle": "INF.2.A10",
+            "level": "Low",
+            "affects": [],
+            "text": "Für alle Komponenten der baulich-technischen Infrastruktur MÜSSEN mindestens die vom herstellenden Unternehmen empfohlenen oder durch Normen festgelegten Intervalle und Vorschriften für Inspektion und Wartung eingehalten werden. Inspektionen und Wartungsarbeiten MÜSSEN protokolliert werden. Brandschotten MÜSSEN daraufhin geprüft werden, ob sie unversehrt sind. Die Ergebnisse MÜSSEN dokumentiert werden.",
+            "isresponsible": "Wartungspersonal, Haustechnik",
+            "mitigates": [
+                "G 0.1",
+                "G 0.18",
+                "G 0.25",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Automatische Überwachung der Infrastruktur",
+            "handle": "INF.2.A11",
+            "level": "Low",
+            "affects": [],
+            "text": "Alle Einrichtungen der Infrastruktur, wie z. B. Leckageüberwachung, Klima-, Strom- und USV-Anlagen, MÜSSEN automatisch überwacht werden. Erkannte Störungen MÜSSEN schnellstmöglich in geeigneter Weise weitergeleitet und bearbeitet werden. Im Falle eines Serverraums SOLLTEN IT- und Supportgeräte, die nicht oder nur selten von einer Person bedient werden müssen, mit einer Fernanzeige für Störungen ausgestattet werden. Die verantwortlichen Mitarbeitenden MÜSSEN zeitnah alarmiert werden.",
+            "isresponsible": "Haustechnik",
+            "mitigates": [
+                "G 0.10",
+                "G 0.25",
+                "G 0.26"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz einer Brandfrüherkennung",
+            "handle": "INF.2.A17",
+            "level": "Low",
+            "affects": [],
+            "text": "Ein Rechenzentrum MUSS mit einer Brandfrüherkennungsanlage ausgestattet werden. Ein Serverraum SOLLTE mit einer Brandfrüherkennungsanlage ausgestattet werden. Die Meldungen der Brandfrüherkennung MÜSSEN an eine ständig besetzte Stelle geleitet werden, die eine Kontrolle und Schutzreaktion innerhalb von maximal 3 Minuten veranlassen kann. Alternativ MUSS eine automatische Schutzreaktion erfolgen. Um ein ausgewogenes Verhältnis zwischen Brandschutz und Verfügbarkeit zu erreichen, MUSS sichergestellt werden, dass sich einander Redundanz gebende Einrichtungen nicht gemeinsam im Wirkungsbereich der gleichen Spannungsfreischaltung befinden.",
+            "isresponsible": "Planende, Haustechnik",
+            "mitigates": [
+                "G 0.1",
+                "G 0.8",
+                "G 0.24"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Vermeidung und Überwachung nicht erforderlicher Leitungen",
+            "handle": "INF.2.A29",
+            "level": "Low",
+            "affects": [],
+            "text": "In einem Rechenzentrum DÜRFEN NUR Leitungen verlegt werden, die der unmittelbaren Versorgung der im Rechenzentrum aufgebauten Technik (in der Regel IT- und gegebenenfalls Kühltechnik) dienen. Ist es aus baulichen Gründen unabwendbar, Leitungen durch das Rechenzentrum zu führen, um andere Bereiche als die des Rechenzentrums zu versorgen, MUSS dies einschließlich Begründung dokumentiert werden. Die Risiken, die von solchen Leitungen ausgehen, MÜSSEN durch geeignete Maßnahmen minimiert werden, z. B. durch Einhausung und Überwachung. Durch Serverräume dürfen vorgenannte Leitungen geführt werden, ohne zu begründen, warum dies unabwendbar ist, diese MÜSSEN aber genauso behandelt werden, wie für das Rechenzentrum beschrieben. Meldungen aus der Überwachung der Leitungen MÜSSEN unverzüglich hinsichtlich der Gefährdungsrelevanz geprüft und bewertet werden. Gegenmaßnahmen MÜSSEN entsprechend der erkannten Gefährdungsrelevanz zeitgerecht umgesetzt werden (siehe auch INF.2.A13 Planung und Installation von Gefahrenmeldeanlagen).",
+            "isresponsible": "Haustechnik, Planende",
+            "mitigates": [
+                "G 0.3",
+                "G 0.18",
+                "G 0.24",
+                "G 0.25"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Perimeterschutz für das Rechenzentrum",
+            "handle": "INF.2.A12",
+            "level": "Medium",
+            "affects": [],
+            "text": "Für Rechenzentren SOLLTE ein Perimeterschutz existieren. Je nach festgelegtem Schutzbedarf für das Rechenzentrum und abhängig vom Gelände SOLLTE der Perimeterschutz aus folgenden Komponenten bestehen: äußere Umschließung oder Umfriedung, Sicherungsmaßnahmen gegen unbeabsichtigtes Überschreiten einer Grundstücksgrenze, Sicherungsmaßnahmen gegen beabsichtigtes gewaltloses Überwinden der Grundstücksgrenze, Sicherungsmaßnahmen gegen beabsichtigtes gewaltsames Überwinden der Grundstücksgrenze, Freiland-Sicherungsmaßnahmen, äußere Personen- und Fahrzeugdetektion, Maßnahmen zur Beweissicherung (beispielsweise Videoaufzeichnung) sowie automatische Alarmierung.",
+            "isresponsible": "Planende, Haustechnik",
+            "mitigates": [
+                "G 0.7",
+                "G 0.34",
+                "G 0.44"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Planung und Installation von Gefahrenmeldeanlagen",
+            "handle": "INF.2.A13",
+            "level": "Medium",
+            "affects": [],
+            "text": "Basierend auf dem Sicherheitskonzept des Gebäudes SOLLTE geplant werden, welche Gefahrenmeldeanlagen für welche Bereiche des Rechenzentrums benötigt und installiert werden. Hierüber hinaus SOLLTE festgelegt werden, wie mit Alarmmeldungen umzugehen ist. Das Konzept SOLLTE immer angepasst werden, wenn sich die Nutzung der Gebäudebereiche verändert. Es SOLLTE eine zum jeweiligen Einsatzzweck passende Gefahrenmeldeanlage (GMA) installiert werden. Die Meldungen der GMA SOLLTEN unter Beachtung der dafür geltenden Technischen Anschlussbedingungen (TAB) auf eine Alarmempfangsstelle aufgeschaltet werden. Die ausgewählte Alarmempfangsstelle MUSS jederzeit erreichbar sein. Sie MUSS technisch sowie personell in der Lage sein, geeignet auf die gemeldete Gefährdung zu reagieren. Der Übertragungsweg zwischen eingesetzter GMA und Alarmempfangsstelle SOLLTE entsprechend den TAB und nach Möglichkeit redundant ausgelegt werden. Alle vorhandenen Übertragungswege MÜSSEN regelmäßig getestet werden.",
+            "isresponsible": "Haustechnik",
+            "mitigates": [
+                "G 0.1",
+                "G 0.3",
+                "G 0.18",
+                "G 0.44"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz einer Netzersatzanlage",
+            "handle": "INF.2.A14",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Energieversorgung eines Rechenzentrums aus dem Netz eines Energieversorgungsunternehmens SOLLTE um eine Netzersatzanlage (NEA) ergänzt werden. Wird eine NEA verwendet, MUSS sie regelmäßig gewartet werden. Bei diesen Wartungen MÜSSEN auch Belastungs- und Funktionstests sowie Testläufe unter Last durchgeführt werden. Der Betriebsmittelvorrat einer NEA MUSS regelmäßig daraufhin überprüft werden, ob er ausreichend ist. Außerdem MUSS regelmäßig kontrolliert werden, ob die Vorräte noch verwendbar sind, vor allem um die sogenannte Dieselpest zu vermeiden. Nach Möglichkeit SOLLTE statt Diesel-Kraftstoff schwefelarmes Heizöl verwendet werden. Die Tankvorgänge von Brennstoffen MÜSSEN protokolliert werden. Aus dem Protokoll MUSS die Art des Brennstoffs, die genutzten Additive, das Tankdatum und die getankte Menge hervorgehen. Wenn für einen Serverraum auf den Einsatz einer NEA verzichtet wird, SOLLTE alternativ zur NEA eine USV mit einer dem Schutzbedarf angemessenen Autonomiezeit realisiert werden.",
+            "isresponsible": "Planende, Haustechnik",
+            "mitigates": [
+                "G 0.8",
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Überspannungsschutzeinrichtung",
+            "handle": "INF.2.A15",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTE auf Basis der aktuell gültigen Norm (DIN EN 62305 Teil 1 bis 4) ein Blitz- und Überspannungsschutzkonzept erstellt werden. Dabei sind die für den ordnungsgemäßen Betrieb des RZ erforderlichen Blitzschutzzonen (LPZ) festzulegen. Für alle für den ordnungsgemäßen Betreib des RZ und dessen Dienstleistungsbereitstellung erforderlichen Einrichtungen SOLLTE das mindestens die LPZ 2 sein. Alle Einrichtungen des Überspannungsschutzes SOLLTEN gemäß DIN EN 62305-3, Tabelle E.2 ein Mal im Jahr einer Umfassenden Prüfung unterzogen werden.",
+            "isresponsible": "Planende, Haustechnik",
+            "mitigates": [
+                "G 0.1",
+                "G 0.18",
+                "G 0.25"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Klimatisierung im Rechenzentrum",
+            "handle": "INF.2.A16",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTE sichergestellt werden, dass im Rechenzentrum geeignete klimatische Bedingungen geschaffen und aufrechterhalten werden. Die Klimatisierung SOLLTE für das Rechenzentrum ausreichend dimensioniert sein. Alle relevanten Werte SOLLTEN ständig überwacht werden. Weicht ein Wert von der Norm ab, SOLLTE automatisch alarmiert werden. Die Klimaanlagen SOLLTEN in IT-Betriebsbereichen möglichst ausfallsicher sein.",
+            "isresponsible": "Planende",
+            "mitigates": [
+                "G 0.2",
+                "G 0.25"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Durchführung von Funktionstests der technischen Infrastruktur",
+            "handle": "INF.2.A19",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die technische Infrastruktur eines Rechenzentrums SOLLTE regelmäßig (zumindest ein- bis zweimal jährlich) sowie nach Systemumbauten und umfangreichen Reparaturen getestet werden. Die Ergebnisse SOLLTEN dokumentiert werden. Besonders ganze Reaktionsketten SOLLTEN einem echten Funktionstest unterzogen werden.",
+            "isresponsible": "Haustechnik",
+            "mitigates": [
+                "G 0.8",
+                "G 0.18",
+                "G 0.26",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Anlagen zur, Löschung oder Vermeidung von Bränden",
+            "handle": "INF.2.A30",
+            "level": "Medium",
+            "affects": [],
+            "text": "Ein Rechenzentrum SOLLTE mit einer automatischen Lösch- oder Brandvermeidungsanlage ausgestattet werden.",
+            "isresponsible": "Haustechnik, Planende",
+            "mitigates": [
+                "G 0.1"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ausweichrechenzentrum",
+            "handle": "INF.2.A21",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Es SOLLTE ein geografisch separiertes Ausweichrechenzentrum aufgebaut werden. Das Ausweichrechenzentrum SOLLTE so dimensioniert sein, dass alle Prozesse der Institution aufrechterhalten werden können. Auch SOLLTE es ständig einsatzbereit sein. Alle Daten der Institution SOLLTEN regelmäßig ins Ausweichrechenzentrum gespiegelt werden. Der Schwenk auf das Notfallrechenzentrum SOLLTE regelmäßig getestet und geübt werden. Die Übertragungswege in das Ausweichrechenzentrum SOLLTEN geeignet abgesichert und entsprechend redundant ausgelegt sein.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.8",
+                "G 0.9",
+                "G 0.10",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Durchführung von Staubschutzmaßnahmen",
+            "handle": "INF.2.A22",
+            "level": "High",
+            "affects": [
+                "IA"
+            ],
+            "text": "Bei Baumaßnahmen in einem Rechenzentrum SOLLTEN geeignete Staubschutzmaßnahmen definiert, geplant und umgesetzt werden. Personen, die selbst nicht an den Baumaßnahmen beteiligt sind, SOLLTEN in ausreichend engen Zeitabständen kontrollieren, ob die Staubschutzmaßnahmen ordnungsgemäß funktionieren und die Regelungen zum Staubschutz eingehalten werden.",
+            "isresponsible": "Haustechnik",
+            "mitigates": [
+                "G 0.2"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Zweckmäßiger Aufbau der Verkabelung im Rechenzentrum",
+            "handle": "INF.2.A23",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Kabeltrassen in Rechenzentren SOLLTEN sorgfältig geplant und ausgeführt werden. Trassen SOLLTEN hinsichtlich Anordnung und Dimensionierung so ausgelegt sein, dass eine Trennung der Spannungsebenen sowie eine sinnvolle Verteilung von Kabeln auf den Trassen möglich ist und dass auch für zukünftige Bedarfsmehrung ausreichend Platz zur Verfügung steht. Zur optimalen Versorgung von IT-Hardware, die über zwei Netzteile verfügt, SOLLTE ab der Niederspannungshauptverteilung für die IT-Betriebsbereiche eine zweizügige sogenannte A-B-Versorgung aufgebaut werden. Einander Redundanz gebende Leitungen SOLLTEN über getrennte Trassen verlegt werden.",
+            "isresponsible": "Haustechnik",
+            "mitigates": [
+                "G 0.8",
+                "G 0.10",
+                "G 0.26"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz von Videoüberwachungsanlagen",
+            "handle": "INF.2.A24",
+            "level": "High",
+            "affects": [
+                "IA"
+            ],
+            "text": "Die Zutrittskontrolle und die Einbruchmeldung SOLLTEN durch Videoüberwachungsanlagen ergänzt werden. Eine Videoüberwachung SOLLTE in das gesamte Sicherheitskonzept eingebettet werden. Bei der Planung, Konzeption und eventuellen Auswertung von Videoaufzeichnungen MUSS der Datenschutzbeauftragte immer mit einbezogen werden. Die für eine Videoüberwachung benötigten zentralen Technikkomponenten SOLLTEN in einer geeigneten Umgebung geschützt aufgestellt werden. Es SOLLTE regelmäßig überprüft werden, ob die Videoüberwachungsanlage korrekt funktioniert und ob die mit dem oder der Datenschutzbeauftragten abgestimmten Blickwinkel eingehalten werden.",
+            "isresponsible": "Datenschutzbeauftragte, Haustechnik, Planende",
+            "mitigates": [
+                "G 0.29",
+                "G 0.30",
+                "G 0.37"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Redundante Auslegung von unterbrechungsfreien Stromversorgungen",
+            "handle": "INF.2.A25",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "USV-Systeme SOLLTEN modular und so aufgebaut sein, dass der Ausfall durch ein redundantes Modul unterbrechungsfrei kompensiert wird. Sofern für die IT-Betriebsbereiche eine zweizügige sogenannte A-B-Versorgung aufgebaut ist, SOLLTE jeder der beiden Strompfade mit einem eigenständigen USV-System ausgestattet sein.",
+            "isresponsible": "Planende",
+            "mitigates": [
+                "G 0.8",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Redundante Auslegung von Netzersatzanlagen",
+            "handle": "INF.2.A26",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Netzersatzanlagen SOLLTEN redundant ausgelegt werden. Hinsichtlich der Wartung MÜSSEN auch redundante NEAs entsprechend INF.2.A14 Einsatz einer Netzersatzanlage behandelt werden.",
+            "isresponsible": "Planende",
+            "mitigates": [
+                "G 0.8",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz von höherwertigen Gefahrenmeldeanlagen",
+            "handle": "INF.2.A28",
+            "level": "High",
+            "affects": [
+                "IA"
+            ],
+            "text": "Für Rechenzentrumsbereiche mit erhöhtem Schutzbedarf SOLLTEN ausschließlich Gefahrenmeldeanlagen der VdS-Klasse C (gemäß VDS-Richtlinie 2311) eingesetzt werden.",
+            "isresponsible": "Planende",
+            "mitigates": [
+                "G 0.18"
+            ]
+        }
+    ]
+}

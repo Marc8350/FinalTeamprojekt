@@ -1,0 +1,419 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "SYS.2.2.3 Clients unter Windows",
+    "handle": "SYS.2.2.3",
+    "text": "Dieser Baustein beschreibt die Gefährdungslage und die Anforderungen für den Schutz von Informationen, die durch und auf Windows-Clients mit Windows 10 oder 11 verarbeitet werden.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Schadprogramme auf Windows-Clients",
+            "handle": "2.1",
+            "text": "Aufgrund der hohen Verbreitung von Windows-Betriebssystemen und der zwischen den Systemgenerationen oftmals vorhandenen Abwärtskompatibilität zu älteren Versionen ist die Gefährdung durch Schadprogramme und unbefugtes Eindringen in IT-Systeme für Windows vergleichsweise hoch.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Schadprogramme",
+                    "type": "Threat",
+                    "text": "Schadprogramme können auf verschiedene Weise auf Windows-Clients gelangen, z. B. durch E-Mail-Anhänge, Downloads aus dem Internet oder über USB-Sticks.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Integrierte Cloud-Funktionen",
+            "handle": "2.2",
+            "text": "Windows beinhaltet zahlreiche Funktionen, mit denen Daten unter Nutzung der Dienste von Microsoft abgelegt und synchronisiert werden (\"Cloud-Dienste\"). Dadurch besteht die Gefahr, diese unwissentlich, oder zumindest unbedacht, auch für möglicherweise institutionskritische oder personenbezogene Daten zu nutzen. Außerdem können Benutzende gegen die Datenschutzgesetze verstoßen, wenn Daten bei Dritten, in der Regel im Ausland, gespeichert werden. Meldet sich eine Person mit bereits aktiviertem Microsoft-Account an ein neues Gerät an, werden automatisch die von ihm genutzten Microsoft-Cloud-Dienste eingerichtet. So können Daten der Institution ungewollt auf die privaten Geräte der Mitarbeitenden synchronisiert werden. Als weiteres Beispiel bietet Windows als Standardeinstellung die Möglichkeit, den Bitlocker-Recovery-Schlüssel direkt über den Microsoft-Account in der Cloud zu sichern und somit schutzbedürftige kryptografische Geheimnisse in die Hände Dritter zu geben.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unbeabsichtigte Datensynchronisation",
+                    "type": "Threat",
+                    "text": "Benutzende können versehentlich sensible Daten mit ihren privaten Microsoft-Konten synchronisieren, wenn sie sich mit diesen Konten an einem Windows-Client anmelden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Speicherung von Bitlocker-Schlüsseln in der Cloud",
+                    "type": "Threat",
+                    "text": "Die Speicherung des Bitlocker-Schlüssels in der Cloud kann dazu führen, dass unbefugte Dritte Zugriff auf die verschlüsselten Daten erhalten.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Beeinträchtigung von Software-Funktionen durch Kompatibilitätsprobleme",
+            "handle": "2.3",
+            "text": "Software, die auf Vorgängerversionen eines Betriebssystems erfolgreich betrieben werden konnte, muss nicht auch grundsätzlich mit der aktuellen Version von Windows zusammenarbeiten. Mögliche Ursachen sind neue Sicherheitsmerkmale oder Betriebssystemeigenschaften sowie der Wegfall von Funktionen oder Diensten. In der Folge kann die Software nicht oder nur eingeschränkt verwendet werden. Beispiele für aktivierte Sicherheitsmerkmale, die bei neuen Windows-Versionen die Ursache für mögliche Kompatibilitätsprobleme sein können, sind die Benutzerkontensteuerung (UAC) oder, bei 64-Bit-Versionen des Betriebssystems, Kernel Patch Guard. Außerdem könnten signierte Treiber notwendig sein, die möglicherweise für ältere Geräte nicht mehr zur Verfügung stehen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Nicht-kompatibles Software",
+                    "type": "Threat",
+                    "text": "Software, die nicht mit der aktuellen Version von Windows kompatibel ist, kann zu Fehlfunktionen oder Sicherheitslücken führen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Telemetrie-Funktionen von Windows",
+            "handle": "2.4",
+            "text": "Windows sendet standardmäßig sogenannte Diagnosedaten an den Hersteller Microsoft. Zusätzlich kann Microsoft über den in Windows integrierten Telemetrie-Dienst gezielt Informationen von einem Client abfragen. Im Telemetrie-Level \"Full\" bzw. \"Vollständig\", der in den Windows-Editionen Home und Pro der Standard-Level ist, schließt dies beispielsweise den Zugriff auf die Registry des Clients sowie die Ausführung von bestimmten Diagnosetools auf dem Client mit ein. Es besteht die Gefahr, dass die Diagnose- bzw. Telemetriedaten schützenswerte Informationen enthalten, die auf diesem Weg an Dritte gelangen können.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Übertragung sensibler Daten",
+                    "type": "Threat",
+                    "text": "Die Telemetrie-Funktionen von Windows können dazu führen, dass sensible Daten an Microsoft übertragen werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Eingeschränkte Forensik bei der Nutzung des Virtual Secure Mode (VSM)",
+            "handle": "2.5",
+            "text": "Durch die Nutzung des Virtual Secure Mode (VSM) werden forensische Untersuchungen, z. B. zur Sicherheitsvorfallbehandlung, eingeschränkt bzw. erschwert. Prozesse, die durch den Secure Kernel bzw. dem Isolated User Mode (IUM) geschützt werden, sind nicht mehr zugänglich. Beispielsweise können Speicherabbilder dieser Prozesse aufgrund kryptografischer Maßnahmen nicht ausgewertet werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Erschwerte Forensik",
+                    "type": "Threat",
+                    "text": "Die Nutzung des Virtual Secure Mode (VSM) erschwert die forensische Untersuchung von Sicherheitsvorfällen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Planung des Einsatzes von Cloud-Diensten unter Windows",
+            "handle": "SYS.2.2.3.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Da Windows-basierte Geräte eng mit den Cloud-Diensten des Herstellers Microsoft verzahnt sind, MUSS vor ihrer Verwendung strategisch festgelegt werden, welche enthaltenen Cloud-Dienste in welchem Umfang genutzt werden sollen bzw. dürfen.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.15",
+                "G 0.18",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Auswahl und Beschaffung einer geeigneten Windows-Version",
+            "handle": "SYS.2.2.3.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Der Funktionsumfang und die Versorgung mit funktionalen Änderungen einer Windows-Version MÜSSEN unter Berücksichtigung des ermittelten Schutzbedarfs und des Einsatzzwecks ausgewählt werden. Die Umsetzbarkeit der erforderlichen Absicherungsmaßnahmen MUSS bei der Auswahl berücksichtigt werden. Basierend auf dem Ergebnis der Überprüfung MUSS der etablierte Beschaffungsprozess um die Auswahl des entsprechenden Lizenzmodells und \"Service Branches\" (CB, CBB oder LTSC) erweitert werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Telemetrie und Datenschutzeinstellungen unter Windows",
+            "handle": "SYS.2.2.3.A4",
+            "level": "Low",
+            "affects": [],
+            "text": "Um die Übertragung von Diagnose- und Nutzungsdaten an Microsoft stark zu reduzieren, MUSS das Telemetrie-Level 0 (Security) in der Enterprise-Edition von Windows konfiguriert werden. Wenn diese Einstellung nicht wirksam umgesetzt wird oder bei anderen Windows-Edition umgesetzt werden kann, dann MUSS durch geeignete Maßnahmen, etwa auf Netzebene, sichergestellt werden, dass die Daten nicht an den Hersteller übertragen werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Schutz vor Schadsoftware unter Windows",
+            "handle": "SYS.2.2.3.A5",
+            "level": "Low",
+            "affects": [],
+            "text": "Sofern nicht gleich- oder höherwertige Maßnahmen, wie z. B. Ausführungskontrolle, zum Schutz des IT-Systems vor einer Infektion mit Schadsoftware getroffen wurden, MUSS eine spezialisierte Komponente zum Schutz vor Schadsoftware auf Windows-Clients eingesetzt werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Integration von Online-Konten in das Betriebssystem",
+            "handle": "SYS.2.2.3.A6",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Anmeldung am System sowie an der Domäne SOLLTE nur mit dem Konto eines selbst betriebenen Verzeichnisdienstes möglich sein. Anmeldungen mit lokalen Konten SOLLTEN Administrierenden vorbehalten sein. Online-Konten zur Anmeldung, etwa ein Microsoft-Konto oder Konten anderer Identitätsmanagementsysteme, DÜRFEN NICHT verwendet werden, da hier personenbezogene Daten an die Systeme Dritter übertragen werden.",
+            "isresponsible": "Benutzende",
+            "mitigates": [
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere zentrale Authentisierung in Windows-Netzen",
+            "handle": "SYS.2.2.3.A9",
+            "level": "Medium",
+            "affects": [],
+            "text": "Für die zentrale Authentisierung SOLLTE ausschließlich Kerberos eingesetzt werden. Eine Gruppenrichtlinie SOLLTE die Verwendung älterer Protokolle verhindern. Ist dies nicht möglich, MUSS alternativ NTLMv2 eingesetzt werden. Die Authentisierung mittels LAN-Manager und NTLMv1 DARF NICHT innerhalb der Institution und in einer produktiven Betriebsumgebung erlaubt werden. Die eingesetzten kryptografischen Mechanismen SOLLTEN entsprechend dem ermittelten Schutzbedarf und basierend auf den internen Richtlinien konfiguriert und dokumentiert werden. Abweichende Einstellungen SOLLTEN begründet und mit dem Sicherheitsmanagement abgestimmt sein.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.23",
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Datei- und Freigabeberechtigungen unter Windows",
+            "handle": "SYS.2.2.3.A12",
+            "level": "Medium",
+            "affects": [],
+            "text": "Der Zugriff auf Dateien und Ordner auf dem lokalen System sowie auf Netzfreigaben SOLLTE gemäß einem Berechtigungs- und Zugriffskonzept konfiguriert werden. Auch die standardmäßig vorhandenen administrativen Freigaben auf dem System SOLLTEN hierbei berücksichtigt werden. Die Schreibrechte für Benutzende SOLLTEN auf einen definierten Bereich im Dateisystem beschränkt werden. Insbesondere SOLLTEN Benutzende keine Schreibrechte für Ordner des Betriebssystems oder installierter Anwendungen erhalten.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.22",
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz der SmartScreen-Funktion",
+            "handle": "SYS.2.2.3.A13",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die SmartScreen-Funktion, die aus dem Internet heruntergeladene Dateien und Webinhalte auf mögliche Schadsoftware untersucht und dazu unter Umständen personenbezogene Daten an Microsoft überträgt, SOLLTE deaktiviert werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz des Sprachassistenten Cortana",
+            "handle": "SYS.2.2.3.A14",
+            "level": "Medium",
+            "affects": [],
+            "text": "Cortana SOLLTE deaktiviert werden.",
+            "isresponsible": "Benutzende",
+            "mitigates": [
+                "G 0.15",
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz der Synchronisationsmechanismen unter Windows",
+            "handle": "SYS.2.2.3.A15",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Synchronisierung von Benutzendendaten mit Microsoft Cloud-Diensten und das Sharing von WLAN-Passwörtern SOLLTEN vollständig deaktiviert werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Anbindung von Windows an den Microsoft-Store",
+            "handle": "SYS.2.2.3.A16",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Verwendung des Microsoft-Stores SOLLTE auf die Verträglichkeit mit den Datenschutz- und Sicherheitsvorgaben der Institution überprüft und bewertet werden. Die generelle Installation von Apps auf Windows ist nicht von der Anbindung an den Microsoft-Store abhängig, daher SOLLTE sie, sofern sie nicht benötigt wird, deaktiviert werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.19",
+                "G 0.28",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Keine Speicherung von Daten zur automatischen Anmeldung",
+            "handle": "SYS.2.2.3.A17",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Speicherung von Kennwörtern, Zertifikaten und anderen Informationen zur automatischen Anmeldung an Webseiten und IT-Systemen SOLLTE NICHT erlaubt werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.19",
+                "G 0.23",
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz der Windows-Remoteunterstützung",
+            "handle": "SYS.2.2.3.A18",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Auswirkungen auf die Konfiguration der lokalen Firewall SOLLTEN bei der Planung der Windows-Remoteunterstützung (hiermit ist nicht RDP gemeint) berücksichtigt werden. Eine Remoteunterstützung SOLLTE nur nach einer expliziten Einladung erfolgen. Bei der Speicherung einer Einladung in einer Datei SOLLTE diese ein Kennwort besitzen. Dem Aufbau einer Sitzung SOLLTE immer explizit zugestimmt werden. Die maximale Gültigkeit der Einladung für eine Unterstützung aus der Ferne SOLLTE in der Dauer angemessen sein. Sofern die Windows-Remoteunterstützung nicht verwendet wird, SOLLTE sie vollständig deaktiviert werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.23",
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sicherheit beim Fernzugriff über RDP",
+            "handle": "SYS.2.2.3.A19",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Auswirkungen auf die Konfiguration der lokalen Firewall SOLLTEN bei der Planung des Fernzugriffs berücksichtigt werden. Die Gruppe der berechtigten Benutzenden für den Remote-Desktopzugriff (RDP) SOLLTE durch die Zuweisung entsprechender Berechtigungen festgelegt werden. In komplexen Infrastrukturen SOLLTE das RDP-Zielsystem nur durch ein dazwischengeschaltetes RDP-Gateway erreicht werden können. Für die Verwendung von RDP SOLLTE eine Prüfung und deren Umsetzung sicherstellen, dass die nachfolgend aufgeführten Komfortfunktionen im Einklang mit dem Schutzbedarf des Zielsystems stehen:\n• die Verwendung der Zwischenablage,\n• die Einbindung von Druckern,\n• die Einbindung von Wechselmedien und Netzlaufwerken sowie\n• die Nutzung der Dateiablagen und von Smartcard-Anschlüssen.\nSofern der Einsatz von Remote-Desktopzugriffen nicht vorgesehen ist, SOLLTEN diese vollständig deaktiviert werden. Die eingesetzten kryptografischen Protokolle und Algorithmen SOLLTEN sicher sein und den internen Vorgaben der Institution entsprechen.",
+            "isresponsible": "Benutzende",
+            "mitigates": [
+                "G 0.23",
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz der Benutzerkontensteuerung UAC für privilegierte Konten",
+            "handle": "SYS.2.2.3.A20",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Konfigurationsparameter der sogenannten Benutzerkontensteuerung (User Account Control, UAC) SOLLTEN für die privilegierten Konten zwischen Bedienbarkeit und Sicherheitsniveau abgewogen eingesetzt werden. Die Entscheidungen für die zu verwendenden Konfigurationsparameter SOLLTEN dokumentiert werden. Darüber hinaus SOLLTE die Dokumentation alle Konten mit Administrationsrechten enthalten sowie regelmäßig geprüft werden, ob es notwendig ist, die Rechte erweitern zu können.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz des Encrypting File Systems",
+            "handle": "SYS.2.2.3.A21",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Da das Encrypting File System (EFS) die verwendeten Schlüssel mit dem Passwort des jeweiligen Kontos schützt, SOLLTE ein sicheres Passwort verwendet werden. Zusätzlich SOLLTEN restriktive Zugriffsrechte die mit EFS verschlüsselten Dateien schützen. Der Wiederherstellungsagent SOLLTE ein dediziertes Konto und kein Administrationskonto sein. In diesem Zusammenhang SOLLTE der private Schlüssel des Agenten gesichert und aus dem System entfernt werden. Es SOLLTEN von allen privaten Schlüsseln Datensicherungen erstellt werden. Beim Einsatz von EFS mit lokalen Konten SOLLTEN die lokalen Passwortspeicher mittels Syskey verschlüsselt werden. Alternativ kann der Windows Defender Credential Guard genutzt werden. Benutzende SOLLTEN im korrekten Umgang mit EFS geschult werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung der Windows PowerShell",
+            "handle": "SYS.2.2.3.A22",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Die PowerShell und die WPS-Dateien SOLLTEN NUR von Administrierenden ausgeführt werden können. Die PowerShell-Ausführung selbst SOLLTE zentral protokolliert und die Protokolle überwacht werden. Die Ausführung von PowerShell-Skripten SOLLTE mit dem Befehl Set-ExecutionPolicy AllSigned eingeschränkt werden, um zu verhindern, dass unsignierte Skripte versehentlich ausgeführt werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.22",
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erweiterter Schutz der Anmeldeinformationen unter Windows",
+            "handle": "SYS.2.2.3.A23",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Auf UEFI-basierten Systemen SOLLTE SecureBoot verwendet und der Status des geschützten Modus für den Local Credential Store LSA beim Systemstart überwacht werden. Ist eine Fernwartung der Clients mittels RDP vorgesehen, SOLLTE beim Einsatz von Windows in einer Domäne ab dem Funktionslevel 2012 R2 von der Option \"restrictedAdmin\" für RDP Gebrauch gemacht werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.22"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Aktivierung des Last-Access-Zeitstempels",
+            "handle": "SYS.2.2.3.A24",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Es SOLLTE geprüft werden, ob der Last-Access-Zeitstempel im Dateisystem aktiviert werden kann, um die Analyse eines Systemmissbrauchs zu erleichtern. Bei der Prüfung SOLLTEN mögliche Auswirkungen dieser Einstellung, wie Performance-Aspekte oder resultierende Einschränkungen bei inkrementellen Backups, berücksichtigt werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.29",
+                "G 0.37"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Umgang mit Fernzugriffsfunktionen der \"Connected User Experience and Telemetry\"",
+            "handle": "SYS.2.2.3.A25",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Es SOLLTE berücksichtigt werden, dass die Komponente \"Connected User Experience and Telemetry\" (CUET) bei Windows fester Bestandteil des Betriebssystems ist und neben der Telemetriefunktion auch eine Fernzugriffsmöglichkeit für den Hersteller Microsoft auf das lokale System erlaubt. Ein solcher Fernzugriff auf den Windows-Client SOLLTE netzseitig geloggt und falls erforderlich geblockt werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.23",
+                "G 0.30",
+                "G 0.36",
+                "G 0.37"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Nutzung des Virtual Secure Mode",
+            "handle": "SYS.2.2.3.A26",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Bei der Nutzung des Virtual Secure Mode (VSM) SOLLTE berücksichtigt werden, dass forensische Untersuchungen, z. B. zur Sicherheitsvorfallbehandlung, eingeschränkt oder erschwert werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.22",
+                "G 0.29"
+            ]
+        }
+    ]
+}

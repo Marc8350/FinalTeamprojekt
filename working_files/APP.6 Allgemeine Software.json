@@ -1,0 +1,343 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "APP.6 Allgemeine Software",
+    "handle": "APP.6",
+    "text": "This asset covers all types of software, regardless of whether it is a word processor, operating system, mobile communication app, custom software, or a distributed content management system. Software typically goes through a lifecycle that includes planning, requirement gathering, procurement, software testing, release, installation in production environments, training, operation, updates, change management, and decommissioning. This lifecycle can vary depending on the application context, and the scope of each step can also vary. However, recurring information security aspects apply to all types of software.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ungeeignete Auswahl von Software",
+            "handle": "2.1",
+            "text": "The selection of unsuitable software that does not meet the requirements of the institution can lead to significant disruptions in operations. For example, file formats may not be compatible with existing programs, or new products may have insufficient functionality. This can result in performance losses, disruptions, or errors within business processes.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Threat 1",
+                    "type": "Threat",
+                    "text": "If the software does not meet the security requirements of the institution, the data processed by the software could be disclosed or manipulated. For example, if login functions of applications are not designed for the intended deployment environment in an open data network, this could lead to vulnerabilities.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Offenlegung schützenswerter Informationen durch fehlerhafte Konfiguration",
+            "handle": "2.2",
+            "text": "If software is incorrectly configured, sensitive information may be unintentionally disclosed. For example, if unnecessary functions are still activated, such as cloud backup functions, data could be unintentionally synchronized to the cloud. This could allow unauthorized parties to access and disclose sensitive data.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Threat 1",
+                    "type": "Threat",
+                    "text": "This could lead to financial losses or damage the reputation of the institution. Additionally, the institution could violate applicable laws, such as those related to the protection of personal data.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Bezug von Software aus unzuverlässiger Quelle",
+            "handle": "2.3",
+            "text": "If software is obtained from unreliable sources, it cannot be guaranteed that an unmodified original version of the software is being used. Instead, a defective or compromised version of the software may have been obtained. This also applies to extensions such as plug-ins or add-ons. If compromised software is installed, malicious code could be distributed within the institution. It is also possible that the software will not function as intended. This could compromise the integrity and availability of IT systems.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Threat 1",
+                    "type": "Threat",
+                    "text": "This could lead to financial losses or damage the reputation of the institution. Additionally, the institution could violate applicable laws, such as those related to the protection of personal data.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sicherheitslücken durch mangelhafte Wartung",
+            "handle": "2.4",
+            "text": "Security vulnerabilities and software weaknesses can occur throughout the entire lifecycle of software. This can compromise the information security of the data processed by the software, for example, by allowing login functions to be bypassed or encryption to be broken.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Threat 1",
+                    "type": "Threat",
+                    "text": "Security vulnerabilities and software weaknesses may not be addressed promptly if a suitable maintenance agreement with the manufacturer or supplier is not in place, or if the software is simply used beyond its maintenance period. Violations of license terms can also lead to the deactivation of (automatic) update mechanisms, meaning that the software is no longer maintained.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Datenverlust durch fehlerhafte Nutzung von Software",
+            "handle": "2.5",
+            "text": "Incorrect use of software can lead to employees accidentally deleting or modifying data in such a way that it becomes unusable. This can block entire business processes. Even if encryption functions are used incorrectly, the data may still be present but cannot be decrypted. In this case, the data can no longer be retrieved or can only be retrieved with increased effort.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Threat 1",
+                    "type": "Threat",
+                    "text": "This could lead to financial losses or damage the reputation of the institution. Additionally, the institution could violate applicable laws, such as those related to the protection of personal data.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Mangelhafte Ressourcen für die Ausführung von Software",
+            "handle": "2.6",
+            "text": "If IT systems have insufficient resources to run the software, this can significantly increase processing and response times for users. In the worst case, the software cannot be run on such a system. This can significantly disrupt business processes.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Threat 1",
+                    "type": "Threat",
+                    "text": "This could lead to financial losses or damage the reputation of the institution. Additionally, the institution could violate applicable laws, such as those related to the protection of personal data.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Nichtbeachtung von Anforderungen der Benutzenden",
+            "handle": "2.7",
+            "text": "Regardless of whether software meets functional requirements, it may not be accepted by users if it is cumbersome and complicated to use. This can lead to users resorting to alternative forms of processing and using other IT systems or software for unintended purposes. For example, private IT systems could be used without coordination with IT operations. These alternative forms of processing are rarely developed with information security in mind and therefore pose an increased risk.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Threat 1",
+                    "type": "Threat",
+                    "text": "This could lead to financial losses or damage the reputation of the institution. Additionally, the institution could violate applicable laws, such as those related to the protection of personal data.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Planung des Software-Einsatzes",
+            "handle": "APP.6.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Bevor eine Institution eine (neue) Software einführt, MUSS sie entscheiden, wofür die Software genutzt und welche Informationen damit verarbeitet werden sollen, wie die Benutzenden bei der Anforderungserhebung beteiligt und bei der Einführung unterstützt werden sollen, wie die Software an weitere Anwendungen und IT-Systeme über welche Schnittstellen angebunden wird, auf welchen IT-Systemen die Software ausgeführt werden soll und welche Ressourcen zur Ausführung der Software erforderlich sind, sowie ob sich die Institution in Abhängigkeit zu einem Hersteller oder einer Herstellerin begibt, wenn sie diese Software einsetzt. Hierbei MÜSSEN bereits Sicherheitsaspekte berücksichtigt werden. Zusätzlich MUSS die Institution die Zuständigkeiten für fachliche Betreuung, Freigabe und betriebliche Administration schon im Vorfeld klären und festlegen. Die Zuständigkeiten MÜSSEN dokumentiert und bei Bedarf aktualisiert werden.",
+            "isresponsible": "Fachverantwortliche",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erstellung eines Anforderungskatalogs für Software",
+            "handle": "APP.6.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Auf Basis der Ergebnisse der Planung MÜSSEN die Anforderungen an die Software in einem Anforderungskatalog erhoben werden. Der Anforderungskatalog MUSS dabei die grundlegenden funktionalen Anforderungen umfassen. Darüber hinaus MÜSSEN die nichtfunktionalen Anforderungen und hier insbesondere die Sicherheitsanforderungen in den Anforderungskatalog integriert werden. Hierbei MÜSSEN sowohl die Anforderungen von den Fachverantwortlichen als auch vom IT-Betrieb berücksichtigt werden. Insbesondere MÜSSEN auch die rechtlichen Anforderungen, die sich aus dem Kontext der zu verarbeitenden Daten ergeben, berücksichtigt werden. Der fertige Anforderungskatalog SOLLTE mit allen betroffenen Fachabteilungen abgestimmt werden.",
+            "isresponsible": "Fachverantwortliche",
+            "mitigates": [
+                "G 0.18",
+                "G 0.27",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Beschaffung von Software",
+            "handle": "APP.6.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Wenn Software beschafft wird, MUSS auf Basis des Anforderungskatalogs eine geeignete Software ausgewählt werden. Die ausgewählte Software MUSS aus vertrauenswürdigen Quellen beschafft werden. Die vertrauenswürdige Quelle SOLLTE eine Möglichkeit bereitstellen, die Software auf Integrität zu überprüfen. Darüber hinaus SOLLTE die Software mit einem geeigneten Wartungsvertrag oder einer vergleichbaren Zusage des herstellenden oder anbietenden Unternehmens beschafft werden. Diese Verträge oder Zusagen SOLLTEN insbesondere garantieren, dass auftretende Sicherheitslücken und Schwachstellen der Software während des gesamten Nutzungszeitraums zeitnah behoben werden.",
+            "isresponsible": "Beschaffungsstelle",
+            "mitigates": [
+                "G 0.18",
+                "G 0.20",
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Regelung für die Installation und Konfiguration von Software",
+            "handle": "APP.6.A4",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Installation und Konfiguration der Software MUSS durch den IT-Betrieb so geregelt werden, dass die Software nur mit dem geringsten notwendigen Funktionsumfang installiert und ausgeführt wird, die Software mit den geringsten möglichen Berechtigungen ausgeführt wird, die datensparsamsten Einstellungen (in Bezug auf die Verarbeitung von personenbezogenen Daten) konfiguriert werden sowie alle relevanten Sicherheitsupdates und -patches installiert sind, bevor die Software produktiv eingesetzt wird. Hierbei MÜSSEN auch abhängige Komponenten (unter anderem Laufzeitumgebungen, Bibliotheken, Schnittstellen sowie weitere Programme) mitbetrachtet werden. Der IT-Betrieb MUSS in Abstimmung mit den Fachverantwortlichen festlegen, wer die Software wie installieren darf. Idealerweise SOLLTE Software immer zentral durch den IT-Betrieb installiert werden. Ist es erforderlich, dass die Software (teilweise) manuell installiert wird, dann MUSS der IT-Betrieb eine Installationsanweisung erstellen, in der klar geregelt wird, welche Zwischenschritte zur Installation durchzuführen und welche Konfigurationen vorzunehmen sind. Darüber hinaus MUSS der IT-Betrieb regeln, wie die Integrität der Installationsdateien überprüft wird. Falls zu einem Installationspaket digitale Signaturen oder Prüfsummen verfügbar sind, MÜSSEN mit diesen die Integrität überprüft werden. Sofern erforderlich, SOLLTE der IT-Betrieb eine sichere Standardkonfiguration der Software festlegen, mit der die Software konfiguriert wird. Die Standardkonfiguration SOLLTE dokumentiert werden.",
+            "isresponsible": "Fachverantwortliche",
+            "mitigates": [
+                "G 0.18",
+                "G 0.20",
+                "G 0.28",
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Installation von Software",
+            "handle": "APP.6.A5",
+            "level": "Low",
+            "affects": [],
+            "text": "Software MUSS entsprechend der Regelung für die Installation auf den IT-Systemen installiert werden. Dabei MÜSSEN ausschließlich unveränderte Versionen der freigegebenen Software verwendet werden. Wird von diesen Anweisungen abgewichen, MUSS dies durch Vorgesetzte und den IT-Betrieb genehmigt werden und entsprechend dokumentiert werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Berücksichtigung empfohlener Sicherheitsanforderungen",
+            "handle": "APP.6.A6",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Institution SOLLTE die nachfolgenden Sicherheitsanforderungen im Anforderungskatalog für die Software berücksichtigen: Die Software SOLLTE generelle Sicherheitsfunktionen wie Protokollierung und Authentifizierung umfassen, die im Anwendungskontext erforderlich sind. Die Software SOLLTE es ermöglichen, die Härtungsfunktionen der Einsatzumgebung zu nutzen. Hierbei SOLLTEN insbesondere die Härtungsfunktionen des geplanten Betriebssystems und der geplanten Ausführungsumgebung berücksichtigt werden. Wenn durch die Software Informationen über ungesicherte, öffentliche Netze übertragen werden, dann SOLLTE die Software sichere Verschlüsselungsfunktionen einsetzen, die dem Stand der Technik entsprechen. Darüber hinaus SOLLTEN die übertragenen Daten auf Integrität überprüft werden, indem Prüfsummen oder digitale Signaturen eingesetzt werden. Verwendet die Software Zertifikate, dann SOLLTE sie die Möglichkeit bieten, die Zertifikate transparent darzustellen. Zudem SOLLTE es möglich sein, Zertifikate zu sperren, ihnen das Vertrauen zu entziehen oder eigene Zertifikate zu ergänzen. Die sich aus den Sicherheitsanforderungen ergebenden Funktionen der Software SOLLTEN im Betrieb verwendet werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Auswahl und Bewertung potentieller Software",
+            "handle": "APP.6.A7",
+            "level": "Medium",
+            "affects": [],
+            "text": "Anhand des Anforderungskatalogs SOLLTEN die am Markt erhältlichen Produkte gesichtet werden. Sie SOLLTEN mithilfe einer Bewertungsskala miteinander verglichen werden. Danach SOLLTE untersucht werden, ob die Produkte aus der engeren Wahl die Anforderungen der Institution erfüllen. Gibt es mehrere Alternativen für Produkte, SOLLTEN auch die Akzeptanz der Benutzenden und der zusätzliche Aufwand für z. B. Schulungen oder die Migration berücksichtigt werden. Fachverantwortliche SOLLTEN gemeinsam mit dem IT-Betrieb anhand der Bewertungen und Testergebnisse ein geeignetes Softwareprodukt auswählen.",
+            "isresponsible": "Fachverantwortliche, Beschaffungsstelle"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Regelung zur Verfügbarkeit der Installationsdateien",
+            "handle": "APP.6.A8",
+            "level": "Medium",
+            "affects": [],
+            "text": "Der IT-Betrieb SOLLTE die Verfügbarkeit der Installationsdateien sicherstellen, um die Installation reproduzieren zu können. Hierzu SOLLTE der IT-Betrieb die Installationsdateien geeignet sichern oder die Verfügbarkeit der Installationsdateien durch die Bezugsquelle (z. B. App-Store) sicherstellen. Zusätzlich SOLLTE sichergestellt werden, dass Software reproduzierbar konfiguriert werden kann. Hierzu SOLLTEN die Konfigurationsdateien gesichert werden. Alternativ SOLLTE geeignet dokumentiert werden, wie die Software konfiguriert wird. Diese Regelung SOLLTE in das Datensicherungskonzept der Institution integriert werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.45"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Inventarisierung von Software",
+            "handle": "APP.6.A9",
+            "level": "Medium",
+            "affects": [],
+            "text": "Software SOLLTE inventarisiert werden. In einem Bestandsverzeichnis SOLLTE dokumentiert werden, auf welchen Systemen die Software unter welcher Lizenz eingesetzt wird. Bei Bedarf SOLLTEN zusätzlich die sicherheitsrelevanten Einstellungen miterfasst werden. Software SOLLTE nur mit Lizenzen eingesetzt werden, die dem Einsatzzweck und den vertraglichen Bestimmungen entsprechen. Die Lizenz SOLLTE den gesamten vorgesehenen Benutzungszeitraum der Software abdecken. Wird von einer Standardkonfiguration abgewichen, SOLLTE dies dokumentiert werden. Das Bestandsverzeichnis SOLLTE anlassbezogen durch den IT-Betrieb aktualisiert werden, insbesondere wenn Software installiert wird. Das Bestandsverzeichnis SOLLTE so aufgebaut sein, dass bei Sicherheitsvorfällen eine schnelle Gesamtübersicht mit den notwendigen Details ermöglicht wird.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erstellung einer Sicherheitsrichtlinie für den Einsatz der Software",
+            "handle": "APP.6.A10",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Institution SOLLTE die Regelungen, die festlegen, wie die Software eingesetzt und betrieben wird, in einer Sicherheitsrichtlinie zusammenfassen. Die Richtlinie SOLLTE allen relevanten Verantwortlichen, Zuständigen und Mitarbeitenden der Institution bekannt sein und die Grundlage für ihre Arbeit und ihr Handeln bilden. Inhaltlich SOLLTE die Richtlinie auch ein Benutzenden-Handbuch umfassen, dass erläutert, wie die Software zu benutzen und zu administrieren ist. Es SOLLTE regelmäßig und stichprobenartig überprüft werden, ob die Mitarbeitenden sich an die Richtlinie halten. Die Richtlinie SOLLTE regelmäßig aktualisiert werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung von Plug-ins und Erweiterungen",
+            "handle": "APP.6.A11",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTEN nur unbedingt notwendige Plug-ins und Erweiterungen installiert werden. Werden Erweiterungen eingesetzt, SOLLTE die Software die Möglichkeit bieten, Erweiterungen zu konfigurieren und abzuschalten.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Geregelte Außerbetriebnahme von Software",
+            "handle": "APP.6.A12",
+            "level": "Medium",
+            "affects": [],
+            "text": "Wenn Software außer Betrieb genommen wird, SOLLTE der IT-Betrieb mit den Fachverantwortlichen regeln, wie dies im Detail durchzuführen ist. Ebenfalls SOLLTE geregelt werden, wie die Benutzenden hierüber zu informieren sind. Hierbei SOLLTE geklärt werden, ob die funktionalen Anforderungen fortbestehen (z. B. zur Bearbeitung von Fachaufgaben). Ist dies der Fall, dann SOLLTE geregelt werden, wie die benötigten Funktionen der betroffenen Software weiter verfügbar sein werden.",
+            "isresponsible": "Fachverantwortliche",
+            "mitigates": [
+                "G 0.18",
+                "G 0.25"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Deinstallation von Software",
+            "handle": "APP.6.A13",
+            "level": "Medium",
+            "affects": [],
+            "text": "Wird Software deinstalliert, SOLLTEN alle angelegten und nicht mehr benötigten Dateien entfernt werden. Alle Einträge in Systemdateien, die für das Produkt vorgenommen wurden und nicht länger benötigt werden, SOLLTEN rückgängig gemacht werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Nutzung zertifizierter Software",
+            "handle": "APP.6.A14",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Bei der Beschaffung von Software SOLLTE festgelegt werden, ob Zusicherungen des herstellenden oder anbietenden Unternehmens über implementierte Sicherheitsfunktionen als ausreichend vertrauenswürdig anerkannt werden können. Ist dies nicht der Fall, SOLLTE eine Zertifizierung der Anwendung z. B. nach Common Criteria als Entscheidungskriterium herangezogen werden. Stehen mehrere Produkte zur Auswahl, SOLLTEN insbesondere dann Sicherheitszertifikate berücksichtigt werden, wenn der evaluierte Funktionsumfang die Mindestfunktionalität (weitestgehend) umfasst und die Mechanismenstärke dem Schutzbedarf entspricht.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.28"
+            ]
+        }
+    ]
+}

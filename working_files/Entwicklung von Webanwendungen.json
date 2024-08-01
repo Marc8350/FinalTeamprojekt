@@ -1,0 +1,394 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "Entwicklung von Webanwendungen",
+    "handle": "CON.10",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Umgehung der Autorisierung bei Webanwendungen",
+            "handle": "2.1",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Angreifer versucht, auf Funktionen oder Daten von Webanwendungen zuzugreifen, die nur mit bestimmten Zugriffsrechten verfügbar sind.",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "CON.10.A2"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Eingabevalidierung und Ausgabekodierung",
+            "handle": "2.2",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Verarbeitet eine Webanwendung ungeprüfte Eingabedaten, können möglicherweise Schutzmechanismen umgangen werden.",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Schadcode in Formulardaten eingeben, der dann vom IT-System ausgeführt wird.",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "CON.10.A8"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlende oder mangelhafte Fehlerbehandlung durch Webanwendungen",
+            "handle": "2.3",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Fehler führen dazu, dass die Webanwendung nicht mehr korrekt ausgeführt wird, für Clients nicht mehr erreichbar ist, Aktionen nur noch unvollständig durchgeführt werden, zwischengespeicherte Aktionen und Daten gehen verloren oder Sicherheitsmechanismen fallen aus.",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "CON.10.A13"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Protokollierung von sicherheitsrelevanten Ereignissen",
+            "handle": "2.4",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Sicherheitsvorfälle können zu einem späteren Zeitpunkt nur schwer nachvollzogen werden.",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "CON.10.A13"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Offenlegung sicherheitsrelevanter Informationen durch Webanwendungen",
+            "handle": "2.5",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Informationen zu den Hintergrundsystemen enthalten, z. B. Angaben zu Datenbanken oder Versionsständen von Frameworks.",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "CON.10.A10"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Missbrauch einer Webanwendung durch automatisierte Nutzung",
+            "handle": "2.6",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Versucht werden, gültige Kombinationen von Konten und Passwörtern zu erraten (Brute-Force).",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Listen mit gültigen Konten erzeugt werden (Enumeration).",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Wiederholte Aufrufe von ressourcenintensiven Funktionen wie z. B. komplexen Datenbankabfragen für Denial-of-Service-Angriffe auf Anwendungsebene missbraucht werden.",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "CON.10.A6"
+            ]
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichendes Session-Management von Webanwendungen",
+            "handle": "2.7",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Session-ID von Konten mit umfangreichen Zugriffsrechten zu ermitteln.",
+                    "type": "Threat",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": [
+                "CON.10.A3"
+            ]
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Authentisierung bei Webanwendungen",
+            "handle": "CON.10.A1",
+            "level": "Low",
+            "affects": [
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "Entwickelnde"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Zugriffskontrolle bei Webanwendungen",
+            "handle": "CON.10.A2",
+            "level": "Low",
+            "affects": [
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "Entwickelnde"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sicheres Session-Management",
+            "handle": "CON.10.A3",
+            "level": "Low",
+            "affects": [
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "Entwickelnde"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Kontrolliertes Einbinden von Inhalten bei Webanwendungen",
+            "handle": "CON.10.A4",
+            "level": "Low",
+            "affects": [
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "Entwickelnde"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Upload-Funktionen",
+            "handle": "CON.10.A5",
+            "level": "Low",
+            "affects": [
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "Entwickelnde"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Schutz vor unerlaubter automatisierter Nutzung von Webanwendungen",
+            "handle": "CON.10.A6",
+            "level": "Low",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "Entwickelnde"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Schutz vertraulicher Daten",
+            "handle": "CON.10.A7",
+            "level": "Low",
+            "affects": [
+                "Confidentiality"
+            ],
+            "isresponsible": "Entwickelnde"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Umfassende Eingabevalidierung und Ausgabekodierung",
+            "handle": "CON.10.A8",
+            "level": "Low",
+            "affects": [
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "Entwickelnde"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Schutz vor SQL-Injection",
+            "handle": "CON.10.A9",
+            "level": "Low",
+            "affects": [
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "Entwickelnde"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Restriktive Herausgabe sicherheitsrelevanter Informationen",
+            "handle": "CON.10.A10",
+            "level": "Low",
+            "affects": [
+                "Confidentiality"
+            ],
+            "isresponsible": "Entwickelnde"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Softwarearchitektur einer Webanwendung",
+            "handle": "CON.10.A11",
+            "level": "Medium",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "Entwickelnde"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verifikation essenzieller Änderungen",
+            "handle": "CON.10.A12",
+            "level": "Medium",
+            "affects": [
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "Entwickelnde"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlerbehandlung",
+            "handle": "CON.10.A13",
+            "level": "Medium",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "Entwickelnde"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere HTTP-Konfiguration bei Webanwendungen",
+            "handle": "CON.10.A14",
+            "level": "Medium",
+            "affects": [
+                "Availability",
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "Entwickelnde"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verhinderung von Cross-Site-Request-Forgery",
+            "handle": "CON.10.A15",
+            "level": "Medium",
+            "affects": [
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "Entwickelnde"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Mehr-Faktor-Authentisierung",
+            "handle": "CON.10.A16",
+            "level": "Medium",
+            "affects": [
+                "Confidentiality",
+                "Integrity"
+            ],
+            "isresponsible": "Entwickelnde"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verhinderung der Blockade von Ressourcen",
+            "handle": "CON.10.A17",
+            "level": "High",
+            "affects": [
+                "Availability"
+            ],
+            "isresponsible": "Entwickelnde"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Kryptografische Absicherung vertraulicher Daten",
+            "handle": "CON.10.A18",
+            "level": "High",
+            "affects": [
+                "Confidentiality"
+            ],
+            "isresponsible": "Entwickelnde"
+        }
+    ]
+}

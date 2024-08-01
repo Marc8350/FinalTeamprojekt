@@ -1,0 +1,6 @@
+owlready2
+vertexai
+pandas
+openpyxl
+logging
+rapidfuzz

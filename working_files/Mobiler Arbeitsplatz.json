@@ -1,0 +1,550 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "Mobiler Arbeitsplatz",
+    "handle": "INF.9",
+    "text": "Mobile Arbeitsplätze ermöglichen es Mitarbeitenden, nahezu an jedem Platz bzw. von überall zu arbeiten. Das bedeutet, dass dienstliche Aufgaben häufig nicht mehr nur in den Räumen und Gebäuden der Institution erfüllt werden, sondern an wechselnden Arbeitsplätzen in unterschiedlichen Umgebungen, z. B. in Hotelzimmern, in Zügen oder bei der Kundschaft. Die dabei verarbeiteten Informationen müssen angemessen geschützt werden. Mobile Arbeitsplätze verändern einerseits die Dauer, Lage und Verteilung der Arbeitszeiten. Andererseits erhöhen sie die Anforderungen an die Informationssicherheit, da in Umgebungen mit mobilen Arbeitsplätzen keine sichere IT-Infrastruktur vorausgesetzt werden kann, so wie sie in einer Büroumgebung anzutreffen ist.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlende oder unzureichende Regelungen für mobile Arbeitsplätze",
+            "handle": "2.1",
+            "text": "Ist das mobile Arbeiten nicht oder nur unzureichend geregelt, können der Institution unter anderem finanzielle Schäden entstehen. Ist beispielsweise nicht geregelt, welche Informationen außerhalb der Institution transportiert und bearbeitet werden dürfen und welche Schutzvorkehrungen dabei zu beachten sind, können vertrauliche Informationen in fremde Hände gelangen. Diese können dann von unbefugten Personen möglicherweise gegen die Institution verwendet werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Vertrauliche Informationen gelangen in die Hände Unbefugter",
+                    "type": "Threat",
+                    "text": "Unbefugte Personen erhalten Zugriff auf vertrauliche Informationen, die durch unzureichende Regelungen für mobile Arbeitsplätze nicht ausreichend geschützt sind.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Beeinträchtigung durch wechselnde Einsatzumgebung",
+            "handle": "2.2",
+            "text": "Da mobile Datenträger und Endgeräte in sehr unterschiedlichen Umgebungen eingesetzt werden, sind sie vielen Gefährdungen ausgesetzt. Dazu gehören beispielsweise schädigende Umwelteinflüsse wie z. B. zu hohe oder zu niedrige Temperaturen, Staub oder Feuchtigkeit. Auch Transportschäden können auftreten. Neben diesen Einflüssen ist auch die Einsatzumgebung mit ihrem unterschiedlichen Sicherheitsniveau zu berücksichtigten. Smartphones, Tablets, Laptops und ähnliche mobile Endgeräte sind nicht nur beweglich, sondern können auch mit anderen IT-Systemen kommunizieren. Dabei können beispielsweise Schadprogramme übertragen oder schützenswerte Informationen kopiert werden. Auch können eventuell Aufgaben nicht mehr erfüllt, Termine mit der Kundschaft nicht wahrgenommen oder IT-Systeme beschädigt werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Schadprogramme werden übertragen",
+                    "type": "Threat",
+                    "text": "Schadprogramme werden durch die Nutzung von mobilen Endgeräten in unsicheren Umgebungen übertragen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Schützenswerte Informationen werden kopiert",
+                    "type": "Threat",
+                    "text": "Schützenswerte Informationen werden durch die Nutzung von mobilen Endgeräten in unsicheren Umgebungen kopiert.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "IT-Systeme werden beschädigt",
+                    "type": "Threat",
+                    "text": "IT-Systeme werden durch die Nutzung von mobilen Endgeräten in unsicheren Umgebungen beschädigt.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Manipulation oder Zerstörung von IT-Systemen, Zubehör, Informationen und Software am mobilen Arbeitsplatz",
+            "handle": "2.3",
+            "text": "IT-Systeme, Zubehör, Informationen und Software, die mobil genutzt werden, können unter Umständen einfacher manipuliert oder zerstört werden als in der Institution. Der mobile Arbeitsplatz ist oft für Dritte zugänglich. Auch sind hier die zentralen Schutzmaßnahmen der Institution nicht vorhanden, wie z. B. Pfortendienste. Werden IT-Systeme, Zubehör, Informationen oder Software manipuliert oder zerstört, sind die Mitarbeitenden am mobilen Arbeitsplatz oft nur noch eingeschränkt arbeitsfähig. Des Weiteren müssen womöglich zerstörte IT-Komponenten oder Softwarelösungen ersetzt werden, was sowohl finanzielle als auch zeitliche Ressourcen erfordert.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "IT-Systeme werden manipuliert",
+                    "type": "Threat",
+                    "text": "IT-Systeme werden durch unbefugte Personen am mobilen Arbeitsplatz manipuliert.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "IT-Systeme werden zerstört",
+                    "type": "Threat",
+                    "text": "IT-Systeme werden durch unbefugte Personen am mobilen Arbeitsplatz zerstört.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Zubehör wird manipuliert",
+                    "type": "Threat",
+                    "text": "Zubehör wird durch unbefugte Personen am mobilen Arbeitsplatz manipuliert.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Zubehör wird zerstört",
+                    "type": "Threat",
+                    "text": "Zubehör wird durch unbefugte Personen am mobilen Arbeitsplatz zerstört.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Informationen werden manipuliert",
+                    "type": "Threat",
+                    "text": "Informationen werden durch unbefugte Personen am mobilen Arbeitsplatz manipuliert.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Informationen werden zerstört",
+                    "type": "Threat",
+                    "text": "Informationen werden durch unbefugte Personen am mobilen Arbeitsplatz zerstört.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Software wird manipuliert",
+                    "type": "Threat",
+                    "text": "Software wird durch unbefugte Personen am mobilen Arbeitsplatz manipuliert.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Software wird zerstört",
+                    "type": "Threat",
+                    "text": "Software wird durch unbefugte Personen am mobilen Arbeitsplatz zerstört.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verzögerungen durch temporär eingeschränkte Erreichbarkeit",
+            "handle": "2.4",
+            "text": "Meist haben die Mitarbeitenden am mobilen Arbeitsplatz keine festen Arbeitszeiten und sind unterwegs auch schwerer zu erreichen. Dadurch kann sich der Informationsfluss deutlich verzögern. Selbst wenn die Informationen per E-Mail übermittelt werden, verkürzt sich nicht zwingend die Reaktionszeit, da nicht sichergestellt werden kann, dass die mobil Mitarbeitenden die E-Mails zeitnah lesen. Die temporär eingeschränkte Erreichbarkeit wirkt sich dabei je nach Situation und Institution unterschiedlich aus, kann aber die Verfügbarkeit von Informationen stark einschränken.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Verzögerung des Informationsflusses",
+                    "type": "Threat",
+                    "text": "Der Informationsfluss wird durch die eingeschränkte Erreichbarkeit von mobilen Arbeitsplätzen verzögert.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ungesicherter Akten- und Datenträgertransport",
+            "handle": "2.5",
+            "text": "Wenn Dokumente, Datenträger oder Akten zwischen der Institution und den mobilen Arbeitsplätzen transportiert werden, können diese Informationen und Daten verlorengehen oder auch von unbefugten Personen entwendet, gelesen oder manipuliert werden. Dadurch können der Institution größere finanzielle Schäden entstehen. Der Akten- und Datenträgertransport kann auf verschiedene Arten unzureichend gesichert sein:",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Dokumente, Datenträger oder Akten gehen verloren",
+                    "type": "Threat",
+                    "text": "Dokumente, Datenträger oder Akten gehen während des Transports zwischen der Institution und mobilen Arbeitsplätzen verloren.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Dokumente, Datenträger oder Akten werden entwendet",
+                    "type": "Threat",
+                    "text": "Dokumente, Datenträger oder Akten werden während des Transports zwischen der Institution und mobilen Arbeitsplätzen entwendet.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Dokumente, Datenträger oder Akten werden gelesen",
+                    "type": "Threat",
+                    "text": "Dokumente, Datenträger oder Akten werden während des Transports zwischen der Institution und mobilen Arbeitsplätzen von Unbefugten gelesen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Dokumente, Datenträger oder Akten werden manipuliert",
+                    "type": "Threat",
+                    "text": "Dokumente, Datenträger oder Akten werden während des Transports zwischen der Institution und mobilen Arbeitsplätzen von Unbefugten manipuliert.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ungeeignete Entsorgung der Datenträger und Dokumente",
+            "handle": "2.6",
+            "text": "Ist es am mobilen Arbeitsplatz nicht möglich, Datenträger und Dokumente in geeigneter Weise zu entsorgen, wandern diese meist in den Hausmüll. Auch dort, wo unterwegs gearbeitet wird, werfen Mitarbeitende Entwürfe und andere vermeintlich unnütze Dokumente häufig direkt in den nächsten Papierkorb. Oder sie lassen sie einfach liegen, sei es im Hotel oder in der Bahn. Wenn jedoch Datenträger oder Dokumente nicht geeignet entsorgt werden, können Dritte daraus wertvolle Informationen entnehmen, die sich gezielt für Erpressungsversuche oder zur Wirtschaftsspionage missbrauchen lassen. Die Folgen reichen vom Wissensverlust bis zur Existenzgefährdung der Institution, z. B. wenn dadurch wichtige Aufträge nicht zustande kommen oder Partnerschaften scheitern.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Dritte entnehmen wertvolle Informationen aus ungeeignet entsorgten Datenträgern oder Dokumenten",
+                    "type": "Threat",
+                    "text": "Dritte entnehmen wertvolle Informationen aus ungeeignet entsorgten Datenträgern oder Dokumenten.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Vertraulichkeitsverlust schützenswerter Informationen",
+            "handle": "2.7",
+            "text": "Am mobilen Arbeitsplatz können Dritte einfacher auf vertrauliche Informationen zugreifen, die sich auf Festplatten, auf austauschbaren Speichermedien oder auf Papier befinden, besonders dann, wenn sie dabei professionell agieren. Auch können sie Kommunikationsverbindungen abhören. Werden Informationen unberechtigt gelesen oder preisgegeben, hat das jedoch schwerwiegende Folgen für die gesamte Institution. Unter anderem kann der Verlust der Vertraulichkeit dazu führen, dass die Institution gegen Gesetze verstößt oder dass Wettbewerbsnachteile und finanzielle Schäden entstehen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Dritte greifen unberechtigt auf vertrauliche Informationen zu",
+                    "type": "Threat",
+                    "text": "Dritte greifen unberechtigt auf vertrauliche Informationen zu, die sich auf Festplatten, auf austauschbaren Speichermedien oder auf Papier befinden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Kommunikationsverbindungen werden abgehört",
+                    "type": "Threat",
+                    "text": "Kommunikationsverbindungen werden von Unbefugten abgehört.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Diebstahl oder Verlust von Datenträgern oder Dokumenten",
+            "handle": "2.8",
+            "text": "Der mobile Arbeitsplatz ist nicht so gut abgesichert wie der Arbeitsplatz in einem Unternehmen oder in einer Behörde. Dienstliche IT-Systeme und Dokumente können daher z. B. während einer Bahnfahrt, aus einem Hotelzimmer oder aus externen Konferenzräumen leichter gestohlen werden. Zudem können mobile IT-Systeme oder IT-Komponenten verloren gehen. Neben dem rein materiellen Schaden durch den unmittelbaren Verlust des mobilen IT-Systems kann zudem ein weiterer finanzieller Schaden entstehen, etwa wenn schützenswerte Daten wie z. B. E-Mails, Notizen von Besprechungen, Adressen oder sonstige Dokumente offengelegt werden. Auch könnte der Ruf der Institution geschädigt werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "IT-Systeme werden gestohlen",
+                    "type": "Threat",
+                    "text": "IT-Systeme werden am mobilen Arbeitsplatz gestohlen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Dokumente werden gestohlen",
+                    "type": "Threat",
+                    "text": "Dokumente werden am mobilen Arbeitsplatz gestohlen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "IT-Systeme gehen verloren",
+                    "type": "Threat",
+                    "text": "IT-Systeme gehen am mobilen Arbeitsplatz verloren.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Dokumente gehen verloren",
+                    "type": "Threat",
+                    "text": "Dokumente gehen am mobilen Arbeitsplatz verloren.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Geeignete Auswahl und Nutzung eines mobilen Arbeitsplatzes",
+            "handle": "INF.9.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Institution MUSS ihren Mitarbeitenden vorschreiben, wie mobile Arbeitsplätze in geeigneter Weise ausgewählt und benutzt werden sollen. Es MÜSSEN Eigenschaften definiert werden, die für einen mobilen Arbeitsplatz wünschenswert sind. Es MÜSSEN aber auch Ausschlusskriterien definiert werden, die gegen einen mobilen Arbeitsplatz sprechen. Mindestens MUSS geregelt werden:\n\n* unter welchen Arbeitsplatzbedingungen schützenswerte Informationen bearbeitet werden dürfen,\n* wie sich Mitarbeitende am mobilen Arbeitsplatz vor ungewollter Einsichtnahme Dritter schützen,\n* ob eine permanente Netz- und Stromversorgung gegeben sein muss sowie\n* welche Arbeitsplatzumgebungen komplett verboten sind.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Regelungen für mobile Arbeitsplätze",
+            "handle": "INF.9.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Für alle Arbeiten unterwegs MUSS geregelt werden, welche Informationen außerhalb der Institution transportiert und bearbeitet werden dürfen. Es MUSS zudem geregelt werden, welche Schutzvorkehrungen dabei zu treffen sind. Dabei MUSS auch geklärt werden, unter welchen Rahmenbedingungen Mitarbeitende mit mobilen IT-Systemen auf interne Informationen ihrer Institution zugreifen dürfen.",
+            "isresponsible": "Personalabteilung",
+            "mitigates": [
+                "G 0.18",
+                "G 0.29",
+                "G 0.37"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Zutritts- und Zugriffsschutz",
+            "handle": "INF.9.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Den Mitarbeitenden MUSS bekannt gegeben werden, welche Regelungen und Maßnahmen zum Einbruch- und Zutrittsschutz am mobilen Arbeitsplatz zu beachten sind. Wenn der mobile Arbeitsplatz nicht besetzt ist, MÜSSEN Fenster und Türen abgeschlossen werden. Ist dies nicht möglich, z. B. im Zug, MÜSSEN die Mitarbeitenden alle Unterlagen und IT-Systeme an sicherer Stelle verwahren oder mitführen, wenn sie abwesend sind. Es MUSS sichergestellt werden, dass unbefugte Personen zu keiner Zeit auf dienstliche IT und Unterlagen zugreifen können. Wird der Arbeitsplatz nur kurz verlassen, MÜSSEN die eingesetzten IT-Systeme gesperrt werden, sodass sie nur nach erfolgreicher Authentisierung wieder benutzt werden können.",
+            "isresponsible": "Zentrale Verwaltung, Mitarbeitende",
+            "mitigates": [
+                "G 0.14",
+                "G 0.16",
+                "G 0.19",
+                "G 0.21",
+                "G 0.22",
+                "G 0.30",
+                "G 0.44",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Arbeiten mit fremden IT-Systemen",
+            "handle": "INF.9.A4",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Institution MUSS regeln, wie Mitarbeitende mit institutionsfremden IT-Systemen arbeiten dürfen. Alle mobilen Mitarbeitenden MÜSSEN über die Gefahren fremder IT-Systeme aufgeklärt werden. Die Regelungen MÜSSEN vorgeben, ob und wie schützenswerte Informationen an fremden IT-Systemen bearbeitet werden dürfen. Sie MÜSSEN zudem festlegen, wie verhindert wird, dass nicht autorisierte Personen die Informationen einsehen können. Wenn Mitarbeitende mit fremden IT-Systemen arbeiten, MUSS grundsätzlich sichergestellt sein, dass alle währenddessen entstandenen temporären Daten gelöscht werden.",
+            "isresponsible": "IT-Betrieb, Mitarbeitende",
+            "mitigates": [
+                "G 0.14",
+                "G 0.18",
+                "G 0.19",
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Zeitnahe Verlustmeldung",
+            "handle": "INF.9.A5",
+            "level": "Medium",
+            "affects": [],
+            "text": "Mitarbeitende SOLLTEN ihrer Institution umgehend melden, wenn Informationen, IT-Systeme oder Datenträger verlorengegangen sind oder gestohlen wurden. Dafür SOLLTE es klare Meldewege und Ansprechpartner innerhalb der Institution geben.",
+            "isresponsible": "Mitarbeitende",
+            "mitigates": [
+                "G 0.14",
+                "G 0.18",
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Entsorgung von vertraulichen Informationen",
+            "handle": "INF.9.A6",
+            "level": "Medium",
+            "affects": [],
+            "text": "Vertrauliche Informationen SOLLTEN auch unterwegs sicher entsorgt werden. Bevor ausgediente oder defekte Datenträger und Dokumente vernichtet werden, MUSS überprüft werden, ob sie sensible Informationen enthalten. Ist dies der Fall, MÜSSEN die Datenträger und Dokumente wieder mit zurücktransportiert werden und auf institutseigenem Wege entsorgt oder vernichtet werden.",
+            "isresponsible": "Mitarbeitende",
+            "mitigates": [
+                "G 0.14",
+                "G 0.18",
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Rechtliche Rahmenbedingungen für das mobile Arbeiten",
+            "handle": "INF.9.A7",
+            "level": "Medium",
+            "affects": [],
+            "text": "Für das mobile Arbeiten SOLLTEN arbeitsrechtliche und arbeitsschutzrechtliche Rahmenbedingungen beachtet und geregelt werden. Alle relevanten Punkte SOLLTEN entweder durch Betriebsvereinbarungen oder durch zusätzlich zum Arbeitsvertrag getroffene individuelle Vereinbarungen zwischen dem mobilen Mitarbeitenden und der Institution geregelt werden.",
+            "isresponsible": "Personalabteilung",
+            "mitigates": [
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sicherheitsrichtlinie für mobile Arbeitsplätze",
+            "handle": "INF.9.A8",
+            "level": "Medium",
+            "affects": [],
+            "text": "Alle relevanten Sicherheitsanforderungen für mobile Arbeitsplätze SOLLTEN in einer für die mobilen Mitarbeitenden verpflichtenden Sicherheitsrichtlinie dokumentiert werden. Sie SOLLTE zudem mit den bereits vorhandenen Sicherheitsrichtlinien der Institution sowie mit allen relevanten Fachabteilungen abgestimmt werden. Die Sicherheitsrichtlinie für mobile Arbeitsplätze SOLLTE regelmäßig aktualisiert werden. Die Mitarbeitenden der Institution SOLLTEN hinsichtlich der aktuellen Sicherheitsrichtlinie sensibilisiert und geschult sein.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verschlüsselung tragbarer IT-Systeme und Datenträger",
+            "handle": "INF.9.A9",
+            "level": "Medium",
+            "affects": [],
+            "text": "Bei tragbaren IT-Systemen und Datenträgern SOLLTE sichergestellt werden, dass diese entsprechend den internen Richtlinien abgesichert sind. Mobile IT-Systeme und Datenträger SOLLTEN dabei verschlüsselt werden. Die kryptografischen Schlüssel SOLLTEN getrennt vom verschlüsselten Gerät aufbewahrt werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.14",
+                "G 0.16",
+                "G 0.19",
+                "G 0.22"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Nutzung eines Bildschirmschutzes",
+            "handle": "INF.9.A12",
+            "level": "Medium",
+            "affects": [],
+            "text": "Wenn IT-Systeme an mobilen Arbeitsplätzen genutzt werden, SOLLTEN die Mitarbeitenden einen Sichtschutz für die Bildschirme der IT-Systeme verwenden.",
+            "isresponsible": "Mitarbeitende",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz von Diebstahlsicherungen",
+            "handle": "INF.9.A10",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Bietet das verwendete IT-System eine Diebstahlsicherung, SOLLTE sie benutzt werden. Die Diebstahlsicherungen SOLLTEN stets dort eingesetzt werden, wo ein erhöhter Publikumsverkehr herrscht oder die Fluktuation von Benutzenden sehr hoch ist. Dabei SOLLTEN die Mitarbeitenden immer beachten, dass der Schutz der auf den IT-Systemen gespeicherten Informationen meist einen höheren Wert besitzt als die Wiederanschaffungskosten des IT-Systems betragen. Die Beschaffungs- und Einsatzkriterien für Diebstahlsicherungen SOLLTEN an die Prozesse der Institution angepasst und dokumentiert werden.",
+            "isresponsible": "Mitarbeitende",
+            "mitigates": [
+                "G 0.16",
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verbot der Nutzung unsicherer Umgebungen",
+            "handle": "INF.9.A11",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Es SOLLTEN Kriterien für die Arbeitsumgebung festgelegt werden, die mindestens erfüllt sein müssen, damit Informationen mit erhöhtem Schutzbedarf mobil bearbeitet werden dürfen. Die Kriterien SOLLTEN mindestens folgende Themenbereiche abdecken:\n\n* Einsicht und Zugriff durch Dritte,\n* geschlossene und, falls nötig, abschließbare oder bewachte Räume,\n* gesicherte Kommunikationsmöglichkeiten sowie\n* eine ausreichende Stromversorgung.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.14",
+                "G 0.18",
+                "G 0.29"
+            ]
+        }
+    ]
+}

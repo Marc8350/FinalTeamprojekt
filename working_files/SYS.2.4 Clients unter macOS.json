@@ -1,0 +1,292 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "SYS.2.4 Clients unter macOS",
+    "handle": "SYS.2.4",
+    "text": "Das Ziel dieses Bausteins ist der Schutz von Informationen, die auf IT-Systemen unter macOS verarbeitet oder mit diesen übertragen werden. Dazu müssen IT-Systeme unter macOS angemessen abgesichert werden.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unkontrollierbarer Zugriff auf ausgelagerte Daten",
+            "handle": "2.1",
+            "text": "macOS bietet eine Reihe von Funktionen, die auf zentralen, von Apple betriebenen Servern ausgeführt werden. Beispielsweise kann Apples iCloud für die Speicherung und für die Synchronisierung von Daten zwischen verschiedenen macOS- und iOS-Geräten verwendet werden. Da hierbei Daten auf Servern Dritter zwischengespeichert werden und damit nicht mehr unter der eigenen Kontrolle stehen, könnten prinzipiell auch Unbefugte auf diese Server zugreifen und die dort gespeicherten oder übertragenen Daten einsehen und für ihre Zwecke missbrauchen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unbefugter Zugriff auf iCloud-Daten",
+                    "type": "Threat",
+                    "text": "Unbefugte könnten versuchen, sich Zugang zu den iCloud-Servern zu verschaffen und die dort gespeicherten Daten einzusehen oder zu verändern.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Missbrauch der Apple-ID als zentrale Zugangsinformation für Apple-Dienste",
+            "handle": "2.2",
+            "text": "Für die Nutzung einiger macOS-Funktionen wird eine eindeutige Apple-ID als Zugangsinformation benötigt. Mit der Apple-ID kann zentral auf verschiedene Apple-Dienste zugegriffen werden, wie beispielsweise auf iCloud, iMessage und den App Store. Falls Unbefugte an die Zugangsinformationen der Apple-ID gelangen, können sie diese Dienste unter Umständen unter einer falschen Identität nutzen und auf Informationen in iCloud zugreifen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Missbrauch der Apple-ID",
+                    "type": "Threat",
+                    "text": "Unbefugte könnten versuchen, die Apple-ID eines Benutzers zu stehlen und diese dann für den Zugriff auf iCloud-Daten oder andere Apple-Dienste zu missbrauchen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Angriffe auf Funkschnittstellen",
+            "handle": "2.3",
+            "text": "Ein Mac verfügt in der Regel über drahtlose Schnittstellen wie WLAN oder Bluetooth, die zudem von vielen Diensten genutzt werden und entsprechend aktiviert sind. Beispielsweise können damit Dateien unmittelbar zwischen Apple-Geräten ausgetauscht werden (AirDrop). Des Weiteren kann die WLAN- und Bluetooth-Funktion genutzt werden, um macOS- und iOS-Geräte zu synchronisieren (Continuity). Mit AirPlay ist es möglich, Video- und Audiodaten an kompatible Wiedergabegeräte zu senden. Angreifende könnten versuchen, diese Funkschnittstellen für Angriffe zu missbrauchen, um vertrauliche Informationen zwischen Mac, iPhone, iPad und anderen Geräten abzufangen oder die Geräte zu kompromittieren.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Man-in-the-Middle-Angriff über WLAN",
+                    "type": "Threat",
+                    "text": "Ein Angreifer könnte versuchen, sich zwischen einen Mac und einen WLAN-Router zu schalten und den Datenverkehr zwischen den beiden Geräten abzufangen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Bluetooth-Angriff",
+                    "type": "Threat",
+                    "text": "Ein Angreifer könnte versuchen, sich mit einem Mac über Bluetooth zu verbinden und so auf vertrauliche Daten zuzugreifen oder Schadcode zu installieren.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Angriffe auf Anwendungen mit Vorschau-Funktion",
+            "handle": "2.4",
+            "text": "Einige der in macOS integrierten Anwendungen unterstützen eine Vorschaufunktion für bestimmte Dateiformate (z. B. Bilddateien). Dazu gehören der Finder, der Browser „Safari“ und das in macOS integrierte E-Mail-Programm. Die Vorschaufunktion stellt beispielsweise automatisch den Anhang einer E-Mail auszugsweise dar, wenn das Dateiformat bekannt ist. Angreifende könnte somit versuchen, Schadcode im Anhang einer E-Mail zu verstecken. Die Vorschaufunktion würde den E-Mail-Anhang anzeigen und möglicherweise den Schadcode ausführen, der wiederum den Mac kompromittieren könnte.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Schadcode in E-Mail-Anhang",
+                    "type": "Threat",
+                    "text": "Ein Angreifer könnte eine E-Mail mit einem Schadcode-Anhang an einen Benutzer senden. Wenn der Benutzer den Anhang öffnet, wird der Schadcode ausgeführt und der Mac kompromittiert.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unsichere Protokolle in macOS oder macOS-Anwendungen",
+            "handle": "2.5",
+            "text": "macOS und seine Anwendungen unterstützen verschiedene, zum Teil Apple-eigene Protokolle (z. B. AFP) zur Kommunikation mit zentralen Servern oder anderen Endgeräten. Wenn diese Kommunikationsprotokolle keine ausreichenden Sicherheitsmechanismen aufweisen oder unsicher konfiguriert werden, könnten die darüber übertragenen Daten unerlaubt mitgelesen, verfälscht oder anderweitig missbraucht werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Man-in-the-Middle-Angriff auf AFP-Verbindung",
+                    "type": "Threat",
+                    "text": "Ein Angreifer könnte versuchen, sich zwischen einen Mac und einen AFP-Server zu schalten und den Datenverkehr zwischen den beiden Geräten abzufangen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Planung des sicheren Einsatzes von macOS",
+            "handle": "SYS.2.4.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Einführung von macOS MUSS sorgfältig geplant werden. Es MUSS entschieden werden, wo und wie Daten abgelegt werden. Es MUSS geplant werden, wie die Datensicherung in das institutionsweite Datensicherungskonzept integriert werden kann. Es MUSS geplant werden, wie Sicherheits- und sonstige Aktualisierungen für macOS und Anwendungen systematisch installiert werden können. Es MUSS ermittelt werden, welche Anwendungen bei einem Plattformwechsel zu macOS benötigt werden. Wird der Mac in einem Datennetz betrieben, MUSS zusätzlich berücksichtigt werden, welche Netzprotokolle eingesetzt werden sollen.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Nutzung der integrierten Sicherheitsfunktionen von macOS",
+            "handle": "SYS.2.4.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Die in macOS integrierten Schutzmechanismen „System Integrity Protection“ (SIP), „Xprotect“ und „Gatekeeper“ MÜSSEN aktiviert sein. Gatekeeper DARF NUR die Ausführung signierter Programme erlauben, sofern unsignierte Programme nicht zwingend notwendig sind.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.21",
+                "G 0.23",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung geeigneter Konten",
+            "handle": "SYS.2.4.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Das bei der Erstkonfiguration von macOS angelegte Konto hat Administrationsrechte und DARF NUR zu administrativen Zwecken verwendet werden. Für die normale Verwendung des Macs MUSS ein Konto mit Standard-Berechtigungen angelegt werden. Sollte der Mac von mehreren Benutzenden verwendet werden, MUSS für jeden Benutzenden ein eigenes Konto angelegt werden. Das Gast-Konto MUSS deaktiviert werden.",
+            "isresponsible": "IT-Betrieb, Benutzende",
+            "mitigates": [
+                "G 0.23",
+                "G 0.30",
+                "G 0.37"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung einer Festplattenverschlüsselung",
+            "handle": "SYS.2.4.A4",
+            "level": "Medium",
+            "affects": [],
+            "text": "Festplatten SOLLTEN, insbesondere bei mobilen Macs (z. B. MacBooks), verschlüsselt werden. Wird dazu die in macOS integrierte Funktion FileVault verwendet, DARF das Schlüsselmaterial NICHT online bei Apple gespeichert werden. Der von FileVault erzeugte Wiederherstellungsschlüssel MUSS an einem sicheren Ort aufbewahrt werden. Es SOLLTE geprüft werden, ob ein institutioneller Wiederherstellungsschlüssel für FileVault verwendet werden soll.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Deaktivierung sicherheitskritischer Funktionen von macOS",
+            "handle": "SYS.2.4.A5",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die in macOS integrierten Ortungsdienste SOLLTEN deaktiviert werden. Heruntergeladene Daten SOLLTEN NICHT automatisch geöffnet werden. Inhalte von optischen und anderen Medien SOLLTEN NICHT automatisch ausgeführt werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.14",
+                "G 0.19",
+                "G 0.21",
+                "G 0.23",
+                "G 0.28",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung aktueller Mac-Hardware",
+            "handle": "SYS.2.4.A6",
+            "level": "Medium",
+            "affects": [],
+            "text": "Werden neue Macs beschafft, SOLLTEN aktuelle Modelle ausgewählt werden. Werden bereits vorhandene Macs eingesetzt, SOLLTE regelmäßig überprüft werden, ob diese sowie das darauf installierte Betriebssystem weiterhin von Apple mit Sicherheits-Updates versorgt werden. Werden die Macs nicht mehr durch Apple unterstützt, SOLLTEN sie nicht mehr verwendet werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.18",
+                "G 0.28",
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Zwei-Faktor-Authentisierung für Apple-ID",
+            "handle": "SYS.2.4.A7",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Zwei-Faktor-Authentisierung für die Verwendung des Apple-ID-Kontos SOLLTE aktiviert werden.",
+            "isresponsible": "Benutzende",
+            "mitigates": [
+                "G 0.36"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Keine Nutzung von iCloud für schützenswerte Daten",
+            "handle": "SYS.2.4.A8",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTE verhindert werden, dass schützenswerte Daten zwischen mehreren Geräten über iCloud-Dienste synchronisiert werden. Stattdessen SOLLTEN Daten nur über selbst betriebene Dienste synchronisiert werden. Schützenswerte Daten SOLLTEN NICHT in iCloud gespeichert werden. Entwürfe, beispielsweise von E-Mails oder Dokumenten, SOLLTEN NICHT automatisch in iCloud gespeichert werden.",
+            "isresponsible": "Benutzende",
+            "mitigates": [
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung von zusätzlichen Schutzprogrammen unter macOS",
+            "handle": "SYS.2.4.A9",
+            "level": "Medium",
+            "affects": [],
+            "text": "Bei Bedarf, etwa wenn Macs in einem heterogenen Netz betrieben werden, SOLLTEN neben den integrierten Schutzmechanismen von macOS zusätzlich Virenschutz-Lösungen von Drittanbietern eingesetzt werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Aktivierung der Personal Firewall unter macOS",
+            "handle": "SYS.2.4.A10",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die in macOS integrierte Personal Firewall SOLLTE aktiviert und geeignet konfiguriert werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.23"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Geräteaussonderung von Macs",
+            "handle": "SYS.2.4.A11",
+            "level": "Medium",
+            "affects": [],
+            "text": "Bei einer Aussonderung des Macs SOLLTEN der nichtflüchtige Datenspeicher NVRAM (Non Volatile Random Access Memory) sowie der SMC (System Management Controller) zurückgesetzt werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.19",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Firmware-Kennwort und Boot-Schutz auf Macs",
+            "handle": "SYS.2.4.A12",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Auf älteren Macs SOLLTE die Abfrage eines sicheren Firmware-Kennworts im sogenannten „Command-Modus“ aktiviert werden, um ein unberechtigtes Booten des Macs von einem anderen Startlaufwerk zu verhindern. Es SOLLTE geprüft werden, ob über den „Full-Modus“ ein Kennwort bei jedem Startvorgang abgefragt werden sollte. Auf Macs mit T2-Sicherheitschip SOLLTE ein Firmware-Passwort über das Startsicherheitsdienstprogramm gesetzt werden. Die Option „Sicheres Starten: Volle Sicherheit“ SOLLTE aktiviert werden. Die Option „Starten von externen Medien nicht zulassen“ SOLLTE aktiviert werden.",
+            "isresponsible": "Benutzende",
+            "mitigates": [
+                "G 0.21",
+                "G 0.30"
+            ]
+        }
+    ]
+}

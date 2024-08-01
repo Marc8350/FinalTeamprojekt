@@ -1,0 +1,425 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "Software-Tests und -Freigaben",
+    "handle": "OPS.1.1.6",
+    "text": "Der Einsatz von IT in Institutionen setzt voraus, dass die maschinelle Datenverarbeitung soweit wie möglich fehlerfrei funktioniert, da die Einzelergebnisse in den meisten Fällen nicht mehr kontrolliert werden können. Deswegen muss Software jeglicher Art schon vor Inbetriebnahme im Rahmen von Software-Tests überprüft werden. In diesen Tests muss nachgewiesen werden, dass die Software die erforderlichen Funktionen zuverlässig bereitstellt und darüber hinaus keine unerwünschten Nebeneffekte aufweist. Mit der anschließenden Freigabe der Software durch die fachlich zuständige Organisationseinheit wird die grundsätzliche Erlaubnis erteilt, die Software produktiv in der Institution zu nutzen. Gleichzeitig übernimmt diese Organisationseinheit damit auch die Verantwortung für das IT-Verfahren, das durch die Software unterstützt wird.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Software-Tests mit Produktivdaten",
+            "handle": "2.1",
+            "text": "Werden Software-Tests mit Produktivdaten durchgeführt, können hierdurch Sicherheitsprobleme entstehen. Insbesondere vertrauliche Produktivdaten könnten dabei von unbefugten Mitarbeitenden oder Dritten eingesehen werden, die mit dem jeweiligen Software-Test beauftragt wurden. Wird mit den „originalen“ Produktivdaten getestet und nicht mit Kopien der Daten, könnten diese ungewollt geändert oder gelöscht werden. Durch Software-Tests im Produktivbetrieb könnte der gesamte Betrieb massiv gestört werden. Denn Fehlfunktionen der zu testenden Software können sich auch auf andere Anwendungen und IT-Systeme auswirken, die dadurch ebenfalls gestört werden. Hinzu kommt, dass Software-Testende bewusst die Software im Grenzbereich testen und damit beabsichtigen, mögliche Fehler aufzudecken. Dies erhöht wiederum die Gefahr, dass der gesamte Betrieb gestört wird.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unbefugter Zugriff auf Produktivdaten",
+                    "type": "Threat",
+                    "text": "Unbefugte Personen, die mit dem Testen der Software beauftragt sind, könnten auf vertrauliche Produktivdaten zugreifen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental",
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unbeabsichtigte Änderung oder Löschung von Produktivdaten",
+                    "type": "Threat",
+                    "text": "Während des Testens könnten Produktivdaten versehentlich geändert oder gelöscht werden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Störung des Betriebs durch Softwarefehler",
+                    "type": "Threat",
+                    "text": "Fehler in der zu testenden Software könnten zu Störungen im gesamten IT-Betrieb führen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlendes oder unzureichendes Testverfahren",
+            "handle": "2.2",
+            "text": "Wird neue Software nicht oder nur unzureichend getestet und ohne Installationsvorschriften freigegeben, können Fehler in der Software unerkannt bleiben. Ebenso ist es möglich, dass dadurch erforderliche und einzuhaltende Installationsparameter nicht erkannt oder nicht beachtet werden. Diese Software- oder Installationsfehler, die aus einem fehlenden oder unzureichenden Software-Testverfahren resultieren, können den IT-Betrieb der Institution erheblich gefährden. So können beispielsweise wichtige Daten verloren gehen, wenn ein Software-Update eingespielt wird.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unerkannte Softwarefehler",
+                    "type": "Threat",
+                    "text": "Fehler in der Software bleiben unerkannt, da die Software nicht ausreichend getestet wurde.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Fehlende oder falsche Installationsparameter",
+                    "type": "Threat",
+                    "text": "Die Software wird falsch installiert, da die notwendigen Installationsparameter nicht bekannt sind.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Datenverlust durch Softwarefehler",
+                    "type": "Threat",
+                    "text": "Wichtige Daten gehen verloren, da ein Softwarefehler während eines Updates auftritt.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlendes oder unzureichendes Freigabeverfahren",
+            "handle": "2.3",
+            "text": "Ein fehlendes oder unzureichendes Freigabeverfahren kann dazu führen, dass Software eingesetzt wird, die von der Fachseite nicht abgenommen wurde. Auf diese Weise kann die Software Funktionen umfassen, die sie nicht enthalten sollte, die nicht wie gewünscht funktionieren oder benötigte Funktionen können fehlen. Außerdem kann die Software zu anderen Anwendungen inkompatibel sein.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Einsatz von Software mit unerkannten Fehlern",
+                    "type": "Threat",
+                    "text": "Software mit unerkannten Fehlern wird eingesetzt, da das Freigabeverfahren unzureichend ist.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Einsatz von Software mit fehlenden Funktionen",
+                    "type": "Threat",
+                    "text": "Software mit fehlenden Funktionen wird eingesetzt, da das Freigabeverfahren unzureichend ist.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Einsatz von Software, die mit anderen Anwendungen inkompatibel ist",
+                    "type": "Threat",
+                    "text": "Software, die mit anderen Anwendungen inkompatibel ist, wird eingesetzt, da das Freigabeverfahren unzureichend ist.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlende oder unzureichende Dokumentation der Tests und Testergebnisse",
+            "handle": "2.4",
+            "text": "Software kann in der Regel freigegeben werden, sobald alle Tests durchgeführt wurden und keine Abweichungen gefunden wurden. Sollte die Dokumentation der Software-Tests jedoch unvollständig sein, ist nachträglich nicht erkennbar, was getestet wurde. Wurden erkannte Softwarefehler oder fehlende Funktionen ungenügend dokumentiert und damit bei der Freigabe nicht berücksichtigt, können durch diese Abweichungen die zu verarbeitenden Produktivdaten ungewollt gelöscht oder verändert werden. Außerdem können andere IT-Systeme und Anwendungen gestört werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unerkannte Softwarefehler durch fehlende Dokumentation",
+                    "type": "Threat",
+                    "text": "Softwarefehler, die während der Tests gefunden wurden, sind nicht ausreichend dokumentiert und werden daher bei der Freigabe nicht berücksichtigt.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unbeabsichtigte Änderung oder Löschung von Produktivdaten",
+                    "type": "Threat",
+                    "text": "Produktivdaten werden ungewollt geändert oder gelöscht, da Softwarefehler, die während der Tests gefunden wurden, nicht ausreichend dokumentiert wurden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Störung anderer IT-Systeme und Anwendungen",
+                    "type": "Threat",
+                    "text": "Andere IT-Systeme und Anwendungen werden gestört, da Softwarefehler, die während der Tests gefunden wurden, nicht ausreichend dokumentiert wurden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlende oder unzureichende Dokumentation der Freigabekriterien",
+            "handle": "2.5",
+            "text": "Wenn Freigabekriterien nicht klar kommuniziert werden, kann dies dazu führen, dass Software voreilig freigegeben wird oder keine Freigabe erfolgt, obwohl diese erteilt werden könnte. Dadurch könnten zum einen Versionen mit unerkannten Softwarefehlern freigegeben werden, die den Produktivbetrieb stören können. Zum anderen kann eine fehlende oder unzureichende Dokumentation der Freigabekriterien dazu führen, dass sich Projekte verzögern und dadurch finanzielle Schäden entstehen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Freigabe von Software mit unerkannten Fehlern",
+                    "type": "Threat",
+                    "text": "Software mit unerkannten Fehlern wird freigegeben, da die Freigabekriterien nicht klar definiert sind.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Verzögerung von Projekten durch fehlende Freigabe",
+                    "type": "Threat",
+                    "text": "Projekte verzögern sich, da die Freigabekriterien nicht klar definiert sind und die Freigabe der Software verzögert wird.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Planung der Software-Tests",
+            "handle": "OPS.1.1.6.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Rahmenbedingungen für Software-Tests MÜSSEN vor den Tests innerhalb der Institution entsprechend der Schutzbedarfe, Organisationseinheiten, technischen Möglichkeiten und Test-Umgebungen festlegt sein. Die Software MUSS auf Basis der Anforderungen des Anforderungskatalogs zu der Software getestet werden. Liegt auch ein Pflichtenheft vor, dann MUSS dieses zusätzlich berücksichtigt werden.",
+            "isresponsible": "Testende",
+            "mitigates": [
+                "G 0.18",
+                "G 0.25",
+                "G 0.26"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Durchführung von funktionalen Software-Tests",
+            "handle": "OPS.1.1.6.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Mit funktionalen Software-Tests MUSS die ordnungsgemäße und vollständige Funktion der Software überprüft werden. Die funktionalen Software-Tests MÜSSEN so durchgeführt werden, dass sie den Produktivbetrieb nicht beeinflussen.",
+            "isresponsible": "Testende",
+            "mitigates": [
+                "G 0.25",
+                "G 0.26"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Auswertung der Testergebnisse",
+            "handle": "OPS.1.1.6.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Ergebnisse der Software-Tests MÜSSEN ausgewertet werden. Es SOLLTE ein Soll-Ist-Vergleich mit definierten Vorgaben durchgeführt werden. Die Auswertung MUSS dokumentiert werden.",
+            "isresponsible": "Testende",
+            "mitigates": [
+                "G 0.26"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Freigabe der Software",
+            "handle": "OPS.1.1.6.A4",
+            "level": "Low",
+            "affects": [],
+            "text": "Die fachlich zuständige Organisationseinheit MUSS die Software freigeben, sobald die Software-Tests erfolgreich durchgeführt wurden. Die Freigabe MUSS in Form einer Freigabeerklärung dokumentiert werden.",
+            "isresponsible": "Fachverantwortliche",
+            "mitigates": [
+                "G 0.18",
+                "G 0.25",
+                "G 0.26"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Durchführung von Software-Tests für nicht funktionale Anforderungen",
+            "handle": "OPS.1.1.6.A5",
+            "level": "Low",
+            "affects": [],
+            "text": "Es MÜSSEN Software-Tests durchgeführt werden, die überprüfen, ob alle wesentlichen nichtfunktionalen Anforderungen erfüllt werden. Insbesondere MÜSSEN sicherheitsspezifische Software-Tests durchgeführt werden, wenn die Anwendung sicherheitskritische Funktionen mitbringt. Die durchgeführten Testfälle, sowie die Testergebnisse, MÜSSEN dokumentiert werden.",
+            "isresponsible": "Testende",
+            "mitigates": [
+                "G 0.27",
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung von anonymisierten oder pseudonymisierten Testdaten",
+            "handle": "OPS.1.1.6.A11",
+            "level": "Low",
+            "affects": [],
+            "text": "Wenn Produktivdaten für Software-Tests verwendet werden, die schützenswerte Informationen enthalten, dann MÜSSEN diese Testdaten angemessen geschützt werden. Enthalten diese Daten personenbezogene Informationen, dann MÜSSEN diese Daten mindestens pseudonymisiert werden. Falls möglich, SOLLTEN die Testdaten mit Personenbezug vollständig anonymisiert werden. Wenn ein Personenbezug von den Testdaten abgeleitet werden könnte, MUSS der oder die Datenschutzbeauftragte und unter Umständen die Personalvertretung hinzugezogen werden.",
+            "isresponsible": [
+                "Datenschutzbeauftragte",
+                "Testende"
+            ],
+            "mitigates": [
+                "G 0.19",
+                "G 0.38"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Geordnete Einweisung der Software-Testenden",
+            "handle": "OPS.1.1.6.A6",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Software-Testenden SOLLTEN über die durchzuführenden Testarten und die zu testenden Bereiche einer Software von Fachverantwortlichen informiert werden. Darüber hinaus SOLLTEN die Software-Testende über die Anwendungsfälle und mögliche weitere Anforderungen der Software informiert werden.",
+            "isresponsible": "Fachverantwortliche",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Personalauswahl der Software-Testenden",
+            "handle": "OPS.1.1.6.A7",
+            "level": "Medium",
+            "affects": [],
+            "text": "Bei der Auswahl der Software-Testenden SOLLTEN gesonderte Auswahlkriterien berücksichtigt werden. Die Software-Testenden SOLLTEN die erforderliche berufliche Qualifikation haben. Wird Individualsoftware auf Quellcode-Ebene überprüft, dann SOLLTEN die Testenden über ausreichendes Fachwissen über die zu testenden Programmiersprache und der Entwicklungsumgebung verfügen. Der Quellcode SOLLTE NICHT ausschließlich von Testenden überprüft werden, die auch an der Erstellung des Quellcodes beteiligt waren.",
+            "isresponsible": [
+                "Personalabteilung",
+                "Fachverantwortliche"
+            ],
+            "mitigates": [
+                "G 0.14",
+                "G 0.18",
+                "G 0.41"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erstellung eines Abnahmeplans",
+            "handle": "OPS.1.1.6.A10",
+            "level": "Medium",
+            "affects": [],
+            "text": "In einem Abnahmeplan SOLLTEN die durchzuführenden Testarten, Testfälle und die erwarteten Ergebnisse dokumentiert sein. Außerdem SOLLTE der Abnahmeplan die Freigabekriterien beinhalten. Es SOLLTE eine Vorgehensweise für die Situation festgelegt werden, wenn eine Freigabe abgelehnt wird.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Durchführung von Regressionstests",
+            "handle": "OPS.1.1.6.A12",
+            "level": "Medium",
+            "affects": [],
+            "text": "Wenn Software verändert wurde, SOLLTEN Regressionstests durchgeführt werden. Hierbei SOLLTE überprüft werden, ob bisherige bestehende Sicherheitsmechanismen und -einstellungen durch das Update ungewollt verändert wurden. Regressionstests SOLLTEN vollständig durchgeführt werden und hierbei auch Erweiterungen sowie Hilfsmittel umfassen. Werden Testfälle ausgelassen, SOLLTE dies begründet und dokumentiert werden. Die durchgeführten Testfälle und die Testergebnisse SOLLTEN dokumentiert werden.",
+            "isresponsible": "Testende",
+            "mitigates": [
+                "G 0.18",
+                "G 0.25",
+                "G 0.26",
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Trennung der Testumgebung von der Produktivumgebung",
+            "handle": "OPS.1.1.6.A13",
+            "level": "Medium",
+            "affects": [],
+            "text": "Software SOLLTE nur in einer hierfür vorgesehenen Testumgebung getestet werden. Die Testumgebung SOLLTE von der Produktivumgebung getrennt betrieben werden. Die in der Testumgebung verwendeten Architekturen und Mechanismen SOLLTEN dokumentiert werden. Es SOLLTEN Verfahren dokumentiert werden, wie mit der Testumgebung nach Abschluss des Software-Tests zu verfahren ist.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.19",
+                "G 0.25",
+                "G 0.26",
+                "G 0.32",
+                "G 0.38",
+                "G 0.45",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Überprüfung der Installation und zugehörigen Dokumentation",
+            "handle": "OPS.1.1.6.A15",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Installation der Software SOLLTE entsprechend der Regelungen zur Installation und Konfiguration von Software (siehe Baustein APP.6 Allgemeine Software) überprüft werden. Falls vorhanden, SOLLTE zusätzlich die Installations- und Konfigurationsdokumentation geprüft werden.",
+            "isresponsible": "Testende"
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Durchführung von Penetrationstests",
+            "handle": "OPS.1.1.6.A14",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Für Anwendungen beziehungsweise IT-Systeme mit erhöhtem Schutzbedarf SOLLTEN Penetrationstests als Testmethode durchgeführt werden. Ein Konzept für Penetrationstests SOLLTE erstellt werden. Im Konzept für Penetrationstests SOLLTEN neben den zu verwendenden Testmethoden auch die Erfolgskriterien dokumentiert werden.",
+            "isresponsible": "Testende",
+            "mitigates": [
+                "G 0.18",
+                "G 0.28"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sicherheitsüberprüfung der Testenden",
+            "handle": "OPS.1.1.6.A16",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Sofern Testende auf besonders schützenswerte Informationen zugreifen müssen, SOLLTE die Institution Nachweise über ihre Integrität und Reputation einholen. Handelt es sich dabei um klassifizierte Verschlusssachen, SOLLTEN sich die Software-Testenden einer Sicherheitsüberprüfung nach dem Sicherheitsüberprüfungsgesetz (SÜG) unterziehen. Hierzu SOLLTE der oder die ISB die Geheimschutzbeauftragten bzw. Sicherheitsbevollmächtigten der Institution einbeziehen.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.14",
+                "G 0.18"
+            ]
+        }
+    ]
+}

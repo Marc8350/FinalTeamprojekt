@@ -1,0 +1,314 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "Safety Instrumented Systems",
+    "handle": "IND.2.7",
+    "text": "Safety Instrumented Systems (SIS) are a subset of Industrial Control Systems (ICS). SIS are used to prevent hazards to technical systems, the environment, and people. The basic structure of SIS is similar to conventional automation systems. The main difference lies in the increased reliability requirements for the safety functions (SIF) that an SIS must perform. The level of reliability is expressed using the four-level Safety Integrity Level (SIL), defined in IEC 61508. SIL1 represents the lowest level and SIL4 the highest. Depending on the SIL level, different requirements apply to the permissible failure rate of components, hardware fault tolerance of the architecture, the independence of testers, and other safety-relevant aspects. The entire life cycle of an SIS is organizationally embedded in a Functional Safety Management (FSM).",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Manipulation des Logiksystems",
+            "handle": "2.1",
+            "text": "The manipulation of the application program on the logic system, which can compromise the integrity of an SIS, poses the greatest risk. Unlike \"simple\" OT components, this can potentially have the most serious consequences for the safety of people, the environment, and technical systems. In the NA 163 working paper of the international association of automation technology users in the process industry NAMUR, the following three categories are defined for risk assessment in this regard:",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Manipulationen, die die Sicherheitsfunktion (SIF) auslösen, ohne dass der Anforderungsfall eingetreten ist.",
+                    "type": "Threat",
+                    "text": "Manipulations that trigger the safety function (SIF) without the requirement occurring. The consequences are not dangerous in terms of functional safety, as the SIS has triggered the safe state. However, the manipulations lead to an interruption of operation. The cause can be malware or human error.",
+                    "hasOrigin": [
+                        "human",
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "deliberate",
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Die Sicherheitsfunktion ist deaktiviert und dadurch kein Schutz mehr geboten.",
+                    "type": "Threat",
+                    "text": "The safety function is deactivated and therefore no longer provides protection. An unacceptable result is only achieved when the requirement occurs. The consequences are considered dangerous, as the SIS cannot fulfill its primary task. Attack scenarios are considered complex, as manipulating the logic system alone is not sufficient to cause damage.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Sicherheitsfunktionen werden deaktiviert und der Anforderungsfall vorsätzlich herbeigeführt.",
+                    "type": "Threat",
+                    "text": "Safety functions are deactivated and the requirement is deliberately triggered. The consequences are also considered dangerous and the attack scenarios as very complex. Because in order to trigger the requirement, attackers must have knowledge of the manipulation of the SIS as well as in-depth knowledge of the physical processes.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Überwachungs- und Detektionsverfahren",
+            "handle": "2.2",
+            "text": "An essential function of automation systems is to monitor operating states of the system being automated. For example, warnings related to the process (e.g., exceeding fill levels) and technical parameters (e.g., temperature, valve position) are usually monitored. In contrast, the supporting IT infrastructure is often not monitored. If unusual or security-relevant events are not or only insufficiently monitored, attacks, network bottlenecks, or foreseeable failures cannot be detected early.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Angriffsversuche, Netzengpässe oder absehbare Ausfälle nicht frühzeitig erkannt werden.",
+                    "type": "Threat",
+                    "text": "Attacks, network bottlenecks, or foreseeable failures cannot be detected early.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erfassung und Dokumentation",
+            "handle": "IND.2.7.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Alle zum SIS gehörenden Hardware- und Softwarekomponenten, relevante Informationen, Verbindungen sowie Rollen und Zuständigkeiten MÜSSEN gesondert erfasst und dokumentiert werden.",
+            "isresponsible": "Planende, Wartungspersonal",
+            "mitigates": [
+                "G 0.14",
+                "G 0.15",
+                "G 0.19",
+                "G 0.21",
+                "G 0.23",
+                "G 0.30",
+                "G 0.41",
+                "G 0.42",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Zweckgebundene Nutzung der Hard- und Softwarekomponenten",
+            "handle": "IND.2.7.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Hard- und Softwarekomponenten, die zum SIS gehören oder im Zusammenhang mit diesem genutzt werden, DÜRFEN NICHT zweckentfremdet werde.",
+            "isresponsible": "Wartungspersonal",
+            "mitigates": [
+                "G 0.14",
+                "G 0.15",
+                "G 0.19",
+                "G 0.21",
+                "G 0.23",
+                "G 0.30",
+                "G 0.41",
+                "G 0.42",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Änderung des Anwendungsprogramms auf dem Logiksystem",
+            "handle": "IND.2.7.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Bereits vorhandene Schutzmechanismen am Logiksystem MÜSSEN aktiviert sein. Wenn dies nicht möglich ist, MÜSSEN alternative Maßnahmen ergriffen werden. Anwendungsprogramme auf den Logiksystemen DÜRFEN NUR von autorisierten Personen geändert oder zur Übertragung freigegeben werden.",
+            "isresponsible": "Wartungspersonal",
+            "mitigates": [
+                "G 0.21",
+                "G 0.41",
+                "G 0.42",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verankerung von Informationssicherheit im Functional Safety Management",
+            "handle": "IND.2.7.A4",
+            "level": "Medium",
+            "affects": [],
+            "text": "Alle Prozesse und Zuständigkeiten bezüglich der Informationssicherheit von SIS SOLLTEN klar definiert sein. Im Functional Safety Management SOLLTEN diese beschrieben und namentlich genannt sein.",
+            "isresponsible": "ICS-Informationssicherheitsbeauftragte",
+            "mitigates": [
+                "G 0.5",
+                "G 0.6",
+                "G 0.9",
+                "G 0.11",
+                "G 0.14",
+                "G 0.15",
+                "G 0.19",
+                "G 0.20",
+                "G 0.21",
+                "G 0.23",
+                "G 0.28",
+                "G 0.29",
+                "G 0.30",
+                "G 0.32",
+                "G 0.36",
+                "G 0.37",
+                "G 0.39",
+                "G 0.41",
+                "G 0.42"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Notfallmanagement von SIS",
+            "handle": "IND.2.7.A5",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Behandlung von Sicherheitsvorfällen SOLLTE in einem Vorfallreaktionsplan festgehalten werden. Dieser SOLLTE die Rollen und Zuständigkeiten festhalten und die zu ergreifenden Maßnahmen enthalten.",
+            "isresponsible": "ICS-Informationssicherheitsbeauftragte",
+            "mitigates": [
+                "G 0.5",
+                "G 0.6",
+                "G 0.9",
+                "G 0.11",
+                "G 0.14",
+                "G 0.41"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Planung und Spezifikation des SIS",
+            "handle": "IND.2.7.A6",
+            "level": "Medium",
+            "affects": [],
+            "text": "Versehentliche oder unautorisierte Änderungen an der Spezifikation, Implementierung und an den Engineering-Daten SOLLTEN verhindert werden.",
+            "isresponsible": "Planende, Wartungspersonal, ICS-Informationssicherheitsbeauftragte",
+            "mitigates": [
+                "G 0.5",
+                "G 0.6",
+                "G 0.9",
+                "G 0.11",
+                "G 0.14",
+                "G 0.15",
+                "G 0.18",
+                "G 0.19",
+                "G 0.20",
+                "G 0.21",
+                "G 0.23",
+                "G 0.41"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Trennung und Unabhängigkeit des SIS von der Umgebung",
+            "handle": "IND.2.7.A7",
+            "level": "Medium",
+            "affects": [],
+            "text": "Das SIS SOLLTE rückwirkungsfrei von seiner Umgebung betrieben werden, um seine Sicherheitsfunktionen gewährleisten zu können. Prozesse, die potenziell Auswirkungen auf das SIS haben, SOLLTEN dem Änderungsmanagementprozess des Functional Safety Management unterstellt werden.",
+            "isresponsible": "Planende, Wartungspersonal",
+            "mitigates": [
+                "G 0.6",
+                "G 0.9",
+                "G 0.14",
+                "G 0.15",
+                "G 0.19",
+                "G 0.21",
+                "G 0.23",
+                "G 0.41",
+                "G 0.42",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sichere Übertragung von Engineering Daten auf SIS",
+            "handle": "IND.2.7.A8",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Integrität der Engineering-Daten SOLLTE während der Übertragung auf SIS sichergestellt werden.",
+            "isresponsible": "Planende, Wartungspersonal, ICS-Informationssicherheitsbeauftragte",
+            "mitigates": [
+                "G 0.20",
+                "G 0.21",
+                "G 0.23",
+                "G 0.41",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Absicherung der Daten- und Signalverbindungen",
+            "handle": "IND.2.7.A9",
+            "level": "Medium",
+            "affects": [],
+            "text": "Sofern keine Rückwirkungsfreiheit von Daten- und Signalverbindungen (Unidirektionalität) nachgewiesen werden kann, SOLLTEN diese Verbindungen geeignet abgesichert werden.",
+            "isresponsible": "Planende, Wartungspersonal, ICS-Informationssicherheitsbeauftragte",
+            "mitigates": [
+                "G 0.9",
+                "G 0.14",
+                "G 0.15",
+                "G 0.19",
+                "G 0.21",
+                "G 0.23",
+                "G 0.41",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Anzeige und Alarmierung von simulierten oder gebrückten Variablen",
+            "handle": "IND.2.7.A10",
+            "level": "Medium",
+            "affects": [],
+            "text": "Variablen der SIS, die durch Ersatzwerte besetzt (simuliert) oder von außen gebrückt werden, SOLLTEN in geeigneter Weise überwacht werden. Die Werte SOLLTEN den Benutzenden fortlaufend angezeigt werden. Grenzwerte SOLLTEN definiert werden. Wenn diese Grenzwerte erreicht werden, SOLLTEN die zuständigen Personen in geeigneter Weise alarmiert werden.",
+            "isresponsible": "Planende",
+            "mitigates": [
+                "G 0.23",
+                "G 0.41",
+                "G 0.42"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Umgang mit integrierten Systemen",
+            "handle": "IND.2.7.A11",
+            "level": "Medium",
+            "affects": [],
+            "text": "Für integrierte Systeme SOLLTE eine passende Strategie entwickelt werden, die den Umgang mit Komponenten regelt, welche die funktionale Sicherheit (Safety) betreffen.",
+            "isresponsible": "Planende, Wartungspersonal, ICS-Informationssicherheitsbeauftragte",
+            "mitigates": [
+                "G 0.6",
+                "G 0.14",
+                "G 0.15",
+                "G 0.19",
+                "G 0.20",
+                "G 0.21",
+                "G 0.23",
+                "G 0.41",
+                "G 0.42",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Sicherstellen der Integrität und Authentizität von Anwendungsprogrammen und Konfigurationsdaten",
+            "handle": "IND.2.7.A12",
+            "level": "High",
+            "affects": [
+                "I"
+            ],
+            "text": "Es SOLLTE darauf geachtet werden, dass die herstellenden Unternehmen geeignete Mechanismen entwickeln und integrieren, die die Integrität und Authentizität von Konfigurationsdaten und Anwendungsprogrammen auf dem Logiksystem oder auf den damit verbundenen Sensoren und Aktoren gewährleisten. Jegliche Software, die als Download angeboten wird, SOLLTE vor Manipulation geschützt werden. Verletzungen der Integrität SOLLTEN automatisch erkannt und gemeldet werden.",
+            "isresponsible": "Planende",
+            "mitigates": [
+                "G 0.20",
+                "G 0.21",
+                "G 0.23",
+                "G 0.28",
+                "G 0.41"
+            ]
+        }
+    ]
+}

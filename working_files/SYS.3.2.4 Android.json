@@ -1,0 +1,202 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "SYS.3.2.4 Android",
+    "handle": "SYS.3.2.4",
+    "text": "Ein oft genutztes Betriebssystem für Smartphones und Tablets ist Android von Google. Seit Version 4 wurde Android schrittweise für den Unternehmenseinsatz ausgebaut. So wurden z. B. Funktionen integriert, die es Institutionen erleichtern, Android-Geräte zu verwalten. Auch steigt die Zahl der von Android unterstützten Verwaltungsrichtlinien mit jeder Version. Zudem ermöglichen spezifische Erweiterungen der herstellenden Institutionen zusätzliche Richtlinien.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Deaktivieren von Sicherheitsfunktionen",
+            "handle": "2.1",
+            "text": "Der Bootprozess von Android-basierten Geräten wird mit Hilfe eines Herstellendenzertifikats abgesichert. Dabei wird jeweils der nächste Ausführungsschritt vor dessen Ausführung überprüft. Damit ist sichergestellt, dass das Betriebssystem Android unverändert startet. Beim Entsperren des Bootloaders wird diese Vertrauenskette unterbrochen, so dass ein verändertes Betriebssystem starten kann. Solche Veränderungen am Bootprozess werden teilweise von der herstellenden Institution unterstützt, teilweise werden Bootloader auch über Schwachstellen entsperrt. Das Android-Sicherheitskonzept wird hierbei umgangen oder außer Kraft gesetzt und es entstehen neue Gefährdungen, die anderweitig abgesichert werden müssen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Entsperren des Bootloaders",
+                    "type": "Threat",
+                    "text": "Durch das Entsperren des Bootloaders kann ein verändertes Betriebssystem gestartet werden, wodurch die Vertrauenskette des Betriebssystems unterbrochen wird.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Schadsoftware für das Android-Betriebssystem",
+            "handle": "2.2",
+            "text": "Aufgrund der hohen Verbreitung und der offenen Architektur sind Geräte mit Android-Betriebssystem ein beliebtes Ziel für Schadsoftware, die oft von Benutzenden selbst installiert wird. Unter Android ist es relativ einfach möglich, Apps nicht nur aus dem Playstore von Google, sondern auch aus alternativen Quellen oder per direktem Download zu installieren. Neben den überwachten App Stores von Google, Geräteherstellenden und anderen Anbietenden werden Apps auch über eher zweifelhafte Quellen zur Installation angeboten. Da es unter Android nicht zwingend erforderlich ist, Apps aus dem offiziellen Google Playstore zu installieren, könnten Angreifende beispielsweise eine beliebte App mit einer Schadsoftware infizieren und anschließend wieder zum Download zur Verfügung stellen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Installation von Schadsoftware aus unsicheren Quellen",
+                    "type": "Threat",
+                    "text": "Benutzende installieren Apps aus unsicheren Quellen, die Schadsoftware enthalten. Diese Schadsoftware kann dann auf sensible Daten zugreifen oder das Gerät steuern.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlende Updates für das Android-Betriebssystem",
+            "handle": "2.3",
+            "text": "Einige herstellende Institutionen liefern Smartphones und Tablets mit veralteten Versionen von Android aus oder stellen keine regelmäßigen oder sogar überhaupt keine Updates zur Verfügung. Da regelmäßig Schwachstellen in Android entdeckt werden, sind solche Geräte besonders gefährdet. Als Konsequenz können bekannte Schwachstellen dieser Geräte nicht beseitigt und entsprechend leicht von Angreifenden ausgenutzt werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Ausnutzung von Schwachstellen in veralteten Android-Versionen",
+                    "type": "Threat",
+                    "text": "Angreifende nutzen bekannte Schwachstellen in veralteten Android-Versionen aus, um auf das Gerät zuzugreifen oder Schadsoftware zu installieren.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Risiko durch Konten (Google-ID) für Google-Dienste",
+            "handle": "2.4",
+            "text": "Mit der Google-ID können Benutzende zentral auf alle Google-Dienste zugreifen, z. B. auf die Geräteverwaltung, die aufgezeichneten geographischen Positionen, Chatsoftware, Cloud-Speicher, den Play Store, Musik-, Buch- und Filmangebote, Datensicherung, Bookmarks oder Password-Speicher für Webseiten und Synchronisationsdienste. Auch viele andere Anbietende von Diensten im Internet verwenden die Google-ID, um Benutzende zu authentisieren. Können sich Angreifende über die Google-ID authentisieren, können alle hiermit verbundenen Dienste unter der gestohlenen Identität benutzt werden. Auch können beispielsweise auf alle dort gespeicherten Daten zugegriffen und Geräte aus der Ferne lokalisiert oder zurückgesetzt, also alle Daten auf dem Gerät gelöscht werden.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Diebstahl von Google-Konten",
+                    "type": "Threat",
+                    "text": "Angreifende stehlen die Google-ID eines Benutzers und erhalten so Zugriff auf alle mit diesem Konto verbundenen Dienste und Daten.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Vorinstallierte Apps und integrierte Funktionen bei Android-basierten Geräten",
+            "handle": "2.5",
+            "text": "Mit dem Betriebssystem liefern die herstellenden Institutionen von Android-Geräten oft bereits fest integrierte und vorinstallierte Apps sowie eine Anbindung zu Diensten von Drittanbietenden (Twitter, Facebook, usw.) aus. Diese Apps können Benutzende oft nicht selbst entfernen. Damit vergrößert sich die Angriffsfläche des Android-Betriebssystems. Auch die direkte Anbindung an Dienste von Drittanbietenden ist in Institutionen oft nicht erwünscht. Insgesamt steigt durch die tiefe Integration von Apps und Schnittstellen von Drittanbietenden die Gefahr, dass das Gerät mit Schadsoftware infiziert wird oder Angreifende unberechtigt auf vertrauliche Informationen zugreifen können.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Ausnutzung von Schwachstellen in vorinstallierten Apps",
+                    "type": "Threat",
+                    "text": "Angreifende nutzen Schwachstellen in vorinstallierten Apps aus, um auf das Gerät zuzugreifen oder Schadsoftware zu installieren.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "ENTFALLEN",
+            "handle": "SYS.3.2.4.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Diese Anforderung ist entfallen.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": []
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Deaktivieren des Entwicklermodus",
+            "handle": "SYS.3.2.4.A2",
+            "level": "Medium",
+            "affects": [],
+            "text": "In allen Android-basierten Geräten SOLLTE der Entwicklermodus deaktiviert sein.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.14",
+                "G 0.21",
+                "G 0.32",
+                "G 0.41",
+                "G 0.46"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz des Multi-User- und Gäste-Modus",
+            "handle": "SYS.3.2.4.A3",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTE geregelt sein, ob ein Gerät mit anderen Personen geteilt werden darf. Es SOLLTE festgelegt werden, ob dazu der Multi-User- oder Gäste-Modus verwendet werden muss. Benutzende auf einem Android-basierten Gerät SOLLTEN natürliche Personen sein.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.30",
+                "G 0.32",
+                "G 0.38"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "ENTFALLEN",
+            "handle": "SYS.3.2.4.A4",
+            "level": "Medium",
+            "affects": [],
+            "text": "Diese Anforderung ist entfallen.",
+            "isresponsible": null,
+            "mitigates": []
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erweiterte Sicherheitseinstellungen",
+            "handle": "SYS.3.2.4.A5",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTEN nur freigegebene Sicherheits-Apps Rechte zur Geräteadministration bekommen oder sich als „Trust Agents“ eintragen lassen. Dies SOLLTE regelmäßig überprüft werden. Weiterhin SOLLTE es nur erlaubten Apps möglich sein, auf Nutzungsdaten und auf Benachrichtigungen zuzugreifen.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "ENTFALLEN",
+            "handle": "SYS.3.2.4.A6",
+            "level": "High",
+            "affects": [],
+            "text": "Diese Anforderung ist entfallen.",
+            "isresponsible": null,
+            "mitigates": []
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "ENTFALLEN",
+            "handle": "SYS.3.2.4.A7",
+            "level": "High",
+            "affects": [],
+            "text": "Diese Anforderung ist entfallen.",
+            "isresponsible": null,
+            "mitigates": []
+        }
+    ]
+}

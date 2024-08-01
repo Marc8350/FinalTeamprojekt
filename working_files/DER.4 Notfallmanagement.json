@@ -1,0 +1,442 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "DER.4 Notfallmanagement",
+    "handle": "DER.4",
+    "text": "In Notfällen müssen Institutionen weiter auf Informationen zugreifen können, um einen Geschäftsprozess, ein IT-System oder eine Fachaufgabe wiederherstellen zu können. Um die Informationssicherheit auch in einem Notfall aufrechterhalten zu können, sollten deshalb entsprechende Prozesse geplant, etabliert und überprüft werden.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Personalausfall",
+            "handle": "2.1",
+            "text": "Fällt Personal aus, kann das schnell bedeuten, dass eine Institution ihre Fachaufgaben und Geschäftsprozesse nicht mehr ausführen kann. Die Gründe für einen Personalausfall können vielfältig sein. Durch Keime in der Kantine oder einen Streik können beispielsweise viele Mitarbeitende gleichzeitig ausfallen. Auch der Tod eines Mitarbeitenden kann zu Ausfällen oder Beeinträchtigungen von wichtigen Geschäftsprozessen oder Fachaufgaben führen. Zudem könnten relevante Informationen zum Wiederanlauf des Geschäftsprozesses oder der IT-Systeme nicht mehr zugänglich sein. Oft verfügen einzelne Personen über spezifisches Fachwissen (Kopfmonopole), sodass ein Schaden auch dann eintreten kann, wenn der Personalausfall zahlenmäßig nur sehr gering ist.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Krankheit",
+                    "type": "Threat",
+                    "text": "Durch Keime in der Kantine oder einen Streik können beispielsweise viele Mitarbeitende gleichzeitig ausfallen.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Tod eines Mitarbeitenden",
+                    "type": "Threat",
+                    "text": "Der Tod eines Mitarbeitenden kann zu Ausfällen oder Beeinträchtigungen von wichtigen Geschäftsprozessen oder Fachaufgaben führen.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Verlust von Fachwissen",
+                    "type": "Threat",
+                    "text": "Oft verfügen einzelne Personen über spezifisches Fachwissen (Kopfmonopole), sodass ein Schaden auch dann eintreten kann, wenn der Personalausfall zahlenmäßig nur sehr gering ist.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ausfall von IT-Systemen",
+            "handle": "2.2",
+            "text": "Fallen Komponenten eines IT-Systems aus, z. B. durch defekte Hardware oder einen Stromausfall, kann der gesamte IT-Betrieb gestört werden. Dadurch ist die Verfügbarkeit der jeweiligen Informationen und damit auch des jeweiligen Geschäftsprozesses gefährdet. Zudem können wichtige Informationen, die für Wiederanlaufmaßnahmen benötigt werden, nicht zur Verfügung stehen.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Hardwaredefekt",
+                    "type": "Threat",
+                    "text": "Fallen Komponenten eines IT-Systems aus, z. B. durch defekte Hardware oder einen Stromausfall, kann der gesamte IT-Betrieb gestört werden.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Stromausfall",
+                    "type": "Threat",
+                    "text": "Fallen Komponenten eines IT-Systems aus, z. B. durch defekte Hardware oder einen Stromausfall, kann der gesamte IT-Betrieb gestört werden.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ausfall eines Weitverkehrsnetzes (WAN)",
+            "handle": "2.3",
+            "text": "Die Ursachen für den Ausfall eines Weitverkehrsnetzes (Wide Area Network, WAN) können vielfältig sein. Daher ist es möglich, dass sich ein Netzausfall lediglich auf einzelne Benutzende, einen Anbietenden oder eine bestimmte Region auswirkt. Häufig stören solche Ausfälle nur kurz und betreffen dann nur die Geschäftsprozesse und Fachaufgaben, die eine entsprechend hohe Verfügbarkeit des WAN benötigen. Es gibt aber auch immer wieder längere Ausfälle, die massive Probleme in der Kommunikation und Erreichbarkeit nach sich ziehen können.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Netzwerkstörung",
+                    "type": "Threat",
+                    "text": "Die Ursachen für den Ausfall eines Weitverkehrsnetzes (Wide Area Network, WAN) können vielfältig sein. Daher ist es möglich, dass sich ein Netzausfall lediglich auf einzelne Benutzende, einen Anbietenden oder eine bestimmte Region auswirkt.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ausfall eines Gebäudes",
+            "handle": "2.4",
+            "text": "Gebäude können unvorhergesehen unbenutzbar werden, z. B. weil sie durch Feuer, Sturm, Hochwasser, Erdbeben oder eine Explosion teilweise oder vollständig zerstört wurden. Ein Gebäude kann aber auch ausfallen, weil die Polizei oder die Feuerwehr das Umfeld sperrt und das Gebäude nicht mehr betreten werden kann oder verlassen werden muss, etwa weil Strom, Wasser, Abwasser, Heizung oder Klimatisierung über einen gewissen Zeitraum nicht mehr funktionieren.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Feuer",
+                    "type": "Threat",
+                    "text": "Gebäude können unvorhergesehen unbenutzbar werden, z. B. weil sie durch Feuer, Sturm, Hochwasser, Erdbeben oder eine Explosion teilweise oder vollständig zerstört wurden.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Sturm",
+                    "type": "Threat",
+                    "text": "Gebäude können unvorhergesehen unbenutzbar werden, z. B. weil sie durch Feuer, Sturm, Hochwasser, Erdbeben oder eine Explosion teilweise oder vollständig zerstört wurden.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Hochwasser",
+                    "type": "Threat",
+                    "text": "Gebäude können unvorhergesehen unbenutzbar werden, z. B. weil sie durch Feuer, Sturm, Hochwasser, Erdbeben oder eine Explosion teilweise oder vollständig zerstört wurden.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Erdbeben",
+                    "type": "Threat",
+                    "text": "Gebäude können unvorhergesehen unbenutzbar werden, z. B. weil sie durch Feuer, Sturm, Hochwasser, Erdbeben oder eine Explosion teilweise oder vollständig zerstört wurden.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Explosion",
+                    "type": "Threat",
+                    "text": "Gebäude können unvorhergesehen unbenutzbar werden, z. B. weil sie durch Feuer, Sturm, Hochwasser, Erdbeben oder eine Explosion teilweise oder vollständig zerstört wurden.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Polizeisperrung",
+                    "type": "Threat",
+                    "text": "Ein Gebäude kann aber auch ausfallen, weil die Polizei oder die Feuerwehr das Umfeld sperrt und das Gebäude nicht mehr betreten werden kann oder verlassen werden muss, etwa weil Strom, Wasser, Abwasser, Heizung oder Klimatisierung über einen gewissen Zeitraum nicht mehr funktionieren.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ausfall einer Lieferung oder Dienstleistung",
+            "handle": "2.5",
+            "text": "Sind Institutionen von Dienstleistungen abhängig, kann dies schnell zu Unterbrechungen der eigenen betrieblichen Kontinuität führen, wenn die dienstleistende oder liefernde Institution teilweise oder vollständig ausfällt. Wird beispielsweise zur Produktion die Lieferung eines bestimmten Werkstoffs benötigt und diese Lieferung fällt aus, so ist möglicherweise die gesamte Produktion gefährdet. Aber auch der Ausfall eines extern bereitgestellten Dienstes, wie z. B. einer Cloud oder auch E-Mail, kann den eigenen Betrieb sehr stark einschränken, bzw. sogar komplett unterbrechen. Dies gefährdet insbesondere kritische Geschäftsprozesse und Fachaufgaben.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Lieferausfall",
+                    "type": "Threat",
+                    "text": "Wird beispielsweise zur Produktion die Lieferung eines bestimmten Werkstoffs benötigt und diese Lieferung fällt aus, so ist möglicherweise die gesamte Produktion gefährdet.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Dienstausfall",
+                    "type": "Threat",
+                    "text": "Aber auch der Ausfall eines extern bereitgestellten Dienstes, wie z. B. einer Cloud oder auch E-Mail, kann den eigenen Betrieb sehr stark einschränken, bzw. sogar komplett unterbrechen.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erstellung eines Notfallhandbuchs",
+            "handle": "DER.4.A1",
+            "level": "Medium",
+            "affects": [],
+            "text": "Es SOLLTE ein Notfallhandbuch erstellt werden, in dem die wichtigsten Informationen zu\n•\nRollen,\n•\nSofortmaßnahmen,\n•\nAlarmierung und Eskalation sowie\n•\nKommunikations-, grundsätzlichen Geschäftsfortführungs-, Wiederanlauf- und\nWiederherstellungsplänen\nenthalten sind. Zuständigkeiten und Befugnisse SOLLTEN zugewiesen, kommuniziert und im\nNotfallhandbuch festgehalten werden. Es SOLLTE sichergestellt sein, dass im Notfall entsprechend\ngeschultes Personal zur Verfügung steht. Es SOLLTE regelmäßig durch Tests und Übungen überprüft\nwerden, ob die im Notfallhandbuch beschriebenen Maßnahmen auch wie vorgesehen funktionieren.\nEs SOLLTE regelmäßig geprüft werden, ob das Notfallhandbuch noch aktuell ist. Gegebenenfalls\nSOLLTE es aktualisiert werden. Es SOLLTE auch im Notfall zugänglich sein. Das Notfallhandbuch\nSOLLTE um Verhaltensregeln für spezielle Fälle ergänzt werden, z. B. Brand. Die Regeln SOLLTEN allen\nMitarbeitenden bekanntgegeben werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.27",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Integration von Notfallmanagement und\nInformationssicherheitsmanagement",
+            "handle": "DER.4.A2",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Prozesse im Sicherheitsmanagement SOLLTEN mit dem Notfallmanagement abgestimmt werden\n(siehe DER.2.1 Behandlung von Sicherheitsvorfällen).",
+            "isresponsible": "Informationssicherheitsbeauftragte (ISB)",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Festlegung des Geltungsbereichs und der\nNotfallmanagementstrategie",
+            "handle": "DER.4.A3",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Der Geltungsbereich für das Notfallmanagementsystem SOLLTE eindeutig festgelegt werden. Die\nInstitutionsleitung SOLLTE eine Notfallmanagementstrategie festlegen, welche die angestrebten Ziele\nund das Risikoakzeptanzniveau darlegen.",
+            "isresponsible": "Institutionsleitung",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Leitlinie zum Notfallmanagement und Übernahme der\nGesamtverantwortung durch die Institutionsleitung",
+            "handle": "DER.4.A4",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Die Institutionsleitung SOLLTE eine Leitlinie zum Notfallmanagement verabschieden. Diese SOLLTE\ndie wesentlichen Eckpunkte des Notfallmanagements enthalten. Die Leitlinie zum Notfallmanagement\nSOLLTE regelmäßig überprüft und gegebenenfalls überarbeitet werden. Sie SOLLTE allen\nMitarbeitenden bekanntgegeben werden.",
+            "isresponsible": "Institutionsleitung",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Aufbau einer geeigneten Organisationsstruktur für das\nNotfallmanagement",
+            "handle": "DER.4.A5",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Die Rollen für das Notfallmanagement SOLLTEN für die Gegebenheiten der Institution angemessen\nfestgelegt werden. Dies SOLLTE mit den Aufgaben, Pflichten und Kompetenzen der Rollen schriftlich\ndokumentiert werden. Es SOLLTEN für alle Rollen im Notfallmanagement qualifizierte Mitarbeitende\nbenannt werden. Die Organisationsstruktur im Notfallmanagement SOLLTE regelmäßig darauf\nüberprüft werden, ob sie praxistauglich, effektiv und effizient ist.",
+            "isresponsible": "Institutionsleitung",
+            "mitigates": [
+                "G 0.18",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Bereitstellung angemessener Ressourcen für das\nNotfallmanagement",
+            "handle": "DER.4.A6",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Die finanziellen, technischen und personellen Ressourcen für die angestrebten Ziele des\nNotfallmanagements SOLLTEN angemessen sein. Der oder die Notfallbeauftragte bzw. das\nNotfallmanagement-Team SOLLTE über genügend Zeit für die Aufgaben im Notfallmanagement\nverfügen.",
+            "isresponsible": "Institutionsleitung",
+            "mitigates": [
+                "G 0.18",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erstellung eines Notfallkonzepts",
+            "handle": "DER.4.A7",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Alle kritischen Geschäftsprozesse und Ressourcen SOLLTEN identifiziert werden, beispielsweise mit\neiner Business-Impact-Analyse (BIA). Es SOLLTEN die wichtigsten relevanten Risiken für die kritischen\nGeschäftsprozesse und Fachaufgaben sowie deren Ressourcen identifiziert werden. Für jedes\nidentifizierte Risiko SOLLTE entschieden werden, welche Risikostrategien zur Risikobehandlung\neingesetzt werden sollen. Es SOLLTEN Kontinuitätsstrategien entwickelt werden, die einen\nWiederanlauf und eine Wiederherstellung der kritischen Geschäftsprozesse in der geforderten Zeit\nermöglichen. Es SOLLTE ein Notfallkonzept erstellt werden. Es SOLLTEN solche Notfallpläne und\nMaßnahmen entwickelt und implementiert werden, die eine effektive Notfallbewältigung und eine\nschnelle Wiederaufnahme der kritischen Geschäftsprozesse ermöglichen. Im Notfallkonzept SOLLTE\ndie Informationssicherheit berücksichtigt und entsprechende Sicherheitskonzepte für die\nNotfalllösungen entwickelt werden.",
+            "isresponsible": "Institutionsleitung",
+            "mitigates": [
+                "G 0.18",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Integration der Mitarbeitenden in den Notfallmanagement-Prozess",
+            "handle": "DER.4.A8",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Alle Mitarbeitenden SOLLTEN regelmäßig für das Thema Notfallmanagement sensibilisiert werden.\nZum Notfallmanagement SOLLTE es ein Schulungs- und Sensibilisierungskonzept geben. Die\nMitarbeitenden im Notfallmanagement-Team SOLLTEN regelmäßig geschult werden, um die\nbenötigten Kompetenzen aufzubauen.",
+            "isresponsible": "Vorgesetzte, Personalabteilung",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Integration von Notfallmanagement in organisationsweite Abläufe\nund Prozesse",
+            "handle": "DER.4.A9",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Es SOLLTE sichergestellt werden, dass Aspekte des Notfallmanagements in allen Geschäftsprozessen\nund Fachaufgaben der Institution berücksichtigt werden. Die Prozesse, Vorgaben und\nVerantwortlichkeiten im Notfallmanagement SOLLTEN mit dem Risikomanagement und\nKrisenmanagement abgestimmt werden.",
+            "isresponsible": "Institutionsleitung",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Tests und Notfallübungen",
+            "handle": "DER.4.A10",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Alle wesentlichen Sofortmaßnahmen und Notfallpläne SOLLTEN in angemessener Weise regelmäßig\nund anlassbezogen getestet und geübt werden. Der zeitliche Rahmen und die fachliche Abdeckung\naller Übungen SOLLTEN übergreifend in einem Übungsplan dokumentiert werden. Im\nNotfallmanagement SOLLTEN ausreichend Ressourcen für die Planung, Konzeption, Durchführung\nund Auswertung der Tests und Übungen bereitgestellt werden.",
+            "isresponsible": "Institutionsleitung",
+            "mitigates": [
+                "G 0.18",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Dokumentation im Notfallmanagement-Prozess",
+            "handle": "DER.4.A12",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Der Ablauf des Notfallmanagement-Prozesses, die Arbeitsergebnisse der einzelnen Phasen und\nwichtige Entscheidungen SOLLTEN dokumentiert werden. Ein festgelegtes Verfahren SOLLTE\nsicherstellen, dass diese Dokumente regelmäßig aktualisiert werden. Darüber hinaus SOLLTE der\nZugriff auf die Dokumentation auf autorisierte Personen beschränkt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Überprüfung und Steuerung des Notfallmanagement-Systems",
+            "handle": "DER.4.A13",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Die Institutionsleitung SOLLTE sich regelmäßig anhand von Managementberichten über den Stand\ndes Notfallmanagements informieren. Sie SOLLTE so das Notfallmanagement-System regelmäßig\nüberprüfen, bewerten und gegebenenfalls korrigieren.",
+            "isresponsible": "Institutionsleitung",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Regelmäßige Überprüfung und Verbesserung der\nNotfallmaßnahmen",
+            "handle": "DER.4.A14",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Alle Notfallmaßnahmen SOLLTEN regelmäßig oder bei größeren Änderungen daraufhin überprüft\nwerden, ob sie noch eingehalten und korrekt umgesetzt werden. Es SOLLTE geprüft werden, ob sie sich\nnoch dazu eignen, die definierten Ziele zu erreichen.\nDabei SOLLTE untersucht werden, ob technische Maßnahmen korrekt implementiert und konfiguriert\nwurden und ob organisatorische Maßnahmen effektiv und effizient umgesetzt sind. Bei Abweichungen\nSOLLTEN die Ursachen für die Mängel ermittelt und Verbesserungsmaßnahmen veranlasst werden.\nDiese Ergebnisübersicht SOLLTE von der Institutionsleitung freigegeben werden. Es SOLLTE zudem\nein Prozess etabliert werden, der steuert und überwacht, ob und wie die Verbesserungsmaßnahmen\numgesetzt werden. Verzögerungen SOLLTEN frühzeitig an die Institutionsleitung gemeldet werden.\nEs SOLLTE von der Institutionsleitung festgelegt sein, wie die Überprüfungen koordiniert werden. Die\nÜberprüfungen SOLLTEN so geplant werden, dass kein relevanter Teil ausgelassen wird. Insbesondere\nSOLLTEN die im Bereich der Revision, der IT, des Sicherheitsmanagements, des\nInformationssicherheitsmanagements und des Notfallmanagements durchgeführten Überprüfungen\nmiteinander koordiniert werden. Dazu SOLLTE geregelt werden, welche Maßnahmen wann und von\nwem überprüft werden.",
+            "isresponsible": "Institutionsleitung",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Bewertung der Leistungsfähigkeit des Notfallmanagementsystems",
+            "handle": "DER.4.A15",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Es SOLLTE regelmäßig bewertet werden, wie leistungsfähig und effektiv das Notfallmanagement-\nSystem ist. Als Grundlage SOLLTEN Mess- und Bewertungskriterien wie z. B. Leistungskennzahlen\ndefiniert werden. Diese Messgrößen SOLLTEN regelmäßig ermittelt und mit geeigneten\nvorangegangenen Werten, mindestens aber mit den Vorjahreswerten, verglichen werden. Weichen die\nWerte negativ ab, SOLLTEN die Ursachen ermittelt und Verbesserungsmaßnahmen definiert werden.\nDie Ergebnisse der Bewertung SOLLTEN an die Leitung berichtet werden.\nDie Leitung SOLLTE entscheiden, mit welchen Maßnahmen das Notfallmanagement weiterentwickelt\nwerden soll. Alle Entscheidungen der Institutionsleitung SOLLTEN dokumentiert und die bisherigen\nAufzeichnungen aktualisiert werden.",
+            "isresponsible": "Institutionsleitung",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Notfallvorsorge- und Notfallreaktionsplanung für ausgelagerte\nKomponenten",
+            "handle": "DER.4.A16",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Bei der Notfallvorsorge- und Notfallreaktionsplanung für ausgelagerte Komponenten SOLLTE\nregelmäßig das Notfallmanagement der liefernden oder dienstleistenden Institution in den\nunterzeichneten Verträgen geprüft werden. Auch SOLLTEN die Abläufe in Notfalltests und -übungen\nmit der liefernden oder bereitstellenden Institution abgestimmt und, wenn angemessen, gemeinsam\ndurchgeführt werden.\nDie Ergebnisse und Auswertungen SOLLTEN regelmäßig zwischen der Institutionsleitung und den\nliefernden Institutionen oder Dienstleistenden ausgetauscht werden. In den Auswertungen SOLLTEN\nauch eventuelle Verbesserungsmaßnahmen enthalten sein.",
+            "isresponsible": "Institutionsleitung",
+            "mitigates": [
+                "G 0.11",
+                "G 0.18"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,651 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "Systemmanagement",
+    "handle": "OPS.1.1.7",
+    "text": "A reliable system management is a basic requirement for the secure and efficient operation of modern networked systems. This requires that a system management integrates all relevant systems comprehensively. In addition, appropriate measures must be implemented to protect system management communication and infrastructure.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unberechtigter Zugriff auf die Systemmanagement-Lösung",
+            "handle": "2.1",
+            "text": "Due to its central position and the necessary access rights to all systems to be managed, system management is a prime target for attacks. If attackers manage to access system management solutions, e.g. through unpatched security vulnerabilities, they can control all systems managed by system management and reconfigure them. This allows them to access sensitive information or disrupt services or managed systems. For example, a company could provide central configuration servers for a system management solution. Through an unpatched vulnerability, the configuration files are changed in this example so that the managed systems install ransomware. As a result, all systems managed by this system management solution are encrypted in this example.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unauthorized Access to System Management Solution",
+                    "type": "Threat",
+                    "text": "Attackers could exploit vulnerabilities in the system management solution to gain unauthorized access and control over the managed systems.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehler in Automatisierungsfunktionen für das Systemmanagement",
+            "handle": "2.2",
+            "text": "All security goals of the managed information systems can be compromised by faulty automated processes. Errors in one or more automation functions, such as scripts, can render the managed systems inoperable or compromised. Due to the automated processes, a large number of IT systems can be compromised quickly. Even particularly critical IT systems can be compromised quickly in this way.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Faulty Automation Scripts",
+                    "type": "Threat",
+                    "text": "Errors in automated scripts used for system management can lead to unintended consequences, such as system failures or security breaches.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unberechtigte Eingriffe in die Systemmanagement-Kommunikation",
+            "handle": "2.3",
+            "text": "Accidental interference with or targeted attacks on system management communication can violate the integrity of the managed IT systems and restrict the availability of services or IT systems. If system management communication is intercepted and manipulated, active systems can be controlled in this way. In addition, the data transmitted to and from the systems can be intercepted and viewed.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Interception and Manipulation of System Management Communication",
+                    "type": "Threat",
+                    "text": "Attackers could intercept and manipulate system management communication to gain unauthorized access to or control over managed systems.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Zeitsynchronisation der Systemmanagement-Komponenten",
+            "handle": "2.4",
+            "text": "Errors in time synchronization can mask problems and events, so that, for example, the detection of security incidents and data leaks is made more difficult. If the system time of the system management components is insufficiently synchronized, then (for example) logs that use timestamps to evaluate the validity of communication can be disrupted by different system times on the system management components and the managed systems. In addition, the logging data for system management may not be able to be correlated with each other. Also, the correlation may lead to incorrect statements if timestamps only appear to match or differ due to faulty synchronization.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Time Synchronization Issues",
+                    "type": "Threat",
+                    "text": "Inaccurate time synchronization between system management components and managed systems can lead to inconsistencies in logs and event data, making it difficult to identify security incidents or other issues.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Inkompatibilität zwischen den zu verwaltenden Systemen und der Systemmanagement-Lösung",
+            "handle": "2.5",
+            "text": "An incompletely compatible system management solution can cause malfunctions of the managed IT systems and restrict their availability. If the system management solution does not fully support the managed IT systems, certain actions cannot be performed as planned. This risk can also occur when systems are updated, where the management interfaces are changed.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Incompatibility Between System Management Solution and Managed Systems",
+                    "type": "Threat",
+                    "text": "If the system management solution is not fully compatible with the managed systems, it may not be able to properly manage or control them, leading to potential security vulnerabilities or system failures.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verbindungsverlust zwischen Anwendenden und Systemmanagement-Lösung",
+            "handle": "2.6",
+            "text": "Connection interruptions can restrict the availability of the system management solution. If the connection between the administrators and the system management solution is disrupted, IT systems can fail. In addition, troubleshooting and managing IT systems can be made more difficult. If a connection breaks or is disrupted, then time-critical and security-relevant tasks cannot be performed on time, for example, security updates cannot be installed or security incidents cannot be responded to appropriately.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Connection Loss Between Administrators and System Management Solution",
+                    "type": "Threat",
+                    "text": "Disruptions in the connection between administrators and the system management solution can lead to service outages, delayed responses to security incidents, and difficulty in managing IT systems.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verbindungsverlust zwischen Systemmanagement-Lösung und zu verwaltenden Systemen",
+            "handle": "2.7",
+            "text": "Connection interruptions to the managed systems can particularly affect the availability or integrity of services in the information network. The extent and constellation of such a connection loss determine whether services are affected and what damage can occur. The resulting error patterns are sometimes difficult to analyze and the errors that occur are difficult to fix.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Connection Loss Between System Management Solution and Managed Systems",
+                    "type": "Threat",
+                    "text": "Disruptions in the connection between the system management solution and managed systems can lead to service outages, data loss, and difficulty in managing IT systems.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Abstimmung zwischen Systemmanagement und Netzmanagement",
+            "handle": "2.8",
+            "text": "Unsynchronized actions in network management can have a negative impact on system management. This can lead to inconsistencies in the configuration between IT systems and connecting networks. For example, connection losses in the network can trigger a large number of follow-up events in the area of system management. These events can lead to misconfigurations.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Misconfiguration Due to Unsynchronized Network Management",
+                    "type": "Threat",
+                    "text": "Unsynchronized actions in network management can lead to inconsistencies in the configuration between IT systems and connecting networks, potentially causing system failures or security vulnerabilities.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Anforderungsspezifikation für das Systemmanagement",
+            "handle": "OPS.1.1.7.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Anforderungen an die Systemmanagement-Infrastruktur und -Prozesse MÜSSEN spezifiziert werden. Dabei MÜSSEN alle wesentlichen Elemente für das Systemmanagement berücksichtigt werden. Auch MÜSSEN die Sicherheitsaspekte für das Systemmanagement von Beginn an beachtet werden. Zudem MÜSSEN die Schnittstellen der zu verwaltenden IT-Systeme dokumentiert werden, z. B. um die Kompatibilität von Systemmanagement-Lösung und zu verwaltendem System zu gewährleisten.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.9",
+                "G 0.18",
+                "G 0.25",
+                "G 0.26",
+                "G 0.27",
+                "G 0.29",
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Planung des Systemmanagements",
+            "handle": "OPS.1.1.7.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Systemmanagement-Lösung und die zugrundeliegende Infrastruktur MÜSSEN geeignet geplant werden. Die Planung MUSS mindestens die folgenden Inhalte umfassen: eine detaillierte Anforderungsanalyse, ein aussagekräftiges Grobkonzept, einen umfassenden Umsetzungsplan sowie Meilensteine für Qualitätssicherung und Abnahme. Dabei MÜSSEN alle in der Anforderungsspezifikation genannten Punkte sowie das Rollen- und Berechtigungskonzept berücksichtigt werden. Es MÜSSEN mindestens die folgenden Themen berücksichtigt werden: Trennung in geeignete Bereiche für das Systemmanagement, Zugriffsmöglichkeiten auf und durch das Systemmanagement, Berechtigungen des Systemmanagements auf den zu verwaltenden Systemen, Netzverbindungen für den Zugriff auf und durch das Systemmanagement, Protokolle für den Zugriff von Benutzenden auf die Systemmanagement-Lösung, Protokolle für die Kommunikation zwischen der Systemmanagement-Lösung und den zu verwaltenden Systemen, Anforderungen an Systemmanagement-Werkzeuge, Schnittstellen, um erfasste Ereignis- oder Alarmmeldungen weiterzuleiten, Protokollierung, inklusive erforderlicher Schnittstellen zu einer zentralen Protokollierungslösung, Unterstützung durch das herstellende bzw. entwickelnde Unternehmen über den geplanten Einsatzzeitraum, Möglichkeiten zum Einspielen von Patches für die Systemmanagement-Lösung sowie für die zu verwaltenden Systeme, Reporting und Schnittstellen zu übergreifenden Lösungen sowie korrespondierende Anforderungen an die zu verwaltenden Systeme.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.9",
+                "G 0.18",
+                "G 0.25",
+                "G 0.26",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Zeitsynchronisation für das Systemmanagement",
+            "handle": "OPS.1.1.7.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Alle Komponenten der Systemmanagement-Lösung, inklusive der zu verwaltenden Systeme, MÜSSEN eine synchrone Uhrzeit nutzen. Die Systemzeit MUSS für jedes zu verwaltende System und für die Systemmanagement-Lösung über geeignete Protokolle synchronisiert werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.21",
+                "G 0.22",
+                "G 0.25",
+                "G 0.26"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Absicherung der Systemmanagement-Kommunikation",
+            "handle": "OPS.1.1.7.A4",
+            "level": "Low",
+            "affects": [],
+            "text": "Sobald die Systemmanagement-Lösung und die zu verwaltenden Systeme über die produktive Infrastruktur kommunizieren, MÜSSEN dafür sichere Protokolle verwendet werden. Falls keine sicheren Protokolle verwendet werden können, dann MUSS ein eigens dafür vorgesehenes Administrationsnetz (Out-of-Band-Management) verwendet werden (siehe NET.1.1 Netzarchitektur und -design). Ist auch dies nicht möglich, dann MÜSSEN ergänzende Sicherheitsmechanismen auf anderer Ebene eingesetzt werden, z. B. Tunnelmechanismen über verschlüsseltes VPN oder vergleichbare Lösungen.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.15",
+                "G 0.19",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.30",
+                "G 0.43"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Gegenseitige Authentisierung von Systemmanagement-Lösung und zu verwaltenden Systemen",
+            "handle": "OPS.1.1.7.A5",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Authentisierung zwischen Systemmanagement-Lösung und zu verwaltenden Systemen MUSS in beide Richtungen erfolgen. Die Authentisierung MUSS in das übergreifende Authentisierungskonzept eingebunden sein. Die Authentisierung MUSS mittels sicherer Protokolle erfolgen.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.15",
+                "G 0.19",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.43"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Absicherung des Zugriffs auf die Systemmanagement-Lösung",
+            "handle": "OPS.1.1.7.A6",
+            "level": "Low",
+            "affects": [],
+            "text": "Der Zugriff von Benutzenden auf die Systemmanagement-Lösung MUSS abgesichert werden durch eine sichere und angemessene Authentisierung und Autorisierung der Benutzenden sowie eine sichere Verschlüsselung der übertragenen Daten. Eine angemessene Authentisierungsmethode MUSS ausgewählt werden. Der Auswahlprozess MUSS dokumentiert werden. Die Stärke der verwendeten kryptografischen Verfahren und Schlüssel MUSS regelmäßig überprüft und bei Bedarf angepasst werden. Die Systemmanagement-Lösung MUSS über eine Autorisierungskomponente sicherstellen, dass Benutzende ausschließlich solche Aktionen durchführen können, zu denen sie berechtigt sind.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.15",
+                "G 0.19",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.30",
+                "G 0.31",
+                "G 0.43"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Festlegung einer Sicherheitsrichtlinie für das Systemmanagement",
+            "handle": "OPS.1.1.7.A7",
+            "level": "Medium",
+            "affects": [],
+            "text": "Für das Systemmanagement SOLLTE eine Sicherheitsrichtlinie erstellt und nachhaltig gepflegt werden. Die Richtlinie SOLLTE allen Personen, die am Systemmanagement beteiligt sind, bekannt sein. Die Sicherheitsrichtlinie SOLLTE zudem grundlegend für die Arbeit dieser Personen sein. Es SOLLTE regelmäßig und nachvollziehbar überprüft werden, dass die in der Richtlinie geforderten Inhalte umgesetzt werden. Die Ergebnisse SOLLTEN dokumentiert werden. Die Sicherheitsrichtlinie SOLLTE mindestens das Folgende festlegen: die Bereiche des Systemmanagements, die über zentrale Management-Werkzeuge und Dienste realisiert werden, die Aufgaben im Systemmanagement, die automatisiert realisiert werden sollen, das Konfigurationsmanagement für die Daten, die von der Systemmanagement-Lösung verwaltet werden, z. B. Versionierung von Konfigurationen, Vorgaben für die Netztrennung, Vorgaben für die Zugriffskontrolle, Vorgaben für die Protokollierung, Vorgaben für die Qualitätssicherung beim Einsatz von Automatisierungsfunktionen, z. B. Skripte, Vorgaben für den Schutz der Kommunikation, die operativen Grundregeln des Systemmanagements sowie Vorgaben für die Abstimmung mit dem Netzmanagement, z. B. Vergabe von IP-Adressen oder DNS-Namen.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.15",
+                "G 0.19",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.30",
+                "G 0.31",
+                "G 0.32"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Erstellung eines Systemmanagement-Konzepts",
+            "handle": "OPS.1.1.7.A8",
+            "level": "Medium",
+            "affects": [],
+            "text": "Ausgehend von der Sicherheitsrichtlinie für das Systemmanagement SOLLTE ein Systemmanagement-Konzept erstellt und kontinuierlich gepflegt werden. Dabei SOLLTEN mindestens folgende Aspekte bedarfsgerecht berücksichtigt werden: Methoden, Techniken und Werkzeuge für das Systemmanagement, Absicherung des Zugangs und der Kommunikation, Absicherung auf Ebene des Netzes, insbesondere Zuordnung von Systemmanagement-Komponenten zu Sicherheitszonen, Umfang des Monitorings und der Alarmierung für jedes zu verwaltende System, Protokollierung, Automatisierung, insbesondere die zentrale Verteilung von Konfigurationsdateien auf die zu verwaltenden Systeme, Vorgaben an Entwicklung und Test von Automatisierungsfunktionen, Meldeketten bei Störungen und Sicherheitsvorfällen, Bereitstellung von Systemmanagement-Informationen für andere Betriebsbereiche, Einbindung des Systemmanagements in die Notfallplanung, sowie benötigten Netzübertragungskapazitäten der Systemmanagement-Lösung.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.25",
+                "G 0.26",
+                "G 0.27",
+                "G 0.29",
+                "G 0.30",
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fein- und Umsetzungsplanung für das Systemmanagement",
+            "handle": "OPS.1.1.7.A9",
+            "level": "Medium",
+            "affects": [],
+            "text": "Eine Fein- und Umsetzungsplanung für die Systemmanagement-Lösung SOLLTE erstellt werden. Dabei SOLLTEN alle in der Sicherheitsrichtlinie und im Systemmanagement-Konzept adressierten Punkte berücksichtigt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.25",
+                "G 0.26",
+                "G 0.27",
+                "G 0.29",
+                "G 0.30",
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Konzept für den sicheren Betrieb der Systemmanagement-Lösung",
+            "handle": "OPS.1.1.7.A10",
+            "level": "Medium",
+            "affects": [],
+            "text": "Ausgehend von den Sicherheitsrichtlinien und dem Systemmanagement-Konzept SOLLTE ein Konzept für den sicheren Betrieb der Systemmanagement-Lösung und der zugrundeliegenden Infrastruktur erstellt werden. Auch SOLLTE geprüft werden, wie sich die Leistungen anderer operativer Einheiten einbinden und steuern lassen.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.15",
+                "G 0.18",
+                "G 0.19",
+                "G 0.21",
+                "G 0.22",
+                "G 0.25",
+                "G 0.26",
+                "G 0.27",
+                "G 0.29",
+                "G 0.30",
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Regelmäßiger Soll-Ist-Vergleich im Rahmen des Systemmanagements",
+            "handle": "OPS.1.1.7.A11",
+            "level": "Medium",
+            "affects": [],
+            "text": "Der IT-Betrieb SOLLTE regelmäßig überprüfen, inwieweit die von der Systemmanagement-Lösung verwalteten Daten, Konfigurationen und Skripte dem Sollzustand entsprechen. Mindestens folgende Aspekte SOLLTEN im Soll-Ist-Vergleich geprüft werden: die Konfiguration der Systemmanagement-Lösung, die Konfiguration der zu verwaltenden Systeme sowie die eingesetzten Automatisierungsfunktionen oder Skripte. Dabei SOLLTE geprüft werden, ob die genannten Aspekte noch die Sicherheitsrichtlinie und Anforderungsspezifikation erfüllen. Weiter SOLLTE verglichen werden, ob die Softwareversion der Systemmanagement-Lösung aktuell ist.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.15",
+                "G 0.18",
+                "G 0.19",
+                "G 0.21",
+                "G 0.22",
+                "G 0.26"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Auslösung von Aktionen durch die zentralen Komponenten der Systemmanagement-Lösung",
+            "handle": "OPS.1.1.7.A12",
+            "level": "Medium",
+            "affects": [],
+            "text": "Aktionen, die durch das Systemmanagement auf den verwalteten Systemen ausgeführt werden, SOLLTEN ausschließlich von der Systemmanagement-Lösung ausgelöst werden. Dafür SOLLTEN nur diejenigen Management-Funktionen auf der Systemmanagement-Lösung und den zu verwaltenden Systemen aktiviert werden, die tatsächlich benötigt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.21",
+                "G 0.22",
+                "G 0.30",
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verpflichtung zur Nutzung der vorgesehenen Schnittstellen für das Systemmanagement",
+            "handle": "OPS.1.1.7.A13",
+            "level": "Medium",
+            "affects": [],
+            "text": "Management-Zugriffe auf zu verwaltende Systeme SOLLTEN ausschließlich über die dafür vorgesehenen Schnittstellen der Systemmanagement-Lösung erfolgen. Falls ein direkter Zugriff auf zu verwaltende Systeme notwendig ist, z. B. nach einem Ausfall eines zu verwaltenden Systems, SOLLTEN sowohl der direkte Zugriff als auch alle in diesem Rahmen vorgenommenen Änderungen dokumentiert und im notwendigen Umfang in die Systemmanagement-Lösung eingepflegt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.30",
+                "G 0.31",
+                "G 0.43"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Zentrale Konfigurationsverwaltung für zu verwaltende Systeme",
+            "handle": "OPS.1.1.7.A14",
+            "level": "Medium",
+            "affects": [],
+            "text": "Software und Konfigurationsdaten für die zu verwaltenden Systeme SOLLTEN konsequent in einem Konfigurationsmanagement verwaltet werden, das eine Versionierung und Änderungsverfolgung ermöglicht. Die zugehörige Dokumentation zur Konfigurationsverwaltung SOLLTE vollständig und immer aktuell sein. Die benötigten Dokumentationen SOLLTEN an zentraler Stelle sicher verfügbar sein sowie in die Datensicherung eingebunden werden. Die zentrale Konfigurationsverwaltung SOLLTE nachhaltig gepflegt und regelmäßig auditiert werden. Sämtliche Schnittstellen zwischen Systemmanagement-Lösung und anderen Anwendungen und Diensten SOLLTEN dokumentiert und vollständig in einem Konfigurationsmanagement verwaltet werden. Zwischen relevanten Betriebsbereichen SOLLTEN funktionale Änderungen an den Schnittstellen frühzeitig abgestimmt und dokumentiert werden. Die Konfigurationsdaten für die zu verwaltenden Systeme SOLLTEN automatisch über das Netz verteilt und ohne Betriebsunterbrechung installiert und aktiviert werden können.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.45"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Statusüberwachung, Protokollierung und Alarmierung bei relevanten Ereignissen in der Systemmanagement-Lösung und den zu verwaltenden Systemen",
+            "handle": "OPS.1.1.7.A15",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die grundlegenden Performance- und Verfügbarkeitsparameter der Systemmanagement-Lösung und der zu verwaltenden Systeme SOLLTEN kontinuierlich überwacht werden. Dafür SOLLTEN vorab die jeweiligen Schwellwerte ermittelt werden (Baselining). Werden definierte Schwellwerte überschritten, SOLLTE das zuständige Personal automatisch benachrichtigt werden. Zur besseren Fehleranalyse SOLLTEN Informationen aus der Statusüberwachung anderer Bereiche, z. B. aus einem eigenen Bereich „Netze“, ebenfalls betrachtet werden, um die genaue Ursache für eine Störung zu finden. Wichtige Ereignisse auf zu verwaltenden Systemen und auf der Systemmanagement-Lösung SOLLTEN automatisch an eine zentrale Protokollierungsinfrastruktur übermittelt und dort protokolliert werden (siehe OPS.1.1.5 Protokollierung). Wichtige Ereignisse SOLLTEN mindestens für folgende Aspekte definiert werden: Ausfall sowie Nichterreichbarkeit von zu verwaltenden Systemen, Ausfall sowie Nichterreichbarkeit von Systemmanagement-Komponenten, Hardware-Fehlfunktionen, Anmeldeversuche an der Systemmanagement-Lösung, Anmeldeversuche an zu verwaltenden Systemen, kritische Zustände oder Überlastung der Systemmanagement-Lösung sowie kritische Zustände oder Überlastung von zu verwaltenden Systemen. Ereignismeldungen sowie Protokollierungs-Daten SOLLTEN an ein zentrales Logging-System übermittelt werden. Alarmmeldungen SOLLTEN sofort, wenn sie auftreten, übermittelt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.26",
+                "G 0.27",
+                "G 0.30",
+                "G 0.31",
+                "G 0.32",
+                "G 0.37"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einbindung des Systemmanagements in die Notfallplanung",
+            "handle": "OPS.1.1.7.A16",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Systemmanagement-Lösung SOLLTE in die Notfallplanung der Institution eingebunden werden. Dazu SOLLTEN sowohl die Systemmanagement-Lösung als auch die Konfigurationen der zu verwaltenden Systeme gesichert und in die Wiederanlaufpläne integriert sein.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.25",
+                "G 0.26"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Kontrolle der Systemmanagement-Kommunikation",
+            "handle": "OPS.1.1.7.A17",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Kommunikation zwischen den Benutzenden und der Systemmanagement-Lösung sowie zwischen der Systemmanagement-Lösung und den zu verwaltenden IT-Systemen SOLLTE über geeignete Filtertechniken auf unbedingt notwendige Verbindungen eingeschränkt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.15",
+                "G 0.19",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.30",
+                "G 0.31",
+                "G 0.43"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Überprüfung des Systemzustands",
+            "handle": "OPS.1.1.7.A18",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Konsistenz zwischen realem Systemzustand und dem von der Systemmanagement-Lösung angenommenen Zustand SOLLTE regelmäßig geprüft werden. Werden Abweichungen festgestellt, SOLLTE der in der Systemmanagement-Lösung vorgesehene Zustand wiederhergestellt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.15",
+                "G 0.19",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.30"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Absicherung der Systemmanagement-Kommunikation zwischen der Systemmanagement-Lösung und den zu verwaltenden Systemen",
+            "handle": "OPS.1.1.7.A19",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Systemmanagement-Kommunikation zwischen der Systemmanagement-Lösung und den zu verwaltenden Systemen SOLLTE grundsätzlich verschlüsselt sein. Die Stärke der verwendeten kryptografischen Verfahren und Schlüssel SOLLTE regelmäßig überprüft und bei Bedarf angepasst werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.15",
+                "G 0.19",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.43"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Hochverfügbare Realisierung der Systemmanagement-Lösung",
+            "handle": "OPS.1.1.7.A20",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Eine zentrale Systemmanagement-Lösung SOLLTE hochverfügbar betrieben werden. Dazu SOLLTEN die für die Systemmanagement-Lösung eingesetzten Server bzw. Werkzeuge inklusive der Netzanbindungen redundant ausgelegt sein.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.9",
+                "G 0.25",
+                "G 0.26"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Physische Trennung der zentralen Systemmanagementnetze",
+            "handle": "OPS.1.1.7.A21",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Das Managementnetz für das Systemmanagement SOLLTE physisch von den funktionalen, insbesondere produktiven, Netzen getrennt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.15",
+                "G 0.19",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.25",
+                "G 0.26",
+                "G 0.30",
+                "G 0.43"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einbindung des Systemmanagements in automatisierte Detektionssysteme",
+            "handle": "OPS.1.1.7.A22",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Die Protokollierung von sicherheitsrelevanten Ereignissen des Systemmanagements SOLLTE in ein Security Information and Event Management (SIEM) eingebunden werden. Dabei SOLLTE nachvollziehbar festgelegt werden, welche Ereignisse an das SIEM weitergeleitet werden. Im Anforderungskatalog zur Auswahl einer Systemmanagement-Lösung SOLLTEN die erforderlichen Schnittstellen und Übergabeformate spezifiziert werden. Eine Systemmanagement-Lösung SOLLTE mit einem System zur Erkennung sicherheitsrelevanter Schwachstellen automatisiert überwacht werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.15",
+                "G 0.19",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.29",
+                "G 0.30",
+                "G 0.31"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Standort-übergreifende Zeitsynchronisation für das Systemmanagement",
+            "handle": "OPS.1.1.7.A23",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Die Zeitsynchronisation SOLLTE sowohl für die Systemmanagement-Lösung als auch für die zu verwaltenden Systeme über alle Standorte der Institution sichergestellt werden. Dafür SOLLTE eine gemeinsame Referenzzeit benutzt werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.21",
+                "G 0.22",
+                "G 0.25",
+                "G 0.26"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Automatisierte Überprüfung von sicherheitsrelevanten Konfigurationen durch geeignete Detektionssysteme",
+            "handle": "OPS.1.1.7.A24",
+            "level": "High",
+            "affects": [
+                "CIA"
+            ],
+            "text": "Sicherheitsrelevante Konfigurationen der Systemmanagement-Lösung und der zu verwaltenden Systeme SOLLTEN durch geeignete Detektionssysteme regelmäßig auf Abweichungen vom Sollzustand sowie auf potenzielle Schwachstellen überprüft werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.18",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.30",
+                "G 0.31",
+                "G 0.32",
+                "G 0.45"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Protokollierung und Reglementierung von Systemmanagement-Sitzungen",
+            "handle": "OPS.1.1.7.A25",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Die Sitzungsinhalte, insbesondere die Aktivitäten von Benutzenden auf der Systemmanagement-Lösung sowie sämtliche direkte Zugriffe auf zu verwaltende Systeme, SOLLTEN kontinuierlich durch eine technische Lösung protokolliert und reglementiert werden. Dabei SOLLTEN die Aktivitäten auf Befehlsebene, d. h. manuelle und automatisierte Befehle, kontrolliert und gegebenenfalls unterbunden werden. Während der Überwachung SOLLTE nicht nur bei konkreten Regelverstößen, sondern auch bei Anomalien im Benutzendenverhalten eine Alarmierung erfolgen.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.29",
+                "G 0.30",
+                "G 0.31",
+                "G 0.32",
+                "G 0.37"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Entkopplung von Zugriffen auf die Systemmanagement-Lösung",
+            "handle": "OPS.1.1.7.A26",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Jeder administrative Zugriff auf die Systemmanagement-Lösung SOLLTE durch die Nutzung von Sprungservern abgesichert werden.",
+            "isresponsible": null,
+            "mitigates": [
+                "G 0.15",
+                "G 0.19",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.30",
+                "G 0.43"
+            ]
+        }
+    ]
+}

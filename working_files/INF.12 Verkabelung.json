@@ -1,0 +1,558 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "INF.12 Verkabelung",
+    "handle": "INF.12",
+    "text": "The proper and standard-compliant implementation of cabling is the basis for secure IT operations. A distinction must be made between electrical cabling and IT cabling. Electrical cabling of IT systems and other devices includes all cables and distributions in the building from the feed point of the distribution network operator (VNB) to the connections of the end devices. IT cabling in an institution includes all communication cables and passive components such as patch panels or patch panels. It thus forms the physical basis of the internal communication networks. IT cabling extends from the handover points from an external network to the connection points of the network participants. Handover points are, for example, the connection of a telecommunications company or the DSL connection of an Internet provider.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Kabelbrand",
+            "handle": "2.1",
+            "text": "Cable fires can severely damage an information network. A cable fire causes, for example, short circuits or interrupts conductors. As a result, protective devices also fail. In addition, aggressive gases can be released during cable fires, depending on the materials of the insulation.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Cable fire due to faulty insulation",
+                    "type": "Threat",
+                    "text": "A cable fire can occur due to faulty insulation, which can be caused by a variety of factors, such as overheating, mechanical damage, or exposure to chemicals. The fire can spread quickly and cause significant damage to the surrounding area.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Cable fire due to deliberate act",
+                    "type": "Threat",
+                    "text": "A cable fire can be caused by a deliberate act, such as arson or sabotage. This type of fire can be very difficult to prevent and can cause significant damage to the surrounding area.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Dimensionierung der Verkabelung",
+            "handle": "2.2",
+            "text": "When workplaces, server rooms or data centers are planned, these plans are often only based on current needs. However, future new requirements often also require further capacities of the power grid and data cables. This may become necessary, for example, when additional servers are deployed or technical standards change. The cabling can only be expanded to the extent that the existing and laid cables and cable routes allow.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Insufficient capacity for future expansion",
+                    "type": "Threat",
+                    "text": "The cabling may not be able to handle the increased demand for bandwidth and power as the organization grows. This can lead to performance issues and outages.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichende Dokumentation der Verkabelung",
+            "handle": "2.3",
+            "text": "If the exact location of cables is not known because it was insufficiently documented, these cables can be damaged during construction work outside or inside a building. Insufficient documentation also makes it difficult to test and repair cables. Furthermore, it cannot be assumed that all cables in the installation zones are installed according to currently valid standards.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Damage to cables during construction work",
+                    "type": "Threat",
+                    "text": "Construction work can damage cables if the exact location of the cables is not known. This can lead to outages and downtime.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Difficulty in troubleshooting and repairing cables",
+                    "type": "Threat",
+                    "text": "It can be difficult to troubleshoot and repair cables if the exact location of the cables is not known. This can lead to extended downtime and increased costs.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzureichend geschützte Verteiler",
+            "handle": "2.4",
+            "text": "Occasionally, power supply or data network distributions are installed in areas that are generally accessible. Unauthorized persons can open such distributors, manipulate them and thus cause failures in the power supply or data supply.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unauthorized access to distributors",
+                    "type": "Threat",
+                    "text": "Unauthorized persons can access distributors and manipulate them, causing outages and downtime.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Leitungsbeschädigungen",
+            "handle": "2.5",
+            "text": "The more unprotected a cable is laid, the greater the risk that it will be damaged intentionally or unintentionally. Damage not only causes direct failures of connections, but can also lead to disruptions later. Damaged insulation sometimes only affects the functional properties of a cable with a long time delay.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Damage to cables during construction work",
+                    "type": "Threat",
+                    "text": "Construction work can damage cables if they are not properly protected. This can lead to outages and downtime.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Damage to cables due to vandalism",
+                    "type": "Threat",
+                    "text": "Vandalism can damage cables, causing outages and downtime.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Spannungsschwankungen, Überspannung, Unterspannung",
+            "handle": "2.6",
+            "text": "Fluctuations in the supply voltage can occur in all areas of the networks. Extremely short and small events have little or no effect on IT systems. Larger fluctuations, however, lead to malfunctions. The connected systems can be damaged up to and including total failures. Destructive overvoltages can also occur.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Power surges",
+                    "type": "Threat",
+                    "text": "Power surges can damage electronic equipment, causing outages and downtime.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Power outages",
+                    "type": "Threat",
+                    "text": "Power outages can cause data loss and downtime.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwendung qualitativ unzureichender Steckdosenleisten",
+            "handle": "2.7",
+            "text": "Often, the fixed sockets are not sufficient for the devices to be operated. To compensate for this, power strips are often used. However, if these power strips are of poor quality, they can become a source of ignition and thus a major fire hazard.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Overloading of power strips",
+                    "type": "Threat",
+                    "text": "Overloading of power strips can cause them to overheat and start a fire.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Use of faulty power strips",
+                    "type": "Threat",
+                    "text": "Faulty power strips can cause electrical shocks and fires.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unzulässige Kabelverbindungen",
+            "handle": "2.8",
+            "text": "In some cases, cable connections are made between IT systems or other technical components that are not intended and are not permitted. This can cause security problems or operational disruptions. Such cable connections may allow unauthorized access to data networks, IT systems, information or applications. Through unauthorized cable connections, information can also be transmitted to the wrong recipients. In addition, the connection can be disrupted.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unauthorized access to data networks",
+                    "type": "Threat",
+                    "text": "Unauthorized persons can gain access to data networks through unauthorized cable connections. This can lead to data theft, data corruption, and denial of service attacks.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Disruption of network services",
+                    "type": "Threat",
+                    "text": "Unauthorized cable connections can disrupt network services, causing outages and downtime.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Leitungsbeeinträchtigungen",
+            "handle": "2.9",
+            "text": "Electrical signal transmission in communication cables can be negatively affected by electrical and magnetic fields. A special form of this line interference is crosstalk. Currents and voltages from adjacent lines are transmitted as interference signals to the communication cable.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Crosstalk",
+                    "type": "Threat",
+                    "text": "Crosstalk can occur when signals from one cable interfere with signals on another cable. This can lead to data corruption and errors.",
+                    "hasOrigin": [
+                        "natural"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Abhören und Manipulation von Kabeln",
+            "handle": "2.10",
+            "text": "Eavesdropping attacks on data cables are a threat to information security that should not be neglected. Basically, there are no eavesdropping-proof cables. The cables only differ in the effort that has to be made to eavesdrop on the line. Whether a cable is actually being tapped can only be determined with a high level of technical effort. In addition, deliberate manipulations of cables up to and including their destruction pose a danger to the institution. Malfunctions of cables can be deliberately caused with manipulative intent. Such manipulations often aim to disrupt IT operations or damage the institution.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Eavesdropping on data cables",
+                    "type": "Threat",
+                    "text": "Unauthorized persons can eavesdrop on data cables, intercepting sensitive information.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Manipulation of cables",
+                    "type": "Threat",
+                    "text": "Unauthorized persons can manipulate cables, causing outages and downtime.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI INF.12 Verkabelung",
+            "name": "Auswahl geeigneter Kabeltypen",
+            "handle": "INF.12.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Bei der Auswahl von Kabeltypen MUSS geprüft werden, welche übertragungstechnischen Eigenschaften notwendig sind. Die einschlägigen Normen und Vorschriften MÜSSEN beachtet werden. Auch die Umgebungsbedingungen im Betrieb und bei der Verlegung MÜSSEN berücksichtigt werden. Hinsichtlich der Umgebungsbedingungen MÜSSEN die folgenden Faktoren beachtet werden:\n• Temperaturen,\n• Kabelwege,\n• Zugkräfte bei der Verlegung,\n• die Art der Verlegung sowie\n• die Entfernung zwischen den Endpunkten und möglichen Störquellen.",
+            "isresponsible": "IT-Betrieb, Haustechnik",
+            "mitigates": [
+                "G 0.2",
+                "G 0.18",
+                "G 0.25",
+                "G 0.26",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI INF.12 Verkabelung",
+            "name": "Planung der Kabelführung",
+            "handle": "INF.12.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Kabel, Kabelwege und Kabeltrassen MÜSSEN aus funktionaler und aus physikalischer Sicht ausreichend dimensioniert werden. Dabei MÜSSEN künftige Notwendigkeiten eingerechnet werden, z. B. genügend Platz für mögliche technische Erweiterungen in Kabelkanälen und -trassen. Bei der gemeinsamen Führung von IT- und Stromverkabelung in einer Trasse MUSS das Übersprechen zwischen den einzelnen Kabeln verhindert werden. Es MUSS darauf geachtet werden, dass die IT-Verkabelung und die elektrotechnische Verkabelung mit dem normgerechten Trennungsabstand geführt werden. Erkennbare Gefahrenquellen MÜSSEN umgangen werden.",
+            "isresponsible": "IT-Betrieb, Haustechnik",
+            "mitigates": [
+                "G 0.12",
+                "G 0.18",
+                "G 0.27",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI INF.12 Verkabelung",
+            "name": "Fachgerechte Installation",
+            "handle": "INF.12.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Installationsarbeiten der Verkabelung MÜSSEN fachkundig und sorgfältig erfolgen. Bei der Installation MÜSSEN alle relevanten Normen beachtet werden. Die fachgerechte Ausführung der Verkabelung MUSS durch eine fachkundige Person in allen Phasen überprüft werden. Bei Anlieferung des Materials MUSS geprüft werden, ob die richtigen Kabel und Anschlusskomponenten geliefert wurden. Es MUSS darauf geachtet werden, dass die Montage keine Beschädigungen verursacht. Außerdem MÜSSEN die Kabelwege so gewählt werden, dass eine Beschädigung der verlegten Kabel durch die normale Nutzung des Gebäudes ausgeschlossen ist.",
+            "isresponsible": "IT-Betrieb, Haustechnik",
+            "mitigates": [
+                "G 0.8",
+                "G 0.9",
+                "G 0.18",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI INF.12 Verkabelung",
+            "name": "EMV-taugliche Stromversorgung",
+            "handle": "INF.12.A4",
+            "level": "Low",
+            "affects": [],
+            "text": "Die Stromversorgung MUSS EMV (Elektromagnetische Verträglichkeit) -tauglich sein. Dafür MUSS das Stromverteilnetz als TN-S-System aufgebaut sein. Bei Aufbau und Betrieb des Stromverteilnetzes MÜSSEN die in den entsprechenden Normen empfohlenen Trennungsabstände soweit wie möglich eingehalten werden. Vorkehrungen gegen Einstrahlungen von außen, Abstrahlung durch die Stromleitung sowie zur Erkennung von Ausgleichsströmen MÜSSEN getroffen werden.",
+            "isresponsible": "Haustechnik",
+            "mitigates": [
+                "G 0.8",
+                "G 0.12"
+            ]
+        },
+        {
+            "Informationsource": "BSI INF.12 Verkabelung",
+            "name": "Anforderungsanalyse für die Verkabelung",
+            "handle": "INF.12.A5",
+            "level": "Medium",
+            "affects": [],
+            "text": "Grundsätzlich SOLLTEN die Anforderungen analysiert werden, die Einfluss auf eine zukunftssichere, bedarfsgerechte und wirtschaftliche Ausführung der Verkabelung haben. In dieser Anforderungsanalyse SOLLTE zunächst abgeschätzt werden, wie die kurzfristige Nutzung der Verkabelung innerhalb der Institution aussieht. Darauf aufbauend SOLLTE die längerfristige Entwicklung der Nutzung abgeschätzt werden. Darüber hinaus MÜSSEN die Schutzziele der Verfügbarkeit, Integrität und Vertraulichkeit bei der Anforderungsanalyse für die Verkabelung mit betrachtet werden.",
+            "isresponsible": "IT-Betrieb, Haustechnik",
+            "mitigates": [
+                "G 0.18",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI INF.12 Verkabelung",
+            "name": "Abnahme der Verkabelung",
+            "handle": "INF.12.A6",
+            "level": "Medium",
+            "affects": [],
+            "text": "Für die Verkabelung SOLLTE es einen Abnahmeprozess geben. Verkabelungen SOLLTEN immer dann abgenommen werden, wenn alle (gegebenenfalls im Rahmen eines Meilensteins) durchzuführenden Aufgaben abgeschlossen sind. Die Ausführenden SOLLTE hierfür die Aufgaben als abgeschlossen und zur Abnahme bereit gemeldet haben. Außerdem SOLLTEN sich bei den Kontrollen durch die auftraggebende Institution keine inakzeptablen Mängel gezeigt haben. Der Abnahmetermin SOLLTE so gewählt werden, dass die Kontrollen zur Abnahme in ausreichender Zeit vorbereitet werden können. Die auftragnehmende Institution MUSS spätestens zum Abnahmetermin schriftlich belegen, dass sämtliche Normen und Vorschriften eingehalten wurden, die für das Gewerk gelten. Bei der Abnahme MUSS der tatsächliche Umfang der Leistungen überprüft werden. Für das Abnahmeprotokoll SOLLTE eine Checkliste vorbereitet werden. Das Abnahmeprotokoll MUSS von den Teilnehmenden und Verantwortlichen rechtsverbindlich unterzeichnet werden. Das Protokoll MUSS Bestandteil der internen Dokumentation der Verkabelung sein.",
+            "isresponsible": "IT-Betrieb, Haustechnik",
+            "mitigates": [
+                "G 0.18",
+                "G 0.29",
+                "G 0.37",
+                "G 0.41"
+            ]
+        },
+        {
+            "Informationsource": "BSI INF.12 Verkabelung",
+            "name": "Überspannungsschutz",
+            "handle": "INF.12.A7",
+            "level": "Medium",
+            "affects": [],
+            "text": "Jedes elektrisch leitende Netz SOLLTE gegen Überspannungen geschützt werden. Hierfür MUSS ein entsprechendes Überspannungsschutzkonzept erstellt werden, das den gültigen Normen entspricht. Netzersatzanlagen (NEA) und unterbrechungsfreie Stromversorgungen (USV) MÜSSEN in das Überspannungsschutzkonzept aufgenommen werden.",
+            "isresponsible": "Haustechnik",
+            "mitigates": [
+                "G 0.8",
+                "G 0.12",
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI INF.12 Verkabelung",
+            "name": "Entfernen und Deaktivieren nicht mehr benötigter Kabel",
+            "handle": "INF.12.A8",
+            "level": "Medium",
+            "affects": [],
+            "text": "Wenn Kabel nicht mehr benötigt werden, SOLLTEN sie fachgerecht und vollständig entfernt werden. Nachdem Kabel entfernt wurden, MÜSSEN die Brandschottungen fachgerecht verschlossen werden. Kabel, die aktuell nicht mehr benötigt werden, aber mit der vorhandenen Technik sinnvoll als Reserve an Ort und Stelle verbleiben können, SOLLTEN in einem betriebsfähigen Zustand erhalten werden. Solche Kabel MÜSSEN mindestens an den Endpunkten entsprechend gekennzeichnet werden. Grundsätzlich SOLLTE eine Übersicht über nicht mehr benötigte Kabel aufgestellt werden. Aus der Dokumentation SOLLTE hervorgehen, welche Kabel entfernt oder deaktiviert wurden.",
+            "isresponsible": "IT-Betrieb, Haustechnik",
+            "mitigates": [
+                "G 0.8",
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI INF.12 Verkabelung",
+            "name": "Brandschutz in Trassen",
+            "handle": "INF.12.A9",
+            "level": "Medium",
+            "affects": [],
+            "text": "Trassen SOLLTEN ausreichend dimensioniert werden. Trassen SOLLTEN über eine ausreichende Be- und Entlüftung verfügen.",
+            "isresponsible": "Haustechnik",
+            "mitigates": [
+                "G 0.1",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI INF.12 Verkabelung",
+            "name": "Dokumentation und Kennzeichnung der Verkabelung",
+            "handle": "INF.12.A10",
+            "level": "Medium",
+            "affects": [],
+            "text": "Eine Institution SOLLTE sicherstellen, dass sie für ihre Verkabelung sowohl über eine interne als auch eine externe Dokumentation verfügt. Die interne Dokumentation MUSS alle Aufzeichnungen zur Installation und zum Betrieb der Verkabelung enthalten. Die interne Dokumentation SOLLTE so umfangreich angefertigt und gepflegt werden, dass der Betrieb und dessen Weiterentwicklung bestmöglich unterstützt werden. Die externe Dokumentation (Beschriftung von Anschlüssen zur Unterstützung des Betriebs) der Verkabelung SOLLTE möglichst neutral gehalten werden. Jede Veränderung im Netz SOLLTE dokumentiert werden. Eine Interims- oder Arbeitsversion der Dokumentation SOLLTE unmittelbar, d. h. am Tag selbst angepasst werden. Die Stamm-Dokumentation MUSS spätestens 4 Wochen nach Abschluss der jeweiligen Arbeiten aktualisiert sein. Es SOLLTE geprüft werden, ob ein Dokumentenmanagement für die Dokumentation eingesetzt werden kann. Die Dokumentation SOLLTE regelmäßig überprüft und aktualisiert werden. Sämtliche technischen Einrichtungen, die im Rahmen der Verkabelung dokumentiert sind, MÜSSEN hinsichtlich der Dokumentationstreue spätestens nach 4 Jahren geprüft werden.",
+            "isresponsible": "IT-Betrieb, Haustechnik",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI INF.12 Verkabelung",
+            "name": "Neutrale Dokumentation in den Verteilern",
+            "handle": "INF.12.A11",
+            "level": "Medium",
+            "affects": [],
+            "text": "In jedem Verteiler SOLLTE es eine Dokumentation geben, die den derzeitigen Stand von Rangierungen und Leitungsbelegungen wiedergibt. Die Dokumentation im Verteiler MUSS ein sicheres Schalten ermöglichen. Die Dokumentation im Verteiler SOLLTE möglichst neutral gehalten werden. In der Dokumentation im Verteiler SOLLTEN nur bestehende und genutzte Verbindungen sowie auflaufende Reservekabel aufgeführt sein. Falls möglich, SOLLTEN keine Hinweise auf die Art gegeben werden, wie Kabel genutzt werden. Es SOLLTEN nur solche Hinweise gegeben werden, die ausdrücklich vorgeschrieben sind. Alle weitergehenden Informationen SOLLTEN in einer Revisionsdokumentation aufgeführt werden.",
+            "isresponsible": "IT-Betrieb, Haustechnik",
+            "mitigates": [
+                "G 0.15",
+                "G 0.18",
+                "G 0.19"
+            ]
+        },
+        {
+            "Informationsource": "BSI INF.12 Verkabelung",
+            "name": "Kontrolle elektrotechnischer Anlagen und bestehender Verbindungen",
+            "handle": "INF.12.A12",
+            "level": "Medium",
+            "affects": [],
+            "text": "Alle elektrischen Anlagen und Betriebsmittel SOLLTEN gemäß DGUV Vorschrift 3, entsprechend den in § 5 Prüfung genannten Durchführungsanweisungen, regelmäßig geprüft werden. Alle Unregelmäßigkeiten, die festgestellt werden, MÜSSEN unverzüglich dokumentiert werden. Festgestellte Unregelmäßigkeiten MÜSSEN unverzüglich den zuständigen Organisationseinheiten gemeldet werden. Die zuständigen Organisationseinheiten MÜSSEN die festgestellten Unregelmäßigkeiten so zeitnah beheben, dass eine Gefährdung von Personen ausgeschlossen werden kann. Die Verfügbarkeit der elektrischen Anlagen und Betriebsmittel MUSS hierbei im erforderlichen Maß sichergestellt sein.",
+            "isresponsible": "IT-Betrieb, Haustechnik",
+            "mitigates": [
+                "G 0.8",
+                "G 0.9",
+                "G 0.18",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI INF.12 Verkabelung",
+            "name": "Vermeidung elektrischer Zündquellen",
+            "handle": "INF.12.A13",
+            "level": "Medium",
+            "affects": [],
+            "text": "Die Nutzung privater Elektrogeräte innerhalb einer Institution SOLLTE klar geregelt werden. Alle Elektrogeräte MÜSSEN durch eine Elektrofachkraft geprüft und für sicher befunden werden, bevor sie eingesetzt werden. Die Verwendung von Steckdosenleisten SOLLTE soweit wie möglich vermieden werden. Fehlende Steckdosen SOLLTEN durch eine Elektrofachkraft fachgerecht nachgerüstet werden.",
+            "isresponsible": "Haustechnik",
+            "mitigates": [
+                "G 0.1",
+                "G 0.8",
+                "G 0.12"
+            ]
+        },
+        {
+            "Informationsource": "BSI INF.12 Verkabelung",
+            "name": "Nutzung von Schranksystemen",
+            "handle": "INF.12.A16",
+            "level": "High",
+            "affects": [
+                "IA"
+            ],
+            "text": "Elektrotechnische Anschlüsse und -verteiler SOLLTEN in Schranksystemen aufgestellt oder in diese eingebaut werden. Bei der Dimensionierung der Schranksysteme SOLLTE das erwartete Wachstum für den geplanten Einsatzzeitraum berücksichtigt werden.",
+            "isresponsible": "Haustechnik",
+            "mitigates": [
+                "G 0.18",
+                "G 0.27"
+            ]
+        },
+        {
+            "Informationsource": "BSI INF.12 Verkabelung",
+            "name": "Redundanzen für die IT-Verkabelung",
+            "handle": "INF.12.A17",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Es SOLLTE geprüft werden, ob eine redundante primäre IT-Verkabelung geschaffen werden soll, die über unabhängige Trassen geführt wird. Ebenso SOLLTE geprüft werden, ob die Anschlüsse an IT- oder TK-Provider redundant ausgelegt werden sollen. Bei hohen oder sehr hohen Verfügbarkeitsanforderungen SOLLTE überlegt werden, in den relevanten Gebäuden die Sekundär- und Tertiärverkabelung redundant auszulegen. Dabei SOLLTEN redundant ausgelegte Teile der Sekundärverkabelung in unterschiedlichen Brandabschnitten geführt werden. Wird eine redundante Verkabelung verwendet, SOLLTE deren Funktionsfähigkeit regelmäßig geprüft werden.",
+            "isresponsible": "IT-Betrieb",
+            "mitigates": [
+                "G 0.9",
+                "G 0.18",
+                "G 0.27",
+                "G 0.41"
+            ]
+        },
+        {
+            "Informationsource": "BSI INF.12 Verkabelung",
+            "name": "A-B-Versorgung",
+            "handle": "INF.12.A14",
+            "level": "High",
+            "affects": [
+                "A"
+            ],
+            "text": "Es SOLLTE geprüft werden, ob anstelle einer einzügigen Stromversorgung eine zweizügige sogenannte A-B-Versorgung geschaffen werden soll, die wichtige IT-Komponenten und andere Verbraucher versorgt. Dabei SOLLTE die Funktionsfähigkeit der Stromversorgung permanent durch geeignete technische Einrichtungen überwacht werden.",
+            "isresponsible": "Haustechnik",
+            "mitigates": [
+                "G 0.8",
+                "G 0.12"
+            ]
+        },
+        {
+            "Informationsource": "BSI INF.12 Verkabelung",
+            "name": "Materielle Sicherung der Verkabelung",
+            "handle": "INF.12.A15",
+            "level": "High",
+            "affects": [
+                "IA"
+            ],
+            "text": "Für alle Räume eines Gebäudes, insbesondere in Räumen mit Publikumsverkehr sowie in unübersichtlichen Bereichen SOLLTE überlegt werden, Kabel und Verteiler gegen unbefugte Zugriffe zu sichern. In jedem Fall SOLLTEN die Zahl und der Umfang derjenigen Stellen möglichst gering gehalten werden, an denen Einrichtungen der Energieversorgung und Zugangspunkte des Datennetzes für Unbefugte zugänglich sind.",
+            "isresponsible": "IT-Betrieb, Haustechnik",
+            "mitigates": [
+                "G 0.15",
+                "G 0.41"
+            ]
+        }
+    ]
+}

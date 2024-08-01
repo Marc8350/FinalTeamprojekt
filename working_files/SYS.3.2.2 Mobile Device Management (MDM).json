@@ -1,0 +1,357 @@
+{
+    "Informationsource": "BSI GSK 2023",
+    "name": "SYS.3.2.2 Mobile Device Management (MDM)",
+    "handle": "SYS.3.2.2",
+    "text": "Smartphones, Tablets and Phablets are an indispensable part of the work for many employees. The IT department must, however, provide more and more of these devices in many different versions and at the same time ensure adequate security. In addition, mobile devices (Mobile Devices) are exposed to particular dangers and the administration differs from other IT systems in fundamental ways. Therefore, a Mobile Device Management (MDM) is essential, especially in institutions with a larger number of smartphones, tablets and phablets, for a regulated and secure operation of these devices. With appropriate software for the MDM, the devices can be managed centrally, security rules can be enforced and emergency actions can be triggered. An MDM thus ensures a uniform or at least comparable security standard on all devices.",
+    "vulnerableTo": [
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Keine ausreichende Synchronisation mit dem MDM",
+            "handle": "2.1",
+            "text": "For the MDM to enforce the rules defined by those responsible on mobile devices, the devices must be synchronized with the MDM regularly. If a device is not connected to the MDM for a longer period of time, new or updated rules cannot be applied, for example. Also, if there is no connection to a lost device, the data can no longer be deleted remotely.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Outdated Security Policies",
+                    "type": "Threat",
+                    "text": "If a device is not synchronized with the MDM for a long time, the device may not be up-to-date with the latest security policies, leaving it vulnerable to attacks.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                },
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Data Loss",
+                    "type": "Threat",
+                    "text": "If a device is lost and not connected to the MDM, the data on the device cannot be deleted remotely, potentially leading to data loss.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fehlerhafte Administration des MDM",
+            "handle": "2.2",
+            "text": "MDM solutions are complex applications with typically hundreds of different rules. Not all rules are compatible with each other and vice versa, many rules depend on each other. Errors in administration can affect both the MDM and the devices, directly or indirectly, affecting the confidentiality, availability or integrity of data and applications.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Misconfigured MDM",
+                    "type": "Threat",
+                    "text": "Misconfiguration of the MDM can lead to vulnerabilities, allowing unauthorized access to data or applications.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "accidental"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Ungeeignetes Rechtemanagement im MDM",
+            "handle": "2.3",
+            "text": "The rights management of the MDM decides which users can make which settings on the mobile devices and who has access to which data. If users are assigned the wrong role, there is a risk that they will be granted too many rights. They could, for example, access data without authorization or change settings on the device. It would also be possible for them to install and use apps that are not permitted in the institution, for example, to use cloud storage services. This could result in sensitive data leaking from the institution or violating data protection regulations.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Unauthorized App Installation",
+                    "type": "Threat",
+                    "text": "If users are granted too many rights, they could install unauthorized apps that could compromise the security of the device or the institution's data.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        },
+        {
+            "type": "specific",
+            "Informationsource": "BSI GSK 2023",
+            "name": "Unberechtigte Erstellung von Bewegungsprofilen durch das MDM",
+            "handle": "2.4",
+            "text": "Most MDM products allow you to determine where a device is currently located and to release or block data or apps depending on the location (so-called \"geofencing\"). This creates detailed movement profiles of the devices and thus also of the users. If this data is collected without informing the users in an appropriate manner, those responsible may be violating data protection regulations. There is also a risk that this data could fall into the wrong hands in the event of an attack. Geofencing can also be misused to monitor employees inappropriately.",
+            "exploitedBy_examples": [
+                {
+                    "Informationsource": "BSI GSK 2023",
+                    "name": "Privacy Violation",
+                    "type": "Threat",
+                    "text": "Collecting location data without user consent violates privacy and can be used for malicious purposes.",
+                    "hasOrigin": [
+                        "human"
+                    ],
+                    "hasSource": [
+                        "deliberate"
+                    ]
+                }
+            ],
+            "mitigatedBy": []
+        }
+    ],
+    "Controls": [
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Festlegung einer Strategie für das Mobile Device Management",
+            "handle": "SYS.3.2.2.A1",
+            "level": "Low",
+            "affects": [],
+            "text": "Es MUSS eine Strategie erarbeitet werden, die festlegt, wie Mitarbeitende mobile Endgeräte benutzen dürfen und wie die Geräte in die IT-Strukturen der Institution integriert sind. Grundlage MUSS dabei der Schutzbedarf der zu verarbeitenden Informationen sein. Die Strategie MUSS mindestens folgende Aspekte abdecken:\n•\nDarf das MDM als Cloud-Dienst betrieben werden?\n•\nSoll das MDM durch die Institution selbst betrieben werden?\n•\nSoll das MDM alle Apps bereitstellen oder dürfen die Benutzenden selber Apps installieren?\n•\nWelche Restriktionen gibt die Institution bei bereitgestellten oder selbst installierten Apps vor?\n•\nSoll das MDM in eine weitere Infrastruktur eingebunden werden?\n•\nWelche Anforderungen bezüglich Supportleistungen und Reaktionszeiten sind an die anbietende Institution des MDM zu stellen?\n•\nWelche Compliance-Anforderungen müssen durchgesetzt werden?\n•\nWelche mobilen Geräte und welche Betriebssysteme muss das MDM unterstützen?\n•\nMuss die MDM-Lösung mandantenfähig sein? Gewährleistet sie die notwendige Mandantentrennung?\n•\nMüssen Cloud-Dienste eingebunden werden?\n•\nMüssen Dokumentenmanagementsysteme eingebunden werden?\n•\nMuss das MDM auch Peripheriegeräte einbinden und verwalten?\n•\nWelches Betriebsmodell soll eingesetzt werden: private Endgeräte (Bring Your Own Device, BYOD), personalisierte Endgeräte (Eigentum der Institution) oder nicht personalisierte Endgeräte (Eigentum der Institution, gemeinsam genutzt)?\nDie Strategie MUSS schriftlich fixiert und von dem oder der ISB freigegeben werden.",
+            "isresponsible": "[IT-Betrieb]",
+            "mitigates": [
+                "G 0.18",
+                "G 0.29"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Festlegung erlaubter mobiler Endgeräte",
+            "handle": "SYS.3.2.2.A2",
+            "level": "Low",
+            "affects": [],
+            "text": "Es MUSS festgelegt werden, welche mobilen Endgeräte und Betriebssysteme in der Institution zugelassen sind. Alle erlaubten Geräte und Betriebssysteme MÜSSEN den Anforderungen der MDM-Strategie genügen und die technischen Sicherheitsanforderungen der Institution vollständig erfüllen. Das MDM MUSS so konfiguriert werden, dass nur mit freigegebenen Geräten auf Informationen der Institution zugegriffen werden kann. Es DÜRFEN nur von der Institution zugelassene mobile Endgeräte beschafft werden.",
+            "isresponsible": "[IT-Betrieb]",
+            "mitigates": [
+                "G 0.18"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Auswahl eines MDM-Produkts",
+            "handle": "SYS.3.2.2.A3",
+            "level": "Low",
+            "affects": [],
+            "text": "Wenn eine geeignete MDM-Software beschafft werden soll, MUSS sichergestellt sein, dass sich mit ihr alle in der MDM-Strategie festgelegten Anforderungen erfüllen lassen. Auch MUSS sie sämtliche technischen und organisatorischen Sicherheitsmaßnahmen umsetzen können und alle zugelassenen mobilen Endgeräte unterstützen.",
+            "isresponsible": "[IT-Betrieb]",
+            "mitigates": [
+                "G 0.11",
+                "G 0.18",
+                "G 0.45"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verteilung der Grundkonfiguration auf mobile Endgeräte",
+            "handle": "SYS.3.2.2.A4",
+            "level": "Low",
+            "affects": [],
+            "text": "Alle mobilen Endgeräte MÜSSEN, bevor sie eingesetzt werden, in das MDM integriert werden. Wenn die Geräte die Grundkonfiguration erhalten, MÜSSEN sie sich im Werkszustand befinden. Die Verbindung der mobilen Endgeräte zum MDM MUSS angemessen abgesichert werden. Bei bereits benutzten Geräten MÜSSEN vorher alle institutionsbezogenen Daten gelöscht werden. Ein nicht über MDM konfiguriertes Endgerät DARF NICHT auf Informationen der Institution zugreifen können.",
+            "isresponsible": "[IT-Betrieb]",
+            "mitigates": [
+                "G 0.13",
+                "G 0.14",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.30",
+                "G 0.31",
+                "G 0.36",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Installation des MDM-Clients",
+            "handle": "SYS.3.2.2.A5",
+            "level": "Low",
+            "affects": [],
+            "text": "Wenn mobile Endgeräte an Mitarbeitende übergeben werden, MUSS, wenn vom Betriebssystem nicht bereits bereitgestellt, darauf der MDM-Client installiert und konfiguriert sein.",
+            "isresponsible": "[IT-Betrieb]",
+            "mitigates": [
+                "G 0.13",
+                "G 0.14",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.30",
+                "G 0.31",
+                "G 0.36",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Regelmäßige Überprüfung des MDM",
+            "handle": "SYS.3.2.2.A20",
+            "level": "Low",
+            "affects": [],
+            "text": "Sicherheitseinstellungen MÜSSEN regelmäßig überprüft werden. Bei neuen Betriebssystemversionen der mobilen Endgeräte MUSS vorab geprüft werden, ob das MDM diese vollständig unterstützt und die Konfigurationsprofile und Sicherheitseinstellungen weiterhin wirksam und ausreichend sind. Abweichungen MÜSSEN korrigiert werden. Die zugeteilten Berechtigungen für Benutzende und Administrierende MÜSSEN regelmäßig daraufhin überprüft werden, ob sie weiterhin angemessen sind (Minimalprinzip).",
+            "isresponsible": "[IT-Betrieb]",
+            "mitigates": [
+                "G 0.18",
+                "G 0.19",
+                "G 0.21",
+                "G 0.23",
+                "G 0.29",
+                "G 0.30",
+                "G 0.31",
+                "G 0.32"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Protokollierung des Gerätestatus",
+            "handle": "SYS.3.2.2.A6",
+            "level": "Medium",
+            "affects": [],
+            "text": "Der Lebenszyklus einschließlich der Konfigurationshistorie eines mobilen Endgerätes SOLLTE ausreichend protokolliert und zentral abrufbar sein. Bei Bedarf SOLLTE der aktuelle Status der verwalteten Endgeräte durch den IT-Betrieb ermittelt werden können (Device Audit).",
+            "isresponsible": "[IT-Betrieb]",
+            "mitigates": [
+                "G 0.30",
+                "G 0.31",
+                "G 0.32",
+                "G 0.37"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Installation von Apps",
+            "handle": "SYS.3.2.2.A7",
+            "level": "Medium",
+            "affects": [],
+            "text": "Apps SOLLTEN gemäß den Anforderungen des geplanten Einsatzszenarios über das MDM installiert, deinstalliert und aktualisiert werden. Das MDM SOLLTE die Installation, Deinstallation und Aktualisierung erzwingen, sobald eine Verbindung zum mobilen Endgerät besteht. Über das MDM installierte Apps SOLLTEN NICHT durch Benutzende deinstalliert werden können. Das MDM SOLLTE eine Block- oder Allow-List für die Installation von Apps ermöglichen.",
+            "isresponsible": "[IT-Betrieb]",
+            "mitigates": [
+                "G 0.14",
+                "G 0.16",
+                "G 0.19",
+                "G 0.21",
+                "G 0.22",
+                "G 0.23",
+                "G 0.24",
+                "G 0.25",
+                "G 0.29",
+                "G 0.30",
+                "G 0.31",
+                "G 0.32",
+                "G 0.36",
+                "G 0.39"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Absicherung der MDM-Betriebsumgebung",
+            "handle": "SYS.3.2.2.A12",
+            "level": "Medium",
+            "affects": [],
+            "text": "Das MDM selbst SOLLTE durch technische Maßnahmen abgesichert werden, um dem Schutzbedarf der hinterlegten oder verarbeiteten Informationen zu genügen. Das zugrundeliegende Betriebssystem SOLLTE gehärtet werden.",
+            "isresponsible": "[IT-Betrieb]",
+            "mitigates": [
+                "G 0.23",
+                "G 0.30",
+                "G 0.32",
+                "G 0.38"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Verwaltung von Zertifikaten",
+            "handle": "SYS.3.2.2.A21",
+            "level": "Medium",
+            "affects": [],
+            "text": "Zertifikate zur Nutzung von Diensten auf dem mobilen Endgerät SOLLTEN zentral über das MDM installiert, deinstalliert und aktualisiert werden. Die Installation von nicht vertrauenswürdigen und nicht verifizierbaren (Root-) Zertifikaten durch Benutzende SOLLTE durch das MDM verhindert werden. Das MDM SOLLTE Mechanismen unterstützen, um die Gültigkeit von Zertifikaten zu überprüfen.",
+            "isresponsible": "[IT-Betrieb]",
+            "mitigates": [
+                "G 0.14",
+                "G 0.15",
+                "G 0.18",
+                "G 0.19",
+                "G 0.22",
+                "G 0.23",
+                "G 0.29",
+                "G 0.30",
+                "G 0.31",
+                "G 0.32",
+                "G 0.36",
+                "G 0.38"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Fernlöschung und Außerbetriebnahme von Endgeräten",
+            "handle": "SYS.3.2.2.A22",
+            "level": "Medium",
+            "affects": [],
+            "text": "Das MDM SOLLTE sicherstellen, dass sämtliche dienstliche Daten auf dem mobilen Endgerät aus der Ferne gelöscht werden können (Remote Wipe bei bestehender Datenverbindung). Werden in dem mobilen Endgerät externe Speicher genutzt, SOLLTE geprüft werden, ob diese bei einem Remote Wipe ebenfalls gelöscht werden sollen. Diese Funktion SOLLTE vom MDM unterstützt werden. Der Prozess zur Außerbetriebnahme des mobilen Endgerätes (Unenrollment) SOLLTE sicherstellen, dass keine schutzbedürftigen Daten auf dem mobilen Endgerät oder eingebundenen Speichermedien verbleiben. Dies SOLLTE insbesondere dann gelten, wenn das Unenrollment aus der Ferne ausgeführt wird.",
+            "isresponsible": "[IT-Betrieb]",
+            "mitigates": [
+                "G 0.14",
+                "G 0.15",
+                "G 0.16",
+                "G 0.17",
+                "G 0.18",
+                "G 0.19",
+                "G 0.24",
+                "G 0.29",
+                "G 0.30",
+                "G 0.36",
+                "G 0.38"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Kontrolle der Nutzung von mobilen Endgeräten",
+            "handle": "SYS.3.2.2.A17",
+            "level": "High",
+            "affects": [
+                "I"
+            ],
+            "text": "Es SOLLTEN angemessene Kriterien definiert werden, aufgrund derer die Geräte zu überwachen sind, ohne gegen gesetzliche oder interne Regelungen zu verstoßen. Insbesondere SOLLTEN sogenannte Jailbreaks oder sogenanntes Routen erkannt werden.",
+            "isresponsible": "[IT-Betrieb]",
+            "mitigates": [
+                "G 0.29",
+                "G 0.30",
+                "G 0.31",
+                "G 0.32",
+                "G 0.37"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Einsatz von Geofencing",
+            "handle": "SYS.3.2.2.A19",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Durch die Hinterlegung einer Geofencing-Richtlinie SOLLTE sichergestellt werden, dass Geräte mit schutzbedürftigen Informationen nicht außerhalb eines zuvor festgelegten geografischen Bereichs verwendet werden können. Wird der geografische Bereich verlassen, SOLLTEN entsprechend klassifizierte Informationen oder das Gerät vollständig gelöscht werden. Bevor das Gerät selektiv oder vollständig gelöscht wird, SOLLTEN die zuständigen Administrierenden und das Sicherheitsmanagement sowie die Benutzenden informiert werden. Erst mit einer angemessenen zeitlichen Verzögerung SOLLTE das Gerät selektiv oder vollständig gelöscht werden. Die Bereiche, an denen diese zusätzlichen Sicherheitsmaßnahmen nötig sind, SOLLTEN identifiziert werden. Anschließend SOLLTEN die Sicherheitsmaßnahmen unter Beachtung gesetzlicher und interner Regelungen umgesetzt werden.",
+            "isresponsible": "[IT-Betrieb]",
+            "mitigates": [
+                "G 0.14"
+            ]
+        },
+        {
+            "Informationsource": "BSI GSK 2023",
+            "name": "Durchsetzung von Compliance-Anforderungen",
+            "handle": "SYS.3.2.2.A23",
+            "level": "High",
+            "affects": [
+                "CI"
+            ],
+            "text": "Verstöße gegen die Regelungen der Institution oder sogar eine Manipulation des Betriebssystems SOLLTEN mit einer geeigneten Lösung erkannt werden. Die folgenden Aktionen SOLLTEN bei Verdacht auf Verstoß gegen Regelungen oder Manipulation des Betriebssystems ausgeführt werden. Hierzu SOLLTEN entsprechende Funktionen bereitgestellt werden:\n1. selbstständiges Versenden von Warnhinweisen,\n2. selbstständiges Sperren des Geräts,\n3. Löschen der vertraulichen Informationen der Institution,\n4. Löschen des kompletten Geräts,\n5. Verhindern des Zugangs zu Unternehmens-Apps sowie\n6. Verhindern des Zugangs zu den Systemen und Informationen der Institution. Bei Verdacht auf einen Verstoß oder eine Manipulation SOLLTE ein Alarm an die zuständigen Administrierenden und das Sicherheitsmanagement in der Institution gesandt werden.",
+            "isresponsible": "[IT-Betrieb]",
+            "mitigates": [
+                "G 0.16",
+                "G 0.21",
+                "G 0.22",
+                "G 0.29"
+            ]
+        }
+    ]
+}
