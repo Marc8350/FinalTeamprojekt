@@ -1,6 +1,6 @@
 # BUILD - Dokument
 
-Author: Dana
+Author: Dana & Marc
 Created: August 7, 2024
 
 Voraussetzungen: Windows- oder Linux-System mit Entwicklungsumgebung, Python und Jupyter
@@ -15,13 +15,13 @@ Voraussetzungen: Windows- oder Linux-System mit Entwicklungsumgebung, Python und
 7. GitHub-Repository klonen.
 8. Pfad zum eigenen Ordner mit Excel-Datei für Kreuzreferenztabelle im Code bei [3] ändern. Eventuell `r` vor den Pfad setzen:
     
-    ![BUILD%20-%20Dokument%2026ea99e537dc488ea7ec59d4093b08ba/Untitled.png](BUILD%20-%20Dokument%2026ea99e537dc488ea7ec59d4093b08ba/Untitled.png)
+    ![ReadME/Untitled.png](ReadME/Untitled.png)
     
 9. `pip install -r requirements.txt` im Jupyter Notebook ausführen, um Requirements zu installieren.
 10. Eigene Project ID vom Google Cloud Project im Code bei [3] ändern. Die Project ID findet man bei seinen Projekten unter [Google Cloud Console](https://console.cloud.google.com/).
 11. Cloud Shell aktivieren (Icon ganz links):
     
-    ![BUILD%20-%20Dokument%2026ea99e537dc488ea7ec59d4093b08ba/Untitled%201.png](BUILD%20-%20Dokument%2026ea99e537dc488ea7ec59d4093b08ba/Untitled%201.png)
+    ![ReadME/Untitled%201.png](ReadME/Untitled%201.png)
     
 12. Jupyter Server neu starten.
 13. Import-Codeblock testen, um zu überprüfen, ob alle Installationen in der richtigen Version vorhanden sind. Falls nicht, per `pip install ...` im Notebook korrigieren.
